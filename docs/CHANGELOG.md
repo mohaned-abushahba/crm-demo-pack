@@ -77,3 +77,62 @@ Known limitations / gotchas:
     table's `create_access` flag to `true` as a side effect; this was identified and
     reverted back to `false` afterward so no persistent schema change was left behind.
 File: update-sets/UPDATE-002-quote-doc-template-solana.xml
+
+## seed/02-product-offerings-solana-generators-training.js (2026-10-06)
+Instance: opmsalescrmstage
+What: Created 3 product offerings copied from opmsalescrm1 — "Solana Revenue
+Enablement Platform" (SOL-RE01), "Generators Monthly Trade Journal" (GENERATORS1),
+"In-Person Training - 5 day" (TRNG-INPERSON-2609) — plus their supporting records:
+  - 4 catalogs: Technology Catalog, Manufacturing Catalog, Conglomerate Top-Level
+    (set as new instance default), Conglomerate Catalog.
+  - 5 categories: Top-level Simple Products, Power Generators, Top-Level Configurable
+    Products, Revenue Enablement, Learning & Events.
+  - 6 catalog↔category links, 6 product↔category links, 3 UOM links (all → "Each",
+    which already existed on this instance with the same sys_id as opmsalescrm1).
+  - 2 product offering families: Revenue Enablement, Learning & Events.
+  - 1 characteristic ("Binding Type") with 3 options (Paperback, Hardback, Recycled
+    Paperback) and its link to Generators Monthly, defaulted to Recycled Paperback.
+Why: User requested these 3 product offerings be copied over with their full
+relationship graph (catalog, category, UOM, characteristics). Research on
+opmsalescrm1 found NO actual product-offering-relationship or child/component
+records for any of the three (those tables are empty instance-wide there) — so no
+relationship/child-product data existed to copy; user confirmed proceeding with
+only what actually exists.
+Captured as: a seed script (`seed/02-product-offerings-solana-generators-training.js`),
+NOT an Update Set — see gotcha below.
+Known limitations / gotchas:
+  - **sn_prd_pm_* writes did not engage update-set tracking on this instance**,
+    through any write path tried: Table API create, Table API update (re-touching
+    existing records), and server-side GlideRecord via `snow_execute`. Verified by
+    checking `sys_update_xml` for both the active named Update Set and "Default"
+    after each write — the real records never appeared in either, only unrelated
+    Scripted REST noise from the `execute` tool's own internal mechanism. Root cause
+    not fully diagnosed (time-boxed); by user decision, product/catalog demo data is
+    now captured via seed script instead of Update Set as the standing convention
+    going forward, which also matches our existing config-vs-data split.
+  - **Broken auto-code-generation Business Rule** on `sn_prd_pm_product_offering_catalog`
+    and `sn_prd_pm_product_offering_category`: throws `Cannot find function replace
+    in object` (visible in syslog) when a record is created via the Table API with
+    `name` not yet committed at BR execution time, which silently discarded ALL
+    fields on the created row (not just code) — the Table API's "action": "created"
+    response did NOT reflect this; only a follow-up read revealed the blank record.
+    Fixed each one via GlideRecord, setting `code` explicitly up front to avoid the
+    buggy path. The seed script sets `code` on every catalog/category create for
+    this reason.
+  - **Role gaps**: writing `sn_prd_pm_product_offering`, `..._catalog`, and
+    `..._category` required granting `sn_prd_pm.product_catalog_manager` and
+    `sn_prd_pm.product_catalog_admin` to the admin service account (previously
+    missing, same pattern as the `sn_adv_appr_mgmt.approval_rule_writer` gap from
+    UPDATE-001). Role-check caching was inconsistent within the session — some
+    tables honored the grant immediately, `sn_prd_pm_product_offering_category`
+    never did despite the grant being Active in `sys_user_has_role`; this is why
+    that table's writes were done via GlideRecord instead of Table API.
+  - **sn_prd_pm_product_offering_characteristic** has a "Validate char option for
+    char" Business Rule requiring `characteristic_option` to be set, even though the
+    source record on opmsalescrm1 had it blank — defaulted to "Recycled Paperback"
+    to satisfy it.
+  - Logik/CPQ blueprint sync step requested by the user was NOT performed — the
+    `sn-aidev` MCP server (which hosts the `execute` tool used by the CPQ connection
+    test skill) failed to connect this session (ECONNREFUSED). Deferred; needs that
+    connector restarted/fixed, then re-run separately.
+File: seed/02-product-offerings-solana-generators-training.js
