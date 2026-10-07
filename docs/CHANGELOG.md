@@ -78,6 +78,49 @@ Known limitations / gotchas:
     reverted back to `false` afterward so no persistent schema change was left behind.
 File: update-sets/UPDATE-002-quote-doc-template-solana.xml
 
+## seed/03-ams-west-forecasts.js (2026-10-06)
+Instance: opmsalescrmstage
+What: Created 2026 Q4 sales forecasts for the AMS-West territory, mirroring
+opmsalescrm1's numbers:
+  - Rollup forecast "AMS-West (Taylor Morgan)" — $2.5M quota, territory AMS-West,
+    submission_required=true.
+  - Individual forecast "Asher Sky (California)" — $1.5M quota, territory California.
+  - Individual forecast "Riley Cole (Oregon-Washington)" — $1M quota, territory
+    Oregon-Washington.
+  All use forecast model "Opportunity Revenue for Sales Territory" and period
+  "2026 Q4" (2026-10-01 to 2027-01-01), currency USD.
+Why: User requested AMS-West territory forecasts (rollup + individuals) copied from
+opmsalescrm1.
+Findings before building — prereqs already existed on opmsalescrmstage, nothing
+needed to be created for them:
+  - Territories AMS-West, California, Oregon-Washington already existed (flat
+    structure — no Global/TECH/AMS ancestor chain like opmsalescrm1 has, just
+    AMS-West as a standalone Sub-region with California/Oregon-Washington as Leaf
+    children). AMS-West.manager was already set to Taylor Morgan;
+    Oregon-Washington.manager was already set to a user named "Riley Cole".
+  - Riley Cole already existed as a `sys_user`, just under `user_name
+    riley.cole_ams_west_or_wa_tech_l5` (matching opmsalescrm1's naming convention
+    directly) rather than a simplified `riley.cole` — a first pass incorrectly
+    concluded this persona was missing by searching the wrong username. Always
+    resolve users by display name search or the full qualified username before
+    assuming a persona needs creating.
+  - Business calendar period "2026 Q4" (f861faf13b670310916b37f726e45a3b) and
+    forecast model "Opportunity Revenue for Sales Territory"
+    (f7a3e9c14b2d8610a5cf3e7b92d1f480) already existed with their own sys_ids on
+    this instance (the forecast model shares the exact same sys_id as
+    opmsalescrm1 — same OOTB-style shared reference pattern seen elsewhere in this
+    repo's capture work).
+Known limitations / gotchas:
+  - Writing `sn_quota_core_sales_quota` required granting
+    `sn_quota_core.quota_admin` to the admin service account (previously missing —
+    same recurring pattern as `sn_adv_appr_mgmt.approval_rule_writer` and
+    `sn_prd_pm.product_catalog_manager` from earlier entries).
+    `sn_sales_forecast_header` write needed no specific role.
+  - Unlike the product-offering catalog/category creates in the previous entry, all
+    quota and forecast header creates here landed cleanly on the first attempt — no
+    field-blanking Business Rule bug encountered on these tables.
+File: seed/03-ams-west-forecasts.js
+
 ## seed/02-product-offerings-solana-generators-training.js (2026-10-06)
 Instance: opmsalescrmstage
 What: Created 3 product offerings copied from opmsalescrm1 — "Solana Revenue

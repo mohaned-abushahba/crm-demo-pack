@@ -39,11 +39,24 @@ Run with the `execute` MCP tool against the target instance.
   was verified by re-reading the record. Always set `code` explicitly (the seed
   script does this) to avoid triggering the buggy auto-gen path.
 
+- `03-ams-west-forecasts.js` — creates 2026 Q4 sales forecasts for the AMS-West
+  territory: a rollup forecast for Taylor Morgan ($2.5M) and individual forecasts
+  for Asher Sky/California ($1.5M) and Riley Cole/Oregon-Washington ($1M), copied
+  from opmsalescrm1. Resolves all prerequisite records (territories, users,
+  period, forecast model) by name/query rather than hardcoded sys_ids, and throws
+  if any are missing rather than silently creating wrong-shaped data — see
+  docs/CHANGELOG.md for the full opmsalescrm1 source values and territory
+  hierarchy if those prereqs need to be built from scratch on a fresh instance.
+
+  **Prereqs on target instance:** the executing user needs
+  `sn_quota_core.quota_admin` (or `sn_quota_core.quota_manager`) to write
+  `sn_quota_core_sales_quota` — grant via `sys_user_has_role` if missing.
+
 ## Planned (not yet written)
 
 ```
 seed/
   01-accounts.js
-  03-catalog-pricelist.js
-  04-quotes-orders.js
+  04-catalog-pricelist.js
+  05-quotes-orders.js
 ```
