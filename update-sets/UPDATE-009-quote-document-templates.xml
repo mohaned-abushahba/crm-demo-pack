@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-10-06 21:00:00">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<description>Quote document templates (Quote Demo Template for Solana incl. 2026-09-29 edit, Quote Lines, Sales Cart Demo Template), blocks, block contents, m2m links and quoteScriptDemo. Source: opmsalescrm1 (captured 2026-10-06 from Default update sets).</description>
+<name>UPDATE-009-quote-document-templates [Global]</name>
+<origin_sys_id>d288d9001d4811de99b95cf660b50f4f</origin_sys_id>
+<remote_sys_id>d288d9001d4811de99b95cf660b50f4f</remote_sys_id>
+<state>loaded</state>
+<sys_id>d288d9001d4811de99b95cf660b50f4f</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_template_block_08b20f903b038310d5260fa693e45a94</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_template_block"><sn_doc_template_block action="INSERT_OR_UPDATE"><active>true</active><description>Quote Subscription Summary</description><name>Quote Subscription Summary</name><sys_class_name>sn_doc_template_block</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 01:10:19</sys_created_on><sys_domain>global</sys_domain><sys_id>08b20f903b038310d5260fa693e45a94</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Quote Subscription Summary</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_doc_template_block_08b20f903b038310d5260fa693e45a94</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 01:10:31</sys_updated_on><table>sn_quote_mgmt_core_quote</table></sn_doc_template_block></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Global]">d288d9001d4811de99b95cf660b50f4f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>fe5d6e7669a12c1509c9644af29ea2cf</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Quote Subscription Summary</target_name>
+<type>Document Template Block</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_template_block_4edd3e943bcf4310d5260fa693e45abc</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_template_block"><sn_doc_template_block action="INSERT_OR_UPDATE"><active>true</active><description>Quote Terms &amp; Conditions for Subscription Changes</description><name>Quote Commerical Terms for Subscription Changes</name><sys_class_name>sn_doc_template_block</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 00:49:25</sys_created_on><sys_domain>global</sys_domain><sys_id>4edd3e943bcf4310d5260fa693e45abc</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Quote Commerical Terms for Subscription Changes</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_doc_template_block_4edd3e943bcf4310d5260fa693e45abc</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 00:53:44</sys_updated_on><table>sn_quote_mgmt_core_quote</table></sn_doc_template_block></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Global]">d288d9001d4811de99b95cf660b50f4f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>3a0c98f6a1061f274bfbc4adcd9f1bb8</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Quote Commerical Terms for Subscription Changes</target_name>
+<type>Document Template Block</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_template_block_cc5cf2d03bcf4310d5260fa693e45ae2</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_template_block"><sn_doc_template_block action="INSERT_OR_UPDATE"><active>true</active><description>Quote Terms &amp; Conditions for Payment Terms</description><name>Quote Commerical Terms for Payment Terms</name><sys_class_name>sn_doc_template_block</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 00:42:21</sys_created_on><sys_domain>global</sys_domain><sys_id>cc5cf2d03bcf4310d5260fa693e45ae2</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Quote Commerical Terms for Payment Terms</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_doc_template_block_cc5cf2d03bcf4310d5260fa693e45ae2</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 00:54:53</sys_updated_on><table>sn_quote_mgmt_core_quote</table></sn_doc_template_block></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Global]">d288d9001d4811de99b95cf660b50f4f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>46aed7a4d94128cea836686d926416ec</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Quote Commerical Terms for Payment Terms</target_name>
+<type>Document Template Block</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_template_block_f61fb6583bcf4310d5260fa693e45aad</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_template_block"><sn_doc_template_block action="INSERT_OR_UPDATE"><active>true</active><description>Quote Commerical Terms for Quote Validity</description><name>Quote Commerical Terms for Quote Validity</name><sys_class_name>sn_doc_template_block</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 00:54:36</sys_created_on><sys_domain>global</sys_domain><sys_id>f61fb6583bcf4310d5260fa693e45aad</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Quote Commerical Terms for Quote Validity</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_doc_template_block_f61fb6583bcf4310d5260fa693e45aad</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 00:54:36</sys_updated_on><table>sn_quote_mgmt_core_quote</table></sn_doc_template_block></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Global]">d288d9001d4811de99b95cf660b50f4f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>5e7a1714ad6d9dac06ba81020033290f</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Quote Commerical Terms for Quote Validity</target_name>
+<type>Document Template Block</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_template_block_content_18e247d03b038310d5260fa693e45a39</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_template_block_content"><sn_doc_template_block_content action="INSERT_OR_UPDATE"><active>true</active><applies_to/><applies_to_user/><applies_when table="sn_quote_mgmt_core_quote">total_monthly_recurring_price_v2!=javascript:global.getCurrencyFilter('sn_quote_mgmt_core_quote','total_monthly_recurring_price_v2', 'USD;0')^ORtotal_annual_recurring_price_v2!=javascript:global.getCurrencyFilter('sn_quote_mgmt_core_quote','total_annual_recurring_price_v2', 'USD;0')^EQ<item endquery="false" field="total_monthly_recurring_price_v2" goto="false" newquery="false" operator="!=" or="false" value="javascript:global.getCurrencyFilter('sn_quote_mgmt_core_quote','total_monthly_recurring_price_v2', 'USD;0')"/><item endquery="false" field="total_annual_recurring_price_v2" goto="false" newquery="false" operator="!=" or="true" value="javascript:global.getCurrencyFilter('sn_quote_mgmt_core_quote','total_annual_recurring_price_v2', 'USD;0')"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></applies_when><block display_value="Quote Subscription Summary">08b20f903b038310d5260fa693e45a94</block><body><![CDATA[<p><span style="font-size: 12pt; color: rgb(35, 111, 161);"><span xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="heading 1">Subscription, Renewal and Payment Summary</span></span><span data-ccp-props="{&quot;134245418&quot;:true,&quot;134245529&quot;:true,&quot;335559738&quot;:480,&quot;335559739&quot;:60}">&nbsp;</span></span></p>
+<table style="border-collapse: collapse; width: 100.03%;" border="1"><colgroup><col style="width: 49.938%;"><col style="width: 49.938%;"></colgroup>
+<tbody>
+<tr>
+<td>Contract start date: ${contract_start_date}</td>
+<td>Contract end date: ${contract_end_date}</td>
+</tr>
+<tr>
+<td>Term (months): ${term_month}</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Auto-renew contract: ${auto_renew}</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Renewal adjustment basis: ${renewal_adjustment_basis}</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Renewal adjustment type Name: ${renewal_adjustment_type.name}</td>
+<td>Renewal adjustment value: ${renewal_adjustment_value}</td>
+</tr>
+</tbody>
+</table>]]]]><![CDATA[></body><language>en</language><name>Quote Subscription Summary Block Content</name><order>0</order><source_content/><sys_class_name>sn_doc_template_block_content</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 01:16:23</sys_created_on><sys_domain>global</sys_domain><sys_id>18e247d03b038310d5260fa693e45a39</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_doc_template_block_content_18e247d03b038310d5260fa693e45a39</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 01:16:23</sys_updated_on></sn_doc_template_block_content><sys_translated_text action="delete_multiple" query="documentkey=18e247d03b038310d5260fa693e45a39"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Global]">d288d9001d4811de99b95cf660b50f4f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>7a70dc8964f7722f5fe76cb9d31ae005</sys_id>
+<table></table>
+<target_name>Quote Subscription Summary Block Content</target_name>
+<type>Document Template Block Content</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_template_block_content_365f7a983bcf4310d5260fa693e45acb</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_template_block_content"><sn_doc_template_block_content action="INSERT_OR_UPDATE"><active>true</active><applies_to/><applies_to_user/><applies_when/><block display_value="Quote Commerical Terms for Quote Validity">f61fb6583bcf4310d5260fa693e45aad</block><body><![CDATA[<div>
+<p role="heading" aria-level="3"><span style="font-size: 12pt; color: rgb(35, 111, 161);" xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="heading 3">Quote Validity</span></span> </p>
+<ul style="list-style-position: inside;">
+<li role="heading" aria-level="3"><span xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="List Bullet">This Quote expires on the stated&nbsp;</span><span data-ccp-parastyle="List Bullet">expiration</span><span data-ccp-parastyle="List Bullet"> date. Material changes may require repricing, </span><span data-ccp-parastyle="List Bullet">reapproval</span><span data-ccp-parastyle="List Bullet"> and a new Quote version.</span></span> </li>
+<li role="heading" aria-level="3"><span xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="List Bullet">A signed or accepted Quote&nbsp;</span><span data-ccp-parastyle="List Bullet">remains</span><span data-ccp-parastyle="List Bullet"> immutable. Later changes are documented through a renewal, </span><span data-ccp-parastyle="List Bullet">amendment</span><span data-ccp-parastyle="List Bullet"> or change order.</span></span><span data-ccp-props="{&quot;335559685&quot;:259,&quot;335559739&quot;:0}">&nbsp;</span></li>
+</ul>
+</div>]]]]><![CDATA[></body><language>en</language><name>Quote Validity Block Content</name><order>0</order><source_content/><sys_class_name>sn_doc_template_block_content</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 00:56:09</sys_created_on><sys_domain>global</sys_domain><sys_id>365f7a983bcf4310d5260fa693e45acb</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_doc_template_block_content_365f7a983bcf4310d5260fa693e45acb</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 00:56:09</sys_updated_on></sn_doc_template_block_content><sys_translated_text action="delete_multiple" query="documentkey=365f7a983bcf4310d5260fa693e45acb"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Global]">d288d9001d4811de99b95cf660b50f4f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>12b92c76ae9c3a6e5bb3b3c6f5464948</sys_id>
+<table></table>
+<target_name>Quote Validity Block Content</target_name>
+<type>Document Template Block Content</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_template_block_content_f41e36d43bcf4310d5260fa693e45ab7</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_template_block_content"><sn_doc_template_block_content action="INSERT_OR_UPDATE"><active>true</active><applies_to/><applies_to_user/><applies_when table="sn_quote_mgmt_core_quote">total_monthly_recurring_price_v2!=javascript:global.getCurrencyFilter('sn_quote_mgmt_core_quote','total_monthly_recurring_price_v2', 'USD;0')^ORtotal_annual_recurring_price_v2!=javascript:global.getCurrencyFilter('sn_quote_mgmt_core_quote','total_annual_recurring_price_v2', 'USD;0')^EQ<item endquery="false" field="total_monthly_recurring_price_v2" goto="false" newquery="false" operator="!=" or="false" value="javascript:global.getCurrencyFilter('sn_quote_mgmt_core_quote','total_monthly_recurring_price_v2', 'USD;0')"/><item endquery="false" field="total_annual_recurring_price_v2" goto="false" newquery="false" operator="!=" or="true" value="javascript:global.getCurrencyFilter('sn_quote_mgmt_core_quote','total_annual_recurring_price_v2', 'USD;0')"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></applies_when><block display_value="Quote Terms &amp; Conditions for Subscription Changes">4edd3e943bcf4310d5260fa693e45abc</block><body><![CDATA[<div>
+<p role="heading" aria-level="3"><span style="font-size: 12pt; color: rgb(35, 111, 161);" xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="heading 3">Subscription and Renewal</span></span> </p>
+<ul style="list-style-position: inside;">
+<li role="heading" aria-level="3"><span xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="List Bullet">The subscription begins on the stated start date and continues for the&nbsp;</span><span data-ccp-parastyle="List Bullet">initial</span><span data-ccp-parastyle="List Bullet"> term shown above.</span></span> </li>
+<li role="heading" aria-level="3"><span xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="List Bullet">If&nbsp;</span><span data-ccp-parastyle="List Bullet">Auto-Renewal</span><span data-ccp-parastyle="List Bullet"> is Yes, the subscription renews for the stated renewal term unless written non-renewal notice is provided within the notice period shown above.</span></span> </li>
+<li role="heading" aria-level="3"><span xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="List Bullet">Renewal pricing uses the stated renewal basis and uplift. Any approved uplift applies to eligible recurring lines.</span></span><span data-ccp-props="{&quot;335559685&quot;:259,&quot;335559739&quot;:0}">&nbsp;</span></li>
+</ul>
+</div>
+<div>
+<p role="heading" aria-level="3">&nbsp;</p>
+<p role="heading" aria-level="3"><span style="font-size: 12pt; color: rgb(35, 111, 161);" xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="heading 3">Ramps and Changes</span></span> </p>
+<ul style="list-style-position: inside;">
+<li role="heading" aria-level="3"><span xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="List Bullet">Prices and quantities may change by period when a ramp schedule is included in the Quote.</span></span> </li>
+<li role="heading" aria-level="3"><span xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="List Bullet">Upsells,&nbsp;</span><span data-ccp-parastyle="List Bullet">downsells</span><span data-ccp-parastyle="List Bullet"> and swaps are documented through an amendment. A </span><span data-ccp-parastyle="List Bullet">downsell</span><span data-ccp-parastyle="List Bullet"> recalculates the eligible quantity tier and related volume discount.</span></span><span data-ccp-props="{&quot;335559685&quot;:259,&quot;335559739&quot;:0}">&nbsp;</span></li>
+</ul>
+</div>]]]]><![CDATA[></body><language>en</language><name>Subscription Changes Block Content</name><order>0</order><source_content/><sys_class_name>sn_doc_template_block_content</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 00:52:57</sys_created_on><sys_domain>global</sys_domain><sys_id>f41e36d43bcf4310d5260fa693e45ab7</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_doc_template_block_content_f41e36d43bcf4310d5260fa693e45ab7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 00:52:57</sys_updated_on></sn_doc_template_block_content><sys_translated_text action="delete_multiple" query="documentkey=f41e36d43bcf4310d5260fa693e45ab7"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Global]">d288d9001d4811de99b95cf660b50f4f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>dff25be41971a7acd2aebbed0277cae8</sys_id>
+<table></table>
+<target_name>Subscription Changes Block Content</target_name>
+<type>Document Template Block Content</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_template_block_content_fe7cfad03bcf4310d5260fa693e45a0d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_template_block_content"><sn_doc_template_block_content action="INSERT_OR_UPDATE"><active>true</active><applies_to/><applies_to_user/><applies_when table="sn_quote_mgmt_core_quote">payment_terms=net_thirty^ORpayment_terms=net_ninety^EQ<item display_value="Net 30" endquery="false" field="payment_terms" goto="false" newquery="false" operator="=" or="false" value="net_thirty"/><item display_value="Net 90" endquery="false" field="payment_terms" goto="false" newquery="false" operator="=" or="true" value="net_ninety"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></applies_when><block display_value="Quote Terms &amp; Conditions for Payment Terms">cc5cf2d03bcf4310d5260fa693e45ae2</block><body><![CDATA[<div>
+<p role="heading" aria-level="3"><span style="font-size: 12pt; color: rgb(35, 111, 161);" xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="heading 3">Payment</span></span> </p>
+<ul style="list-style-position: inside;">
+<li role="heading" aria-level="3"><span xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="List Bullet">Net 30:&nbsp;</span><span data-ccp-parastyle="List Bullet">undisputed</span><span data-ccp-parastyle="List Bullet"> invoices are due within 30 calendar days of the invoice date.</span></span> </li>
+<li role="heading" aria-level="3"><span xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="List Bullet">Net 90:&nbsp;</span><span data-ccp-parastyle="List Bullet">applies</span><span data-ccp-parastyle="List Bullet"> only when </span><span data-ccp-parastyle="List Bullet">stated</span><span data-ccp-parastyle="List Bullet"> on the Quote and approved by the Contract Manager and CFO.</span></span><span data-ccp-props="{&quot;335559685&quot;:259,&quot;335559739&quot;:0}">&nbsp;</span></li>
+</ul>
+</div>]]]]><![CDATA[></body><language>en</language><name>Payment Term Block Content</name><order>0</order><source_content/><sys_class_name>sn_doc_template_block_content</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 00:44:11</sys_created_on><sys_domain>global</sys_domain><sys_id>fe7cfad03bcf4310d5260fa693e45a0d</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_doc_template_block_content_fe7cfad03bcf4310d5260fa693e45a0d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 00:44:11</sys_updated_on></sn_doc_template_block_content><sys_translated_text action="delete_multiple" query="documentkey=fe7cfad03bcf4310d5260fa693e45a0d"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Global]">d288d9001d4811de99b95cf660b50f4f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>17c0a7c938180de94dd7abef2ceb1785</sys_id>
+<table></table>
+<target_name>Payment Term Block Content</target_name>
+<type>Document Template Block Content</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<application_name>Quote Management Data Model</application_name>
+<application_scope>sn_quote_mgmt_core</application_scope>
+<description>Quote document templates (Quote Demo Template for Solana incl. 2026-09-29 edit, Quote Lines, Sales Cart Demo Template), blocks, block contents, m2m links and quoteScriptDemo. Source: opmsalescrm1 (captured 2026-10-06 from Default update sets).</description>
+<name>UPDATE-009-quote-document-templates [Quote Management Data Model]</name>
+<origin_sys_id>f908fbf016d386660e6de858019a90bd</origin_sys_id>
+<remote_sys_id>f908fbf016d386660e6de858019a90bd</remote_sys_id>
+<state>loaded</state>
+<sys_id>f908fbf016d386660e6de858019a90bd</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_template_block_8842ea983b8b4310d5260fa693e45a72</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_template_block"><sn_doc_template_block action="INSERT_OR_UPDATE"><active>true</active><description>Terms &amp; Conditions for Quote Template.</description><name>Quote Terms &amp; Conditions for One-time purchases</name><sys_class_name>sn_doc_template_block</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 22:49:01</sys_created_on><sys_domain>global</sys_domain><sys_id>8842ea983b8b4310d5260fa693e45a72</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Quote Terms &amp; Conditions for One-time purchases</sys_name><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sn_doc_template_block_8842ea983b8b4310d5260fa693e45a72</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 22:57:32</sys_updated_on><table>sn_quote_mgmt_core_quote</table></sn_doc_template_block></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Quote Management Data Model]">f908fbf016d386660e6de858019a90bd</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>462dc666280b2d16cb1a9f23cfde4a07</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Quote Terms &amp; Conditions for One-time purchases</target_name>
+<type>Document Template Block</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_template_block_930562503bcb4310d5260fa693e45aaf</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_template_block"><sn_doc_template_block action="INSERT_OR_UPDATE"><active>true</active><description>Quote Terms &amp; Conditions for Subscription purchases</description><name>Quote Terms &amp; Conditions for Subscriptions</name><sys_class_name>sn_doc_template_block</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 23:00:40</sys_created_on><sys_domain>global</sys_domain><sys_id>930562503bcb4310d5260fa693e45aaf</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Quote Terms &amp; Conditions for Subscriptions</sys_name><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sn_doc_template_block_930562503bcb4310d5260fa693e45aaf</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 23:00:40</sys_updated_on><table>sn_quote_mgmt_core_quote</table></sn_doc_template_block></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Quote Management Data Model]">f908fbf016d386660e6de858019a90bd</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>29baa16f90df63c2e3a9c7e2c4d48d62</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Quote Terms &amp; Conditions for Subscriptions</target_name>
+<type>Document Template Block</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_template_block_content_04656e503bcb4310d5260fa693e45a16</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_template_block_content"><sn_doc_template_block_content action="INSERT_OR_UPDATE"><active>true</active><applies_to/><applies_to_user/><applies_when table="sn_quote_mgmt_core_quote">total_monthly_recurring_price_v2!=javascript:global.getCurrencyFilter('sn_quote_mgmt_core_quote','total_monthly_recurring_price_v2', 'USD;0')^ORtotal_annual_recurring_price_v2!=javascript:global.getCurrencyFilter('sn_quote_mgmt_core_quote','total_annual_recurring_price_v2', 'USD;0')^EQ<item endquery="false" field="total_monthly_recurring_price_v2" goto="false" newquery="false" operator="!=" or="false" value="javascript:global.getCurrencyFilter('sn_quote_mgmt_core_quote','total_monthly_recurring_price_v2', 'USD;0')"/><item endquery="false" field="total_annual_recurring_price_v2" goto="false" newquery="false" operator="!=" or="true" value="javascript:global.getCurrencyFilter('sn_quote_mgmt_core_quote','total_annual_recurring_price_v2', 'USD;0')"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></applies_when><block display_value="Quote Terms &amp; Conditions for Subscriptions">930562503bcb4310d5260fa693e45aaf</block><body><![CDATA[<p><span xml:lang="EN-US" data-contrast="none">This Quote is for subscription-based Services and is governed by the Master Subscription Agreement (or equivalent order form terms) between Customer and ServiceNow. Subscription fees are billed in advance for the Subscription Term specified herein and are non-cancelable and non-refundable except as expressly provided in the governing agreement. Unless otherwise stated, the Subscription Term will automatically renew for successive periods equal to the initial term unless either party provides written notice of non-renewal in accordance with the agreement. Use of the subscribed Service is limited to the entitlements, user counts, and usage metrics specified in this Quote, and any usage in excess of those entitlements may be subject to additional fees. Pricing is fixed for the initial Subscription Term and may be adjusted for renewal periods per the governing agreement.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></p>]]]]><![CDATA[></body><language>en</language><name>Quote Terms &amp; Conditions for Subscription</name><order>10</order><source_content/><sys_class_name>sn_doc_template_block_content</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 23:01:41</sys_created_on><sys_domain>global</sys_domain><sys_id>04656e503bcb4310d5260fa693e45a16</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sn_doc_template_block_content_04656e503bcb4310d5260fa693e45a16</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 23:01:41</sys_updated_on></sn_doc_template_block_content><sys_translated_text action="delete_multiple" query="documentkey=04656e503bcb4310d5260fa693e45a16"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Quote Management Data Model]">f908fbf016d386660e6de858019a90bd</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>0a273cc3c3ae7078ff40518446f27f0c</sys_id>
+<table></table>
+<target_name>Quote Terms &amp; Conditions for Subscription</target_name>
+<type>Document Template Block Content</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_template_block_content_d8746adc3b8b4310d5260fa693e45a32</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_template_block_content"><sn_doc_template_block_content action="INSERT_OR_UPDATE"><active>true</active><applies_to/><applies_to_user/><applies_when table="sn_quote_mgmt_core_quote">total_one_time_price!=javascript:global.getCurrencyFilter('sn_quote_mgmt_core_quote','total_one_time_price', 'USD;0')^EQ<item endquery="false" field="total_one_time_price" goto="false" newquery="false" operator="!=" or="false" value="javascript:global.getCurrencyFilter('sn_quote_mgmt_core_quote','total_one_time_price', 'USD;0')"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></applies_when><block display_value="Quote Terms &amp; Conditions for One-time purchases">8842ea983b8b4310d5260fa693e45a72</block><body><![CDATA[<p><span xml:lang="EN-US" data-contrast="none">This Quote is for a one-time purchase of the specified product(s)/license(s) and does not include a recurring subscription fee unless otherwise noted. Payment is due in full per the payment terms stated on this Quote, and all sales are final upon delivery/activation except as otherwise required by law or the governing purchase agreement. Any associated support, maintenance, or updates are not included unless separately purchased and identified on this Quote. Title and/or license rights transfer to Customer only upon receipt of full payment. This purchase is subject to the terms of the applicable End User License Agreement or Master Agreement referenced herein.</span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335551550&quot;:0,&quot;335551620&quot;:0,&quot;335559738&quot;:240,&quot;335559739&quot;:240}">&nbsp;</span></p>]]]]><![CDATA[></body><language>en</language><name>Quote Terms &amp; Conditions for One-time purchases</name><order>0</order><source_content/><sys_class_name>sn_doc_template_block_content</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 22:58:39</sys_created_on><sys_domain>global</sys_domain><sys_id>d8746adc3b8b4310d5260fa693e45a32</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sn_doc_template_block_content_d8746adc3b8b4310d5260fa693e45a32</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 22:58:39</sys_updated_on></sn_doc_template_block_content><sys_translated_text action="delete_multiple" query="documentkey=d8746adc3b8b4310d5260fa693e45a32"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Quote Management Data Model]">f908fbf016d386660e6de858019a90bd</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>d442c75f493ec78d68f7589e65ee70c2</sys_id>
+<table></table>
+<target_name>Quote Terms &amp; Conditions for One-time purchases</target_name>
+<type>Document Template Block Content</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_template_script_04a15e252b838b104deaf02ac891bf2f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_template_script"><sn_doc_template_script action="INSERT_OR_UPDATE"><name>quoteScriptDemo</name><script><![CDATA[(function runTemplateScript(target, docTemplate) {
+
+    var getHeaderCell = function(label, width) {
+        width = width || 'auto';
+        return '<th style="border: 1px solid #dddddd; text-align: center; font-family: Gilroy; padding: 5px; background-color: #f1f1f1; font-size: 10px; word-wrap: break-word; width: ' + width + ';">' + label + '</th>';
+    };
+
+    var getDataCell = function(value, width) {
+        width = width || 'auto';
+        return '<td style="border: 1px solid #dddddd; text-align: center; font-family: Gilroy; padding: 5px; font-size: 10px; word-wrap: break-word; width: ' + width + ';">' + value + '</td>';
+    };
+
+    var html = '';
+    var hasSellerOrg = false;
+
+    var quoteGr = new GlideRecordSecure('sn_quote_mgmt_core_quote_line_item');
+    quoteGr.addQuery('quote.sys_id', target.getValue('sys_id'));
+    quoteGr.query();
+
+    while (quoteGr.next()) {
+        html += '<tr>';
+        html += getDataCell(quoteGr.getDisplayValue('number'), '12%');
+        html += getDataCell(quoteGr.getDisplayValue('product_offering'), '15%');
+        html += getDataCell(quoteGr.getDisplayValue('quantity'), '5%');
+        html += getDataCell(quoteGr.getDisplayValue('unit_of_measurement'), '8%');
+        var periodicity = gs.nil(quoteGr.getDisplayValue('product_offering.periodicity')) ? '' : quoteGr.getDisplayValue('product_offering.periodicity');
+        html += getDataCell(periodicity);
+        if (quoteGr.isValidField('seller_organization')) {
+            hasSellerOrg = true;
+            html += getDataCell(quoteGr.getDisplayValue('seller_organization'));
+        }
+        html += getDataCell(quoteGr.getDisplayValue('list_price'));
+        html += getDataCell(quoteGr.getDisplayValue('cumulative_monthly_recurring_price_v2'));
+        html += getDataCell(quoteGr.getDisplayValue('cumulative_annual_recurring_price_v2'));
+        html += getDataCell(quoteGr.getDisplayValue('cumulative_one_time_price'));
+        html += getDataCell(quoteGr.getDisplayValue('cumulative_net_price'), '12%');
+        html += '</tr>';
+    }
+
+    if (!gs.nil(html)) {
+        html = '<table style="width: 100%; border-collapse: collapse; table-layout: fixed;">'
+            + '<thead><tr>'
+            + getHeaderCell('Quote line item', '12%')
+            + getHeaderCell('Product offering', '15%')
+            + getHeaderCell('Qty', '5%')
+            + getHeaderCell('Unit of measure', '8%')
+            + getHeaderCell('Periodicity')
+            + (hasSellerOrg ? getHeaderCell('Seller organization') : '')
+            + getHeaderCell('Unit list price')
+            + getHeaderCell('Cum. monthly rec. price')
+            + getHeaderCell('Cum. annual rec. price')
+            + getHeaderCell('Cum. one-time price')
+            + getHeaderCell('Cum. net price', '12%')
+            + '</tr></thead>'
+            + '<tbody>' + html + '</tbody>'
+            + '</table>';
+    }
+
+    return html;
+
+})(target, docTemplate);]]]]><![CDATA[></script><sys_class_name>sn_doc_template_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-31 18:48:09</sys_created_on><sys_domain>global</sys_domain><sys_id>04a15e252b838b104deaf02ac891bf2f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>quoteScriptDemo</sys_name><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sn_doc_template_script_04a15e252b838b104deaf02ac891bf2f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-31 18:48:09</sys_updated_on></sn_doc_template_script></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Quote Management Data Model]">f908fbf016d386660e6de858019a90bd</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>1fa31c2af9c449770757fdb1d68c9639</sys_id>
+<table></table>
+<target_name>quoteScriptDemo</target_name>
+<type>Document Template Script</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_html_template_7e06a6d03bcb4310d5260fa693e45a05</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_html_template"><sn_doc_html_template action="INSERT_OR_UPDATE"><acknowledgement_text/><active>true</active><category display_value="Sales Proposals">74e2bfb64386521014a0fdc8cab8f2cc</category><custom_font/><end_date/><footer_image/><footer_image_height>50</footer_image_height><footer_image_position>CENTER</footer_image_position><footnote>Confidential | Solana Template | August 2026 </footnote><footnote_position>CENTER</footnote_position><footnote_vertical_position>BELOW</footnote_vertical_position><header_image>a896a6543bcb4310d5260fa693e45a55</header_image><header_image_height>50</header_image_height><header_image_position>CENTER</header_image_position><html_script_body><![CDATA[<p style="text-align: center;"><span style="color: rgb(35, 111, 161);"><strong><span style="list-style-type: disc; font-size: 14pt;" xml:lang="EN-US" data-contrast="none">CUSTOMER QUOTE</span></strong></span></p>
+<table style="border-collapse: collapse; width: 99.999%; height: 61.5624px;" border="1"><colgroup><col style="width: 25%;"><col style="width: 25%;"><col style="width: 25%;"><col style="width: 25%;"></colgroup>
+<tbody>
+<tr style="height: 15.3906px;">
+<td style="height: 15.3906px;"><span style="background-color: rgb(255, 255, 255);"><span xml:lang="EN-US" data-contrast="none">Quote #</span><span data-ccp-props="{&quot;335559739&quot;:60}">&nbsp;</span></span></td>
+<td style="height: 15.3906px;">${number}</td>
+<td style="height: 15.3906px;"><span xml:lang="EN-US" data-contrast="none">Account</span></td>
+<td style="height: 15.3906px;">${account.name}</td>
+</tr>
+<tr style="height: 15.3906px;">
+<td style="height: 15.3906px;"><span style="background-color: rgb(255, 255, 255);" xml:lang="EN-US" data-contrast="none">Quote Date</span></td>
+<td style="height: 15.3906px;">${quote_date}</td>
+<td style="height: 15.3906px;"><span xml:lang="EN-US" data-contrast="none">Contact</span></td>
+<td style="height: 15.3906px;">${contact.name}</td>
+</tr>
+<tr style="height: 15.3906px;">
+<td style="height: 15.3906px;"><span style="background-color: rgb(255, 255, 255);" xml:lang="EN-US" data-contrast="none">Expires</span></td>
+<td style="height: 15.3906px;">${expiration_date}</td>
+<td style="height: 15.3906px;"><span xml:lang="EN-US" data-contrast="none">Email</span></td>
+<td style="height: 15.3906px;">${contact.email}</td>
+</tr>
+<tr style="height: 15.3906px;">
+<td style="height: 15.3906px;"><span style="background-color: rgb(255, 255, 255);"><span xml:lang="EN-US" data-contrast="none">Payment Terms</span><span data-ccp-props="{&quot;335559739&quot;:60}">&nbsp;</span></span></td>
+<td style="height: 15.3906px;">${payment_terms}</td>
+<td style="height: 15.3906px;"><span xml:lang="EN-US" data-contrast="none">Currency</span></td>
+<td style="height: 15.3906px;">${currency.code}</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; color: rgb(35, 111, 161);"><span xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="heading 2">Quote Lines</span></span><span data-ccp-props="{&quot;134245418&quot;:true,&quot;134245529&quot;:true,&quot;335559738&quot;:200,&quot;335559739&quot;:60}">&nbsp;</span></span></p>
+<p><span style="color: rgb(0, 0, 0); font-family: Gilroy;"><code>${template_script:quoteScriptDemo}</code></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; color: rgb(35, 111, 161);" data-ccp-props="{&quot;134245418&quot;:true,&quot;134245529&quot;:true,&quot;335559738&quot;:200,&quot;335559739&quot;:60}"><span xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="heading 2">Commercial Summary</span></span>&nbsp;</span></p>
+<table style="border-collapse: collapse; width: 99.999%;" border="1"><colgroup><col style="width: 50%;"><col style="width: 50%;"></colgroup>
+<tbody>
+<tr>
+<td>Total One-time price</td>
+<td>${total_one_time_price}</td>
+</tr>
+<tr>
+<td>Total monthly price</td>
+<td>${total_monthly_recurring_price_v2}</td>
+</tr>
+<tr>
+<td>Total amount</td>
+<td>${total_amount}</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<div id="dtblock_08b20f903b038310d5260fa693e45a94_1787879894320_dtblock" class="dt-block-content-item mceNonEditable" style="border: 1px solid #ddd; padding: 10px; margin: 5px 0; disabled: true; display: block; color: rgb(var(now-color--neutral-14,var(--now-color_surface--neutral-6,53,59,73))); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; line-height: 1.42857; font-weight: bold; width: 95%;" tabindex="0" data-dt-type="dtblock" data-dtblock-id="08b20f903b038310d5260fa693e45a94">
+<div class="block-info" style="display: inline-block; vertical-align: top;" data-dt-type="dtblockcontent">
+<div class="block-text-title">Quote Subscription Summary</div>
+<div class="description" style="font-weight: 100;">Quote Subscription Summary</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><span style="list-style-type: disc; font-size: 12pt; color: rgb(35, 111, 161);" xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="heading 2">Commercial Terms</span></span></p>
+<div id="dtblock_cc5cf2d03bcf4310d5260fa693e45ae2_1787878646240_dtblock" class="dt-block-content-item mceNonEditable" style="border: 1px solid #ddd; padding: 10px; margin: 5px 0; disabled: true; display: block; color: rgb(var(now-color--neutral-14,var(--now-color_surface--neutral-6,53,59,73))); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; line-height: 1.42857; font-weight: bold; width: 95%;" tabindex="0" data-dt-type="dtblock" data-dtblock-id="cc5cf2d03bcf4310d5260fa693e45ae2">
+<div class="block-info" style="display: inline-block; vertical-align: top;" data-dt-type="dtblockcontent">
+<div class="block-text-title">Quote Commerical Terms for Payment Terms</div>
+<div class="description" style="font-weight: 100;">Quote Terms &amp; Conditions for Payment Terms</div>
+</div>
+</div>
+<div id="dtblock_4edd3e943bcf4310d5260fa693e45abc_1787878617217_dtblock" class="dt-block-content-item mceNonEditable" style="border: 1px solid #ddd; padding: 10px; margin: 5px 0; disabled: true; display: block; color: rgb(var(now-color--neutral-14,var(--now-color_surface--neutral-6,53,59,73))); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; line-height: 1.42857; font-weight: bold; width: 95%;" tabindex="0" data-dt-type="dtblock" data-dtblock-id="4edd3e943bcf4310d5260fa693e45abc">
+<div class="block-info" style="display: inline-block; vertical-align: top;" data-dt-type="dtblockcontent">
+<div class="block-text-title">Quote Commerical Terms for Subscription Changes</div>
+<div class="description" style="font-weight: 100;">Quote Terms &amp; Conditions for Subscription Changes</div>
+</div>
+</div>
+<div id="dtblock_f61fb6583bcf4310d5260fa693e45aad_1787878657356_dtblock" class="dt-block-content-item mceNonEditable" style="border: 1px solid #ddd; padding: 10px; margin: 5px 0; disabled: true; display: block; color: rgb(var(now-color--neutral-14,var(--now-color_surface--neutral-6,53,59,73))); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; line-height: 1.42857; font-weight: bold; width: 95%;" tabindex="0" data-dt-type="dtblock" data-dtblock-id="f61fb6583bcf4310d5260fa693e45aad">
+<div class="block-info" style="display: inline-block; vertical-align: top;" data-dt-type="dtblockcontent">
+<div class="block-text-title">Quote Commerical Terms for Quote Validity</div>
+<div class="description" style="font-weight: 100;">Quote Commerical Terms for Quote Validity</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; color: rgb(35, 111, 161);"><span xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="heading 2">Terms &amp; Conditions</span></span><span data-ccp-props="{&quot;134245418&quot;:true,&quot;134245529&quot;:true,&quot;335559738&quot;:200,&quot;335559739&quot;:60}">&nbsp;</span></span></p>
+<div id="dtblock_930562503bcb4310d5260fa693e45aaf_1787871976547_dtblock" class="dt-block-content-item mceNonEditable" style="border: 1px solid #ddd; padding: 10px; margin: 5px 0; disabled: true; display: block; color: rgb(var(now-color--neutral-14,var(--now-color_surface--neutral-6,53,59,73))); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; line-height: 1.42857; font-weight: bold; width: 95%;" tabindex="0" data-dt-type="dtblock" data-dtblock-id="930562503bcb4310d5260fa693e45aaf">
+<div class="block-info" style="display: inline-block; vertical-align: top;" data-dt-type="dtblockcontent">
+<div class="block-text-title">Quote Terms &amp; Conditions for Subscriptions</div>
+<div class="description" style="font-weight: 100;">Quote Terms &amp; Conditions for Subscription purchases</div>
+</div>
+</div>
+<div id="dtblock_8842ea983b8b4310d5260fa693e45a72_1787871976546_dtblock" class="dt-block-content-item mceNonEditable" style="border: 1px solid #ddd; padding: 10px; margin: 5px 0; disabled: true; display: block; color: rgb(var(now-color--neutral-14,var(--now-color_surface--neutral-6,53,59,73))); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; line-height: 1.42857; font-weight: bold; width: 95%;" tabindex="0" data-dt-type="dtblock" data-dtblock-id="8842ea983b8b4310d5260fa693e45a72">
+<div class="block-info" style="display: inline-block; vertical-align: top;" data-dt-type="dtblockcontent">
+<div class="block-text-title">Quote Terms &amp; Conditions for One-time purchases</div>
+<div class="description" style="font-weight: 100;">Terms &amp; Conditions for Quote Template.</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; color: rgb(35, 111, 161);" xml:lang="EN-US" data-contrast="none"><span data-ccp-parastyle="heading 2">Acceptance</span></span><span data-ccp-props="{&quot;134245418&quot;:true,&quot;134245529&quot;:true,&quot;335559738&quot;:200,&quot;335559739&quot;:60}">&nbsp;</span></p>
+<table style="border-collapse: collapse; width: 100.015%;" border="1"><colgroup><col style="width: 50%;"><col style="width: 50%;"></colgroup>
+<tbody>
+<tr>
+<td>
+<p>Internal signer Name: ${internal_signer.name}</p>
+<p>Internal signer Company Name: ${internal_signer.company.name}</p>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>External signer Name: ${external_signer.name}</p>
+<p>External signer Company Name: ${external_signer.company.name}</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>]]]]><![CDATA[></html_script_body><language>en</language><left_right_margin>36</left_right_margin><name>Quote Demo Template for Solana</name><owner/><page_number_config/><page_size>LETTER</page_size><sanitize>true</sanitize><set_signing_order>true</set_signing_order><signing_type>servicenow_sign</signing_type><source_template/><start_date/><state>published</state><storage_destination>attachment</storage_destination><sys_class_name>sn_doc_html_template</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 23:06:39</sys_created_on><sys_domain>global</sys_domain><sys_id>7e06a6d03bcb4310d5260fa693e45a05</sys_id><sys_mod_count>22</sys_mod_count><sys_name>Quote Demo Template for Solana</sys_name><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sn_doc_html_template_7e06a6d03bcb4310d5260fa693e45a05</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-29 23:10:03</sys_updated_on><table>sn_quote_mgmt_core_quote</table><template_date_format/><toc_config/><top_bottom_margin>72</top_bottom_margin><user_criteria/></sn_doc_html_template><sys_translated_text action="delete_multiple" query="documentkey=7e06a6d03bcb4310d5260fa693e45a05"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Quote Management Data Model]">f908fbf016d386660e6de858019a90bd</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>5529f6ff5669cec9bbd5509a67a5aec5</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Quote Demo Template for Solana</target_name>
+<type>HTML Template</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_html_template_98f11a652b838b104deaf02ac891bf7d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_html_template"><sn_doc_html_template action="INSERT_OR_UPDATE"><acknowledgement_text/><active>true</active><category/><custom_font/><end_date/><footer_image/><footer_image_height>50</footer_image_height><footer_image_position>CENTER</footer_image_position><footnote/><footnote_position>RIGHT</footnote_position><footnote_vertical_position>BELOW</footnote_vertical_position><header_image/><header_image_height>50</header_image_height><header_image_position>CENTER</header_image_position><html_script_body><![CDATA[<p><span style="font-size: 12pt; color: rgb(35, 111, 161);">Quote Line Items</span></p>
+<p><span style="color: rgb(0, 0, 0); font-family: Gilroy;"><code>${template_script:quoteScriptDemo}</code></span></p>]]]]><![CDATA[></html_script_body><language>en</language><left_right_margin>36</left_right_margin><name>Quote Lines</name><owner/><page_number_config/><page_size>LETTER</page_size><sanitize>true</sanitize><set_signing_order>true</set_signing_order><signing_type>servicenow_sign</signing_type><source_template/><start_date/><state>draft</state><storage_destination>attachment</storage_destination><sys_class_name>sn_doc_html_template</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-31 18:51:19</sys_created_on><sys_domain>global</sys_domain><sys_id>98f11a652b838b104deaf02ac891bf7d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Quote Lines</sys_name><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sn_doc_html_template_98f11a652b838b104deaf02ac891bf7d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-31 18:51:19</sys_updated_on><table>sn_quote_mgmt_core_quote</table><template_date_format/><toc_config/><top_bottom_margin>72</top_bottom_margin><user_criteria/></sn_doc_html_template><sys_translated_text action="delete_multiple" query="documentkey=98f11a652b838b104deaf02ac891bf7d"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Quote Management Data Model]">f908fbf016d386660e6de858019a90bd</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>4732fd6a6b19582b0fa3caaf58e7d87b</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Quote Lines</target_name>
+<type>HTML Template</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_m2m_html_template_to_block_0186e2543bcb4310d5260fa693e45a97</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_m2m_html_template_to_block"><sn_doc_m2m_html_template_to_block action="INSERT_OR_UPDATE"><html_template display_value="Quote Demo Template for Solana">7e06a6d03bcb4310d5260fa693e45a05</html_template><sys_class_name>sn_doc_m2m_html_template_to_block</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 23:06:39</sys_created_on><sys_domain>global</sys_domain><sys_id>0186e2543bcb4310d5260fa693e45a97</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sn_doc_m2m_html_template_to_block_0186e2543bcb4310d5260fa693e45a97</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 23:06:39</sys_updated_on><template_block display_value="Quote Terms &amp; Conditions for Subscriptions">930562503bcb4310d5260fa693e45aaf</template_block></sn_doc_m2m_html_template_to_block></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Quote Management Data Model]">f908fbf016d386660e6de858019a90bd</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>5f4c968a9345d08ef2fe2c085da24808</sys_id>
+<table></table>
+<target_name></target_name>
+<type>HTML Template to Document Block</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_m2m_html_template_to_block_0d86e2543bcb4310d5260fa693e45aa9</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_m2m_html_template_to_block"><sn_doc_m2m_html_template_to_block action="INSERT_OR_UPDATE"><html_template display_value="Quote Demo Template for Solana">7e06a6d03bcb4310d5260fa693e45a05</html_template><sys_class_name>sn_doc_m2m_html_template_to_block</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 23:06:39</sys_created_on><sys_domain>global</sys_domain><sys_id>0d86e2543bcb4310d5260fa693e45aa9</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sn_doc_m2m_html_template_to_block_0d86e2543bcb4310d5260fa693e45aa9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 23:06:39</sys_updated_on><template_block display_value="Quote Terms &amp; Conditions for One-time purchases">8842ea983b8b4310d5260fa693e45a72</template_block></sn_doc_m2m_html_template_to_block></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Quote Management Data Model]">f908fbf016d386660e6de858019a90bd</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>b73d02fec0370c1b0bda14e429c89d77</sys_id>
+<table></table>
+<target_name></target_name>
+<type>HTML Template to Document Block</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_m2m_html_template_to_block_697207903b038310d5260fa693e45a3d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_m2m_html_template_to_block"><sn_doc_m2m_html_template_to_block action="INSERT_OR_UPDATE"><html_template display_value="Quote Demo Template for Solana">7e06a6d03bcb4310d5260fa693e45a05</html_template><sys_class_name>sn_doc_m2m_html_template_to_block</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 01:08:45</sys_created_on><sys_domain>global</sys_domain><sys_id>697207903b038310d5260fa693e45a3d</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sn_doc_m2m_html_template_to_block_697207903b038310d5260fa693e45a3d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 01:08:45</sys_updated_on><template_block display_value="Quote Commerical Terms for Subscription Changes">4edd3e943bcf4310d5260fa693e45abc</template_block></sn_doc_m2m_html_template_to_block></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Quote Management Data Model]">f908fbf016d386660e6de858019a90bd</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>bbc60a4de6530198495057f1df362b2e</sys_id>
+<table></table>
+<target_name></target_name>
+<type>HTML Template to Document Block</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_m2m_html_template_to_block_afbd3a943bcf4310d5260fa693e45a28</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_m2m_html_template_to_block"><sn_doc_m2m_html_template_to_block action="INSERT_OR_UPDATE"><html_template display_value="Quote Demo Template for Solana">7e06a6d03bcb4310d5260fa693e45a05</html_template><sys_class_name>sn_doc_m2m_html_template_to_block</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 00:48:08</sys_created_on><sys_domain>global</sys_domain><sys_id>afbd3a943bcf4310d5260fa693e45a28</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sn_doc_m2m_html_template_to_block_afbd3a943bcf4310d5260fa693e45a28</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 00:48:08</sys_updated_on><template_block display_value="Quote Terms &amp; Conditions for Payment Terms">cc5cf2d03bcf4310d5260fa693e45ae2</template_block></sn_doc_m2m_html_template_to_block></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Quote Management Data Model]">f908fbf016d386660e6de858019a90bd</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>c794c8c66773d0e27d8d97d8a799eb5e</sys_id>
+<table></table>
+<target_name></target_name>
+<type>HTML Template to Document Block</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_m2m_html_template_to_block_f17207903b038310d5260fa693e45a59</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_m2m_html_template_to_block"><sn_doc_m2m_html_template_to_block action="INSERT_OR_UPDATE"><html_template display_value="Quote Demo Template for Solana">7e06a6d03bcb4310d5260fa693e45a05</html_template><sys_class_name>sn_doc_m2m_html_template_to_block</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 01:08:45</sys_created_on><sys_domain>global</sys_domain><sys_id>f17207903b038310d5260fa693e45a59</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sn_doc_m2m_html_template_to_block_f17207903b038310d5260fa693e45a59</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 01:08:45</sys_updated_on><template_block display_value="Quote Commerical Terms for Quote Validity">f61fb6583bcf4310d5260fa693e45aad</template_block></sn_doc_m2m_html_template_to_block></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Quote Management Data Model]">f908fbf016d386660e6de858019a90bd</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>b5cbb835826bac3cb5c45c6a8f9d8b39</sys_id>
+<table></table>
+<target_name></target_name>
+<type>HTML Template to Document Block</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_m2m_html_template_to_block_f1a40fd43b038310d5260fa693e45a09</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_m2m_html_template_to_block"><sn_doc_m2m_html_template_to_block action="INSERT_OR_UPDATE"><html_template display_value="Quote Demo Template for Solana">7e06a6d03bcb4310d5260fa693e45a05</html_template><sys_class_name>sn_doc_m2m_html_template_to_block</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 01:18:19</sys_created_on><sys_domain>global</sys_domain><sys_id>f1a40fd43b038310d5260fa693e45a09</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sn_doc_m2m_html_template_to_block_f1a40fd43b038310d5260fa693e45a09</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 01:18:19</sys_updated_on><template_block display_value="Quote Subscription Summary">08b20f903b038310d5260fa693e45a94</template_block></sn_doc_m2m_html_template_to_block></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Quote Management Data Model]">f908fbf016d386660e6de858019a90bd</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>d38935a76d72066c6fdb0c5073abdec2</sys_id>
+<table></table>
+<target_name></target_name>
+<type>HTML Template to Document Block</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_view_04666e143bcb4310d5260fa693e45aa6</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view"><sys_ui_view action="INSERT_OR_UPDATE"><group/><hidden>false</hidden><name>dt_template_block_search</name><roles/><sys_class_name>sys_ui_view</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 23:06:03</sys_created_on><sys_id>04666e143bcb4310d5260fa693e45aa6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Dt_template_block_search</sys_name><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sys_ui_view_04666e143bcb4310d5260fa693e45aa6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 23:06:03</sys_updated_on><title>Dt_template_block_search</title><user/></sys_ui_view></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Quote Management Data Model]">f908fbf016d386660e6de858019a90bd</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>a8b841836a739d8565c2ef601cabca11</sys_id>
+<table></table>
+<target_name>Dt_template_block_search</target_name>
+<type>UI View</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Sales Cart">6185ab4cff056610ee6efffffffffffe</application>
+<application_name>Sales Cart</application_name>
+<application_scope>sn_sales_cart</application_scope>
+<description>Quote document templates (Quote Demo Template for Solana incl. 2026-09-29 edit, Quote Lines, Sales Cart Demo Template), blocks, block contents, m2m links and quoteScriptDemo. Source: opmsalescrm1 (captured 2026-10-06 from Default update sets).</description>
+<name>UPDATE-009-quote-document-templates [Sales Cart]</name>
+<origin_sys_id>43dcc5fe04ab12440d5a2580f0bb208b</origin_sys_id>
+<remote_sys_id>43dcc5fe04ab12440d5a2580f0bb208b</remote_sys_id>
+<state>loaded</state>
+<sys_id>43dcc5fe04ab12440d5a2580f0bb208b</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Sales Cart">6185ab4cff056610ee6efffffffffffe</application>
+<category>customer</category>
+<comments/>
+<name>sn_doc_html_template_4d7282d6ff9d62103e5cffffffffff77</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_doc_html_template"><sn_doc_html_template action="INSERT_OR_UPDATE"><acknowledgement_text/><active>true</active><category/><custom_font/><end_date/><footer_image/><footer_image_height>50</footer_image_height><footer_image_position>CENTER</footer_image_position><footnote/><footnote_position>RIGHT</footnote_position><footnote_vertical_position>BELOW</footnote_vertical_position><header_image/><header_image_height>50</header_image_height><header_image_position>CENTER</header_image_position><html_script_body><![CDATA[<style>
+    @page {
+        margin-top: 45mm;
+        margin-bottom: 15mm;
+        margin-left: 10mm;
+        margin-right: 10mm;
+
+        @top-left {
+            content: element(pageHeader);
+        }
+
+        @bottom-center {
+            content: element(pageFooter);
+        }
+
+    }
+
+    #pageFooter {
+        position: running(pageFooter);
+        text-align: right;
+        font-size: 0.9rem;
+        color: #555555;
+        background-color: white;
+    }
+
+    #pageFooter::after {
+        content: "Page " counter(page) " of " counter(pages);
+        font-size: 0.9rem;
+        color: #555555;
+    }
+
+    .body {
+        font-family: Gilroy;
+        margin: 4px;
+        margin-top: 0px;
+    }
+
+    #pageHeader {
+        position: running(pageHeader);
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    #pageHeader img {
+        max-height: 30px;
+        max-width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .content1 {
+        page-break-after: auto;
+    }
+
+    .content2 {
+        page-break-before: auto;
+        page-break-after: auto;
+    }
+
+    .content3 {
+        page-break-before: auto;
+        page-break-after: auto;
+    }
+
+    .content4 {
+        page-break-before: auto;
+    }
+
+    .block-heading {
+        border-bottom: 1px solid #999999;
+    }
+
+    .block-heading p {
+        line-height: 16px;
+        font-size: 16px;
+        font-weight: 700;
+        font: Gilroy;
+        margin-bottom: 16px;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .col-md-4 {
+        text-align: left;
+        padding-right: 15px;
+        padding-left: 15px;
+        max-width: 200px;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .col-md-4 h4 {
+        font: Gilroy;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 600;
+        color: #272727;
+        margin-top: 2px;
+    }
+
+    .col-md-4 p {
+        font: Gilroy;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+        color: #707070;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .row2 {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .h-line {
+        flex: 1;
+        height: 1px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 0;
+    }
+
+    .col-md-2 {
+        text-align: left;
+        font-size: 14px;
+        padding-right: 15px;
+        padding-left: 15px;
+        width: 100%;
+    }
+
+    .col-md-2 p {
+        font: Gilroy;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+        color: #707070;
+        margin-top: 0;
+        padding-right: 8px;
+    }
+</style>
+<div class="body">
+<div id="pageHeader">
+<div class="row" style="justify-content: space-between; align-items: flex-start;">
+<div style="margin-top: 0; padding-right: 45px;"><img title="Logo" src="${template_script:cartLogoImage}" alt="Logo"></div>
+<div class="row" style="margin-top: 0;">
+<div class="col-md-4">
+<p>Account</p>
+<h4>${account}</h4>
+</div>
+<div class="col-md-4">
+<p>Cart Number</p>
+<h4>${number}</h4>
+</div>
+<div class="col-md-4">
+<p>Download Date</p>
+<h4><code>${template_script:getCartDownloadDate}</code></h4>
+</div>
+<div class="col-md-4">
+<p>Cart Created by</p>
+<h4>${opened_by.name}</h4>
+</div>
+</div>
+</div>
+</div>
+<div><code>${template_script:cartAddressScriptDefault}</code></div>
+<p>&nbsp;</p>
+<div id="pageFooter"></div>
+<div class="content1">
+<div class="block-heading" style="border: 0;">
+<p><strong>MY CART</strong></p>
+</div>
+<p><code>${template_script:cartLinesScriptDefault}</code></p>
+</div>
+<div class="content2">
+<div class="block-heading">
+<p>&nbsp;</p>
+<p><strong>TOTAL PRICE</strong></p>
+</div>
+<div id="dtblock_3cd077beff59a2103e5cffffffffff62_1746687499378_dtblock" class="dt-block-content-item mceNonEditable" style="border: 1px solid #ddd; padding: 10px; margin: 5px 0; disabled: true; display: block; color: rgb(var(now-color--neutral-14,var(--now-color_surface--neutral-6,53,59,73))); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; line-height: 1.42857; font-weight: bold; width: 95%;" tabindex="0" data-dt-type="dtblock" data-dtblock-id="3cd077beff59a2103e5cffffffffff62">
+<div class="block-info" style="display: inline-block; vertical-align: top;" data-dt-type="dtblockcontent">
+<div class="block-text-title">CartFinalPricing</div>
+<div class="description" style="font-weight: 100;">Displays the final/total procing details of the cart record</div>
+</div>
+</div>
+</div>
+<div class="content3">
+<div class="block-heading">
+<p>&nbsp;</p>
+<p><strong>TERMS &amp; CONDITIONS</strong></p>
+</div>
+<div id="dtblock_b58c037aff19a2103e5cffffffffff59_1746677539726_dtblock" class="dt-block-content-item mceNonEditable" style="border: 1px solid #ddd; padding: 10px; margin: 5px 0; disabled: true; display: block; color: rgb(var(now-color--neutral-14,var(--now-color_surface--neutral-6,53,59,73))); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; line-height: 1.42857; font-weight: bold; width: 95%;" tabindex="0" data-dt-type="dtblock" data-dtblock-id="b58c037aff19a2103e5cffffffffff59">
+<div class="block-info" style="display: inline-block; vertical-align: top;" data-dt-type="dtblockcontent">
+<div class="block-text-title">CartTermsAndCo</div>
+<div class="description" style="font-weight: 100;">Terms and conditions block for cart checkout and download cart template</div>
+</div>
+</div>
+</div>
+<div class="content4">
+<div class="block-heading">
+<p>&nbsp;</p>
+<p><strong>ACKNOWLEDGEMENTS</strong></p>
+</div>
+<div class="row2" style="justify-content: space-between;">
+<div class="col-md-2">
+<h4>Buyer Acceptance</h4>
+<div class="row2">
+<p>Signature</p>
+<div class="h-line">&nbsp;</div>
+</div>
+<div class="row2">
+<p>Name</p>
+<div class="h-line">&nbsp;</div>
+</div>
+<div class="row2">
+<p>Title</p>
+<div class="h-line">&nbsp;</div>
+</div>
+<div class="row2">
+<p>Date</p>
+<div class="h-line">&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+</div>]]]]><![CDATA[></html_script_body><language>en</language><left_right_margin>36</left_right_margin><name>Sales Cart Demo Template</name><owner/><page_number_config/><page_size>A4</page_size><sanitize>false</sanitize><set_signing_order>true</set_signing_order><signing_type>servicenow_sign</signing_type><source_template/><start_date/><state>edit</state><storage_destination/><sys_class_name>sn_doc_html_template</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-05-06 09:29:16</sys_created_on><sys_domain>global</sys_domain><sys_id>4d7282d6ff9d62103e5cffffffffff77</sys_id><sys_mod_count>173</sys_mod_count><sys_name>Sales Cart Demo Template</sys_name><sys_package display_value="Sales Cart" source="sn_sales_cart">6185ab4cff056610ee6efffffffffffe</sys_package><sys_policy/><sys_scope display_value="Sales Cart">6185ab4cff056610ee6efffffffffffe</sys_scope><sys_update_name>sn_doc_html_template_4d7282d6ff9d62103e5cffffffffff77</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 15:51:17</sys_updated_on><table>sn_sales_cart</table><template_date_format/><toc_config/><top_bottom_margin>72</top_bottom_margin><user_criteria/></sn_doc_html_template><sys_translated_text action="delete_multiple" query="documentkey=4d7282d6ff9d62103e5cffffffffff77"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-009-quote-document-templates [Sales Cart]">43dcc5fe04ab12440d5a2580f0bb208b</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>fe9c1c7a02483b91994e1dcdd7cd6c94</sys_id>
+<table>sn_sales_cart</table>
+<target_name>Sales Cart Demo Template</target_name>
+<type>HTML Template</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+</unload>

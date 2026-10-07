@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-10-06 21:00:00">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<description>Sales territory model, 5 territory levels + level mappings, and the BRs that sync Account sales owner from the primary territory member. Source: opmsalescrm1 (captured 2026-10-06 from Default update sets).</description>
+<name>UPDATE-005-territory-model-and-sales-owner-sync [Global]</name>
+<origin_sys_id>0add9cc470204155c816a86260116a36</origin_sys_id>
+<remote_sys_id>0add9cc470204155c816a86260116a36</remote_sys_id>
+<state>loaded</state>
+<sys_id>0add9cc470204155c816a86260116a36</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_1b8026213b4f8b10d5260fa693e45abe</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>false</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>true</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>customer_account</collection><condition>!current.primary_sales_territory.nil() &amp;&amp; current.primary_sales_territory.changes()</condition><description>When a Primary Sales Territory is assigned (or changed) on an account, set the Sales Owner to the user with Primary membership on that territory.</description><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Set Sales Owner from Primary Territory M</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    var territoryId = current.getValue('primary_sales_territory');
+    if (!territoryId) {
+        return;
+    }
+
+    var member = new GlideRecord('sn_tp_territory_membership_override');
+    member.addQuery('territory', territoryId);
+    member.addQuery('membershiptype', 'primary');
+    member.addQuery('active', true);
+    member.setLimit(1);
+    member.query();
+
+    if (member.next()) {
+        current.sales_owner = member.getValue('user');
+    }
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-31 19:53:00</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>1b8026213b4f8b10d5260fa693e45abe</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Set Sales Owner from Primary Territory M</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_script_1b8026213b4f8b10d5260fa693e45abe</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-09 19:09:36</sys_updated_on><template/><when>before</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=1b8026213b4f8b10d5260fa693e45abe"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-005-territory-model-and-sales-owner-sync [Global]">0add9cc470204155c816a86260116a36</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>63b28aca0c17d889cfe36fb8b137f694</sys_id>
+<table>customer_account</table>
+<target_name>Set Sales Owner from Primary Territory M</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_tp_territory_level_0fcec25b3bf24710d5260fa693e45a9e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_tp_territory_level"><sn_tp_territory_level action="INSERT_OR_UPDATE"><description>Tier L1 — top of hierarchy; global rollup view.</description><name>Global</name><order>1</order><sys_class_name>sn_tp_territory_level</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-24 18:49:06</sys_created_on><sys_domain>global</sys_domain><sys_id>0fcec25b3bf24710d5260fa693e45a9e</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Global</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_tp_territory_level_0fcec25b3bf24710d5260fa693e45a9e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-24 19:10:32</sys_updated_on></sn_tp_territory_level></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-005-territory-model-and-sales-owner-sync [Global]">0add9cc470204155c816a86260116a36</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>824a22730c189857a66403da2217adde</sys_id>
+<table></table>
+<target_name>Global</target_name>
+<type>Territory Level</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_tp_territory_level_1bce0a1b2bb243104deaf02ac891bf67</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_tp_territory_level"><sn_tp_territory_level action="INSERT_OR_UPDATE"><description>Tier L5 — e.g. California. Sales Representatives (Account Executives) are assigned at this tier, not above it.</description><name>Leaf</name><order>5</order><sys_class_name>sn_tp_territory_level</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-24 18:49:07</sys_created_on><sys_domain>global</sys_domain><sys_id>1bce0a1b2bb243104deaf02ac891bf67</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Leaf</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_tp_territory_level_1bce0a1b2bb243104deaf02ac891bf67</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-24 19:10:36</sys_updated_on></sn_tp_territory_level></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-005-territory-model-and-sales-owner-sync [Global]">0add9cc470204155c816a86260116a36</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>5ba897408295308005b068a27086d14c</sys_id>
+<table></table>
+<target_name>Leaf</target_name>
+<type>Territory Level</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_tp_territory_level_57cec6d73bf24710d5260fa693e45a2e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_tp_territory_level"><sn_tp_territory_level action="INSERT_OR_UPDATE"><description>Tier L2 — e.g. TECH, MFG, CPG, LS, GOV.</description><name>Industry</name><order>2</order><sys_class_name>sn_tp_territory_level</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-24 18:49:07</sys_created_on><sys_domain>global</sys_domain><sys_id>57cec6d73bf24710d5260fa693e45a2e</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Industry</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_tp_territory_level_57cec6d73bf24710d5260fa693e45a2e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-24 19:10:26</sys_updated_on></sn_tp_territory_level></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-005-territory-model-and-sales-owner-sync [Global]">0add9cc470204155c816a86260116a36</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>64694fbc99174ff2abb0ede6caa76761</sys_id>
+<table></table>
+<target_name>Industry</target_name>
+<type>Territory Level</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_tp_territory_level_93cec61b2bb243104deaf02ac891bffd</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_tp_territory_level"><sn_tp_territory_level action="INSERT_OR_UPDATE"><description>Tier L3 — e.g. AMS, EMEA, APAC.</description><name>Region</name><order>3</order><sys_class_name>sn_tp_territory_level</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-24 18:49:07</sys_created_on><sys_domain>global</sys_domain><sys_id>93cec61b2bb243104deaf02ac891bffd</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Region</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_tp_territory_level_93cec61b2bb243104deaf02ac891bffd</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-24 19:10:22</sys_updated_on></sn_tp_territory_level></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-005-territory-model-and-sales-owner-sync [Global]">0add9cc470204155c816a86260116a36</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>b4e313541d509a7ee18906f8f3dd9f45</sys_id>
+<table></table>
+<target_name>Region</target_name>
+<type>Territory Level</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_tp_territory_level_d7ce0a1b2bb243104deaf02ac891bf07</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_tp_territory_level"><sn_tp_territory_level action="INSERT_OR_UPDATE"><description>Tier L4 — e.g. AMS-West.</description><name>Sub-region</name><order>4</order><sys_class_name>sn_tp_territory_level</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-24 18:49:07</sys_created_on><sys_domain>global</sys_domain><sys_id>d7ce0a1b2bb243104deaf02ac891bf07</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Sub-region</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_tp_territory_level_d7ce0a1b2bb243104deaf02ac891bf07</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-24 19:10:18</sys_updated_on></sn_tp_territory_level></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-005-territory-model-and-sales-owner-sync [Global]">0add9cc470204155c816a86260116a36</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>650a7cbfe54908abfb2d8d097a1b987f</sys_id>
+<table></table>
+<target_name>Sub-region</target_name>
+<type>Territory Level</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_tp_territory_model_level_mapping_19de4a1b2bb243104deaf02ac891bf93</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_tp_territory_model_level_mapping"><sn_tp_territory_model_level_mapping action="INSERT_OR_UPDATE"><level display_value="Industry">57cec6d73bf24710d5260fa693e45a2e</level><model display_value="Sales Territory Model">d7edc96bb7e26210794ef561ae11a9cb</model><sys_class_name>sn_tp_territory_model_level_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-24 18:49:16</sys_created_on><sys_id>19de4a1b2bb243104deaf02ac891bf93</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_tp_territory_model_level_mapping_19de4a1b2bb243104deaf02ac891bf93</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-24 18:49:16</sys_updated_on></sn_tp_territory_model_level_mapping></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-005-territory-model-and-sales-owner-sync [Global]">0add9cc470204155c816a86260116a36</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>da2815b44bb65ffa0b2280ab399aa97c</sys_id>
+<table></table>
+<target_name></target_name>
+<type>Territory Model Level Mapping</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_tp_territory_model_level_mapping_6ddec25b3bf24710d5260fa693e45aaf</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_tp_territory_model_level_mapping"><sn_tp_territory_model_level_mapping action="INSERT_OR_UPDATE"><level display_value="Region">93cec61b2bb243104deaf02ac891bffd</level><model display_value="Sales Territory Model">d7edc96bb7e26210794ef561ae11a9cb</model><sys_class_name>sn_tp_territory_model_level_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-24 18:49:16</sys_created_on><sys_id>6ddec25b3bf24710d5260fa693e45aaf</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_tp_territory_model_level_mapping_6ddec25b3bf24710d5260fa693e45aaf</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-24 18:49:16</sys_updated_on></sn_tp_territory_model_level_mapping></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-005-territory-model-and-sales-owner-sync [Global]">0add9cc470204155c816a86260116a36</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>07b8f29ee6376d5ab73d97cf2610d9b7</sys_id>
+<table></table>
+<target_name></target_name>
+<type>Territory Model Level Mapping</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_tp_territory_model_level_mapping_adde4a1b2bb243104deaf02ac891bf9c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_tp_territory_model_level_mapping"><sn_tp_territory_model_level_mapping action="INSERT_OR_UPDATE"><level display_value="Sub-region">d7ce0a1b2bb243104deaf02ac891bf07</level><model display_value="Sales Territory Model">d7edc96bb7e26210794ef561ae11a9cb</model><sys_class_name>sn_tp_territory_model_level_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-24 18:49:16</sys_created_on><sys_id>adde4a1b2bb243104deaf02ac891bf9c</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_tp_territory_model_level_mapping_adde4a1b2bb243104deaf02ac891bf9c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-24 18:49:16</sys_updated_on></sn_tp_territory_model_level_mapping></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-005-territory-model-and-sales-owner-sync [Global]">0add9cc470204155c816a86260116a36</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>f3bfe1331b87ff997a6da543c1515928</sys_id>
+<table></table>
+<target_name></target_name>
+<type>Territory Model Level Mapping</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_tp_territory_model_level_mapping_d1de0a1b2bb243104deaf02ac891bf9c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_tp_territory_model_level_mapping"><sn_tp_territory_model_level_mapping action="INSERT_OR_UPDATE"><level display_value="Global">0fcec25b3bf24710d5260fa693e45a9e</level><model display_value="Sales Territory Model">d7edc96bb7e26210794ef561ae11a9cb</model><sys_class_name>sn_tp_territory_model_level_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-24 18:49:15</sys_created_on><sys_id>d1de0a1b2bb243104deaf02ac891bf9c</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_tp_territory_model_level_mapping_d1de0a1b2bb243104deaf02ac891bf9c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-24 18:49:15</sys_updated_on></sn_tp_territory_model_level_mapping></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-005-territory-model-and-sales-owner-sync [Global]">0add9cc470204155c816a86260116a36</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>a0d9e21d8501175de7d81a6f46b9aea0</sys_id>
+<table></table>
+<target_name></target_name>
+<type>Territory Model Level Mapping</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_tp_territory_model_level_mapping_edde065b3bf24710d5260fa693e45acb</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_tp_territory_model_level_mapping"><sn_tp_territory_model_level_mapping action="INSERT_OR_UPDATE"><level display_value="Leaf">1bce0a1b2bb243104deaf02ac891bf67</level><model display_value="Sales Territory Model">d7edc96bb7e26210794ef561ae11a9cb</model><sys_class_name>sn_tp_territory_model_level_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-24 18:49:16</sys_created_on><sys_id>edde065b3bf24710d5260fa693e45acb</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_tp_territory_model_level_mapping_edde065b3bf24710d5260fa693e45acb</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-24 18:49:16</sys_updated_on></sn_tp_territory_model_level_mapping></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-005-territory-model-and-sales-owner-sync [Global]">0add9cc470204155c816a86260116a36</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>d92dce0937d30775250bba6519593e00</sys_id>
+<table></table>
+<target_name></target_name>
+<type>Territory Model Level Mapping</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</application>
+<application_name>Quote Management Application</application_name>
+<application_scope>sn_quote_mgmt</application_scope>
+<description>Sales territory model, 5 territory levels + level mappings, and the BRs that sync Account sales owner from the primary territory member. Source: opmsalescrm1 (captured 2026-10-06 from Default update sets).</description>
+<name>UPDATE-005-territory-model-and-sales-owner-sync [Quote Management Application]</name>
+<origin_sys_id>219a8d294175dccb76cebf92d9077944</origin_sys_id>
+<remote_sys_id>219a8d294175dccb76cebf92d9077944</remote_sys_id>
+<state>loaded</state>
+<sys_id>219a8d294175dccb76cebf92d9077944</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_5e2f98182b53cf104deaf02ac891bf61</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>false</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>true</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_tp_territory_membership_override</collection><condition/><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Sync Sales Owner from Territory Membersh</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    if (current.getValue('membershiptype') != 'primary') {
+        return;
+    }
+    if (!current.active) {
+        return;
+    }
+
+    var accountGr = new GlideRecord('customer_account');
+    accountGr.addQuery('primary_sales_territory', current.getValue('territory'));
+    accountGr.query();
+
+    while (accountGr.next()) {
+        if (accountGr.getValue('sales_owner') != current.getValue('user')) {
+            accountGr.setValue('sales_owner', current.getValue('user'));
+            accountGr.update();
+        }
+    }
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-08 23:30:58</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>5e2f98182b53cf104deaf02ac891bf61</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Sync Sales Owner from Territory Membersh</sys_name><sys_overrides/><sys_package display_value="Quote Management Application" source="sn_quote_mgmt">c2194b8ab72171101aaebe508e11a927</sys_package><sys_policy/><sys_scope display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</sys_scope><sys_update_name>sys_script_5e2f98182b53cf104deaf02ac891bf61</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-08 23:33:32</sys_updated_on><template/><when>after</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=5e2f98182b53cf104deaf02ac891bf61"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-005-territory-model-and-sales-owner-sync [Quote Management Application]">219a8d294175dccb76cebf92d9077944</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>a8fdde21d997f7b3db9e33ff50762b1a</sys_id>
+<table>sn_tp_territory_membership_override</table>
+<target_name>Sync Sales Owner from Territory Membersh</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Sales Territory Management">a2bcc9c4b7116610794ef561ae11a9f5</application>
+<application_name>Sales Territory Management</application_name>
+<application_scope>sn_sales_territory</application_scope>
+<description>Sales territory model, 5 territory levels + level mappings, and the BRs that sync Account sales owner from the primary territory member. Source: opmsalescrm1 (captured 2026-10-06 from Default update sets).</description>
+<name>UPDATE-005-territory-model-and-sales-owner-sync [Sales Territory Management]</name>
+<origin_sys_id>5fd5e80a32c6698a888b69834a7abef8</origin_sys_id>
+<remote_sys_id>5fd5e80a32c6698a888b69834a7abef8</remote_sys_id>
+<state>loaded</state>
+<sys_id>5fd5e80a32c6698a888b69834a7abef8</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Sales Territory Management">a2bcc9c4b7116610794ef561ae11a9f5</application>
+<category>customer</category>
+<comments/>
+<name>sn_tp_territory_model_d7edc96bb7e26210794ef561ae11a9cb</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_tp_territory_model"><sn_tp_territory_model action="INSERT_OR_UPDATE"><active>true</active><description>This model contains the territory hierarchies created for Sales and Order Management.</description><name>Sales Territory Model</name><sys_class_name>sn_tp_territory_model</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-11 06:06:51</sys_created_on><sys_domain>global</sys_domain><sys_id>d7edc96bb7e26210794ef561ae11a9cb</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Sales Territory Model</sys_name><sys_package display_value="Sales Territory Management" source="sn_sales_territory">a2bcc9c4b7116610794ef561ae11a9f5</sys_package><sys_policy/><sys_scope display_value="Sales Territory Management">a2bcc9c4b7116610794ef561ae11a9f5</sys_scope><sys_update_name>sn_tp_territory_model_d7edc96bb7e26210794ef561ae11a9cb</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 16:35:56</sys_updated_on><territory_role>sn_sales_territory.sales_territory_basic</territory_role></sn_tp_territory_model></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-005-territory-model-and-sales-owner-sync [Sales Territory Management]">5fd5e80a32c6698a888b69834a7abef8</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>b65df26d234cc1bce5b55c98d2408108</sys_id>
+<table></table>
+<target_name>Sales Territory Model</target_name>
+<type>Territory Model</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+</unload>

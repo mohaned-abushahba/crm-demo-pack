@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-10-06 21:00:00">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<description>BOProcessChainUtil + Sync Process Record BRs (Opportunity, Quote, Quote Line, Order, Order Line, Order Case, Order Case Line) Business Object types/relationships, and the Opportunity-to-Order Objects business object group + 13 members. Source: opmsalescrm1 (captured 2026-10-06 from Default update sets).</description>
+<name>UPDATE-013-business-process-chain-sync</name>
+<origin_sys_id>b459b75fbaff58022178bd63f1710a86</origin_sys_id>
+<remote_sys_id>b459b75fbaff58022178bd63f1710a86</remote_sys_id>
+<state>loaded</state>
+<sys_id>b459b75fbaff58022178bd63f1710a86</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_group_3f1c98c22b878f104deaf02ac891bfec</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_group"><sn_bo_core_obj_group action="INSERT_OR_UPDATE"><applies_to>sn_l2c_cockpit_sales_process_record</applies_to><business_process/><description>Objects involved in the opportunity-to-order process such as opportunities, quotes, contract, orders and orders/invoice cases</description><name>Opportunity-to-Order Objects</name><sys_class_name>sn_bo_core_obj_group</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:14:43</sys_created_on><sys_id>3f1c98c22b878f104deaf02ac891bfec</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 00:14:43</sys_updated_on></sn_bo_core_obj_group></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>08eff6fe73449ec258248420c8bb7742</sys_id>
+<table></table>
+<target_name>Opportunity-to-Order Objects</target_name>
+<type>Business Object Group</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_group_members_02cc14462b878f104deaf02ac891bf64</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_group_members"><sn_bo_core_obj_group_members action="INSERT_OR_UPDATE"><business_object_group display_value="Opportunity-to-Order Objects">3f1c98c22b878f104deaf02ac891bfec</business_object_group><business_object_type display_value="Order">b9c09f37ff01221066aeffffffffff20</business_object_type><sys_class_name>sn_bo_core_obj_group_members</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 23:34:21</sys_created_on><sys_id>02cc14462b878f104deaf02ac891bf64</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 23:34:21</sys_updated_on></sn_bo_core_obj_group_members></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>68f507f5c704b565bb2459240b9f3303</sys_id>
+<table></table>
+<target_name>Order</target_name>
+<type>Business Object Group Members</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_group_members_0cdc54462b878f104deaf02ac891bf83</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_group_members"><sn_bo_core_obj_group_members action="INSERT_OR_UPDATE"><business_object_group display_value="Opportunity-to-Order Objects">3f1c98c22b878f104deaf02ac891bfec</business_object_group><business_object_type display_value="Order Line">9701d377ff01221066aeffffffffff21</business_object_type><sys_class_name>sn_bo_core_obj_group_members</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 23:34:31</sys_created_on><sys_id>0cdc54462b878f104deaf02ac891bf83</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 23:34:31</sys_updated_on></sn_bo_core_obj_group_members></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>15e044b7bbe01a9b8829cbabb43aebbb</sys_id>
+<table></table>
+<target_name>Order Line</target_name>
+<type>Business Object Group Members</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_group_members_1b466c022b0b8f104deaf02ac891bfca</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_group_members"><sn_bo_core_obj_group_members action="INSERT_OR_UPDATE"><business_object_group display_value="Opportunity-to-Order Objects">3f1c98c22b878f104deaf02ac891bfec</business_object_group><business_object_type display_value="Order Case Line">4ba564ce2bc78f104deaf02ac891bfe9</business_object_type><sys_class_name>sn_bo_core_obj_group_members</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:15:57</sys_created_on><sys_id>1b466c022b0b8f104deaf02ac891bfca</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 00:15:57</sys_updated_on></sn_bo_core_obj_group_members></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>a6bf7126259fb11d41505fe2370fb50b</sys_id>
+<table></table>
+<target_name>Order Case Line</target_name>
+<type>Business Object Group Members</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_group_members_2156ec022b0b8f104deaf02ac891bf70</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_group_members"><sn_bo_core_obj_group_members action="INSERT_OR_UPDATE"><business_object_group display_value="Opportunity-to-Order Objects">3f1c98c22b878f104deaf02ac891bfec</business_object_group><business_object_type display_value="Customer Contract">c1d4244e2bc78f104deaf02ac891bfc9</business_object_type><sys_class_name>sn_bo_core_obj_group_members</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:16:12</sys_created_on><sys_id>2156ec022b0b8f104deaf02ac891bf70</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 00:16:12</sys_updated_on></sn_bo_core_obj_group_members></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>fbd9ac7548d8575d201b7ddc35f5def1</sys_id>
+<table></table>
+<target_name>Customer Contract</target_name>
+<type>Business Object Group Members</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_group_members_2adc90462b878f104deaf02ac891bf78</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_group_members"><sn_bo_core_obj_group_members action="INSERT_OR_UPDATE"><business_object_group display_value="Opportunity-to-Order Objects">3f1c98c22b878f104deaf02ac891bfec</business_object_group><business_object_type display_value="Order Task">d8211777ff01221066aeffffffffff53</business_object_type><sys_class_name>sn_bo_core_obj_group_members</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 23:34:44</sys_created_on><sys_id>2adc90462b878f104deaf02ac891bf78</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 23:34:44</sys_updated_on></sn_bo_core_obj_group_members></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>f8f00762601999bb1eb8f4636882a32f</sys_id>
+<table></table>
+<target_name>Order Task</target_name>
+<type>Business Object Group Members</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_group_members_649cd8062b878f104deaf02ac891bfa7</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_group_members"><sn_bo_core_obj_group_members action="INSERT_OR_UPDATE"><business_object_group display_value="Opportunity-to-Order Objects">3f1c98c22b878f104deaf02ac891bfec</business_object_group><business_object_type display_value="Opportunity Line">14709737ff01221066aeffffffffff2d</business_object_type><sys_class_name>sn_bo_core_obj_group_members</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 23:33:25</sys_created_on><sys_id>649cd8062b878f104deaf02ac891bfa7</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 23:33:25</sys_updated_on></sn_bo_core_obj_group_members></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>48256b49aa72dc35433004646f9e4c01</sys_id>
+<table></table>
+<target_name>Opportunity Line</target_name>
+<type>Business Object Group Members</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_group_members_a73628022b0b8f104deaf02ac891bfcf</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_group_members"><sn_bo_core_obj_group_members action="INSERT_OR_UPDATE"><business_object_group display_value="Opportunity-to-Order Objects">3f1c98c22b878f104deaf02ac891bfec</business_object_group><business_object_type display_value="Order Case">3495a0ce2bc78f104deaf02ac891bf7f</business_object_type><sys_class_name>sn_bo_core_obj_group_members</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:15:48</sys_created_on><sys_id>a73628022b0b8f104deaf02ac891bfcf</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 00:15:48</sys_updated_on></sn_bo_core_obj_group_members></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>42a67c61fd3f21ed10cf3e5648538e6a</sys_id>
+<table></table>
+<target_name>Order Case</target_name>
+<type>Business Object Group Members</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_group_members_b4acdc062b878f104deaf02ac891bf4a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_group_members"><sn_bo_core_obj_group_members action="INSERT_OR_UPDATE"><business_object_group display_value="Opportunity-to-Order Objects">3f1c98c22b878f104deaf02ac891bfec</business_object_group><business_object_type display_value="Quote">06909b37ff01221066aeffffffffff0d</business_object_type><sys_class_name>sn_bo_core_obj_group_members</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 23:33:45</sys_created_on><sys_id>b4acdc062b878f104deaf02ac891bf4a</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 23:33:45</sys_updated_on></sn_bo_core_obj_group_members></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>caf399602afe0e70561011340f6b9d77</sys_id>
+<table></table>
+<target_name>Quote</target_name>
+<type>Business Object Group Members</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_group_members_ba9cd8062b878f104deaf02ac891bfc9</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_group_members"><sn_bo_core_obj_group_members action="INSERT_OR_UPDATE"><business_object_group display_value="Opportunity-to-Order Objects">3f1c98c22b878f104deaf02ac891bfec</business_object_group><business_object_type display_value="Opportunity Task">f9801b37ff01221066aeffffffffffaf</business_object_type><sys_class_name>sn_bo_core_obj_group_members</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 23:33:34</sys_created_on><sys_id>ba9cd8062b878f104deaf02ac891bfc9</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 23:33:34</sys_updated_on></sn_bo_core_obj_group_members></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>bc560625d321e6bd219660dfa955b131</sys_id>
+<table></table>
+<target_name>Opportunity Task</target_name>
+<type>Business Object Group Members</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_group_members_bf7c58062b878f104deaf02ac891bf46</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_group_members"><sn_bo_core_obj_group_members action="INSERT_OR_UPDATE"><business_object_group display_value="Opportunity-to-Order Objects">3f1c98c22b878f104deaf02ac891bfec</business_object_group><business_object_type display_value="Opportunity">bbdf87f3ff01221066aeffffffffffd2</business_object_type><sys_class_name>sn_bo_core_obj_group_members</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 23:33:15</sys_created_on><sys_id>bf7c58062b878f104deaf02ac891bf46</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 23:33:15</sys_updated_on></sn_bo_core_obj_group_members></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>eeec1fbc7112a54436235f5190c3be7e</sys_id>
+<table></table>
+<target_name>Opportunity</target_name>
+<type>Business Object Group Members</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_group_members_cbbc90462b878f104deaf02ac891bfcd</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_group_members"><sn_bo_core_obj_group_members action="INSERT_OR_UPDATE"><business_object_group display_value="Opportunity-to-Order Objects">3f1c98c22b878f104deaf02ac891bfec</business_object_group><business_object_type display_value="Quote Task">36b01f37ff01221066aeffffffffff73</business_object_type><sys_class_name>sn_bo_core_obj_group_members</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 23:34:12</sys_created_on><sys_id>cbbc90462b878f104deaf02ac891bfcd</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 23:34:12</sys_updated_on></sn_bo_core_obj_group_members></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>60d15814474d7fc7d0a1871584fd1941</sys_id>
+<table></table>
+<target_name>Quote Task</target_name>
+<type>Business Object Group Members</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_group_members_d56660422b0b8f104deaf02ac891bf70</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_group_members"><sn_bo_core_obj_group_members action="INSERT_OR_UPDATE"><business_object_group display_value="Opportunity-to-Order Objects">3f1c98c22b878f104deaf02ac891bfec</business_object_group><business_object_type display_value="Customer Contract Line">96f4604e2bc78f104deaf02ac891bf6d</business_object_type><sys_class_name>sn_bo_core_obj_group_members</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:16:22</sys_created_on><sys_id>d56660422b0b8f104deaf02ac891bf70</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 00:16:22</sys_updated_on></sn_bo_core_obj_group_members></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>cd86d34a8d41c3fac4796eb233d2f494</sys_id>
+<table></table>
+<target_name>Customer Contract Line</target_name>
+<type>Business Object Group Members</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_group_members_e3ac10462b878f104deaf02ac891bfbd</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_group_members"><sn_bo_core_obj_group_members action="INSERT_OR_UPDATE"><business_object_group display_value="Opportunity-to-Order Objects">3f1c98c22b878f104deaf02ac891bfec</business_object_group><business_object_type display_value="Quote Line">fea0db37ff01221066aeffffffffff40</business_object_type><sys_class_name>sn_bo_core_obj_group_members</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 23:33:59</sys_created_on><sys_id>e3ac10462b878f104deaf02ac891bfbd</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 23:33:59</sys_updated_on></sn_bo_core_obj_group_members></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>bd6322c7533d5c3829fa7aa54da0a7dc</sys_id>
+<table></table>
+<target_name>Quote Line</target_name>
+<type>Business Object Group Members</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_rel_0691c54e2b0f8f104deaf02ac891bf39</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_rel"><sn_bo_core_obj_rel action="INSERT_OR_UPDATE"><destination display_value="Order Case Line">4ba564ce2bc78f104deaf02ac891bfe9</destination><destination_field>parent</destination_field><source display_value="Order Case">3495a0ce2bc78f104deaf02ac891bf7f</source><source_field/><sys_class_name>sn_bo_core_obj_rel</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 02:15:05</sys_created_on><sys_id>0691c54e2b0f8f104deaf02ac891bf39</sys_id><sys_mod_count>0</sys_mod_count><sys_name>4ba564ce2bc78f104deaf02ac891bfe9</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_bo_core_obj_rel_0691c54e2b0f8f104deaf02ac891bf39</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 02:15:05</sys_updated_on></sn_bo_core_obj_rel></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>4ff4744b0d9995887afa08798163ad47</sys_id>
+<table></table>
+<target_name>4ba564ce2bc78f104deaf02ac891bfe9</target_name>
+<type>Business Object Relationship</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_rel_4291c54e2b0f8f104deaf02ac891bf2c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_rel"><sn_bo_core_obj_rel action="INSERT_OR_UPDATE"><destination display_value="Order Case">3495a0ce2bc78f104deaf02ac891bf7f</destination><destination_field>order_id</destination_field><source display_value="Order">b9c09f37ff01221066aeffffffffff20</source><source_field/><sys_class_name>sn_bo_core_obj_rel</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 02:15:05</sys_created_on><sys_id>4291c54e2b0f8f104deaf02ac891bf2c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>3495a0ce2bc78f104deaf02ac891bf7f</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_bo_core_obj_rel_4291c54e2b0f8f104deaf02ac891bf2c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 02:15:05</sys_updated_on></sn_bo_core_obj_rel></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>81c1178c2937e56c3bc66b1d4d6913da</sys_id>
+<table></table>
+<target_name>3495a0ce2bc78f104deaf02ac891bf7f</target_name>
+<type>Business Object Relationship</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_type_1b65a88e2bc78f104deaf02ac891bf97</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_type"><sn_bo_core_obj_type action="INSERT_OR_UPDATE"><name>Sold Product</name><sys_class_name>sn_bo_core_obj_type</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:12:17</sys_created_on><sys_id>1b65a88e2bc78f104deaf02ac891bf97</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Sold Product</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_bo_core_obj_type_1b65a88e2bc78f104deaf02ac891bf97</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 00:12:17</sys_updated_on><table_name>sn_install_base_sold_product</table_name></sn_bo_core_obj_type></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>82f8d598622889106a9537f48530f29c</sys_id>
+<table></table>
+<target_name>Sold Product</target_name>
+<type>Business Object Type</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_type_2bb520ce2bc78f104deaf02ac891bf74</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_type"><sn_bo_core_obj_type action="INSERT_OR_UPDATE"><name>Invoice Case</name><sys_class_name>sn_bo_core_obj_type</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:13:39</sys_created_on><sys_id>2bb520ce2bc78f104deaf02ac891bf74</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Invoice Case</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_bo_core_obj_type_2bb520ce2bc78f104deaf02ac891bf74</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 00:13:39</sys_updated_on><table_name>sn_csm_invoice_case</table_name></sn_bo_core_obj_type></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>f56e510f17654d756b56f29e667f4100</sys_id>
+<table></table>
+<target_name>Invoice Case</target_name>
+<type>Business Object Type</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_type_3495a0ce2bc78f104deaf02ac891bf7f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_type"><sn_bo_core_obj_type action="INSERT_OR_UPDATE"><name>Order Case</name><sys_class_name>sn_bo_core_obj_type</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:13:03</sys_created_on><sys_id>3495a0ce2bc78f104deaf02ac891bf7f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Order Case</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_bo_core_obj_type_3495a0ce2bc78f104deaf02ac891bf7f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 00:13:03</sys_updated_on><table_name>sn_order_case</table_name></sn_bo_core_obj_type></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>5568e290dc934b8504b7c2e1432f7168</sys_id>
+<table></table>
+<target_name>Order Case</target_name>
+<type>Business Object Type</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_type_3775ac8e2bc78f104deaf02ac891bffd</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_type"><sn_bo_core_obj_type action="INSERT_OR_UPDATE"><name>Sold Product Ramp</name><sys_class_name>sn_bo_core_obj_type</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:12:36</sys_created_on><sys_id>3775ac8e2bc78f104deaf02ac891bffd</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Sold Product Ramp</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_bo_core_obj_type_3775ac8e2bc78f104deaf02ac891bffd</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 00:12:36</sys_updated_on><table_name>sn_install_base_sold_product_ramp</table_name></sn_bo_core_obj_type></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>2f13066d469e4143a6e80317aa104652</sys_id>
+<table></table>
+<target_name>Sold Product Ramp</target_name>
+<type>Business Object Type</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_type_3b45288e2bc78f104deaf02ac891bf30</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_type"><sn_bo_core_obj_type action="INSERT_OR_UPDATE"><name>Quote Line Ramp</name><sys_class_name>sn_bo_core_obj_type</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:11:47</sys_created_on><sys_id>3b45288e2bc78f104deaf02ac891bf30</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Quote Line Ramp</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_bo_core_obj_type_3b45288e2bc78f104deaf02ac891bf30</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 00:11:47</sys_updated_on><table_name>sn_quote_mgmt_core_quote_line_ramp</table_name></sn_bo_core_obj_type></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>5f42ae67f97234e4c94a9a67cf8c507a</sys_id>
+<table></table>
+<target_name>Quote Line Ramp</target_name>
+<type>Business Object Type</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_type_4915ec4e2bc78f104deaf02ac891bfa9</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_type"><sn_bo_core_obj_type action="INSERT_OR_UPDATE"><name>Contract Line Ramp</name><sys_class_name>sn_bo_core_obj_type</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:11:00</sys_created_on><sys_id>4915ec4e2bc78f104deaf02ac891bfa9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Contract Line Ramp</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_bo_core_obj_type_4915ec4e2bc78f104deaf02ac891bfa9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 00:11:00</sys_updated_on><table_name>sn_pss_core_customer_contract_line_ramp</table_name></sn_bo_core_obj_type></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>85f1c631b6a988de5104199bf5f09d69</sys_id>
+<table></table>
+<target_name>Contract Line Ramp</target_name>
+<type>Business Object Type</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_type_4ba564ce2bc78f104deaf02ac891bfe9</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_type"><sn_bo_core_obj_type action="INSERT_OR_UPDATE"><name>Order Case Line</name><sys_class_name>sn_bo_core_obj_type</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:13:21</sys_created_on><sys_id>4ba564ce2bc78f104deaf02ac891bfe9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Order Case Line</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_bo_core_obj_type_4ba564ce2bc78f104deaf02ac891bfe9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 00:13:21</sys_updated_on><table_name>sn_order_case_line</table_name></sn_bo_core_obj_type></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>1c413c461b3b73a3e5e6b159c10d27d6</sys_id>
+<table></table>
+<target_name>Order Case Line</target_name>
+<type>Business Object Type</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_type_96f4604e2bc78f104deaf02ac891bf6d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_type"><sn_bo_core_obj_type action="INSERT_OR_UPDATE"><name>Customer Contract Line</name><sys_class_name>sn_bo_core_obj_type</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:10:25</sys_created_on><sys_id>96f4604e2bc78f104deaf02ac891bf6d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Customer Contract Line</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_bo_core_obj_type_96f4604e2bc78f104deaf02ac891bf6d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 00:10:25</sys_updated_on><table_name>sn_pss_core_service_contract_line</table_name></sn_bo_core_obj_type></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>daec037ec352f88817c9d993c3f5ee36</sys_id>
+<table></table>
+<target_name>Customer Contract Line</target_name>
+<type>Business Object Type</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_type_bbc5a8ce2bc78f104deaf02ac891bfe9</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_type"><sn_bo_core_obj_type action="INSERT_OR_UPDATE"><name>Invoice Case Line</name><sys_class_name>sn_bo_core_obj_type</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:13:58</sys_created_on><sys_id>bbc5a8ce2bc78f104deaf02ac891bfe9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Invoice Case Line</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_bo_core_obj_type_bbc5a8ce2bc78f104deaf02ac891bfe9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 00:13:58</sys_updated_on><table_name>sn_csm_invoice_case_line</table_name></sn_bo_core_obj_type></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>02c640fbcd76b81f19c14eefc29885bd</sys_id>
+<table></table>
+<target_name>Invoice Case Line</target_name>
+<type>Business Object Type</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_type_c1d4244e2bc78f104deaf02ac891bfc9</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_type"><sn_bo_core_obj_type action="INSERT_OR_UPDATE"><name>Customer Contract</name><sys_class_name>sn_bo_core_obj_type</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:09:58</sys_created_on><sys_id>c1d4244e2bc78f104deaf02ac891bfc9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Customer Contract</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_bo_core_obj_type_c1d4244e2bc78f104deaf02ac891bfc9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 00:09:58</sys_updated_on><table_name>sn_pss_core_service_contract</table_name></sn_bo_core_obj_type></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>5c25d58b11e34f3346ddaeaebf1d1feb</sys_id>
+<table></table>
+<target_name>Customer Contract</target_name>
+<type>Business Object Type</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_bo_core_obj_type_d135248e2bc78f104deaf02ac891bf4b</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_bo_core_obj_type"><sn_bo_core_obj_type action="INSERT_OR_UPDATE"><name>Order Line Ramp</name><sys_class_name>sn_bo_core_obj_type</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:11:27</sys_created_on><sys_id>d135248e2bc78f104deaf02ac891bf4b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Order Line Ramp</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_bo_core_obj_type_d135248e2bc78f104deaf02ac891bf4b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 00:11:27</sys_updated_on><table_name>sn_ind_tmt_orm_order_line_ramp</table_name></sn_bo_core_obj_type></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>afff503ec2f6cceabacd8589553d96ac</sys_id>
+<table></table>
+<target_name>Order Line Ramp</target_name>
+<type>Business Object Type</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_036874063b87cf10d5260fa693e45a07</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>true</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>true</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_quote_mgmt_core_quote_line_item</collection><condition/><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Sync Process Record on Quote Line Change</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    var util = new BOProcessChainUtil();
+
+    if (current.operation() == 'delete') {
+        util.deactivateLinkCascade(current.getUniqueValue());
+    } else if (!gs.nil(current.quote)) {
+        util.ensureQuoteLink(current.getValue('quote'));
+    }
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 01:35:01</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>036874063b87cf10d5260fa693e45a07</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Sync Process Record on Quote Line Change</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_script_036874063b87cf10d5260fa693e45a07</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-24 21:58:24</sys_updated_on><template/><when>after</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=036874063b87cf10d5260fa693e45a07"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>8ecc36cb414d462fa418f9d7063fa7f3</sys_id>
+<table>sn_quote_mgmt_core_quote_line_item</table>
+<target_name>Sync Process Record on Quote Line Change</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_0368f8422bcb8f104deaf02ac891bf00</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>true</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>true</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_opty_mgmt_core_opportunity</collection><condition/><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Sync Process Record on Opportunity Chang</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    var util = new BOProcessChainUtil();
+
+    if (current.operation() == 'delete') {
+        util.deactivateLinkCascade(current.getUniqueValue());
+    } else {
+        util.syncOpportunity(current.getUniqueValue());
+    }
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 01:35:00</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>0368f8422bcb8f104deaf02ac891bf00</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Sync Process Record on Opportunity Chang</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_script_0368f8422bcb8f104deaf02ac891bf00</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 01:35:26</sys_updated_on><template/><when>after</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=0368f8422bcb8f104deaf02ac891bf00"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>2fa0ef354954039c5ce21761e6da8c8c</sys_id>
+<table>sn_opty_mgmt_core_opportunity</table>
+<target_name>Sync Process Record on Opportunity Chang</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_3bcd7c822b0f8f104deaf02ac891bfb1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>true</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>true</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_order_case_line</collection><condition/><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Sync Process Record on Order Case Line C</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    var util = new BOProcessChainUtil();
+
+    if (current.operation() == 'delete') {
+        util.deactivateLinkCascade(current.getUniqueValue());
+    } else if (!gs.nil(current.parent)) {
+        util.ensureOrderCaseLink(current.getValue('parent'));
+    }
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 01:58:33</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>3bcd7c822b0f8f104deaf02ac891bfb1</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Sync Process Record on Order Case Line C</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_script_3bcd7c822b0f8f104deaf02ac891bfb1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 01:58:39</sys_updated_on><template/><when>after</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=3bcd7c822b0f8f104deaf02ac891bfb1"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>8088cf52dc687a5234db4db6a27223ca</sys_id>
+<table>sn_order_case_line</table>
+<target_name>Sync Process Record on Order Case Line C</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_4f55bc0a2b8b8f104deaf02ac891bf03</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>true</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>true</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_ind_tmt_orm_order</collection><condition/><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Sync Process Record on Order Generated f</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    var util = new BOProcessChainUtil();
+
+    if (current.operation() == 'delete' || gs.nil(current.quote)) {
+        util.deactivateLinkCascade(current.getUniqueValue());
+    } else {
+        util.ensureOrderLink(current.getUniqueValue());
+    }
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 01:21:38</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>4f55bc0a2b8b8f104deaf02ac891bf03</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Sync Process Record on Order Generated f</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_script_4f55bc0a2b8b8f104deaf02ac891bf03</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 01:35:26</sys_updated_on><template/><when>after</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=4f55bc0a2b8b8f104deaf02ac891bf03"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>a7bf631c48b68cc2c3c3a03c5d9428b3</sys_id>
+<table>sn_ind_tmt_orm_order</table>
+<target_name>Sync Process Record on Order Generated f</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_6b9cf4022b0f8f104deaf02ac891bf78</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>true</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>true</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_order_case</collection><condition/><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Sync Process Record on Order Case Change</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    var util = new BOProcessChainUtil();
+
+    if (current.operation() == 'delete' || gs.nil(current.order_id)) {
+        util.deactivateLinkCascade(current.getUniqueValue());
+    } else {
+        util.ensureOrderCaseLink(current.getUniqueValue());
+    }
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 01:53:20</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>6b9cf4022b0f8f104deaf02ac891bf78</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Sync Process Record on Order Case Change</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_script_6b9cf4022b0f8f104deaf02ac891bf78</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 01:53:27</sys_updated_on><template/><when>after</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=6b9cf4022b0f8f104deaf02ac891bf78"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>c965aa05bf8a03d86f3bcaf50248f4fc</sys_id>
+<table>sn_order_case</table>
+<target_name>Sync Process Record on Order Case Change</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_9c7d60463b07cf10d5260fa693e45ab0</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>true</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>true</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_quote_mgmt_core_quote</collection><condition/><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Auto-create Sales Process Record on Oppo</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    // gs.hasRole() treats admin as satisfying every role check, so it can't
+    // distinguish an actual partner-portal user from an admin doing the same
+    // operation. Check the literal role grant instead.
+    var hasExternalRole = false;
+    var roleGr = new GlideRecord('sys_user_has_role');
+    roleGr.addQuery('user', gs.getUserID());
+    roleGr.addQuery('role.name', 'snc_external');
+    roleGr.query();
+    if (roleGr.next()) {
+        hasExternalRole = true;
+    }
+    if (hasExternalRole) return; // skip Sales Process Record creation for partner portal users
+
+    var util = new BOProcessChainUtil();
+
+    if (current.operation() == 'delete') {
+        util.deactivateLinkCascade(current.getUniqueValue());
+    } else {
+        util.ensureQuoteLink(current.getUniqueValue());
+    }
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 00:47:02</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>9c7d60463b07cf10d5260fa693e45ab0</sys_id><sys_mod_count>12</sys_mod_count><sys_name>Auto-create Sales Process Record on Oppo</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_script_9c7d60463b07cf10d5260fa693e45ab0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-03 05:56:47</sys_updated_on><template/><when>after</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=9c7d60463b07cf10d5260fa693e45ab0"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>9b9e1b39e273a603854bb9eb109e9b5f</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Auto-create Sales Process Record on Oppo</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_bb68f8422bcb8f104deaf02ac891bfd6</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>true</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>true</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_ind_tmt_orm_order_line_item</collection><condition/><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Sync Process Record on Order Line Change</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    var util = new BOProcessChainUtil();
+
+    if (current.operation() == 'delete') {
+        util.deactivateLinkCascade(current.getUniqueValue());
+    } else if (!gs.nil(current.order)) {
+        util.ensureOrderLink(current.getValue('order'));
+    }
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 01:35:04</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>bb68f8422bcb8f104deaf02ac891bfd6</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Sync Process Record on Order Line Change</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_script_bb68f8422bcb8f104deaf02ac891bfd6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 01:35:27</sys_updated_on><template/><when>after</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=bb68f8422bcb8f104deaf02ac891bfd6"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>ca642b1d7bb2c80f07a8258a4b947e5a</sys_id>
+<table>sn_ind_tmt_orm_order_line_item</table>
+<target_name>Sync Process Record on Order Line Change</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_include_064570062b8b8f104deaf02ac891bfbc</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include"><sys_script_include action="INSERT_OR_UPDATE"><access>package_private</access><active>true</active><api_name>global.BOProcessChainUtil</api_name><caller_access/><client_callable>false</client_callable><description/><mobile_callable>false</mobile_callable><name>BOProcessChainUtil</name><sandbox_callable>false</sandbox_callable><script><![CDATA[var BOProcessChainUtil = Class.create();
+BOProcessChainUtil.prototype = {
+    initialize: function() {},
+
+    TYPES: {
+        OPPORTUNITY: 'bbdf87f3ff01221066aeffffffffffd2',
+        QUOTE: '06909b37ff01221066aeffffffffff0d',
+        ORDER: 'b9c09f37ff01221066aeffffffffff20',
+        QUOTE_LINE: 'fea0db37ff01221066aeffffffffff40',
+        ORDER_LINE: '9701d377ff01221066aeffffffffff21',
+        ORDER_CASE: '3495a0ce2bc78f104deaf02ac891bf7f',
+        ORDER_CASE_LINE: '4ba564ce2bc78f104deaf02ac891bfe9'
+    },
+
+    TABLES: {
+        SPR: 'sn_l2c_cockpit_sales_process_record',
+        OPPORTUNITY: 'sn_opty_mgmt_core_opportunity',
+        QUOTE: 'sn_quote_mgmt_core_quote',
+        QUOTE_LINE: 'sn_quote_mgmt_core_quote_line_item',
+        ORDER: 'sn_ind_tmt_orm_order',
+        ORDER_LINE: 'sn_ind_tmt_orm_order_line_item',
+        ORDER_CASE: 'sn_order_case',
+        ORDER_CASE_LINE: 'sn_order_case_line',
+        RESOURCE: 'sn_bo_core_process_resource'
+    },
+
+    OBJECT_GROUP: '3f1c98c22b878f104deaf02ac891bfec',
+
+    _linkExists: function(businessProcessRecordId, objectSysId, parentTableName, parentObjectSysId) {
+        var gr = new GlideRecord(this.TABLES.RESOURCE);
+        gr.addQuery('business_process_record', businessProcessRecordId);
+        gr.addQuery('object', objectSysId);
+        gr.addQuery('parent_table_name', parentTableName);
+        gr.addQuery('parent_object', parentObjectSysId);
+        gr.addQuery('active', true);
+        gr.query();
+        return gr.next();
+    },
+
+    _createLink: function(businessProcessRecordId, objectTypeId, objectSysId, parentTableName, parentObjectSysId) {
+        var gr = new GlideRecord(this.TABLES.RESOURCE);
+        gr.initialize();
+        gr.setValue('business_process_record', businessProcessRecordId);
+        gr.setValue('business_object_type', objectTypeId);
+        gr.setValue('object', objectSysId);
+        gr.setValue('active', true);
+        gr.setValue('parent_table_name', parentTableName);
+        gr.setValue('parent_object', parentObjectSysId);
+        return gr.insert();
+    },
+
+    /**
+     * Finds the process record (if any) that already tracks this object,
+     * regardless of what it's currently parented under. Used to reuse an
+     * existing process record when an object's place in the chain changes
+     * (e.g. an opportunity gets added to a quote that was already tracked).
+     */
+    _findSalesProcessRecordForLinkedObject: function(objectSysId, businessObjectTypeId) {
+        var gr = new GlideRecord(this.TABLES.RESOURCE);
+        gr.addQuery('object', objectSysId);
+        gr.addQuery('business_object_type', businessObjectTypeId);
+        gr.addQuery('active', true);
+        gr.query();
+        if (gr.next()) {
+            return gr.getValue('business_process_record');
+        }
+        return null;
+    },
+
+    /**
+     * Creates a link for this object if none exists. If it's already linked
+     * somewhere else (process record/type/parent changed), retires the old
+     * link and inserts a fresh one rather than updating in place - the OOB
+     * "Check table name and BOT fields" validation on this table only
+     * re-checks business_object_type when that field or business_process_record
+     * itself changes, so an update that only moves the parent can be wrongly
+     * aborted even though the type was already valid. A plain insert avoids
+     * that entirely. Safe to call every time - a no-op if nothing changed.
+     */
+    _ensureLink: function(businessProcessRecordId, objectTypeId, objectSysId, parentTableName, parentObjectSysId) {
+        var gr = new GlideRecord(this.TABLES.RESOURCE);
+        gr.addQuery('object', objectSysId);
+        gr.addQuery('active', true);
+        gr.query();
+        if (gr.next()) {
+            if (gr.getValue('business_process_record') == businessProcessRecordId &&
+                gr.getValue('business_object_type') == objectTypeId &&
+                gr.getValue('parent_table_name') == parentTableName &&
+                gr.getValue('parent_object') == parentObjectSysId) {
+                return gr.getUniqueValue();
+            }
+            gr.setValue('active', false);
+            gr.update();
+        }
+        return this._createLink(businessProcessRecordId, objectTypeId, objectSysId, parentTableName, parentObjectSysId);
+    },
+
+    /**
+     * Ensures a Sales Process Record exists for this opportunity and that the
+     * opportunity is linked directly under it. Reuses an existing one if found.
+     */
+    ensureOpportunityLink: function(opportunitySysId) {
+        if (!opportunitySysId) {
+            return null;
+        }
+
+        var salesProcessRecordId = this._findSalesProcessRecordForLinkedObject(opportunitySysId, this.TYPES.OPPORTUNITY);
+        if (salesProcessRecordId) {
+            return salesProcessRecordId;
+        }
+
+        var oppGR = new GlideRecord(this.TABLES.OPPORTUNITY);
+        if (!oppGR.get(opportunitySysId)) {
+            return null;
+        }
+
+        var sprGR = new GlideRecord(this.TABLES.SPR);
+        sprGR.initialize();
+        sprGR.setValue('account', oppGR.getValue('account'));
+        sprGR.setValue('business_object_group', this.OBJECT_GROUP);
+        sprGR.setValue('short_description', 'Opportunity to Order process - ' + oppGR.getDisplayValue('short_description'));
+        salesProcessRecordId = sprGR.insert();
+
+        if (!salesProcessRecordId) {
+            return null;
+        }
+
+        this._ensureLink(salesProcessRecordId, this.TYPES.OPPORTUNITY, opportunitySysId, this.TABLES.SPR, salesProcessRecordId);
+        return salesProcessRecordId;
+    },
+
+    /**
+     * Keeps an already-linked Sales Process Record's header fields (currently: account)
+     * in sync with its Opportunity. Does not create a new process record - creation is
+     * quote-driven, this only refreshes an existing one.
+     */
+    syncOpportunity: function(opportunitySysId) {
+        if (!opportunitySysId) {
+            return;
+        }
+
+        var salesProcessRecordId = this._findSalesProcessRecordForLinkedObject(opportunitySysId, this.TYPES.OPPORTUNITY);
+        if (!salesProcessRecordId) {
+            return;
+        }
+
+        var oppGR = new GlideRecord(this.TABLES.OPPORTUNITY);
+        if (!oppGR.get(opportunitySysId)) {
+            return;
+        }
+
+        var sprGR = new GlideRecord(this.TABLES.SPR);
+        if (sprGR.get(salesProcessRecordId) && sprGR.getValue('account') != oppGR.getValue('account')) {
+            sprGR.setValue('account', oppGR.getValue('account'));
+            sprGR.update();
+        }
+    },
+
+    _createProcessRecordForQuote: function(quoteGR) {
+        var sprGR = new GlideRecord(this.TABLES.SPR);
+        sprGR.initialize();
+        sprGR.setValue('account', quoteGR.getValue('account'));
+        sprGR.setValue('business_object_group', this.OBJECT_GROUP);
+        sprGR.setValue('short_description', 'Quote to Order process - ' + quoteGR.getDisplayValue('number'));
+        return sprGR.insert();
+    },
+
+    /**
+     * Ensures the chain Process Record -> [Opportunity ->] Quote exists for this
+     * quote, and syncs the quote's current line items underneath it. If the quote
+     * has no source_opportunity, the Quote links directly under the Process Record
+     * instead (skipping the Opportunity level). If an opportunity is added later,
+     * the existing process record is reused and the quote is re-parented under the
+     * opportunity in place - no duplicate process record is created. Safe to call
+     * repeatedly, e.g. every time the quote changes or a line is added.
+     */
+    ensureQuoteLink: function(quoteSysId) {
+        if (!quoteSysId) {
+            return null;
+        }
+
+        var quoteGR = new GlideRecord(this.TABLES.QUOTE);
+        if (!quoteGR.get(quoteSysId)) {
+            return null;
+        }
+
+        var opportunitySysId = quoteGR.getValue('source_opportunity');
+
+        // Reuse whatever process record already tracks this quote, whether it
+        // was created via its opportunity or created directly for the quote.
+        var salesProcessRecordId = this._findSalesProcessRecordForLinkedObject(quoteSysId, this.TYPES.QUOTE);
+
+        var quoteParentTable, quoteParentObject;
+
+        if (opportunitySysId) {
+            if (!salesProcessRecordId) {
+                salesProcessRecordId = this._findSalesProcessRecordForLinkedObject(opportunitySysId, this.TYPES.OPPORTUNITY);
+            }
+            if (!salesProcessRecordId) {
+                salesProcessRecordId = this.ensureOpportunityLink(opportunitySysId);
+            } else {
+                this._ensureLink(salesProcessRecordId, this.TYPES.OPPORTUNITY, opportunitySysId, this.TABLES.SPR, salesProcessRecordId);
+            }
+            if (!salesProcessRecordId) {
+                return null;
+            }
+
+            quoteParentTable = this.TABLES.OPPORTUNITY;
+            quoteParentObject = opportunitySysId;
+        } else {
+            if (!salesProcessRecordId) {
+                salesProcessRecordId = this._createProcessRecordForQuote(quoteGR);
+            }
+            if (!salesProcessRecordId) {
+                return null;
+            }
+
+            quoteParentTable = this.TABLES.SPR;
+            quoteParentObject = salesProcessRecordId;
+        }
+
+        this._ensureLink(salesProcessRecordId, this.TYPES.QUOTE, quoteSysId, quoteParentTable, quoteParentObject);
+
+        this._syncQuoteLines(salesProcessRecordId, quoteSysId);
+
+        return salesProcessRecordId;
+    },
+
+    _syncQuoteLines: function(salesProcessRecordId, quoteSysId) {
+        var lineGR = new GlideRecord(this.TABLES.QUOTE_LINE);
+        lineGR.addQuery('quote', quoteSysId);
+        lineGR.query();
+        while (lineGR.next()) {
+            var lineSysId = lineGR.getUniqueValue();
+            if (!this._linkExists(salesProcessRecordId, lineSysId, this.TABLES.QUOTE, quoteSysId)) {
+                this._createLink(salesProcessRecordId, this.TYPES.QUOTE_LINE, lineSysId, this.TABLES.QUOTE, quoteSysId);
+            }
+        }
+    },
+
+    /**
+     * Ensures the full chain Process Record -> Opportunity -> Quote -> Order exists
+     * for this order (building the upstream Quote/Opportunity links too if they
+     * don't exist yet), and syncs the order's current line items underneath it.
+     */
+    ensureOrderLink: function(orderSysId) {
+        if (!orderSysId) {
+            return null;
+        }
+
+        var orderGR = new GlideRecord(this.TABLES.ORDER);
+        if (!orderGR.get(orderSysId)) {
+            return null;
+        }
+
+        var quoteSysId = orderGR.getValue('quote');
+        if (!quoteSysId) {
+            return null;
+        }
+
+        var salesProcessRecordId = this.ensureQuoteLink(quoteSysId);
+        if (!salesProcessRecordId) {
+            return null;
+        }
+
+        if (!this._linkExists(salesProcessRecordId, orderSysId, this.TABLES.QUOTE, quoteSysId)) {
+            this._createLink(salesProcessRecordId, this.TYPES.ORDER, orderSysId, this.TABLES.QUOTE, quoteSysId);
+        }
+
+        this._syncOrderLines(salesProcessRecordId, orderSysId);
+
+        return salesProcessRecordId;
+    },
+
+    _syncOrderLines: function(salesProcessRecordId, orderSysId) {
+        var lineGR = new GlideRecord(this.TABLES.ORDER_LINE);
+        lineGR.addQuery('order', orderSysId);
+        lineGR.query();
+        while (lineGR.next()) {
+            var lineSysId = lineGR.getUniqueValue();
+            if (!this._linkExists(salesProcessRecordId, lineSysId, this.TABLES.ORDER, orderSysId)) {
+                this._createLink(salesProcessRecordId, this.TYPES.ORDER_LINE, lineSysId, this.TABLES.ORDER, orderSysId);
+            }
+        }
+    },
+
+    /**
+     * Ensures the chain Process Record -> ... -> Order -> Order Case exists for this
+     * order case, building the upstream Opportunity/Quote/Order links too if they
+     * don't exist yet, and syncs the order case's current lines underneath it.
+     */
+    ensureOrderCaseLink: function(orderCaseSysId) {
+        if (!orderCaseSysId) {
+            return null;
+        }
+
+        var caseGR = new GlideRecord(this.TABLES.ORDER_CASE);
+        if (!caseGR.get(orderCaseSysId)) {
+            return null;
+        }
+
+        var orderSysId = caseGR.getValue('order_id');
+        if (!orderSysId) {
+            return null;
+        }
+
+        var salesProcessRecordId = this.ensureOrderLink(orderSysId);
+        if (!salesProcessRecordId) {
+            return null;
+        }
+
+        if (!this._linkExists(salesProcessRecordId, orderCaseSysId, this.TABLES.ORDER, orderSysId)) {
+            this._createLink(salesProcessRecordId, this.TYPES.ORDER_CASE, orderCaseSysId, this.TABLES.ORDER, orderSysId);
+        }
+
+        this._syncOrderCaseLines(salesProcessRecordId, orderCaseSysId);
+
+        return salesProcessRecordId;
+    },
+
+    _syncOrderCaseLines: function(salesProcessRecordId, orderCaseSysId) {
+        var lineGR = new GlideRecord(this.TABLES.ORDER_CASE_LINE);
+        lineGR.addQuery('parent', orderCaseSysId);
+        lineGR.query();
+        while (lineGR.next()) {
+            var lineSysId = lineGR.getUniqueValue();
+            if (!this._linkExists(salesProcessRecordId, lineSysId, this.TABLES.ORDER_CASE, orderCaseSysId)) {
+                this._createLink(salesProcessRecordId, this.TYPES.ORDER_CASE_LINE, lineSysId, this.TABLES.ORDER_CASE, orderCaseSysId);
+            }
+        }
+    },
+
+    /**
+     * Deactivates the process-resource link for this object, and recursively
+     * deactivates anything linked underneath it (e.g. deleting a Quote also
+     * deactivates its Quote Lines and any Order/Order Lines hanging off it;
+     * deleting a line item just deactivates that one link).
+     */
+    deactivateLinkCascade: function(objectSysId) {
+        if (!objectSysId) {
+            return;
+        }
+
+        var childIds = [];
+        var childGr = new GlideRecord(this.TABLES.RESOURCE);
+        childGr.addQuery('parent_object', objectSysId);
+        childGr.addQuery('active', true);
+        childGr.query();
+        while (childGr.next()) {
+            childIds.push(childGr.getValue('object'));
+        }
+
+        var gr = new GlideRecord(this.TABLES.RESOURCE);
+        gr.addQuery('object', objectSysId);
+        gr.addQuery('active', true);
+        gr.query();
+        while (gr.next()) {
+            gr.setValue('active', false);
+            gr.update();
+        }
+
+        for (var i = 0; i < childIds.length; i++) {
+            this.deactivateLinkCascade(childIds[i]);
+        }
+    },
+
+    type: 'BOProcessChainUtil'
+};]]]]><![CDATA[></script><sys_class_name>sys_script_include</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 01:21:18</sys_created_on><sys_id>064570062b8b8f104deaf02ac891bfbc</sys_id><sys_mod_count>9</sys_mod_count><sys_name>BOProcessChainUtil</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_script_include_064570062b8b8f104deaf02ac891bfbc</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-24 21:58:24</sys_updated_on></sys_script_include></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-013-business-process-chain-sync">b459b75fbaff58022178bd63f1710a86</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>ddafab8516016cc7575714896a9f7a8e</sys_id>
+<table></table>
+<target_name>BOProcessChainUtil</target_name>
+<type>Script Include</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+</unload>

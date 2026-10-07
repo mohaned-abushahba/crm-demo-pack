@@ -4,7 +4,44 @@ Exported Update Set XML, one file per logical feature/fix, applied in numeric or
 
 Naming: `UPDATE-<NNN>-<short-kebab-name>.xml`
 
-No baseline captured yet — see `docs/CHANGELOG.md` for the plan to reconstruct the
-opmsalescrmstage baseline deliberately (re-apply known fixes with a named Update Set
-active, rather than mining the existing "Default" update set, which is dominated by
-unrelated plugin/platform noise).
+## Sources
+
+| Files | Built on | How |
+|---|---|---|
+| UPDATE-003 | opmsalescrmstage | Re-applied deliberately with a named Update Set current, then exported |
+| UPDATE-004 … 017 | opmsalescrm1 (stable golden instance) | Captured 2026-10-06 from the instance's customer update payloads (Default update sets), grouped by feature. See `docs/CHANGELOG.md` |
+
+UPDATE-004 … 017 each contain **one retrieved update set per application scope**, named
+`UPDATE-NNN-slug [Scope]`, because ServiceNow update sets are scope-bound. After importing a file,
+you will see several retrieved update sets. Preview and commit the `[Global]` one first (or the
+file's only one), then the scoped ones.
+
+## Recommended commit order
+
+Prerequisites: plugins installed. Users, groups, product offerings and price lists must be seeded
+with opmsalescrm1's sys_ids before 006, 010, 011 and 012, because those records reference them.
+
+`004 → 005 → 013 → 006 → 007 → 008 → 009 → 010 → 011 → 012 → 014 → 015 → 016 → 017`
+
+013 goes early because the Sync Process Record BRs in 006/007/012 call `BOProcessChainUtil`.
+
+## Removed sets
+
+UPDATE-001 (stage-only $500K approval test) and UPDATE-002 (stage copy of the Solana quote template)
+were removed on 2026-10-07. UPDATE-010 and UPDATE-009 are canonical for approvals and quote
+templates. UPDATE-003 targets the same `sp_portal` record as on opmsalescrm1, so it is not
+duplicated in 004–017.
+
+## Review before committing
+
+- **UPDATE-017** holds other @snc personnel's direct changes. Its 16 `snc_external` role grants on
+  UI-framework query ACLs are a known workaround for an existing instance defect (RFQ playbook).
+  They are kept as-is by decision (2026-10-07).
+- **UPDATE-015** and **UPDATE-017** modify OOB script includes (`SalesForecastHeaderItemUtil`,
+  `CustomerPortalCatalogAccessUtil`). Expect skip/collision prompts in Preview if plugin versions differ.
+- 35 records in **UPDATE-007/011/013** come from tables that ServiceNow does not update-set track:
+  L2C mappings, CPQ rule matrices, and the Business Object group + members. Their payloads were
+  serialised from live field values. Check them in Preview.
+
+Full inventory, method and risks:
+`~/Downloads/servicenow-mcp-main v2/docs/instances/opmsalescrm1/06-delta-2026-10-06.md`.

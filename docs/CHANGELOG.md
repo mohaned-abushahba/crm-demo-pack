@@ -14,6 +14,50 @@ File: update-sets/UPDATE-XXX-short-name.xml
 
 ---
 
+## Removed UPDATE-001 and UPDATE-002 (2026-10-07)
+What: Deleted update-sets/UPDATE-001-quote-approval-500k-threshold.xml and
+update-sets/UPDATE-002-quote-doc-template-solana.xml. Their entries below are kept for history.
+Why: UPDATE-001 was a test-only approval retune on opmsalescrmstage; UPDATE-010 (opmsalescrm1's
+Quote + Deal Registration approvals) is canonical. UPDATE-002 duplicated the Solana quote template
+with stage-specific sys_ids; UPDATE-009 (opmsalescrm1 original, incl. 2026-09-29 edit) is canonical.
+Also decided: UPDATE-017's `snc_external` ACL role grants stay as-is — they are a workaround for an
+existing instance defect.
+
+## UPDATE-004 … UPDATE-017 — opmsalescrm1 golden build capture (2026-10-06)
+Instance: opmsalescrm1
+What: The full Sales CRM demo **config** build from the stable golden instance, in 14 files /
+56 per-scope retrieved update sets / 1,018 records:
+  - 004 crm-custom-fields-and-choices (24): `u_` fields, import data-source tables, labels, choices
+  - 005 territory-model-and-sales-owner-sync (13): territory model/levels/mappings + 2 BRs
+  - 006 lead-opportunity-automation (14): lead/opty BRs, RENEW cycle type, stage, allocation types
+  - 007 quote-defaulting-automation (38): 9 quote/RFQ BRs, client script, forms, L2C mappings
+  - 008 account-actions-and-forms (17): Create Quote/Opportunity actions, Account forms
+  - 009 quote-document-templates (23): Solana / Quote Lines / Sales Cart templates + blocks
+  - 010 advanced-approvals (40): Quote + Deal Registration approval configuration
+  - 011 cpq-pricing-decision-tables (614): 8 pricing decision tables, 5 rule matrices, context vars
+  - 012 order-management-automation (28): order BRs, OrderTaskUtils, task policy, 3 flows
+  - 013 business-process-chain-sync (35): BOProcessChainUtil, 7 sync BRs, BO types/group
+  - 014 partner-segmentation (7), 015 sales-forecasting (5), 016 workspace-landing-pages-dashboards (135)
+  - 017 contributed-snc-personnel-changes (25): other @snc personnel's direct changes (review first)
+Why: opmsalescrm1 is declared stable. Capturing its config lets a blank instance be rebuilt without
+hand-recreating the build. Master/seed data was excluded by request and stays on the seed/ path.
+How: Read-only. Took the latest customer `sys_update_xml` payload per record (2026-08-23 onward),
+dropped platform/plugin noise, deletes and 43 orphans (labels/choices for deleted decision tables,
+TEST flow result), then grouped by feature and wrote one `sys_remote_update_set` per scope. Nothing
+was written to opmsalescrm1.
+Known limitations / gotchas:
+  - opmsalescrm1's demo build all landed in "Default" update sets. That is why the capture works
+    from payloads rather than a named set.
+  - 35 records come from tables that are not update-set tracked (`sn_bo_core_obj_group`(+members),
+    `sn_csm_ctxrul_mgt_rule_matrix`, `sn_l2c_core_*`). They were serialised from live field values.
+    `BOProcessChainUtil` hard-codes the BO group sys_id, so 013 needs that group.
+  - Overlapped stage-built UPDATE-001/002. Resolved 2026-10-07 by removing both (see entry above).
+  - Data-dependent config references opmsalescrm1 master-data sys_ids (SDR group, Sage Reed,
+    SCRM-Order Operations, approvers, product offerings, price lists). Seed with matching sys_ids.
+  - Not captured: CPQ/Logik OAuth + tenant URL, Now Assist/Otto settings, SMTP/clone/crypto
+    properties, Change Log Tracker app, AI Agents, approval delegation rule.
+Files: update-sets/UPDATE-004-crm-custom-fields-and-choices.xml … UPDATE-017-contributed-snc-personnel-changes.xml
+
 ## UPDATE-001-quote-approval-500k-threshold (2026-10-06)
 Instance: opmsalescrmstage
 What: Advanced Approval Management (sn_adv_appr_mgmt) config for Quote

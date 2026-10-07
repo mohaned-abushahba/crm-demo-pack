@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-10-06 21:00:00">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<description>Quote defaulting BRs (assigned-to, contact, signers, billing/shipping, expiry, deal type / route to market), RFQ auto-assign, route-to-market client script, Quote form layouts, and the hand-built Lead-to-Cash entity definitions/attribute mappings (Order to Sold Product, deal type, route to market, seller organization). Source: opmsalescrm1 (captured 2026-10-06 from Default update sets).</description>
+<name>UPDATE-007-quote-defaulting-automation [Global]</name>
+<origin_sys_id>9bf58e076cf8e8ae8feb03eee7653da3</origin_sys_id>
+<remote_sys_id>9bf58e076cf8e8ae8feb03eee7653da3</remote_sys_id>
+<state>loaded</state>
+<sys_id>9bf58e076cf8e8ae8feb03eee7653da3</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_0a735d9c2b0f4b104deaf02ac891bff4</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>false</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>true</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_quote_mgmt_core_quote</collection><condition>current.account.changes() || (current.isNewRecord() &amp;&amp; !gs.nil(current.account))</condition><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Auto-populate Billing/Shipping location </name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var HQ_TYPE = '2a4e93163bbac310d5260fa693e45a65';
+	var BILLING_TYPE = '724e53962bba83104deaf02ac891bf6b';
+	var SHIPPING_TYPE = '7e4ed3962bba83104deaf02ac891bf0c';
+
+	if (gs.nil(current.getValue('account'))) {
+		return;
+	}
+
+	function getAddressLocation(accountId, typeSysId) {
+		var rel = new GlideRecord('account_address_relationship');
+		rel.addQuery('account', accountId);
+		rel.addQuery('type', typeSysId);
+		rel.query();
+		if (rel.next()) {
+			return rel.getValue('location');
+		}
+		return '';
+	}
+
+	function applyLocation(locationSysId, prefix) {
+		if (!locationSysId) {
+			return;
+		}
+		var loc = new GlideRecord('cmn_location');
+		if (loc.get(locationSysId)) {
+			current.setValue(prefix + '_location', locationSysId);
+			current.setValue(prefix + '_street', loc.getValue('street'));
+			current.setValue(prefix + '_city', loc.getValue('city'));
+			current.setValue(prefix + '_state', loc.getValue('state'));
+			current.setValue(prefix + '_zip', loc.getValue('zip'));
+			current.setValue(prefix + '_country', loc.getValue('country'));
+		}
+	}
+
+	var accountId = current.getValue('account');
+
+	var billingLoc = getAddressLocation(accountId, BILLING_TYPE) || getAddressLocation(accountId, HQ_TYPE);
+	var shippingLoc = getAddressLocation(accountId, SHIPPING_TYPE) || getAddressLocation(accountId, HQ_TYPE);
+
+	applyLocation(billingLoc, 'billing');
+	applyLocation(shippingLoc, 'shipping');
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 17:03:49</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>0a735d9c2b0f4b104deaf02ac891bff4</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Auto-populate Billing/Shipping location </sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_script_0a735d9c2b0f4b104deaf02ac891bff4</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 17:03:49</sys_updated_on><template/><when>before</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=0a735d9c2b0f4b104deaf02ac891bff4"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Global]">9bf58e076cf8e8ae8feb03eee7653da3</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>ca2f9c890afbd40d7efb5b418ff484f8</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Auto-populate Billing/Shipping location </target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_fd6e49902b0f4b104deaf02ac891bf61</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>false</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>false</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_quote_mgmt_core_quote</collection><condition>!current.account.nil() &amp;&amp; current.assigned_to.nil()</condition><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Default Assigned To from Account Sales O</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+    if (current.account.sales_owner) {
+        current.assigned_to = current.account.sales_owner;
+    }
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 16:41:41</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>fd6e49902b0f4b104deaf02ac891bf61</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Default Assigned To from Account Sales O</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_script_fd6e49902b0f4b104deaf02ac891bf61</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 16:41:41</sys_updated_on><template/><when>before</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=fd6e49902b0f4b104deaf02ac891bf61"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Global]">9bf58e076cf8e8ae8feb03eee7653da3</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>670d2e56ae51583fea6f6b6ec2363874</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Default Assigned To from Account Sales O</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_client_40bb295c2b0303104deaf02ac891bffc</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client"><sys_script_client action="INSERT_OR_UPDATE"><active>true</active><applies_extended>false</applies_extended><condition/><description/><field>deal_type</field><global>true</global><isolate_script>false</isolate_script><messages/><name>Sync Route to Market with Deal Type (Dir</name><order/><script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    if (newValue === 'direct') {
+        g_form.setValue('route_to_market', 'direct');
+    }
+}]]]]><![CDATA[></script><sys_class_name>sys_script_client</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:49:38</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>40bb295c2b0303104deaf02ac891bffc</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Sync Route to Market with Deal Type (Dir</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_script_client_40bb295c2b0303104deaf02ac891bffc</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:49:48</sys_updated_on><table>sn_quote_mgmt_core_quote</table><type>onChange</type><ui_type>0</ui_type><view/></sys_script_client></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Global]">9bf58e076cf8e8ae8feb03eee7653da3</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>57c8baf0b96332e91341c167f7817e04</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Sync Route to Market with Deal Type (Dir</target_name>
+<type>Client Script</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<application_name>Customer Life Cycle Management Workflows</application_name>
+<application_scope>sn_l2c_cust_flows</application_scope>
+<description>Quote defaulting BRs (assigned-to, contact, signers, billing/shipping, expiry, deal type / route to market), RFQ auto-assign, route-to-market client script, Quote form layouts, and the hand-built Lead-to-Cash entity definitions/attribute mappings (Order to Sold Product, deal type, route to market, seller organization). Source: opmsalescrm1 (captured 2026-10-06 from Default update sets).</description>
+<name>UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]</name>
+<origin_sys_id>4d8e2e472d0c733ebae1a947e8289359</origin_sys_id>
+<remote_sys_id>4d8e2e472d0c733ebae1a947e8289359</remote_sys_id>
+<state>loaded</state>
+<sys_id>4d8e2e472d0c733ebae1a947e8289359</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_06f93e60058b4710f8773239c502ec25</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute"><sn_l2c_core_entity_attribute action="INSERT_OR_UPDATE"><advanced>0</advanced><entity display_value="Sold Product">5f3ffa4853823110e37dddeeff7b1226</entity><field>deal_type</field><key/><script>(function getAttributeValue(current, attributeContext) {
+
+ // Add your code here to return a value from current record.
+
+ })(current, attributeContext);</script><sys_class_name>sn_l2c_core_entity_attribute</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 19:10:56</sys_created_on><sys_id>06f93e60058b4710f8773239c502ec25</sys_id><sys_mod_count>0</sys_mod_count><sys_name>deal_type</sys_name><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_06f93e60058b4710f8773239c502ec25</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 19:10:56</sys_updated_on><table>sn_install_base_sold_product</table></sn_l2c_core_entity_attribute></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>07e8e50d77755e8f81ded24258343ce8</sys_id>
+<table></table>
+<target_name>deal_type</target_name>
+<type>Lead To Cash Entity Attribute</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_222ab2a0058b4710f8773239c502ec48</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute"><sn_l2c_core_entity_attribute action="INSERT_OR_UPDATE"><advanced>0</advanced><entity display_value="Sold Product">5f3ffa4853823110e37dddeeff7b1226</entity><field>route_to_market</field><key/><script>(function getAttributeValue(current, attributeContext) {
+
+ // Add your code here to return a value from current record.
+
+ })(current, attributeContext);</script><sys_class_name>sn_l2c_core_entity_attribute</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 19:11:19</sys_created_on><sys_id>222ab2a0058b4710f8773239c502ec48</sys_id><sys_mod_count>0</sys_mod_count><sys_name>route_to_market</sys_name><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_222ab2a0058b4710f8773239c502ec48</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 19:11:19</sys_updated_on><table>sn_install_base_sold_product</table></sn_l2c_core_entity_attribute></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>f9f0710575f788a1522c2cbcb5b59bb0</sys_id>
+<table></table>
+<target_name>route_to_market</target_name>
+<type>Lead To Cash Entity Attribute</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_6efa8720050f4710f8773239c502ec9b</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute"><sn_l2c_core_entity_attribute action="INSERT_OR_UPDATE"><advanced>0</advanced><entity display_value="Sold Product">5f3ffa4853823110e37dddeeff7b1226</entity><field>seller_organization</field><key/><script>(function getAttributeValue(current, attributeContext) {
+
+ // Add your code here to return a value from current record.
+
+ })(current, attributeContext);</script><sys_class_name>sn_l2c_core_entity_attribute</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 20:24:45</sys_created_on><sys_id>6efa8720050f4710f8773239c502ec9b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>seller_organization</sys_name><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_6efa8720050f4710f8773239c502ec9b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:24:45</sys_updated_on><table>sn_install_base_sold_product_related_party</table></sn_l2c_core_entity_attribute></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>98534c08c0a5036a6c13bfa3cf9a7f8f</sys_id>
+<table></table>
+<target_name>seller_organization</target_name>
+<type>Lead To Cash Entity Attribute</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_73178760050f4710f8773239c502ec09</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute"><sn_l2c_core_entity_attribute action="INSERT_OR_UPDATE"><advanced>0</advanced><entity display_value="Sold Product">5f3ffa4853823110e37dddeeff7b1226</entity><field>responsibility</field><key display_value="Responsibility">fb0b5c28ff8b32107816ffffffffffad</key><script>(function getAttributeValue(current, attributeContext) {
+
+ // Add your code here to return a value from current record.
+
+ })(current, attributeContext);</script><sys_class_name>sn_l2c_core_entity_attribute</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 20:08:01</sys_created_on><sys_id>73178760050f4710f8773239c502ec09</sys_id><sys_mod_count>0</sys_mod_count><sys_name>responsibility</sys_name><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_73178760050f4710f8773239c502ec09</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:08:01</sys_updated_on><table>sn_install_base_sold_product_related_party</table></sn_l2c_core_entity_attribute></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>e52e97b92507bf96a111a97ffa5191fd</sys_id>
+<table></table>
+<target_name>responsibility</target_name>
+<type>Lead To Cash Entity Attribute</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_83374720050f4710f8773239c502ecad</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute"><sn_l2c_core_entity_attribute action="INSERT_OR_UPDATE"><advanced>0</advanced><entity display_value="Sold Product">5f3ffa4853823110e37dddeeff7b1226</entity><field>account_address</field><key display_value="Account address">194a58a4ff8b32107816ffffffffff70</key><script>(function getAttributeValue(current, attributeContext) {
+
+ // Add your code here to return a value from current record.
+
+ })(current, attributeContext);</script><sys_class_name>sn_l2c_core_entity_attribute</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 20:08:45</sys_created_on><sys_id>83374720050f4710f8773239c502ecad</sys_id><sys_mod_count>0</sys_mod_count><sys_name>account_address</sys_name><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_83374720050f4710f8773239c502ecad</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:08:45</sys_updated_on><table>sn_install_base_sold_product_related_party</table></sn_l2c_core_entity_attribute></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>773954eebad597c491c20d8f437efb05</sys_id>
+<table></table>
+<target_name>account_address</target_name>
+<type>Lead To Cash Entity Attribute</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_95870f20050f4710f8773239c502ecba</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute"><sn_l2c_core_entity_attribute action="INSERT_OR_UPDATE"><advanced>0</advanced><entity display_value="Sold Product">5f3ffa4853823110e37dddeeff7b1226</entity><field>order</field><key display_value="Rank">8bb41468ff4b32107816ffffffffff9a</key><script>(function getAttributeValue(current, attributeContext) {
+
+ // Add your code here to return a value from current record.
+
+ })(current, attributeContext);</script><sys_class_name>sn_l2c_core_entity_attribute</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 20:09:36</sys_created_on><sys_id>95870f20050f4710f8773239c502ecba</sys_id><sys_mod_count>0</sys_mod_count><sys_name>order</sys_name><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_95870f20050f4710f8773239c502ecba</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:09:36</sys_updated_on><table>sn_install_base_sold_product_related_party</table></sn_l2c_core_entity_attribute></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>37a5db59bab103410c25638942ed2dbb</sys_id>
+<table></table>
+<target_name>order</target_name>
+<type>Lead To Cash Entity Attribute</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_ae678f60050f4710f8773239c502eccb</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute"><sn_l2c_core_entity_attribute action="INSERT_OR_UPDATE"><advanced>0</advanced><entity display_value="Sold Product">5f3ffa4853823110e37dddeeff7b1226</entity><field>from_header</field><key/><script>(function getAttributeValue(current, attributeContext) {
+
+ // Add your code here to return a value from current record.
+
+ })(current, attributeContext);</script><sys_class_name>sn_l2c_core_entity_attribute</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 20:09:08</sys_created_on><sys_id>ae678f60050f4710f8773239c502eccb</sys_id><sys_mod_count>0</sys_mod_count><sys_name>from_header</sys_name><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_ae678f60050f4710f8773239c502eccb</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:09:08</sys_updated_on><table>sn_install_base_sold_product_related_party</table></sn_l2c_core_entity_attribute></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>9151074eb4ab4dac65352ec1b765a29a</sys_id>
+<table></table>
+<target_name>from_header</target_name>
+<type>Lead To Cash Entity Attribute</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_c3b74ba0050f4710f8773239c502ec4c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute"><sn_l2c_core_entity_attribute action="INSERT_OR_UPDATE"><advanced>0</advanced><entity display_value="Sold Product">5f3ffa4853823110e37dddeeff7b1226</entity><field>type</field><key display_value="Type">c05bd468ff8b32107816ffffffffff17</key><script>(function getAttributeValue(current, attributeContext) {
+
+ // Add your code here to return a value from current record.
+
+ })(current, attributeContext);</script><sys_class_name>sn_l2c_core_entity_attribute</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 20:10:53</sys_created_on><sys_id>c3b74ba0050f4710f8773239c502ec4c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>type</sys_name><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_c3b74ba0050f4710f8773239c502ec4c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:10:53</sys_updated_on><table>sn_install_base_sold_product_related_party</table></sn_l2c_core_entity_attribute></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>b7c1e7c657a0f70fca43d691d7f82a9a</sys_id>
+<table></table>
+<target_name>type</target_name>
+<type>Lead To Cash Entity Attribute</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_e797c3a0050f4710f8773239c502ec29</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute"><sn_l2c_core_entity_attribute action="INSERT_OR_UPDATE"><advanced>0</advanced><entity display_value="Sold Product">5f3ffa4853823110e37dddeeff7b1226</entity><field>account</field><key display_value="Account">0d8a18e4ff8b32107816ffffffffff20</key><script>(function getAttributeValue(current, attributeContext) {
+
+ // Add your code here to return a value from current record.
+
+ })(current, attributeContext);</script><sys_class_name>sn_l2c_core_entity_attribute</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 20:10:10</sys_created_on><sys_id>e797c3a0050f4710f8773239c502ec29</sys_id><sys_mod_count>0</sys_mod_count><sys_name>account</sys_name><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_e797c3a0050f4710f8773239c502ec29</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:10:10</sys_updated_on><table>sn_install_base_sold_product_related_party</table></sn_l2c_core_entity_attribute></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>63caca8b8822c9fd3baa9fbb6e4be640</sys_id>
+<table></table>
+<target_name>account</target_name>
+<type>Lead To Cash Entity Attribute</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_mapping_039a43a0050f4710f8773239c502ec77</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute_mapping"><sn_l2c_core_entity_attribute_mapping action="INSERT_OR_UPDATE"><advanced>0</advanced><entity_table_mapping display_value="Order to Sold Product">db5a8be4050f4710f8773239c502ec02</entity_table_mapping><script>(function getTargetAttributeValue(currentJSON, attributeContext) {
+
+ // Add your code here to return a value from current JSON.
+
+ })(currentJSON, attributeContext);</script><source_entity_attribute display_value="order">5bd0daecffc4cb109761ffffffffffa4</source_entity_attribute><sys_class_name>sn_l2c_core_entity_attribute_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 20:23:14</sys_created_on><sys_id>039a43a0050f4710f8773239c502ec77</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_mapping_039a43a0050f4710f8773239c502ec77</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:23:14</sys_updated_on><target_entity_attribute display_value="order">95870f20050f4710f8773239c502ecba</target_entity_attribute></sn_l2c_core_entity_attribute_mapping></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>a51bb542edd682c4e7ac3ecbcbe1a3b2</sys_id>
+<table></table>
+<target_name></target_name>
+<type>Lead To Cash Entity Attribute Mapping</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_mapping_1aab0f68050f4710f8773239c502ec00</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute_mapping"><sn_l2c_core_entity_attribute_mapping action="INSERT_OR_UPDATE"><advanced>0</advanced><entity_table_mapping display_value="Order to Sold Product">db5a8be4050f4710f8773239c502ec02</entity_table_mapping><script>(function getTargetAttributeValue(currentJSON, attributeContext) {
+
+ // Add your code here to return a value from current JSON.
+
+ })(currentJSON, attributeContext);</script><source_entity_attribute display_value="responsibility">81011220ff08cb109761ffffffffffe6</source_entity_attribute><sys_class_name>sn_l2c_core_entity_attribute_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 20:27:38</sys_created_on><sys_id>1aab0f68050f4710f8773239c502ec00</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_mapping_1aab0f68050f4710f8773239c502ec00</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:27:38</sys_updated_on><target_entity_attribute display_value="responsibility">73178760050f4710f8773239c502ec09</target_entity_attribute></sn_l2c_core_entity_attribute_mapping></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>adb91cfea511b7596c5c7338e928c518</sys_id>
+<table></table>
+<target_name></target_name>
+<type>Lead To Cash Entity Attribute Mapping</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_mapping_22bb83a8050f4710f8773239c502ec8a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute_mapping"><sn_l2c_core_entity_attribute_mapping action="INSERT_OR_UPDATE"><advanced>0</advanced><entity_table_mapping display_value="Order to Sold Product">db5a8be4050f4710f8773239c502ec02</entity_table_mapping><script>(function getTargetAttributeValue(currentJSON, attributeContext) {
+
+ // Add your code here to return a value from current JSON.
+
+ })(currentJSON, attributeContext);</script><source_entity_attribute display_value="account_address">6b90d2ecffc4cb109761ffffffffffec</source_entity_attribute><sys_class_name>sn_l2c_core_entity_attribute_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 20:27:53</sys_created_on><sys_id>22bb83a8050f4710f8773239c502ec8a</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_mapping_22bb83a8050f4710f8773239c502ec8a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:27:53</sys_updated_on><target_entity_attribute display_value="account_address">83374720050f4710f8773239c502ecad</target_entity_attribute></sn_l2c_core_entity_attribute_mapping></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>861049230c243d2ee41f8f9dc0749f43</sys_id>
+<table></table>
+<target_name></target_name>
+<type>Lead To Cash Entity Attribute Mapping</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_mapping_32b93660058b4710f8773239c502ec39</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute_mapping"><sn_l2c_core_entity_attribute_mapping action="INSERT_OR_UPDATE"><advanced>1</advanced><entity_table_mapping display_value="Order to Sold Product">10b03af053827110e37dddeeff7b1260</entity_table_mapping><script>(function getTargetAttributeValue(currentJSON, attributeContext) {
+    // deal_type lives on the Order header; this table mapping iterates order line items.
+    // Walk line item -&gt; order (native field, no entity-attribute registration needed) -&gt; header.
+    var lineItemId = currentJSON &amp;&amp; currentJSON.attributes &amp;&amp; currentJSON.attributes.sys_id &amp;&amp; currentJSON.attributes.sys_id.value;
+    if (gs.nil(lineItemId)) return '';
+
+    var lineGr = new GlideRecord('sn_ind_tmt_orm_order_line_item');
+    if (!lineGr.get(lineItemId)) return '';
+
+    var orderId = lineGr.getValue('order');
+    if (gs.nil(orderId)) return '';
+
+    var orderGr = new GlideRecord('sn_ind_tmt_orm_order');
+    if (orderGr.get(orderId)) return orderGr.getValue('deal_type');
+    return '';
+})(currentJSON, attributeContext);</script><source_entity_attribute/><sys_class_name>sn_l2c_core_entity_attribute_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 19:12:40</sys_created_on><sys_id>32b93660058b4710f8773239c502ec39</sys_id><sys_mod_count>1</sys_mod_count><sys_name/><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_mapping_32b93660058b4710f8773239c502ec39</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:44:01</sys_updated_on><target_entity_attribute display_value="deal_type">06f93e60058b4710f8773239c502ec25</target_entity_attribute></sn_l2c_core_entity_attribute_mapping></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>decb254cbb64bce75296caab5e322c21</sys_id>
+<table></table>
+<target_name></target_name>
+<type>Lead To Cash Entity Attribute Mapping</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_mapping_427bcb68050f4710f8773239c502ecf9</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute_mapping"><sn_l2c_core_entity_attribute_mapping action="INSERT_OR_UPDATE"><advanced>1</advanced><entity_table_mapping display_value="Order to Sold Product">db5a8be4050f4710f8773239c502ec02</entity_table_mapping><script>(function getTargetAttributeValue(currentJSON, attributeContext) {
+
+return false;
+
+ })(currentJSON, attributeContext);</script><source_entity_attribute/><sys_class_name>sn_l2c_core_entity_attribute_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 20:27:05</sys_created_on><sys_id>427bcb68050f4710f8773239c502ecf9</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_mapping_427bcb68050f4710f8773239c502ecf9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:27:05</sys_updated_on><target_entity_attribute display_value="from_header">ae678f60050f4710f8773239c502eccb</target_entity_attribute></sn_l2c_core_entity_attribute_mapping></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>a2b5073cd244ffa84df09b86720d01ec</sys_id>
+<table></table>
+<target_name></target_name>
+<type>Lead To Cash Entity Attribute Mapping</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_mapping_451bcf28050f4710f8773239c502ecc4</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute_mapping"><sn_l2c_core_entity_attribute_mapping action="INSERT_OR_UPDATE"><advanced>0</advanced><entity_table_mapping display_value="Order to Sold Product">db5a8be4050f4710f8773239c502ec02</entity_table_mapping><script>(function getTargetAttributeValue(currentJSON, attributeContext) {
+
+ // Add your code here to return a value from current JSON.
+
+ })(currentJSON, attributeContext);</script><source_entity_attribute display_value="account">9c501aacffc4cb109761ffffffffff04</source_entity_attribute><sys_class_name>sn_l2c_core_entity_attribute_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 20:25:20</sys_created_on><sys_id>451bcf28050f4710f8773239c502ecc4</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_mapping_451bcf28050f4710f8773239c502ecc4</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:25:20</sys_updated_on><target_entity_attribute display_value="account">e797c3a0050f4710f8773239c502ec29</target_entity_attribute></sn_l2c_core_entity_attribute_mapping></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>05b7e180e878768f423b17adc1527b2b</sys_id>
+<table></table>
+<target_name></target_name>
+<type>Lead To Cash Entity Attribute Mapping</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_mapping_8cfbb264058b4710f8773239c502eced</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute_mapping"><sn_l2c_core_entity_attribute_mapping action="INSERT_OR_UPDATE"><advanced>1</advanced><entity_table_mapping display_value="Order to Sold Product">10b03af053827110e37dddeeff7b1260</entity_table_mapping><script>(function getTargetAttributeValue(currentJSON, attributeContext) {
+    // route_to_market lives on the Order header; this table mapping  iterates order line items.
+    // Walk line item -&gt; order (native field, no entity-attribute registration needed) -&gt; header.
+    var lineItemId = currentJSON &amp;&amp; currentJSON.attributes &amp;&amp; currentJSON.attributes.sys_id &amp;&amp; currentJSON.attributes.sys_id.value;
+    if (gs.nil(lineItemId)) return '';
+
+    var lineGr = new GlideRecord('sn_ind_tmt_orm_order_line_item');
+    if (!lineGr.get(lineItemId)) return '';
+
+    var orderId = lineGr.getValue('order');
+    if (gs.nil(orderId)) return '';
+
+    var orderGr = new GlideRecord('sn_ind_tmt_orm_order');
+    if (orderGr.get(orderId)) return orderGr.getValue('route_to_market');
+    return '';
+})(currentJSON, attributeContext);</script><source_entity_attribute/><sys_class_name>sn_l2c_core_entity_attribute_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 19:19:07</sys_created_on><sys_id>8cfbb264058b4710f8773239c502eced</sys_id><sys_mod_count>3</sys_mod_count><sys_name/><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_mapping_8cfbb264058b4710f8773239c502eced</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:55:04</sys_updated_on><target_entity_attribute display_value="route_to_market">222ab2a0058b4710f8773239c502ec48</target_entity_attribute></sn_l2c_core_entity_attribute_mapping></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>fd18fac4d773ed8441b4733ec7b67cb2</sys_id>
+<table></table>
+<target_name></target_name>
+<type>Lead To Cash Entity Attribute Mapping</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_mapping_a23b8ba0050f4710f8773239c502ec34</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute_mapping"><sn_l2c_core_entity_attribute_mapping action="INSERT_OR_UPDATE"><advanced>1</advanced><entity_table_mapping display_value="Order to Sold Product">db5a8be4050f4710f8773239c502ec02</entity_table_mapping><script>(function getTargetAttributeValue(currentJSON, attributeContext) {
+
+    var orderRoleSysId = '';
+    if (currentJSON.attributes &amp;&amp; currentJSON.attributes.type) {
+        orderRoleSysId = currentJSON.attributes.type.value;
+    }
+    if (gs.nil(orderRoleSysId)) {
+        return '';
+    }
+
+    var workflowUtil = new sn_l2c_cust_flows.CustomerWorkflowUtil();
+    return workflowUtil.getSPRelatedPartyType(orderRoleSysId);
+
+})(currentJSON, attributeContext);</script><source_entity_attribute display_value="type">12119220ff08cb109761fffffffffff8</source_entity_attribute><sys_class_name>sn_l2c_core_entity_attribute_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 20:26:03</sys_created_on><sys_id>a23b8ba0050f4710f8773239c502ec34</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_mapping_a23b8ba0050f4710f8773239c502ec34</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:26:03</sys_updated_on><target_entity_attribute display_value="type">c3b74ba0050f4710f8773239c502ec4c</target_entity_attribute></sn_l2c_core_entity_attribute_mapping></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>1bcad92d9450ee30cbc19e1ea7727aaa</sys_id>
+<table></table>
+<target_name></target_name>
+<type>Lead To Cash Entity Attribute Mapping</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_mapping_f6ba0728050f4710f8773239c502ec5f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute_mapping"><sn_l2c_core_entity_attribute_mapping action="INSERT_OR_UPDATE"><advanced>0</advanced><entity_table_mapping display_value="Order to Sold Product">db5a8be4050f4710f8773239c502ec02</entity_table_mapping><script>(function getTargetAttributeValue(currentJSON, attributeContext) {
+
+ // Add your code here to return a value from current JSON.
+
+ })(currentJSON, attributeContext);</script><source_entity_attribute display_value="seller_organization">d9411a20ff08cb109761ffffffffffb8</source_entity_attribute><sys_class_name>sn_l2c_core_entity_attribute_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 20:24:53</sys_created_on><sys_id>f6ba0728050f4710f8773239c502ec5f</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_attribute_mapping_f6ba0728050f4710f8773239c502ec5f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:24:53</sys_updated_on><target_entity_attribute display_value="seller_organization">6efa8720050f4710f8773239c502ec9b</target_entity_attribute></sn_l2c_core_entity_attribute_mapping></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>0da1931dd0387e8a5147e99d86406f06</sys_id>
+<table></table>
+<target_name></target_name>
+<type>Lead To Cash Entity Attribute Mapping</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_definition_c9f1c36005cb4710f8773239c502ecb0</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_definition"><sn_l2c_core_entity_definition action="INSERT_OR_UPDATE"><enable_post_processing>0</enable_post_processing><entity display_value="Sold Product">5f3ffa4853823110e37dddeeff7b1226</entity><filter_conditions/><inherit_parent_definition>0</inherit_parent_definition><label>Sold Product Related Party</label><order>60</order><parent display_value="Parent SP Line Item">c2ef768853823110e37dddeeff7b12ee</parent><parent_field>sys_id</parent_field><post_processing_script>(function postProcessCurrentRecord(currentGr, currentJSON, parentJSON, context) {
+
+ // Add your code here to apply any post processing logic for currentJSON.
+ // return {JSON}: return currentJSON or {} to skip the record.
+
+ })(currentGr, currentJSON, parentJSON, context);</post_processing_script><relationship_field>sold_product</relationship_field><sys_class_name>sn_l2c_core_entity_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 19:54:30</sys_created_on><sys_id>c9f1c36005cb4710f8773239c502ecb0</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Sold Product Related Party</sys_name><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_definition_c9f1c36005cb4710f8773239c502ecb0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:05:30</sys_updated_on><table>sn_install_base_sold_product_related_party</table><type display_value="LineItems Related Party">ded21c24ff4b32107816ffffffffff31</type></sn_l2c_core_entity_definition></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>d27c203fcba1fbb041f828e41c291af6</sys_id>
+<table></table>
+<target_name>Sold Product Related Party</target_name>
+<type>Lead To Cash Entity Definition</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_table_mapping_db5a8be4050f4710f8773239c502ec02</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_table_mapping"><sn_l2c_core_entity_table_mapping action="INSERT_OR_UPDATE"><active>1</active><advanced>0</advanced><advanced_mapping_criteria>(function refineQuery(currentJSON) {
+
+ // Add your code here and return true/false.
+
+ })(currentJSON);</advanced_mapping_criteria><mapping display_value="Order to Sold Product">ed3076f053827110e37dddeeff7b1231</mapping><order>40</order><source_entity_table>sn_ind_tmt_orm_order_line_related_party_address</source_entity_table><sys_class_name>sn_l2c_core_entity_table_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-28 20:22:18</sys_created_on><sys_id>db5a8be4050f4710f8773239c502ec02</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ed3076f053827110e37dddeeff7b1231</sys_name><sys_package display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_package><sys_policy/><sys_scope display_value="Customer Life Cycle Management Workflows">8db2306e55b4fd50f877c0ac3e4ff5a1</sys_scope><sys_tags/><sys_update_name>sn_l2c_core_entity_table_mapping_db5a8be4050f4710f8773239c502ec02</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-28 20:22:18</sys_updated_on><target_entity_table>sn_install_base_sold_product_related_party</target_entity_table></sn_l2c_core_entity_table_mapping></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Customer Life Cycle Management Workflows]">4d8e2e472d0c733ebae1a947e8289359</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>0b39c3b9bbfc7d60778e5e504b7f4d2f</sys_id>
+<table></table>
+<target_name>Order to Sold Product</target_name>
+<type>Lead To Cash Entity Table Mapping</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</application>
+<application_name>Quote Management Application</application_name>
+<application_scope>sn_quote_mgmt</application_scope>
+<description>Quote defaulting BRs (assigned-to, contact, signers, billing/shipping, expiry, deal type / route to market), RFQ auto-assign, route-to-market client script, Quote form layouts, and the hand-built Lead-to-Cash entity definitions/attribute mappings (Order to Sold Product, deal type, route to market, seller organization). Source: opmsalescrm1 (captured 2026-10-06 from Default update sets).</description>
+<name>UPDATE-007-quote-defaulting-automation [Quote Management Application]</name>
+<origin_sys_id>7a990d12ccc6f35d96f092fc32738101</origin_sys_id>
+<remote_sys_id>7a990d12ccc6f35d96f092fc32738101</remote_sys_id>
+<state>loaded</state>
+<sys_id>7a990d12ccc6f35d96f092fc32738101</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_section_1b2270d44331521014a0fdc8cab8f251</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Quote Document Details" section_id="1b2270d44331521014a0fdc8cab8f251" sys_domain="global" table="sn_quote_mgmt_core_quote" version="3" view="workspace"><sys_ui_element action="INSERT_OR_UPDATE"><element>internal_signer</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:59:08</sys_created_on><sys_id>d3dd25dc3bc70310d5260fa693e45ae7</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Quote Document Details" display_value="Quote Document Details" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">1b2270d44331521014a0fdc8cab8f251</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:59:08</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>document_template</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:59:08</sys_created_on><sys_id>53dd25dc3bc70310d5260fa693e45ae8</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Quote Document Details" display_value="Quote Document Details" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">1b2270d44331521014a0fdc8cab8f251</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:59:08</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:59:08</sys_created_on><sys_id>dfdd25dc3bc70310d5260fa693e45ae8</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Quote Document Details" display_value="Quote Document Details" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">1b2270d44331521014a0fdc8cab8f251</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:59:08</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>external_signer</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:59:08</sys_created_on><sys_id>5fdd25dc3bc70310d5260fa693e45ae9</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Quote Document Details" display_value="Quote Document Details" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">1b2270d44331521014a0fdc8cab8f251</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:59:08</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Quote Document Details</caption><header>false</header><name>sn_quote_mgmt_core_quote</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-06 22:46:26</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>1b2270d44331521014a0fdc8cab8f251</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sn_quote_mgmt_core_quote</sys_name><sys_overrides/><sys_package display_value="Quote Management Application" source="sn_quote_mgmt">c2194b8ab72171101aaebe508e11a927</sys_package><sys_policy/><sys_scope display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</sys_scope><sys_update_name>sys_ui_section_1b2270d44331521014a0fdc8cab8f251</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-11-06 22:46:26</sys_updated_on><sys_user/><title>false</title><view display_value="Workspace" name="workspace">6cce824a2bb203104deaf02ac891bfa8</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Quote Management Application]">7a990d12ccc6f35d96f092fc32738101</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>da1f91d97683104e701f63998f634132</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Quote</target_name>
+<type>Form Layout</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view>workspace</view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_section_300d7a1e68797110f87706df8a3fbd14</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="" section_id="300d7a1e68797110f87706df8a3fbd14" sys_domain="global" table="sn_quote_mgmt_core_quote" version="3" view="workspace"><sys_ui_element action="INSERT_OR_UPDATE"><element>number</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:56:41</sys_created_on><sys_id>534d21583bc70310d5260fa693e45a30</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:56:41</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>state</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:56:41</sys_created_on><sys_id>df4d21583bc70310d5260fa693e45a30</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:56:41</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>account</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:56:41</sys_created_on><sys_id>5f4d21583bc70310d5260fa693e45a31</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:56:41</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>contact</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:56:41</sys_created_on><sys_id>db4d21583bc70310d5260fa693e45a32</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:56:41</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>consumer</element><position>4</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:56:41</sys_created_on><sys_id>5b4d21583bc70310d5260fa693e45a33</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:56:41</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>short_description</element><position>5</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:56:41</sys_created_on><sys_id>d74d21583bc70310d5260fa693e45a34</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:56:41</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>consolidated_quote</element><position>6</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:56:41</sys_created_on><sys_id>574d21583bc70310d5260fa693e45a35</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:56:41</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>existing_contract</element><position>7</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:56:41</sys_created_on><sys_id>d34d21583bc70310d5260fa693e45a36</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:56:41</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>8</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:56:41</sys_created_on><sys_id>534d21583bc70310d5260fa693e45a37</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:56:41</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>active</element><position>9</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:56:41</sys_created_on><sys_id>5f4d21583bc70310d5260fa693e45a50</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:56:41</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>opty_synced</element><position>10</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:56:41</sys_created_on><sys_id>db4d21583bc70310d5260fa693e45a51</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:56:41</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>source_opportunity</element><position>11</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:56:41</sys_created_on><sys_id>5b4d21583bc70310d5260fa693e45a52</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:56:41</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>assigned_to</element><position>12</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:56:41</sys_created_on><sys_id>d74d21583bc70310d5260fa693e45a53</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:56:41</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>deal_type</element><position>13</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:56:41</sys_created_on><sys_id>574d21583bc70310d5260fa693e45a54</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:56:41</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>route_to_market</element><position>14</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:56:41</sys_created_on><sys_id>d34d21583bc70310d5260fa693e45a55</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:56:41</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>seller_organization</element><position>15</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:56:41</sys_created_on><sys_id>534d21583bc70310d5260fa693e45a56</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:56:41</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>sn_quote_mgmt_core_quote</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>maint</sys_created_by><sys_created_on>2023-10-12 21:38:33</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>300d7a1e68797110f87706df8a3fbd14</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sn_quote_mgmt_core_quote</sys_name><sys_overrides/><sys_package display_value="Quote Management Application" source="sn_quote_mgmt">c2194b8ab72171101aaebe508e11a927</sys_package><sys_policy/><sys_scope display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</sys_scope><sys_update_name>sys_ui_section_300d7a1e68797110f87706df8a3fbd14</sys_update_name><sys_updated_by>maint</sys_updated_by><sys_updated_on>2023-10-12 21:38:33</sys_updated_on><sys_user/><title>false</title><view display_value="Workspace" name="workspace">6cce824a2bb203104deaf02ac891bfa8</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Quote Management Application]">7a990d12ccc6f35d96f092fc32738101</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>7e4a860cb1f1b75345b3e6ba5ea1f9b2</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Quote</target_name>
+<type>Form Layout</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view>workspace</view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_section_31b114168b734210794edd39812395a4</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Dates &amp; Terms" section_id="31b114168b734210794edd39812395a4" sys_domain="global" table="sn_quote_mgmt_core_quote" version="3" view="workspace"><sys_ui_element action="INSERT_OR_UPDATE"><element>quote_date</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 19:02:22</sys_created_on><sys_id>2a9e6dd43b0b0310d5260fa693e45a6a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Dates &amp; Terms" display_value="Dates &amp; Terms" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">31b114168b734210794edd39812395a4</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 19:02:22</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>expiration_date</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 19:02:22</sys_created_on><sys_id>a69e6dd43b0b0310d5260fa693e45a6b</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Dates &amp; Terms" display_value="Dates &amp; Terms" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">31b114168b734210794edd39812395a4</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 19:02:22</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>payment_terms</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 19:02:22</sys_created_on><sys_id>269e6dd43b0b0310d5260fa693e45a6c</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Dates &amp; Terms" display_value="Dates &amp; Terms" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">31b114168b734210794edd39812395a4</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 19:02:22</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 19:02:22</sys_created_on><sys_id>a29e6dd43b0b0310d5260fa693e45a6d</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Dates &amp; Terms" display_value="Dates &amp; Terms" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">31b114168b734210794edd39812395a4</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 19:02:22</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>contract_start_date</element><position>4</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 19:02:22</sys_created_on><sys_id>229e6dd43b0b0310d5260fa693e45a6e</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Dates &amp; Terms" display_value="Dates &amp; Terms" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">31b114168b734210794edd39812395a4</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 19:02:22</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>term_month</element><position>5</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 19:02:22</sys_created_on><sys_id>ae9e6dd43b0b0310d5260fa693e45a6e</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Dates &amp; Terms" display_value="Dates &amp; Terms" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">31b114168b734210794edd39812395a4</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 19:02:22</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>contract_end_date</element><position>6</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 19:02:22</sys_created_on><sys_id>2e9e6dd43b0b0310d5260fa693e45a6f</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Dates &amp; Terms" display_value="Dates &amp; Terms" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">31b114168b734210794edd39812395a4</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 19:02:22</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>auto_renew</element><position>7</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 19:02:22</sys_created_on><sys_id>aa9e6dd43b0b0310d5260fa693e45a70</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Dates &amp; Terms" display_value="Dates &amp; Terms" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">31b114168b734210794edd39812395a4</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 19:02:22</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>agreement_start_date</element><position>8</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 19:02:22</sys_created_on><sys_id>2a9e6dd43b0b0310d5260fa693e45a71</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Dates &amp; Terms" display_value="Dates &amp; Terms" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">31b114168b734210794edd39812395a4</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 19:02:22</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>agreement_end_date</element><position>9</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 19:02:22</sys_created_on><sys_id>a69e6dd43b0b0310d5260fa693e45a72</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Dates &amp; Terms" display_value="Dates &amp; Terms" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">31b114168b734210794edd39812395a4</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 19:02:22</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Dates &amp; Terms</caption><header>false</header><name>sn_quote_mgmt_core_quote</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-08-05 15:26:52</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>31b114168b734210794edd39812395a4</sys_id><sys_mod_count>1</sys_mod_count><sys_name>sn_quote_mgmt_core_quote</sys_name><sys_overrides/><sys_package display_value="Quote Management Application" source="sn_quote_mgmt">c2194b8ab72171101aaebe508e11a927</sys_package><sys_policy/><sys_scope display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</sys_scope><sys_update_name>sys_ui_section_31b114168b734210794edd39812395a4</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:58:14</sys_updated_on><sys_user/><title>false</title><view display_value="Workspace" name="workspace">6cce824a2bb203104deaf02ac891bfa8</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Quote Management Application]">7a990d12ccc6f35d96f092fc32738101</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>ebdce9e5dcfd3488cb69f6a6d1cd0e3e</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Quote</target_name>
+<type>Form Layout</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view>workspace</view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_section_55edf29e68797110f87706df8a3fbdf1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Notes" section_id="55edf29e68797110f87706df8a3fbdf1" sys_domain="global" table="sn_quote_mgmt_core_quote" version="3" view="workspace"><sys_ui_element action="INSERT_OR_UPDATE"><element>work_notes</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:44:51</sys_created_on><sys_id>4e9a29583b470310d5260fa693e45ad3</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Notes" display_value="Notes" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">55edf29e68797110f87706df8a3fbdf1</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:44:51</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>comments</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:44:51</sys_created_on><sys_id>ca9a29583b470310d5260fa693e45ad4</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Notes" display_value="Notes" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">55edf29e68797110f87706df8a3fbdf1</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:44:51</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>sys_created_by</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:44:51</sys_created_on><sys_id>4a9a29583b470310d5260fa693e45ad5</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Notes" display_value="Notes" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">55edf29e68797110f87706df8a3fbdf1</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:44:51</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>activity.xml</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:44:51</sys_created_on><sys_id>c69a29583b470310d5260fa693e45ad6</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter display_value="Activities (filtered)">444ea5c6bf310100e628555b3f0739d6</sys_ui_formatter><sys_ui_section caption="Notes" display_value="Notes" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">55edf29e68797110f87706df8a3fbdf1</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:44:51</sys_updated_on><sys_user/><type>formatter</type></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Notes</caption><header>false</header><name>sn_quote_mgmt_core_quote</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>maint</sys_created_by><sys_created_on>2023-10-12 21:42:24</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>55edf29e68797110f87706df8a3fbdf1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sn_quote_mgmt_core_quote</sys_name><sys_overrides/><sys_package display_value="Quote Management Application" source="sn_quote_mgmt">c2194b8ab72171101aaebe508e11a927</sys_package><sys_policy/><sys_scope display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</sys_scope><sys_update_name>sys_ui_section_55edf29e68797110f87706df8a3fbdf1</sys_update_name><sys_updated_by>maint</sys_updated_by><sys_updated_on>2023-10-12 21:42:24</sys_updated_on><sys_user/><title>false</title><view display_value="Workspace" name="workspace">6cce824a2bb203104deaf02ac891bfa8</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Quote Management Application]">7a990d12ccc6f35d96f092fc32738101</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>9eb251d116b5753fea2d6db9d4f8186a</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Quote</target_name>
+<type>Form Layout</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view>workspace</view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_section_a99ae5583b470310d5260fa693e45a42</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Sales Agreement" section_id="a99ae5583b470310d5260fa693e45a42" sys_domain="global" table="sn_quote_mgmt_core_quote" version="3" view="workspace"><sys_ui_element action="INSERT_OR_UPDATE"><element>generate_sales_agreement</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:44:50</sys_created_on><sys_id>3d9a29583b470310d5260fa693e45a91</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Sales Agreement" display_value="Sales Agreement" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">a99ae5583b470310d5260fa693e45a42</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:44:50</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:44:50</sys_created_on><sys_id>b99a29583b470310d5260fa693e45a92</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Sales Agreement" display_value="Sales Agreement" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">a99ae5583b470310d5260fa693e45a42</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:44:50</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>sales_agreement</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:44:50</sys_created_on><sys_id>399a29583b470310d5260fa693e45a93</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Sales Agreement" display_value="Sales Agreement" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">a99ae5583b470310d5260fa693e45a42</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:44:50</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Sales Agreement</caption><header>false</header><name>sn_quote_mgmt_core_quote</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:44:49</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>a99ae5583b470310d5260fa693e45a42</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sn_quote_mgmt_core_quote</sys_name><sys_overrides/><sys_package display_value="Quote Management Application" source="sn_quote_mgmt">c2194b8ab72171101aaebe508e11a927</sys_package><sys_policy/><sys_scope display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</sys_scope><sys_update_name>sys_ui_section_a99ae5583b470310d5260fa693e45a42</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:44:49</sys_updated_on><sys_user/><title>false</title><view display_value="Workspace" name="workspace">6cce824a2bb203104deaf02ac891bfa8</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Quote Management Application]">7a990d12ccc6f35d96f092fc32738101</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>63dddafe21a39cf3148ff81bfb772248</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Quote</target_name>
+<type>Form Layout</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view>workspace</view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_form_sections_ed1d325e68797110f87706df8a3fbd41</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_form_sections form_id="ed1d325e68797110f87706df8a3fbd41" sys_domain="global" table="sn_quote_mgmt_core_quote" version="3"><sys_ui_form_section action="INSERT_OR_UPDATE"><position>0</position><sys_created_by>maint</sys_created_by><sys_created_on>2023-10-12 21:38:52</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>a91d325e68797110f87706df8a3fbd42</sys_id><sys_mod_count>0</sys_mod_count><sys_overrides/><sys_ui_form display_value="sn_quote_mgmt_core_quote" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">ed1d325e68797110f87706df8a3fbd41</sys_ui_form><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">300d7a1e68797110f87706df8a3fbd14</sys_ui_section><sys_updated_by>maint</sys_updated_by><sys_updated_on>2023-10-12 21:38:52</sys_updated_on></sys_ui_form_section><sys_ui_form_section action="INSERT_OR_UPDATE"><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:44:49</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>e99ae5583b470310d5260fa693e45a73</sys_id><sys_mod_count>1</sys_mod_count><sys_overrides/><sys_ui_form display_value="sn_quote_mgmt_core_quote" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">ed1d325e68797110f87706df8a3fbd41</sys_ui_form><sys_ui_section caption="Sales Agreement" display_value="Sales Agreement" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">a99ae5583b470310d5260fa693e45a42</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:44:49</sys_updated_on></sys_ui_form_section><sys_ui_form_section action="INSERT_OR_UPDATE"><position>2</position><sys_created_by>maint</sys_created_by><sys_created_on>2023-10-12 21:39:50</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>6f4d7ada68797110f87706df8a3fbdb3</sys_id><sys_mod_count>3</sys_mod_count><sys_overrides/><sys_ui_form display_value="sn_quote_mgmt_core_quote" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">ed1d325e68797110f87706df8a3fbd41</sys_ui_form><sys_ui_section caption="Pricing" display_value="Pricing" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">234d7ada68797110f87706df8a3fbdb2</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:44:49</sys_updated_on></sys_ui_form_section><sys_ui_form_section action="INSERT_OR_UPDATE"><position>3</position><sys_created_by>maint</sys_created_by><sys_created_on>2025-08-11 18:44:54</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>bfd4ab61715f2e10f87723656e33cd03</sys_id><sys_mod_count>1</sys_mod_count><sys_overrides/><sys_ui_form display_value="sn_quote_mgmt_core_quote" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">ed1d325e68797110f87706df8a3fbd41</sys_ui_form><sys_ui_section caption="Totals" display_value="Totals" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">bbd4ab61715f2e10f87723656e33cd00</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:44:49</sys_updated_on></sys_ui_form_section><sys_ui_form_section action="INSERT_OR_UPDATE"><position>4</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-08-05 15:26:52</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>79b114168b734210794edd39812395a7</sys_id><sys_mod_count>3</sys_mod_count><sys_overrides/><sys_ui_form display_value="sn_quote_mgmt_core_quote" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">ed1d325e68797110f87706df8a3fbd41</sys_ui_form><sys_ui_section caption="Dates" display_value="Dates" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">31b114168b734210794edd39812395a4</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:44:49</sys_updated_on></sys_ui_form_section><sys_ui_form_section action="INSERT_OR_UPDATE"><position>5</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-11-06 22:46:26</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>572270d44331521014a0fdc8cab8f254</sys_id><sys_mod_count>3</sys_mod_count><sys_overrides/><sys_ui_form display_value="sn_quote_mgmt_core_quote" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">ed1d325e68797110f87706df8a3fbd41</sys_ui_form><sys_ui_section caption="Quote Document Details" display_value="Quote Document Details" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">1b2270d44331521014a0fdc8cab8f251</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:44:49</sys_updated_on></sys_ui_form_section><sys_ui_form_section action="INSERT_OR_UPDATE"><position>6</position><sys_created_by>maint</sys_created_by><sys_created_on>2023-10-12 21:38:52</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>ed1d325e68797110f87706df8a3fbd43</sys_id><sys_mod_count>3</sys_mod_count><sys_overrides/><sys_ui_form display_value="sn_quote_mgmt_core_quote" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">ed1d325e68797110f87706df8a3fbd41</sys_ui_form><sys_ui_section caption="Addresses" display_value="Addresses" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">251d325e68797110f87706df8a3fbd43</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:44:49</sys_updated_on></sys_ui_form_section><sys_ui_form_section action="INSERT_OR_UPDATE"><position>7</position><sys_created_by>maint</sys_created_by><sys_created_on>2023-10-12 21:42:25</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>15edf29e68797110f87706df8a3fbdf3</sys_id><sys_mod_count>3</sys_mod_count><sys_overrides/><sys_ui_form display_value="sn_quote_mgmt_core_quote" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">ed1d325e68797110f87706df8a3fbd41</sys_ui_form><sys_ui_section caption="Notes" display_value="Notes" name="sn_quote_mgmt_core_quote" sys_domain="global" view="6cce824a2bb203104deaf02ac891bfa8">55edf29e68797110f87706df8a3fbdf1</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:44:49</sys_updated_on></sys_ui_form_section><sys_ui_form action="INSERT_OR_UPDATE"><name>sn_quote_mgmt_core_quote</name><roles/><sys_class_name>sys_ui_form</sys_class_name><sys_created_by>maint</sys_created_by><sys_created_on>2023-10-12 21:38:52</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>ed1d325e68797110f87706df8a3fbd41</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sn_quote_mgmt_core_quote</sys_name><sys_overrides/><sys_package display_value="Quote Management Application" source="sn_quote_mgmt">c2194b8ab72171101aaebe508e11a927</sys_package><sys_policy/><sys_scope display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</sys_scope><sys_update_name>sys_ui_form_sections_ed1d325e68797110f87706df8a3fbd41</sys_update_name><sys_updated_by>maint</sys_updated_by><sys_updated_on>2023-10-12 21:38:52</sys_updated_on><sys_user/><view display_value="Workspace" name="workspace">6cce824a2bb203104deaf02ac891bfa8</view><view_name/></sys_ui_form></sys_ui_form_sections></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Quote Management Application]">7a990d12ccc6f35d96f092fc32738101</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>505969e3b2d7f692216afe92915ca957</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Quote</target_name>
+<type>Form Sections</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view>6cce824a2bb203104deaf02ac891bfa8</view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</application>
+<category>customer</category>
+<comments/>
+<name>sn_l2c_core_entity_attribute_60e9b9b9ff71221050e5ffffffffff84</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_l2c_core_entity_attribute"><sn_l2c_core_entity_attribute action="INSERT_OR_UPDATE"><advanced>false</advanced><entity display_value="Quote">b118cbfd77ceb110ce3ea465ae5a99c5</entity><field>seller_organization</field><key display_value="Channel Partner">44a00e322b0b03104deaf02ac891bf42</key><script><![CDATA[(function getAttributeValue(current, attributeContext) {
+
+ // Add your code here to return a value from current record.
+
+ })(current, attributeContext);]]]]><![CDATA[></script><sys_class_name>sn_l2c_core_entity_attribute</sys_class_name><sys_created_by>maint</sys_created_by><sys_created_on>2025-05-29 16:15:06</sys_created_on><sys_id>60e9b9b9ff71221050e5ffffffffff84</sys_id><sys_mod_count>1</sys_mod_count><sys_name>seller_organization</sys_name><sys_package display_value="Quote Management Application" source="sn_quote_mgmt">c2194b8ab72171101aaebe508e11a927</sys_package><sys_policy/><sys_scope display_value="Quote Management Application">c2194b8ab72171101aaebe508e11a927</sys_scope><sys_update_name>sn_l2c_core_entity_attribute_60e9b9b9ff71221050e5ffffffffff84</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-08 19:35:39</sys_updated_on><table>sn_quote_mgmt_core_quote</table></sn_l2c_core_entity_attribute></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Quote Management Application]">7a990d12ccc6f35d96f092fc32738101</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>4c178953f7b1882b315c81931a3a13d4</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>seller_organization</target_name>
+<type>Lead To Cash Entity Attribute</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<application_name>Quote Management Data Model</application_name>
+<application_scope>sn_quote_mgmt_core</application_scope>
+<description>Quote defaulting BRs (assigned-to, contact, signers, billing/shipping, expiry, deal type / route to market), RFQ auto-assign, route-to-market client script, Quote form layouts, and the hand-built Lead-to-Cash entity definitions/attribute mappings (Order to Sold Product, deal type, route to market, seller organization). Source: opmsalescrm1 (captured 2026-10-06 from Default update sets).</description>
+<name>UPDATE-007-quote-defaulting-automation [Quote Management Data Model]</name>
+<origin_sys_id>35bfba720becf2972113b7679ff1fa3a</origin_sys_id>
+<remote_sys_id>35bfba720becf2972113b7679ff1fa3a</remote_sys_id>
+<state>loaded</state>
+<sys_id>35bfba720becf2972113b7679ff1fa3a</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_0f2403653bc3cb10d5260fa693e45a5a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>false</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>true</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_quote_mgmt_core_quote</collection><condition/><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Default Quote External Signer from Accou</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    if (!current.account) {
+        return;
+    }
+    if (!current.external_signer.nil()) {
+        return; // don't override an existing/manual signer
+    }
+    if (current.operation() == 'update' && !current.account.changes()) {
+        return; // only act when account was just set/changed
+    }
+
+    var accountGr = new GlideRecord('customer_account');
+    if (accountGr.get(current.account) && accountGr.primary_contact) {
+        current.external_signer = accountGr.getValue('primary_contact');
+    }
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-31 22:28:38</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>0f2403653bc3cb10d5260fa693e45a5a</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Default Quote External Signer from Accou</sys_name><sys_overrides/><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sys_script_0f2403653bc3cb10d5260fa693e45a5a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-31 22:28:42</sys_updated_on><template/><when>before</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=0f2403653bc3cb10d5260fa693e45a5a"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Quote Management Data Model]">35bfba720becf2972113b7679ff1fa3a</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>d6ff5f97e2f7cba1157799f841fd019f</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Default Quote External Signer from Accou</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_18ff36293b83cb10d5260fa693e45a91</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>false</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>true</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_quote_mgmt_core_quote</collection><condition/><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Default Quote Contact from Account Prima</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    if (!current.account) {
+        return;
+    }
+    if (!current.contact.nil()) {
+        return; // don't override an existing/manual contact
+    }
+    if (current.operation() == 'update' && !current.account.changes()) {
+        return; // only act when account was just set/changed
+    }
+
+    var accountGr = new GlideRecord('customer_account');
+    if (accountGr.get(current.account) && accountGr.primary_contact) {
+        current.contact = accountGr.getValue('primary_contact');
+    }
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-31 22:10:09</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>18ff36293b83cb10d5260fa693e45a91</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Default Quote Contact from Account Prima</sys_name><sys_overrides/><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sys_script_18ff36293b83cb10d5260fa693e45a91</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-31 22:10:18</sys_updated_on><template/><when>before</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=18ff36293b83cb10d5260fa693e45a91"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Quote Management Data Model]">35bfba720becf2972113b7679ff1fa3a</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>7718416ebb4c9d85b81493ed01e57368</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Default Quote Contact from Account Prima</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_5ba483212bcb8b104deaf02ac891bf3d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>false</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>true</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_cust_rfq_core_rfq</collection><condition/><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Auto-assign RFQ to Account Sales Owner</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    if (!current.account) {
+        return;
+    }
+    if (!current.assigned_to.nil()) {
+        return; // don't override an existing/manual assignment
+    }
+    if (current.operation() == 'update' && !current.account.changes()) {
+        return; // only act when account was just set/changed
+    }
+
+    var accountGr = new GlideRecord('customer_account');
+    if (accountGr.get(current.account) && accountGr.sales_owner) {
+        current.assigned_to = accountGr.getValue('sales_owner');
+    }
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-31 22:30:50</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>5ba483212bcb8b104deaf02ac891bf3d</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Auto-assign RFQ to Account Sales Owner</sys_name><sys_overrides/><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sys_script_5ba483212bcb8b104deaf02ac891bf3d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-31 22:30:55</sys_updated_on><template/><when>before</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=5ba483212bcb8b104deaf02ac891bf3d"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Quote Management Data Model]">35bfba720becf2972113b7679ff1fa3a</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>058e30d84bceda982b874d43a36b6bcf</sys_id>
+<table>sn_cust_rfq_core_rfq</table>
+<target_name>Auto-assign RFQ to Account Sales Owner</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_6b778fa93bc3cb10d5260fa693e45ae6</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>false</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>false</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_quote_mgmt_core_quote</collection><condition/><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Default Quote Deal Type and Route to Mar</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    if (current.deal_type.nil()) {
+        current.deal_type = 'direct';
+    }
+    if (current.route_to_market.nil()) {
+        current.route_to_market = 'direct';
+    }
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-31 22:43:08</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>6b778fa93bc3cb10d5260fa693e45ae6</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Default Quote Deal Type and Route to Mar</sys_name><sys_overrides/><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sys_script_6b778fa93bc3cb10d5260fa693e45ae6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-31 22:43:11</sys_updated_on><template/><when>before</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=6b778fa93bc3cb10d5260fa693e45ae6"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Quote Management Data Model]">35bfba720becf2972113b7679ff1fa3a</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>ac5382b55a34fa8495c371e857a7dce9</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Default Quote Deal Type and Route to Mar</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_9c80072d3b83cb10d5260fa693e45a3c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>false</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>true</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_quote_mgmt_core_quote</collection><condition/><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Default Quote Internal Signer from Accou</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    if (!current.account) {
+        return;
+    }
+    if (!current.internal_signer.nil()) {
+        return; // don't override an existing/manual signer
+    }
+    if (current.operation() == 'update' && !current.account.changes()) {
+        return; // only act when account was just set/changed
+    }
+
+    var accountGr = new GlideRecord('customer_account');
+    if (accountGr.get(current.account) && accountGr.sales_owner) {
+        current.internal_signer = accountGr.getValue('sales_owner');
+    }
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-31 22:12:36</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>9c80072d3b83cb10d5260fa693e45a3c</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Default Quote Internal Signer from Accou</sys_name><sys_overrides/><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sys_script_9c80072d3b83cb10d5260fa693e45a3c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-31 22:12:40</sys_updated_on><template/><when>before</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=9c80072d3b83cb10d5260fa693e45a3c"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Quote Management Data Model]">35bfba720becf2972113b7679ff1fa3a</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>d5adf8723719cafd9f51625c3f50841d</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Default Quote Internal Signer from Accou</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_ae494fa13b07cb10d5260fa693e45aef</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>false</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>true</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_quote_mgmt_core_quote</collection><condition/><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Set Deal Type and Route to Market for Ch</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    if (!current.seller_organization) {
+        return;
+    }
+    if (current.operation() == 'update' && !current.seller_organization.changes()) {
+        return; // only re-evaluate when the channel partner was just set/changed
+    }
+
+    current.deal_type = 'indirect';
+    current.route_to_market = 'sell_thru';
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-31 22:50:59</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>ae494fa13b07cb10d5260fa693e45aef</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Set Deal Type and Route to Market for Ch</sys_name><sys_overrides/><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sys_script_ae494fa13b07cb10d5260fa693e45aef</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-31 22:51:05</sys_updated_on><template/><when>before</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=ae494fa13b07cb10d5260fa693e45aef"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Quote Management Data Model]">35bfba720becf2972113b7679ff1fa3a</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>78be543b40923e9b07c30c9acbc9f555</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Set Deal Type and Route to Market for Ch</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_ed550f613bc3cb10d5260fa693e45a9f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><abort_action>false</abort_action><access>package_private</access><action_delete>false</action_delete><action_insert>true</action_insert><action_query>false</action_query><action_update>false</action_update><active>true</active><add_message>false</add_message><advanced>true</advanced><change_fields>false</change_fields><client_callable>false</client_callable><collection>sn_quote_mgmt_core_quote</collection><condition/><description/><execute_function>false</execute_function><filter_condition/><is_rest>false</is_rest><message/><name>Set Quote Expiration 30 Days After Creat</name><order>100</order><priority>100</priority><rest_method/><rest_method_text/><rest_service/><rest_service_text/><rest_variables/><role_conditions/><script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    if (!current.expiration_date.nil()) {
+        return; // don't override a manually specified expiration date
+    }
+
+    var createdOn = current.sys_created_on.nil() ? new GlideDateTime() : new GlideDateTime(current.sys_created_on);
+    createdOn.addDaysUTC(30);
+    current.expiration_date = createdOn;
+
+})(current, previous);]]]]><![CDATA[></script><sys_class_name>sys_script</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-31 22:33:43</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>ed550f613bc3cb10d5260fa693e45a9f</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Set Quote Expiration 30 Days After Creat</sys_name><sys_overrides/><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sys_script_ed550f613bc3cb10d5260fa693e45a9f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-31 22:33:46</sys_updated_on><template/><when>before</when></sys_script><sys_translated_text action="delete_multiple" query="documentkey=ed550f613bc3cb10d5260fa693e45a9f"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Quote Management Data Model]">35bfba720becf2972113b7679ff1fa3a</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>89ed30c1f789ea4c962613fd54494407</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Set Quote Expiration 30 Days After Creat</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_section_7270be5e68397110f87706df8a3fbd16</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="" section_id="7270be5e68397110f87706df8a3fbd16" sys_domain="global" table="sn_quote_mgmt_core_quote" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>number</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>c498615c3bc30310d5260fa693e45a20</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>seller_organization</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>8c98615c3bc30310d5260fa693e45a21</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>state</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>0c98615c3bc30310d5260fa693e45a22</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>sys_created_by</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>8898615c3bc30310d5260fa693e45a23</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>account</element><position>4</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>0898615c3bc30310d5260fa693e45a24</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>contact</element><position>5</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>8498615c3bc30310d5260fa693e45a25</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>consumer</element><position>6</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>0498615c3bc30310d5260fa693e45a26</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>deal_type</element><position>7</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>8098615c3bc30310d5260fa693e45a27</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>short_description</element><position>8</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>0098615c3bc30310d5260fa693e45a28</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>9</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>8c98615c3bc30310d5260fa693e45a28</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>active</element><position>10</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>0c98615c3bc30310d5260fa693e45a29</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>opty_synced</element><position>11</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>9898615c3bc30310d5260fa693e45a2a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>source_opportunity</element><position>12</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>9498615c3bc30310d5260fa693e45a44</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>generate_sales_agreement</element><position>13</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>1498615c3bc30310d5260fa693e45a45</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>sales_agreement</element><position>14</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>9098615c3bc30310d5260fa693e45a46</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>existing_contract</element><position>15</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>1098615c3bc30310d5260fa693e45a47</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>assignment_group</element><position>16</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>9c98615c3bc30310d5260fa693e45a47</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>assigned_to</element><position>17</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>1c98615c3bc30310d5260fa693e45a48</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>route_to_market</element><position>18</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>9898615c3bc30310d5260fa693e45a49</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>external_id</element><position>19</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>1898615c3bc30310d5260fa693e45a4a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>transaction_id</element><position>20</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 18:35:59</sys_created_on><sys_id>9498615c3bc30310d5260fa693e45a4b</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="sn_quote_mgmt_core_quote" sys_domain="global" view="Default view">7270be5e68397110f87706df8a3fbd16</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 18:35:59</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>sn_quote_mgmt_core_quote</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>maint</sys_created_by><sys_created_on>2023-10-12 20:43:48</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>7270be5e68397110f87706df8a3fbd16</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sn_quote_mgmt_core_quote</sys_name><sys_overrides/><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sys_ui_section_7270be5e68397110f87706df8a3fbd16</sys_update_name><sys_updated_by>maint</sys_updated_by><sys_updated_on>2023-10-12 20:43:48</sys_updated_on><sys_user/><title>true</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-007-quote-defaulting-automation [Quote Management Data Model]">35bfba720becf2972113b7679ff1fa3a</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>80f5c63768e31243608ba34bc4075daf</sys_id>
+<table>sn_quote_mgmt_core_quote</table>
+<target_name>Quote</target_name>
+<type>Form Layout</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+</unload>

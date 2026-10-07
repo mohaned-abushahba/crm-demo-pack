@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-10-06 21:00:00">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<description>Advanced Approval Management for Quote and Deal Registration: configurations, chains, rules, reminders, trigger conditions, push notification. Source: opmsalescrm1 (captured 2026-10-06 from Default update sets).</description>
+<name>UPDATE-010-advanced-approvals [Global]</name>
+<origin_sys_id>b2cfbf86045ef0789b31f8fe0b89fc28</origin_sys_id>
+<remote_sys_id>b2cfbf86045ef0789b31f8fe0b89fc28</remote_sys_id>
+<state>loaded</state>
+<sys_id>b2cfbf86045ef0789b31f8fe0b89fc28</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_chain_77fb5b752b8b4f104deaf02ac891bf9b</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_chain"><sn_adv_appr_mgmt_approval_chain action="INSERT_OR_UPDATE"><approval_configuration display_value="Deal Registration Approvals">c0a5b27d2b834f104deaf02ac891bf24</approval_configuration><name>Deal Reg Approvals</name><order>10</order><sys_class_name>sn_adv_appr_mgmt_approval_chain</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 18:51:38</sys_created_on><sys_id>77fb5b752b8b4f104deaf02ac891bf9b</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Deal Reg Approvals</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_chain_77fb5b752b8b4f104deaf02ac891bf9b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 20:18:20</sys_updated_on></sn_adv_appr_mgmt_approval_chain></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>623df006554eaf17f141f5915da7ca44</sys_id>
+<table></table>
+<target_name>Deal Reg Approvals</target_name>
+<type>Approval Chain</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_chain_7c58718c2b0fc7104deaf02ac891bf69</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_chain"><sn_adv_appr_mgmt_approval_chain action="INSERT_OR_UPDATE"><approval_configuration display_value="Quote">19ac88482b4b87104deaf02ac891bfcc</approval_configuration><name>Payment</name><order>30</order><sys_class_name>sn_adv_appr_mgmt_approval_chain</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 01:06:31</sys_created_on><sys_id>7c58718c2b0fc7104deaf02ac891bf69</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Payment</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_chain_7c58718c2b0fc7104deaf02ac891bf69</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 01:06:31</sys_updated_on></sn_adv_appr_mgmt_approval_chain></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>c1a295736b6d2df7f4551392ed130fd7</sys_id>
+<table></table>
+<target_name>Payment</target_name>
+<type>Approval Chain</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_chain_7d17ded43b0b4310d5260fa693e45a51</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_chain"><sn_adv_appr_mgmt_approval_chain action="INSERT_OR_UPDATE"><approval_configuration display_value="Quote">19ac88482b4b87104deaf02ac891bfcc</approval_configuration><name>Shipping</name><order>10</order><sys_class_name>sn_adv_appr_mgmt_approval_chain</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 21:59:31</sys_created_on><sys_id>7d17ded43b0b4310d5260fa693e45a51</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Shipping</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_chain_7d17ded43b0b4310d5260fa693e45a51</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 21:59:38</sys_updated_on></sn_adv_appr_mgmt_approval_chain></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>317759a915e133b31c0791f2a133c11e</sys_id>
+<table></table>
+<target_name>Shipping</target_name>
+<type>Approval Chain</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_chain_86a6fdcc2b0fc7104deaf02ac891bfcd</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_chain"><sn_adv_appr_mgmt_approval_chain action="INSERT_OR_UPDATE"><approval_configuration display_value="Quote">19ac88482b4b87104deaf02ac891bfcc</approval_configuration><name>Sales Discount Management</name><order>10</order><sys_class_name>sn_adv_appr_mgmt_approval_chain</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 00:59:20</sys_created_on><sys_id>86a6fdcc2b0fc7104deaf02ac891bfcd</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Sales Discount Management</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_chain_86a6fdcc2b0fc7104deaf02ac891bfcd</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-04 03:40:26</sys_updated_on></sn_adv_appr_mgmt_approval_chain></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>d1542b1abf4766ac62b1721217300b61</sys_id>
+<table></table>
+<target_name>Sales Discount Management</target_name>
+<type>Approval Chain</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_chain_d42cd3f92b8b4f104deaf02ac891bfa8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_chain"><sn_adv_appr_mgmt_approval_chain action="INSERT_OR_UPDATE"><approval_configuration display_value="Deal Registration Approvals">c0a5b27d2b834f104deaf02ac891bf24</approval_configuration><name>Account Executive</name><order>20</order><sys_class_name>sn_adv_appr_mgmt_approval_chain</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 18:51:58</sys_created_on><sys_id>d42cd3f92b8b4f104deaf02ac891bfa8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Account Executive</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_chain_d42cd3f92b8b4f104deaf02ac891bfa8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 18:51:58</sys_updated_on></sn_adv_appr_mgmt_approval_chain></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>78fe35ed513ce17822f7c355e4848405</sys_id>
+<table></table>
+<target_name>Account Executive</target_name>
+<type>Approval Chain</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_configuration_19ac88482b4b87104deaf02ac891bfcc</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_adv_appr_mgmt_approval_configuration"><sn_adv_appr_mgmt_approval_configuration action="INSERT_OR_UPDATE"><allow_consolidation>true</allow_consolidation><allow_escalations>true</allow_escalations><auto_reminders>true</auto_reminders><entity_table>sn_quote_mgmt_core_quote</entity_table><name>Quote</name><schedule display_value="8-5 weekdays">08fcd0830a0a0b2600079f56b1adb9ae</schedule><sys_class_name>sn_adv_appr_mgmt_approval_configuration</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-26 17:17:15</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>19ac88482b4b87104deaf02ac891bfcc</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Quote</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_configuration_19ac88482b4b87104deaf02ac891bfcc</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-26 17:17:15</sys_updated_on></sn_adv_appr_mgmt_approval_configuration></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>0e96f4ddb35a4e4b88e6ac2b430fd4d6</sys_id>
+<table></table>
+<target_name>Quote</target_name>
+<type>Approval Configuration</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_configuration_c0a5b27d2b834f104deaf02ac891bf24</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_adv_appr_mgmt_approval_configuration"><sn_adv_appr_mgmt_approval_configuration action="INSERT_OR_UPDATE"><allow_consolidation>false</allow_consolidation><allow_escalations>false</allow_escalations><auto_reminders>false</auto_reminders><entity_table>sn_prm_dr_deal_registration</entity_table><name>Deal Registration Approvals</name><schedule/><sys_class_name>sn_adv_appr_mgmt_approval_configuration</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 16:04:04</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>c0a5b27d2b834f104deaf02ac891bf24</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Deal Registration Approvals</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_configuration_c0a5b27d2b834f104deaf02ac891bf24</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 16:04:04</sys_updated_on></sn_adv_appr_mgmt_approval_configuration></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>ea2922b3ba6ba3ab4ebf3a51abba7ed5</sys_id>
+<table></table>
+<target_name>Deal Registration Approvals</target_name>
+<type>Approval Configuration</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_15db8b3a2bcb43104deaf02ac891bf65</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule"><sn_adv_appr_mgmt_approval_rule action="INSERT_OR_UPDATE"><active>true</active><advanced>false</advanced><approval_chain display_value="Sales Discount Management">86a6fdcc2b0fc7104deaf02ac891bfcd</approval_chain><approval_criteria>anyone</approval_criteria><approval_trigger_condition display_value="Low Margin Quote">281b8b322bcb43104deaf02ac891bf9b</approval_trigger_condition><approver_type>group</approver_type><auto_escalate>false</auto_escalate><description>Deal Desk Involved for low margin deal</description><dynamic_approver/><dynamic_escalated_assignee/><entity_table>sn_quote_mgmt_core_quote</entity_table><escalated_assignee/><escalation_schedule display_value="Approval Escalation SLA">d7be3207b5d73a90f8778a808e889a9f</escalation_schedule><escalation_type>user</escalation_type><expected_days_to_complete/><name>Pricing Manager - Low Margin Quote Approval</name><order>70</order><scripted_approver><![CDATA[(function eval(headerGr, ruleGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and ruleGr    * Script must set answer variable to an array of sys_id of Users(sys_user) if Approval type is User     * or Groups(sys_user_group) if Approval type is Group     */})(headerGr, ruleGr);]]]]><![CDATA[></scripted_approver><sys_class_name>sn_adv_appr_mgmt_approval_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-04 20:15:36</sys_created_on><sys_id>15db8b3a2bcb43104deaf02ac891bf65</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Pricing Manager - Low Margin Quote Approval</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_rule_15db8b3a2bcb43104deaf02ac891bf65</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-04 20:53:49</sys_updated_on></sn_adv_appr_mgmt_approval_rule></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>958cb897d2c7c30a33572988bbfc57d6</sys_id>
+<table></table>
+<target_name>Pricing Manager - Low Margin Quote Approval</target_name>
+<type>Approval Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_1d09fd802b4fc7104deaf02ac891bf7f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule"><sn_adv_appr_mgmt_approval_rule action="INSERT_OR_UPDATE"><active>true</active><advanced>false</advanced><approval_chain display_value="Payment">7c58718c2b0fc7104deaf02ac891bf69</approval_chain><approval_criteria>anyone</approval_criteria><approval_trigger_condition display_value="Net 90">98b8f5442b4fc7104deaf02ac891bf85</approval_trigger_condition><approver_type>group</approver_type><auto_escalate>false</auto_escalate><description>Deal Desk - Payment Term Approval</description><dynamic_approver/><dynamic_escalated_assignee/><entity_table>sn_quote_mgmt_core_quote</entity_table><escalated_assignee/><escalation_schedule display_value="Approval Escalation SLA">d7be3207b5d73a90f8778a808e889a9f</escalation_schedule><escalation_type>user</escalation_type><expected_days_to_complete/><name>Deal Desk - Payment Term Approval</name><order>30</order><scripted_approver><![CDATA[(function eval(headerGr, ruleGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and ruleGr    * Script must set answer variable to an array of sys_id of Users(sys_user) if Approval type is User     * or Groups(sys_user_group) if Approval type is Group     */})(headerGr, ruleGr);]]]]><![CDATA[></scripted_approver><sys_class_name>sn_adv_appr_mgmt_approval_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 01:09:52</sys_created_on><sys_id>1d09fd802b4fc7104deaf02ac891bf7f</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Deal Desk - Payment Term Approval</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_rule_1d09fd802b4fc7104deaf02ac891bf7f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 21:56:13</sys_updated_on></sn_adv_appr_mgmt_approval_rule></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>d1f419dd3a13673754887d71a71ca33e</sys_id>
+<table></table>
+<target_name>Deal Desk - Payment Term Approval</target_name>
+<type>Approval Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_1d26358c2b4bc7104deaf02ac891bf76</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule"><sn_adv_appr_mgmt_approval_rule action="INSERT_OR_UPDATE"><active>true</active><advanced>true</advanced><approval_chain display_value="Sales Management">86a6fdcc2b0fc7104deaf02ac891bfcd</approval_chain><approval_criteria>anyone</approval_criteria><approval_trigger_condition display_value="Discount Tier 3 (30%+)">e7afb44c2b83c7104deaf02ac891bfc0</approval_trigger_condition><approver_type>user</approver_type><auto_escalate>false</auto_escalate><description>Sales GM Discount Approval</description><dynamic_approver/><dynamic_escalated_assignee/><entity_table>sn_quote_mgmt_core_quote</entity_table><escalated_assignee/><escalation_schedule display_value="Approval Escalation SLA">d7be3207b5d73a90f8778a808e889a9f</escalation_schedule><escalation_type>user</escalation_type><expected_days_to_complete/><name>Sales GM Discount Approval</name><order>30</order><scripted_approver><![CDATA[(function eval(headerGr, ruleGr) {
+    /* Resolve the account's primary sales territory, walk up the territory
+     * hierarchy skipping the first two levels that have an active, primary
+     * Territory Manager (Sales Manager's level, then Sales VP's level),
+     * and route to the THIRD level's active, primary Territory Manager -
+     * one level above the Sales VP - as the Sales GM approver.
+     */
+    var territorySysId = null;
+    var acctSysId = headerGr.getValue('account');
+    if (acctSysId) {
+        var acctGr = new GlideRecord('customer_account');
+        if (acctGr.get(acctSysId)) {
+            territorySysId = acctGr.getValue('primary_sales_territory');
+        }
+    }
+
+    var managerSysId = null;
+    var levelsPassed = 0;
+    var today = new GlideDate();
+    var guard = 0;
+
+    while (territorySysId && !managerSysId && guard < 10) {
+        var terrGr = new GlideRecord('sn_tp_territory');
+        var parentTerritorySysId = terrGr.get(territorySysId) ? terrGr.getValue('parent') : null;
+
+        var mgrGr = new GlideRecord('sn_tp_territory_manager');
+        mgrGr.addQuery('territory', territorySysId);
+        mgrGr.addQuery('manager_type', 'territory_manager');
+        mgrGr.addQuery('primary', true);
+        mgrGr.addQuery('from', '<=', today);
+        mgrGr.addQuery('to', '>=', today);
+        mgrGr.query();
+
+        if (mgrGr.next()) {
+            if (levelsPassed < 2) {
+                // Level 0 = Sales Manager, Level 1 = Sales VP - skip both for GM
+                levelsPassed++;
+            } else {
+                managerSysId = mgrGr.getValue('manager');
+            }
+        }
+
+        territorySysId = parentTerritorySysId;
+        guard++;
+    }
+
+    answer = managerSysId ? [managerSysId] : [];
+})(headerGr, ruleGr);]]]]><![CDATA[></scripted_approver><sys_class_name>sn_adv_appr_mgmt_approval_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 00:57:17</sys_created_on><sys_id>1d26358c2b4bc7104deaf02ac891bf76</sys_id><sys_mod_count>6</sys_mod_count><sys_name>Sales GM Discount Approval</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_rule_1d26358c2b4bc7104deaf02ac891bf76</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-03 00:42:29</sys_updated_on></sn_adv_appr_mgmt_approval_rule></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>e2ebab164256dd565d3d8d8e4d234c16</sys_id>
+<table></table>
+<target_name>Sales GM Discount Approval</target_name>
+<type>Approval Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_31de5c562b8343504deaf02ac891bfb7</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule"><sn_adv_appr_mgmt_approval_rule action="INSERT_OR_UPDATE"><active>true</active><advanced>true</advanced><approval_chain display_value="Sales Territory Manager">2647e7ee3b478750d5260fa693e45a33</approval_chain><approval_criteria>anyone</approval_criteria><approval_trigger_condition display_value="Territory Manager Roll-Up">82ce5cda3b0f4350d5260fa693e45a06</approval_trigger_condition><approver_type>user</approver_type><auto_escalate>true</auto_escalate><description>Routes to the account's Territory Manager, rolling up the territory hierarchy until one is found.
+
+— Created via ServiceNow Forge (Claude)</description><dynamic_approver/><dynamic_escalated_assignee/><entity_table>sn_quote_mgmt_core_quote</entity_table><escalated_assignee display_value="Renee Foster_REVOPS_GLOBAL">e5098b212b0f8b104deaf02ac891bfc0</escalated_assignee><escalation_schedule display_value="Approval Escalation SLA">d7be3207b5d73a90f8778a808e889a9f</escalation_schedule><escalation_type>user</escalation_type><expected_days_to_complete>1970-01-01 00:03:00</expected_days_to_complete><name>Territory Manager Roll-Up Approval</name><order>5</order><scripted_approver><![CDATA[(function eval(headerGr, ruleGr) {
+    /* Resolve the account's primary sales territory, then walk up the
+     * territory hierarchy (parent) until a level with an active,
+     * primary Territory Manager is found. Route the approval to them.
+     */
+    var territorySysId = null;
+    var acctSysId = headerGr.getValue('account');
+    if (acctSysId) {
+        var acctGr = new GlideRecord('customer_account');
+        if (acctGr.get(acctSysId)) {
+            territorySysId = acctGr.getValue('primary_sales_territory');
+        }
+    }
+
+    var managerSysId = null;
+    var today = new GlideDate();
+    var guard = 0;
+
+    while (territorySysId && !managerSysId && guard < 10) {
+        var mgrGr = new GlideRecord('sn_tp_territory_manager');
+        mgrGr.addQuery('territory', territorySysId);
+        mgrGr.addQuery('manager_type', 'territory_manager');
+        mgrGr.addQuery('primary', true);
+        mgrGr.addQuery('from', '<=', today);
+        mgrGr.addQuery('to', '>=', today);
+        mgrGr.query();
+
+        if (mgrGr.next()) {
+            managerSysId = mgrGr.getValue('manager');
+        } else {
+            var terrGr = new GlideRecord('sn_tp_territory');
+            territorySysId = terrGr.get(territorySysId) ? terrGr.getValue('parent') : null;
+        }
+        guard++;
+    }
+
+    answer = managerSysId ? [managerSysId] : [];
+})(headerGr, ruleGr);]]]]><![CDATA[></scripted_approver><sys_class_name>sn_adv_appr_mgmt_approval_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 18:21:43</sys_created_on><sys_id>31de5c562b8343504deaf02ac891bfb7</sys_id><sys_mod_count>6</sys_mod_count><sys_name>Territory Manager Roll-Up Approval</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_rule_31de5c562b8343504deaf02ac891bfb7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-04 03:37:09</sys_updated_on></sn_adv_appr_mgmt_approval_rule></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>8a97f399daedb45f7e031a3267d1aa0d</sys_id>
+<table></table>
+<target_name>Territory Manager Roll-Up Approval</target_name>
+<type>Approval Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_488439082b0fc7104deaf02ac891bf26</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule"><sn_adv_appr_mgmt_approval_rule action="INSERT_OR_UPDATE"><active>true</active><advanced>true</advanced><approval_chain display_value="Sales Management">86a6fdcc2b0fc7104deaf02ac891bfcd</approval_chain><approval_criteria>anyone</approval_criteria><approval_trigger_condition display_value="Discount Tier 2 (20%+)">408ff48c2b83c7104deaf02ac891bf0e</approval_trigger_condition><approver_type>user</approver_type><auto_escalate>false</auto_escalate><description>Sales VP Discount Approval</description><dynamic_approver/><dynamic_escalated_assignee/><entity_table>sn_quote_mgmt_core_quote</entity_table><escalated_assignee/><escalation_schedule display_value="Approval Escalation SLA">d7be3207b5d73a90f8778a808e889a9f</escalation_schedule><escalation_type>user</escalation_type><expected_days_to_complete/><name>Sales VP Discount Approval</name><order>20</order><scripted_approver><![CDATA[(function eval(headerGr, ruleGr) {
+    /* Resolve the account's primary sales territory, walk up until the first
+     * level with an active, primary Territory Manager is found (this is the
+     * Sales Manager's level), then continue walking up to find the NEXT
+     * level's active, primary Territory Manager - one level above the
+     * Sales Manager in the territory hierarchy - and route to them.
+     */
+    var territorySysId = null;
+    var acctSysId = headerGr.getValue('account');
+    if (acctSysId) {
+        var acctGr = new GlideRecord('customer_account');
+        if (acctGr.get(acctSysId)) {
+            territorySysId = acctGr.getValue('primary_sales_territory');
+        }
+    }
+
+    var managerSysId = null;
+    var passedSalesManagerLevel = false;
+    var today = new GlideDate();
+    var guard = 0;
+
+    while (territorySysId && !managerSysId && guard < 10) {
+        var terrGr = new GlideRecord('sn_tp_territory');
+        var parentTerritorySysId = terrGr.get(territorySysId) ? terrGr.getValue('parent') : null;
+
+        var mgrGr = new GlideRecord('sn_tp_territory_manager');
+        mgrGr.addQuery('territory', territorySysId);
+        mgrGr.addQuery('manager_type', 'territory_manager');
+        mgrGr.addQuery('primary', true);
+        mgrGr.addQuery('from', '<=', today);
+        mgrGr.addQuery('to', '>=', today);
+        mgrGr.query();
+
+        if (mgrGr.next()) {
+            if (!passedSalesManagerLevel) {
+                // This is the Sales Manager's level - go one level higher for the VP
+                passedSalesManagerLevel = true;
+            } else {
+                managerSysId = mgrGr.getValue('manager');
+            }
+        }
+
+        territorySysId = parentTerritorySysId;
+        guard++;
+    }
+
+    answer = managerSysId ? [managerSysId] : [];
+})(headerGr, ruleGr);]]]]><![CDATA[></scripted_approver><sys_class_name>sn_adv_appr_mgmt_approval_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 00:50:34</sys_created_on><sys_id>488439082b0fc7104deaf02ac891bf26</sys_id><sys_mod_count>8</sys_mod_count><sys_name>Sales VP Discount Approval</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_rule_488439082b0fc7104deaf02ac891bf26</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-03 00:42:22</sys_updated_on></sn_adv_appr_mgmt_approval_rule></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>9106f08e53913a06f9c8c1997dec1fd4</sys_id>
+<table></table>
+<target_name>Sales VP Discount Approval</target_name>
+<type>Approval Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_4c3193362b0f43104deaf02ac891bfa0</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule"><sn_adv_appr_mgmt_approval_rule action="INSERT_OR_UPDATE"><active>true</active><advanced>false</advanced><approval_chain display_value="Sales Discount Management">86a6fdcc2b0fc7104deaf02ac891bfcd</approval_chain><approval_criteria>anyone</approval_criteria><approval_trigger_condition display_value="Low Margin Quote Line">9850df7e2b8b43104deaf02ac891bf78</approval_trigger_condition><approver_type>group</approver_type><auto_escalate>false</auto_escalate><description>Approval for any line in the quote that has very low margin &lt;20%</description><dynamic_approver/><dynamic_escalated_assignee/><entity_table>sn_quote_mgmt_core_quote</entity_table><escalated_assignee/><escalation_schedule display_value="Approval Escalation SLA">d7be3207b5d73a90f8778a808e889a9f</escalation_schedule><escalation_type>user</escalation_type><expected_days_to_complete/><name>Pricing Manager - Low Margin Quote Line Approval</name><order>80</order><scripted_approver><![CDATA[(function eval(headerGr, ruleGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and ruleGr    * Script must set answer variable to an array of sys_id of Users(sys_user) if Approval type is User     * or Groups(sys_user_group) if Approval type is Group     */})(headerGr, ruleGr);]]]]><![CDATA[></scripted_approver><sys_class_name>sn_adv_appr_mgmt_approval_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-04 20:39:09</sys_created_on><sys_id>4c3193362b0f43104deaf02ac891bfa0</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Pricing Manager - Low Margin Quote Line Approval</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_rule_4c3193362b0f43104deaf02ac891bfa0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-04 20:53:07</sys_updated_on></sn_adv_appr_mgmt_approval_rule></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>dfaf772028e4ddab58ee813fe7023fc6</sys_id>
+<table></table>
+<target_name>Pricing Manager - Low Margin Quote Line Approval</target_name>
+<type>Approval Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_68d656943b0b4310d5260fa693e45a93</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule"><sn_adv_appr_mgmt_approval_rule action="INSERT_OR_UPDATE"><active>true</active><advanced>false</advanced><approval_chain display_value="Payment">7c58718c2b0fc7104deaf02ac891bf69</approval_chain><approval_criteria>anyone</approval_criteria><approval_trigger_condition display_value="Delinquent Account">ea2fc29c3b874310d5260fa693e45a27</approval_trigger_condition><approver_type>group</approver_type><auto_escalate>false</auto_escalate><description>Deal Desk - Delinquent Account Approval</description><dynamic_approver/><dynamic_escalated_assignee/><entity_table>sn_quote_mgmt_core_quote</entity_table><escalated_assignee/><escalation_schedule display_value="Approval Escalation SLA">d7be3207b5d73a90f8778a808e889a9f</escalation_schedule><escalation_type>user</escalation_type><expected_days_to_complete/><name>Deal Desk - Delinquent Account Approval</name><order>10</order><scripted_approver><![CDATA[(function eval(headerGr, ruleGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and ruleGr    * Script must set answer variable to an array of sys_id of Users(sys_user) if Approval type is User     * or Groups(sys_user_group) if Approval type is Group     */})(headerGr, ruleGr);]]]]><![CDATA[></scripted_approver><sys_class_name>sn_adv_appr_mgmt_approval_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 21:58:23</sys_created_on><sys_id>68d656943b0b4310d5260fa693e45a93</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Deal Desk - Delinquent Account Approval</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_rule_68d656943b0b4310d5260fa693e45a93</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 21:58:23</sys_updated_on></sn_adv_appr_mgmt_approval_rule></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>08c9e21c003f2be9dbaf1420820bf5fc</sys_id>
+<table></table>
+<target_name>Deal Desk - Delinquent Account Approval</target_name>
+<type>Approval Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_780037f52b8f4f104deaf02ac891bf4a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule"><sn_adv_appr_mgmt_approval_rule action="INSERT_OR_UPDATE"><active>true</active><advanced>false</advanced><approval_chain display_value="Deal Reg Approvals">77fb5b752b8b4f104deaf02ac891bf9b</approval_chain><approval_criteria>all</approval_criteria><approval_trigger_condition display_value="All Deal Registrations">40da1b752b8b4f104deaf02ac891bf7c</approval_trigger_condition><approver_type>user</approver_type><auto_escalate>false</auto_escalate><description>2nd level of approval that goes to the AE of the Account</description><dynamic_approver/><dynamic_escalated_assignee/><entity_table>sn_prm_dr_deal_registration</entity_table><escalated_assignee/><escalation_schedule display_value="Approval Escalation SLA">d7be3207b5d73a90f8778a808e889a9f</escalation_schedule><escalation_type>user</escalation_type><expected_days_to_complete/><name>AE Approval</name><order>20</order><scripted_approver><![CDATA[(function eval(headerGr, ruleGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and ruleGr    * Script must set answer variable to an array of sys_id of Users(sys_user) if Approval type is User     * or Groups(sys_user_group) if Approval type is Group     */})(headerGr, ruleGr);]]]]><![CDATA[></scripted_approver><sys_class_name>sn_adv_appr_mgmt_approval_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 20:20:22</sys_created_on><sys_id>780037f52b8f4f104deaf02ac891bf4a</sys_id><sys_mod_count>2</sys_mod_count><sys_name>AE Approval</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_rule_780037f52b8f4f104deaf02ac891bf4a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 20:24:07</sys_updated_on></sn_adv_appr_mgmt_approval_rule></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>74608ddf2d1829ddf937fd64868ecb72</sys_id>
+<table></table>
+<target_name>AE Approval</target_name>
+<type>Approval Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_aef79ad83b0b4310d5260fa693e45a81</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule"><sn_adv_appr_mgmt_approval_rule action="INSERT_OR_UPDATE"><active>true</active><advanced>false</advanced><approval_chain display_value="Shipping">7d17ded43b0b4310d5260fa693e45a51</approval_chain><approval_criteria>anyone</approval_criteria><approval_trigger_condition display_value="Foreign Shipping Country">2e9712d43b0b4310d5260fa693e45add</approval_trigger_condition><approver_type>group</approver_type><auto_escalate>false</auto_escalate><description>Shipping Approval</description><dynamic_approver/><dynamic_escalated_assignee/><entity_table>sn_quote_mgmt_core_quote</entity_table><escalated_assignee/><escalation_schedule/><escalation_type>dynamic</escalation_type><expected_days_to_complete/><name>Shipping Approval</name><order>10</order><scripted_approver><![CDATA[(function eval(headerGr, ruleGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and ruleGr    * Script must set answer variable to an array of sys_id of Users(sys_user) if Approval type is User     * or Groups(sys_user_group) if Approval type is Group     */})(headerGr, ruleGr);]]]]><![CDATA[></scripted_approver><sys_class_name>sn_adv_appr_mgmt_approval_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 22:03:40</sys_created_on><sys_id>aef79ad83b0b4310d5260fa693e45a81</sys_id><sys_mod_count>6</sys_mod_count><sys_name>Shipping Approval</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_rule_aef79ad83b0b4310d5260fa693e45a81</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-03 17:30:20</sys_updated_on></sn_adv_appr_mgmt_approval_rule></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>e43b8bf852c2724b9bb627a8b963f97b</sys_id>
+<table></table>
+<target_name>Shipping Approval</target_name>
+<type>Approval Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_cc5c933d2b8b4f104deaf02ac891bf21</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule"><sn_adv_appr_mgmt_approval_rule action="INSERT_OR_UPDATE"><active>true</active><advanced>false</advanced><approval_chain display_value="Deal Reg Approvals">77fb5b752b8b4f104deaf02ac891bf9b</approval_chain><approval_criteria>all</approval_criteria><approval_trigger_condition display_value="All Deal Registrations">40da1b752b8b4f104deaf02ac891bf7c</approval_trigger_condition><approver_type>user</approver_type><auto_escalate>false</auto_escalate><description>1st level of approval goes to Enterprise Relationship Manager of the Channel Partner</description><dynamic_approver/><dynamic_escalated_assignee/><entity_table>sn_prm_dr_deal_registration</entity_table><escalated_assignee/><escalation_schedule display_value="Approval Escalation SLA">d7be3207b5d73a90f8778a808e889a9f</escalation_schedule><escalation_type>user</escalation_type><expected_days_to_complete/><name>1st level goes to Ent Rel Manager of the Partner</name><order>10</order><scripted_approver><![CDATA[(function eval(headerGr, ruleGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and ruleGr    * Script must set answer variable to an array of sys_id of Users(sys_user) if Approval type is User     * or Groups(sys_user_group) if Approval type is Group     */})(headerGr, ruleGr);]]]]><![CDATA[></scripted_approver><sys_class_name>sn_adv_appr_mgmt_approval_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 18:53:47</sys_created_on><sys_id>cc5c933d2b8b4f104deaf02ac891bf21</sys_id><sys_mod_count>4</sys_mod_count><sys_name>1st level goes to Ent Rel Manager of the Partner</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_rule_cc5c933d2b8b4f104deaf02ac891bf21</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 20:25:42</sys_updated_on></sn_adv_appr_mgmt_approval_rule></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>4bd5f0488f486544f19683b5af3d2ea9</sys_id>
+<table></table>
+<target_name>1st level goes to Ent Rel Manager of the Partner</target_name>
+<type>Approval Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_d89ad3712b8b4f104deaf02ac891bfab</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule"><sn_adv_appr_mgmt_approval_rule action="INSERT_OR_UPDATE"><active>true</active><advanced>false</advanced><approval_chain/><approval_criteria>all</approval_criteria><approval_trigger_condition display_value="All Deal Registrations">40da1b752b8b4f104deaf02ac891bf7c</approval_trigger_condition><approver_type>user</approver_type><auto_escalate>false</auto_escalate><description>Approval for all Deal Registrations</description><dynamic_approver/><dynamic_escalated_assignee/><entity_table>sn_prm_dr_deal_registration</entity_table><escalated_assignee/><escalation_schedule display_value="Approval Escalation SLA">d7be3207b5d73a90f8778a808e889a9f</escalation_schedule><escalation_type>user</escalation_type><expected_days_to_complete/><name>Deal Reg Approvals</name><order>1</order><scripted_approver><![CDATA[(function eval(headerGr, ruleGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and ruleGr    * Script must set answer variable to an array of sys_id of Users(sys_user) if Approval type is User     * or Groups(sys_user_group) if Approval type is Group     */})(headerGr, ruleGr);]]]]><![CDATA[></scripted_approver><sys_class_name>sn_adv_appr_mgmt_approval_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 18:49:28</sys_created_on><sys_id>d89ad3712b8b4f104deaf02ac891bfab</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Deal Reg Approvals</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_rule_d89ad3712b8b4f104deaf02ac891bfab</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-03 20:14:49</sys_updated_on></sn_adv_appr_mgmt_approval_rule></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>3ed65d965e9c9b763317fe06465585b5</sys_id>
+<table></table>
+<target_name>Deal Reg Approvals</target_name>
+<type>Approval Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_ef488b322bcb43104deaf02ac891bf4c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule"><sn_adv_appr_mgmt_approval_rule action="INSERT_OR_UPDATE"><active>true</active><advanced>false</advanced><approval_chain display_value="Payment">7c58718c2b0fc7104deaf02ac891bf69</approval_chain><approval_criteria>anyone</approval_criteria><approval_trigger_condition display_value="Net 90">98b8f5442b4fc7104deaf02ac891bf85</approval_trigger_condition><approver_type>group</approver_type><auto_escalate>false</auto_escalate><description>CFO approval is needed once deal desk clears it</description><dynamic_approver/><dynamic_escalated_assignee/><entity_table>sn_quote_mgmt_core_quote</entity_table><escalated_assignee/><escalation_schedule display_value="Approval Escalation SLA">d7be3207b5d73a90f8778a808e889a9f</escalation_schedule><escalation_type>user</escalation_type><expected_days_to_complete/><name>Net 90 - CFO Approval</name><order>50</order><scripted_approver><![CDATA[(function eval(headerGr, ruleGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and ruleGr    * Script must set answer variable to an array of sys_id of Users(sys_user) if Approval type is User     * or Groups(sys_user_group) if Approval type is Group     */})(headerGr, ruleGr);]]]]><![CDATA[></scripted_approver><sys_class_name>sn_adv_appr_mgmt_approval_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-04 19:59:57</sys_created_on><sys_id>ef488b322bcb43104deaf02ac891bf4c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Net 90 - CFO Approval</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_rule_ef488b322bcb43104deaf02ac891bf4c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-04 19:59:57</sys_updated_on></sn_adv_appr_mgmt_approval_rule></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>1528cd97c7e22097f0c6585757c8a563</sys_id>
+<table></table>
+<target_name>Net 90 - CFO Approval</target_name>
+<type>Approval Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_efff78cc2b83c7104deaf02ac891bfa5</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule"><sn_adv_appr_mgmt_approval_rule action="INSERT_OR_UPDATE"><active>true</active><advanced>true</advanced><approval_chain display_value="Sales Management">86a6fdcc2b0fc7104deaf02ac891bfcd</approval_chain><approval_criteria>anyone</approval_criteria><approval_trigger_condition display_value="Discount Tier 1 (10%+)">822fbc4c2b83c7104deaf02ac891bf22</approval_trigger_condition><approver_type>user</approver_type><auto_escalate>false</auto_escalate><description>Sales Manager Discount Approval - Routes through the territory</description><dynamic_approver/><dynamic_escalated_assignee/><entity_table>sn_quote_mgmt_core_quote</entity_table><escalated_assignee/><escalation_schedule display_value="Approval Escalation SLA">d7be3207b5d73a90f8778a808e889a9f</escalation_schedule><escalation_type>user</escalation_type><expected_days_to_complete/><name>Sales Manager Discount Approval</name><order>10</order><scripted_approver><![CDATA[(function eval(headerGr, ruleGr) {
+    /* Resolve the account's primary sales territory, then walk up the
+     * territory hierarchy (parent) until a level with an active,
+     * primary Territory Manager is found. Route the approval to them.
+     */
+    var territorySysId = null;
+    var acctSysId = headerGr.getValue('account');
+    if (acctSysId) {
+        var acctGr = new GlideRecord('customer_account');
+        if (acctGr.get(acctSysId)) {
+            territorySysId = acctGr.getValue('primary_sales_territory');
+        }
+    }
+
+    var managerSysId = null;
+    var today = new GlideDate();
+    var guard = 0;
+
+    while (territorySysId && !managerSysId && guard < 10) {
+        var mgrGr = new GlideRecord('sn_tp_territory_manager');
+        mgrGr.addQuery('territory', territorySysId);
+        mgrGr.addQuery('manager_type', 'territory_manager');
+        mgrGr.addQuery('primary', true);
+        mgrGr.addQuery('from', '<=', today);
+        mgrGr.addQuery('to', '>=', today);
+        mgrGr.query();
+
+        if (mgrGr.next()) {
+            managerSysId = mgrGr.getValue('manager');
+        } else {
+            var terrGr = new GlideRecord('sn_tp_territory');
+            territorySysId = terrGr.get(territorySysId) ? terrGr.getValue('parent') : null;
+        }
+        guard++;
+    }
+
+    answer = managerSysId ? [managerSysId] : [];
+})(headerGr, ruleGr);]]]]><![CDATA[></scripted_approver><sys_class_name>sn_adv_appr_mgmt_approval_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-26 21:00:36</sys_created_on><sys_id>efff78cc2b83c7104deaf02ac891bfa5</sys_id><sys_mod_count>7</sys_mod_count><sys_name>Sales Manager Discount Approval</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_rule_efff78cc2b83c7104deaf02ac891bfa5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 18:41:21</sys_updated_on></sn_adv_appr_mgmt_approval_rule></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>a61af32b53608adcf2a78b16d8913bf8</sys_id>
+<table></table>
+<target_name>Sales Manager Discount Approval</target_name>
+<type>Approval Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_reminder_6676718c2b0fc7104deaf02ac891bf21</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule_reminder"><sn_adv_appr_mgmt_approval_rule_reminder action="INSERT_OR_UPDATE"><approval_rule display_value="Sales VP">488439082b0fc7104deaf02ac891bf26</approval_rule><duration>1970-01-03 00:00:00</duration><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 00:58:21</sys_created_on><sys_id>6676718c2b0fc7104deaf02ac891bf21</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 00:58:21</sys_updated_on></sn_adv_appr_mgmt_approval_rule_reminder></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>c5fc139a5492bc3f03861067fbfeb22d</sys_id>
+<table></table>
+<target_name>6676718c2b0fc7104deaf02ac891bf21</target_name>
+<type>Approval Rule Reminder</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_reminder_6b30cd042b8707104deaf02ac891bf64</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule_reminder"><sn_adv_appr_mgmt_approval_rule_reminder action="INSERT_OR_UPDATE"><approval_rule display_value="Sales Manager">efff78cc2b83c7104deaf02ac891bfa5</approval_rule><duration>1970-01-03 00:00:00</duration><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-26 21:01:25</sys_created_on><sys_id>6b30cd042b8707104deaf02ac891bf64</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-26 21:01:25</sys_updated_on></sn_adv_appr_mgmt_approval_rule_reminder></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>2c9a99d661fa1a6b0c00fe4b7e33b467</sys_id>
+<table></table>
+<target_name>6b30cd042b8707104deaf02ac891bf64</target_name>
+<type>Approval Rule Reminder</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_reminder_b3293dc82b0fc7104deaf02ac891bf3c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule_reminder"><sn_adv_appr_mgmt_approval_rule_reminder action="INSERT_OR_UPDATE"><approval_rule display_value="Deal Desk">1d09fd802b4fc7104deaf02ac891bf7f</approval_rule><duration>1970-01-03 00:00:00</duration><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 01:10:12</sys_created_on><sys_id>b3293dc82b0fc7104deaf02ac891bf3c</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 01:10:12</sys_updated_on></sn_adv_appr_mgmt_approval_rule_reminder></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>b014898b44869045ef99bb08f3437b34</sys_id>
+<table></table>
+<target_name>b3293dc82b0fc7104deaf02ac891bf3c</target_name>
+<type>Approval Rule Reminder</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_reminder_dc563dc82b0fc7104deaf02ac891bf6a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule_reminder"><sn_adv_appr_mgmt_approval_rule_reminder action="INSERT_OR_UPDATE"><approval_rule display_value="Sales GM">1d26358c2b4bc7104deaf02ac891bf76</approval_rule><duration>1970-01-03 00:00:00</duration><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 00:57:39</sys_created_on><sys_id>dc563dc82b0fc7104deaf02ac891bf6a</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 00:57:39</sys_updated_on></sn_adv_appr_mgmt_approval_rule_reminder></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>d17cb96389b71d95f3784a0cbd4dfd69</sys_id>
+<table></table>
+<target_name>dc563dc82b0fc7104deaf02ac891bf6a</target_name>
+<type>Approval Rule Reminder</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_reminder_fc48929c3b0b4310d5260fa693e45af8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule_reminder"><sn_adv_appr_mgmt_approval_rule_reminder action="INSERT_OR_UPDATE"><approval_rule display_value="Shipping Approval">aef79ad83b0b4310d5260fa693e45a81</approval_rule><duration>1970-01-03 00:00:00</duration><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 22:04:26</sys_created_on><sys_id>fc48929c3b0b4310d5260fa693e45af8</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 22:04:26</sys_updated_on></sn_adv_appr_mgmt_approval_rule_reminder></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>79c399e4cb2262bcd5d1c4cb68a860e6</sys_id>
+<table></table>
+<target_name>fc48929c3b0b4310d5260fa693e45af8</target_name>
+<type>Approval Rule Reminder</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_trigger_condition_281b8b322bcb43104deaf02ac891bf9b</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_trigger_condition"><sn_adv_appr_mgmt_approval_trigger_condition action="INSERT_OR_UPDATE"><active>true</active><advanced_condition>false</advanced_condition><advanced_smart_condition>false</advanced_smart_condition><approval_configuration display_value="Quote">19ac88482b4b87104deaf02ac891bfcc</approval_configuration><condition>total_margin_percentage&lt;=40</condition><condition_table>sn_quote_mgmt_core_quote</condition_table><description>Total margin ≤ 40% </description><name>Low Margin Quote</name><scripted_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_condition><scripted_smart_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_smart_condition><smart_reapproval>false</smart_reapproval><smart_reapproval_condition/><sys_class_name>sn_adv_appr_mgmt_approval_trigger_condition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-04 20:12:31</sys_created_on><sys_id>281b8b322bcb43104deaf02ac891bf9b</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Low Margin Quote</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_trigger_condition_281b8b322bcb43104deaf02ac891bf9b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-04 20:41:57</sys_updated_on></sn_adv_appr_mgmt_approval_trigger_condition></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>a7c4336b113dbfd55b5c4fdcffc76f53</sys_id>
+<table></table>
+<target_name>Low Margin Quote</target_name>
+<type>Approval Trigger Condition</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_trigger_condition_2e9712d43b0b4310d5260fa693e45add</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_trigger_condition"><sn_adv_appr_mgmt_approval_trigger_condition action="INSERT_OR_UPDATE"><active>true</active><advanced_condition>false</advanced_condition><advanced_smart_condition>false</advanced_smart_condition><approval_configuration display_value="Quote">19ac88482b4b87104deaf02ac891bfcc</approval_configuration><condition>shipping_country=Iran^ORshipping_countryLIKENorth Korea^ORshipping_country=Cuba</condition><condition_table>sn_quote_mgmt_core_quote</condition_table><description>Foreign shipping countries require operational risk review.</description><name>Restricted Shipping Country</name><scripted_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_condition><scripted_smart_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_smart_condition><smart_reapproval>false</smart_reapproval><smart_reapproval_condition/><sys_class_name>sn_adv_appr_mgmt_approval_trigger_condition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 22:02:21</sys_created_on><sys_id>2e9712d43b0b4310d5260fa693e45add</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Restricted Shipping Country</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_trigger_condition_2e9712d43b0b4310d5260fa693e45add</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-06 01:31:46</sys_updated_on></sn_adv_appr_mgmt_approval_trigger_condition></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>db6528a558fd1b1a9c3282c58968be75</sys_id>
+<table></table>
+<target_name>Restricted Shipping Country</target_name>
+<type>Approval Trigger Condition</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_trigger_condition_408ff48c2b83c7104deaf02ac891bf0e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_trigger_condition"><sn_adv_appr_mgmt_approval_trigger_condition action="INSERT_OR_UPDATE"><active>true</active><advanced_condition>false</advanced_condition><advanced_smart_condition>true</advanced_smart_condition><approval_configuration display_value="Quote">19ac88482b4b87104deaf02ac891bfcc</approval_configuration><condition>discount_percentage&gt;=20</condition><condition_table>sn_quote_mgmt_core_quote</condition_table><description>Discount Tier 2 (20%+). No approval needed if the relative change is 5% or less. I.e. 20 to 20.5% does not trigger reapproval.</description><name>Discount Tier 2 (20%+)</name><scripted_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_condition><scripted_smart_condition><![CDATA[(function eval(headerGr, conditionGr) {
+    var stepGr = new GlideRecord('sn_adv_appr_mgmt_approval_step');
+    stepGr.addQuery('approval_trigger_condition', conditionGr.getUniqueValue());
+    stepGr.addQuery('stateIN', '2,3'); // approved or rejected
+    stepGr.addQuery('auto_approved', false);
+    stepGr.orderByDesc('sys_created_on');
+    stepGr.setLimit(1);
+    stepGr.query();
+
+    if (!stepGr.next()) {
+        answer = false; // no prior decision to compare against
+        return;
+    }
+
+    var snapshot = JSON.parse(stepGr.getValue('field_snapshot') || '{}');
+    var prevDiscount = parseFloat(snapshot.discount_percentage);
+    var currDiscount = parseFloat(headerGr.getValue('discount_percentage'));
+
+    if (isNaN(prevDiscount) || isNaN(currDiscount) || prevDiscount === 0) {
+        answer = false;
+        return;
+    }
+
+    answer = ((currDiscount - prevDiscount) / prevDiscount) <= 0.05;
+})(headerGr, conditionGr);]]]]><![CDATA[></scripted_smart_condition><smart_reapproval>true</smart_reapproval><smart_reapproval_condition/><sys_class_name>sn_adv_appr_mgmt_approval_trigger_condition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-26 20:58:30</sys_created_on><sys_id>408ff48c2b83c7104deaf02ac891bf0e</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Discount Tier 2 (20%+)</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_trigger_condition_408ff48c2b83c7104deaf02ac891bf0e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-03 02:49:38</sys_updated_on></sn_adv_appr_mgmt_approval_trigger_condition></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>d8843e0b5a95ffbcab6e1ce794990ce8</sys_id>
+<table></table>
+<target_name>Discount Tier 2 (20%+)</target_name>
+<type>Approval Trigger Condition</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_trigger_condition_40da1b752b8b4f104deaf02ac891bf7c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_trigger_condition"><sn_adv_appr_mgmt_approval_trigger_condition action="INSERT_OR_UPDATE"><active>true</active><advanced_condition>false</advanced_condition><advanced_smart_condition>false</advanced_smart_condition><approval_configuration display_value="Deal Registration Approvals">c0a5b27d2b834f104deaf02ac891bf24</approval_configuration><condition>deal_registration_typeANYTHING</condition><condition_table>sn_prm_dr_deal_registration</condition_table><description>For all Deal registrations submitted by Channel Partners.</description><name>All Deal Registrations</name><scripted_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_condition><scripted_smart_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_smart_condition><smart_reapproval>false</smart_reapproval><smart_reapproval_condition/><sys_class_name>sn_adv_appr_mgmt_approval_trigger_condition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 18:49:19</sys_created_on><sys_id>40da1b752b8b4f104deaf02ac891bf7c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>All Deal Registrations</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_trigger_condition_40da1b752b8b4f104deaf02ac891bf7c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 18:49:19</sys_updated_on></sn_adv_appr_mgmt_approval_trigger_condition></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>418512541a2b70d5a84b0a28e5cf39a8</sys_id>
+<table></table>
+<target_name>All Deal Registrations</target_name>
+<type>Approval Trigger Condition</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_trigger_condition_822fbc4c2b83c7104deaf02ac891bf22</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_trigger_condition"><sn_adv_appr_mgmt_approval_trigger_condition action="INSERT_OR_UPDATE"><active>true</active><advanced_condition>false</advanced_condition><advanced_smart_condition>false</advanced_smart_condition><approval_configuration display_value="Quote">19ac88482b4b87104deaf02ac891bfcc</approval_configuration><condition>discount_percentage&gt;=10</condition><condition_table>sn_quote_mgmt_core_quote</condition_table><description>Discount Tier 1 (10%+). No reapproval needed if Marquee account and the discount stays below 19%.</description><name>Discount Tier 1 (10%+)</name><scripted_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_condition><scripted_smart_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_smart_condition><smart_reapproval>true</smart_reapproval><smart_reapproval_condition>account.u_marquee_account=true^discount_percentage&lt;=19</smart_reapproval_condition><sys_class_name>sn_adv_appr_mgmt_approval_trigger_condition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-26 20:57:41</sys_created_on><sys_id>822fbc4c2b83c7104deaf02ac891bf22</sys_id><sys_mod_count>4</sys_mod_count><sys_name>Discount Tier 1 (10%+)</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_trigger_condition_822fbc4c2b83c7104deaf02ac891bf22</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-03 02:10:57</sys_updated_on></sn_adv_appr_mgmt_approval_trigger_condition></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>bce55c156fb3f7518cb964a78faa7d54</sys_id>
+<table></table>
+<target_name>Discount Tier 1 (10%+)</target_name>
+<type>Approval Trigger Condition</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_trigger_condition_82ce5cda3b0f4350d5260fa693e45a06</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_trigger_condition"><sn_adv_appr_mgmt_approval_trigger_condition action="INSERT_OR_UPDATE"><active>true</active><advanced_condition>false</advanced_condition><advanced_smart_condition>false</advanced_smart_condition><approval_configuration display_value="Quote">19ac88482b4b87104deaf02ac891bfcc</approval_configuration><condition>total_amount&gt;javascript:global.getCurrencyFilter('sn_quote_mgmt_core_quote','total_amount','USD;100000.00')</condition><condition_table>sn_quote_mgmt_core_quote</condition_table><description>Quotes over $100K need the account's territory manager (rolled up through the territory hierarchy) to sign off.
+
+— Created via ServiceNow Forge (Claude)</description><name>Territory Manager Roll-Up</name><scripted_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_condition><scripted_smart_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_smart_condition><smart_reapproval>false</smart_reapproval><smart_reapproval_condition/><sys_class_name>sn_adv_appr_mgmt_approval_trigger_condition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 18:21:28</sys_created_on><sys_id>82ce5cda3b0f4350d5260fa693e45a06</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Territory Manager Roll-Up</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_trigger_condition_82ce5cda3b0f4350d5260fa693e45a06</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 18:21:28</sys_updated_on></sn_adv_appr_mgmt_approval_trigger_condition></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>6dcd9845d2531bdb75a752ae8619b76c</sys_id>
+<table></table>
+<target_name>Territory Manager Roll-Up</target_name>
+<type>Approval Trigger Condition</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_trigger_condition_9850df7e2b8b43104deaf02ac891bf78</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_trigger_condition"><sn_adv_appr_mgmt_approval_trigger_condition action="INSERT_OR_UPDATE"><active>true</active><advanced_condition>false</advanced_condition><advanced_smart_condition>false</advanced_smart_condition><approval_configuration display_value="Quote">19ac88482b4b87104deaf02ac891bfcc</approval_configuration><condition>^RLQUERYsn_quote_mgmt_core_quote_line_item.quote,&gt;=1^unit_margin&lt;21^ENDRLQUERY</condition><condition_table>sn_quote_mgmt_core_quote</condition_table><description>Approval condition for detecting any line in a quote that has &lt;20% margin left</description><name>Low Margin Quote Line</name><scripted_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_condition><scripted_smart_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_smart_condition><smart_reapproval>false</smart_reapproval><smart_reapproval_condition/><sys_class_name>sn_adv_appr_mgmt_approval_trigger_condition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-04 20:37:48</sys_created_on><sys_id>9850df7e2b8b43104deaf02ac891bf78</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Low Margin Quote Line</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_trigger_condition_9850df7e2b8b43104deaf02ac891bf78</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-04 20:37:48</sys_updated_on></sn_adv_appr_mgmt_approval_trigger_condition></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>17565ae7d2d4fc263ff73f6f5abc05c8</sys_id>
+<table></table>
+<target_name>Low Margin Quote Line</target_name>
+<type>Approval Trigger Condition</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_trigger_condition_98b8f5442b4fc7104deaf02ac891bf85</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_trigger_condition"><sn_adv_appr_mgmt_approval_trigger_condition action="INSERT_OR_UPDATE"><active>true</active><advanced_condition>false</advanced_condition><advanced_smart_condition>false</advanced_smart_condition><approval_configuration display_value="Quote">19ac88482b4b87104deaf02ac891bfcc</approval_configuration><condition>payment_terms=net_ninety</condition><condition_table>sn_quote_mgmt_core_quote</condition_table><description>If quote or order has Net 90 as payment terms</description><name>Net 90</name><scripted_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_condition><scripted_smart_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_smart_condition><smart_reapproval>false</smart_reapproval><smart_reapproval_condition/><sys_class_name>sn_adv_appr_mgmt_approval_trigger_condition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 01:08:40</sys_created_on><sys_id>98b8f5442b4fc7104deaf02ac891bf85</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Net 90</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_trigger_condition_98b8f5442b4fc7104deaf02ac891bf85</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 01:08:40</sys_updated_on></sn_adv_appr_mgmt_approval_trigger_condition></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>42170ffc0d1324447ea28c70760d66ac</sys_id>
+<table></table>
+<target_name>Net 90</target_name>
+<type>Approval Trigger Condition</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_trigger_condition_e7afb44c2b83c7104deaf02ac891bfc0</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_trigger_condition"><sn_adv_appr_mgmt_approval_trigger_condition action="INSERT_OR_UPDATE"><active>true</active><advanced_condition>false</advanced_condition><advanced_smart_condition>false</advanced_smart_condition><approval_configuration display_value="Quote">19ac88482b4b87104deaf02ac891bfcc</approval_configuration><condition>discount_percentage&gt;=30</condition><condition_table>sn_quote_mgmt_core_quote</condition_table><description>Discount Tier 3 (30%+)</description><name>Discount Tier 3 (30%+)</name><scripted_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_condition><scripted_smart_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_smart_condition><smart_reapproval>false</smart_reapproval><smart_reapproval_condition/><sys_class_name>sn_adv_appr_mgmt_approval_trigger_condition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-26 20:59:13</sys_created_on><sys_id>e7afb44c2b83c7104deaf02ac891bfc0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Discount Tier 3 (30%+)</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_trigger_condition_e7afb44c2b83c7104deaf02ac891bfc0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-26 20:59:13</sys_updated_on></sn_adv_appr_mgmt_approval_trigger_condition></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>849d851f19b2ccedc416b4975d6d70c5</sys_id>
+<table></table>
+<target_name>Discount Tier 3 (30%+)</target_name>
+<type>Approval Trigger Condition</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sysevent_email_action_82d560123b8f4350d5260fa693e45a7b</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action"><sysevent_email_action action="INSERT_OR_UPDATE"><action_insert>true</action_insert><action_update>false</action_update><active>true</active><advanced_condition/><affected_field_on_event/><category display_value="Advanced Approvals" name="Advanced Approvals">78b91720b7bb76105b0f85208e11a9f3</category><collection>sysapproval_approver</collection><condition/><content_type>text/html</content_type><default_digest>false</default_digest><default_interval/><description/><digest_from/><digest_html/><digest_reply_to/><digest_separator_html><![CDATA[<br><hr><br>]]]]><![CDATA[></digest_separator_html><digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]]]><![CDATA[></digest_separator_text><digest_subject/><digest_template/><digest_text/><digest_type>single</digest_type><digestable>false</digestable><enable_dynamic_translation>false</enable_dynamic_translation><event_name/><event_parm_1>false</event_parm_1><event_parm_2>false</event_parm_2><exclude_delegates>false</exclude_delegates><force_delivery>false</force_delivery><from/><generation_type>engine</generation_type><importance/><include_attachments>false</include_attachments><item>event.parm1</item><item_table/><mandatory>false</mandatory><message/><message_html/><message_list/><message_text/><name>Advanced Approval Request - Push</name><omit_watermark>false</omit_watermark><order>100</order><push_message_only>true</push_message_only><recipient_fields>approver</recipient_fields><recipient_groups/><recipient_users/><reply_to/><send_self>true</send_self><sms_alternate/><style/><subject/><subscribable>false</subscribable><sys_class_name>sysevent_email_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 18:54:29</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>82d560123b8f4350d5260fa693e45a7b</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Advanced Approval Request - Push</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sysevent_email_action_82d560123b8f4350d5260fa693e45a7b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 18:54:49</sys_updated_on><sys_version>2</sys_version><template/><type>email</type><weight>0</weight></sysevent_email_action></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Global]">b2cfbf86045ef0789b31f8fe0b89fc28</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>5b29f48af25cb38cc2625ea5dc70c182</sys_id>
+<table>sysapproval_approver</table>
+<target_name>Advanced Approval Request - Push</target_name>
+<type>Notification</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Advanced Approval Management">da1a8b211899f2d0f8774c10431fdc88</application>
+<application_name>Advanced Approval Management</application_name>
+<application_scope>sn_adv_appr_mgmt</application_scope>
+<description>Advanced Approval Management for Quote and Deal Registration: configurations, chains, rules, reminders, trigger conditions, push notification. Source: opmsalescrm1 (captured 2026-10-06 from Default update sets).</description>
+<name>UPDATE-010-advanced-approvals [Advanced Approval Management]</name>
+<origin_sys_id>d638f9163ca5feb121d20cbfe63e318f</origin_sys_id>
+<remote_sys_id>d638f9163ca5feb121d20cbfe63e318f</remote_sys_id>
+<state>loaded</state>
+<sys_id>d638f9163ca5feb121d20cbfe63e318f</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Advanced Approval Management">da1a8b211899f2d0f8774c10431fdc88</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_rule_ee2315c22bcf8f104deaf02ac891bff7</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_rule"><sn_adv_appr_mgmt_approval_rule action="INSERT_OR_UPDATE"><active>true</active><advanced>false</advanced><approval_chain display_value="Marquee Large Deal">fa36a7aa3b478750d5260fa693e45add</approval_chain><approval_criteria>anyone</approval_criteria><approval_trigger_condition display_value="Marquee Large Deal">83b25d8a2bcf8f104deaf02ac891bf10</approval_trigger_condition><approver_type>user</approver_type><auto_escalate>false</auto_escalate><description>Marquee Account &gt; 20 Mil needs CRO approval</description><dynamic_approver/><dynamic_escalated_assignee/><entity_table>sn_quote_mgmt_core_quote</entity_table><escalated_assignee/><escalation_schedule display_value="Approval Escalation SLA">d7be3207b5d73a90f8778a808e889a9f</escalation_schedule><escalation_type>user</escalation_type><expected_days_to_complete/><name>Marquee Large Deal</name><order>10</order><scripted_approver><![CDATA[(function eval(headerGr, ruleGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and ruleGr    * Script must set answer variable to an array of sys_id of Users(sys_user) if Approval type is User     * or Groups(sys_user_group) if Approval type is Group     */})(headerGr, ruleGr);]]]]><![CDATA[></scripted_approver><sys_class_name>sn_adv_appr_mgmt_approval_rule</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 03:32:53</sys_created_on><sys_id>ee2315c22bcf8f104deaf02ac891bff7</sys_id><sys_mod_count>4</sys_mod_count><sys_name>Marquee Large Deal</sys_name><sys_package display_value="Advanced Approval Management" source="sn_adv_appr_mgmt">da1a8b211899f2d0f8774c10431fdc88</sys_package><sys_policy/><sys_scope display_value="Advanced Approval Management">da1a8b211899f2d0f8774c10431fdc88</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_rule_ee2315c22bcf8f104deaf02ac891bff7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-04 03:34:42</sys_updated_on></sn_adv_appr_mgmt_approval_rule></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Advanced Approval Management]">d638f9163ca5feb121d20cbfe63e318f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>d1670b25be82e54a2fc9693407799b4c</sys_id>
+<table></table>
+<target_name>Marquee Large Deal</target_name>
+<type>Approval Rule</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Advanced Approval Management">da1a8b211899f2d0f8774c10431fdc88</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_trigger_condition_83b25d8a2bcf8f104deaf02ac891bf10</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_trigger_condition"><sn_adv_appr_mgmt_approval_trigger_condition action="INSERT_OR_UPDATE"><active>true</active><advanced_condition>false</advanced_condition><advanced_smart_condition>false</advanced_smart_condition><approval_configuration display_value="Quote">19ac88482b4b87104deaf02ac891bfcc</approval_configuration><condition>account.u_marquee_account=true^total_amount&gt;javascript:global.getCurrencyFilter('sn_quote_mgmt_core_quote','total_amount','USD;20000000.00')</condition><condition_table>sn_quote_mgmt_core_quote</condition_table><description>Large Marquee Account &gt; 20 Mil needs CRO approval</description><name>Marquee Large Deal</name><scripted_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_condition><scripted_smart_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_smart_condition><smart_reapproval>false</smart_reapproval><smart_reapproval_condition/><sys_class_name>sn_adv_appr_mgmt_approval_trigger_condition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 03:31:37</sys_created_on><sys_id>83b25d8a2bcf8f104deaf02ac891bf10</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Marquee Large Deal</sys_name><sys_package display_value="Advanced Approval Management" source="sn_adv_appr_mgmt">da1a8b211899f2d0f8774c10431fdc88</sys_package><sys_policy/><sys_scope display_value="Advanced Approval Management">da1a8b211899f2d0f8774c10431fdc88</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_trigger_condition_83b25d8a2bcf8f104deaf02ac891bf10</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 15:42:22</sys_updated_on></sn_adv_appr_mgmt_approval_trigger_condition></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Advanced Approval Management]">d638f9163ca5feb121d20cbfe63e318f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>9c6162ad7982d75559791e51fb85c291</sys_id>
+<table></table>
+<target_name>Marquee Large Deal</target_name>
+<type>Approval Trigger Condition</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Opportunity Management Application">346aff309395f11032e8b8284dba1085</application>
+<application_name>Opportunity Management Application</application_name>
+<application_scope>sn_opty_mgmt</application_scope>
+<description>Advanced Approval Management for Quote and Deal Registration: configurations, chains, rules, reminders, trigger conditions, push notification. Source: opmsalescrm1 (captured 2026-10-06 from Default update sets).</description>
+<name>UPDATE-010-advanced-approvals [Opportunity Management Application]</name>
+<origin_sys_id>6d2c74ebd4e38fe56981a249380b6477</origin_sys_id>
+<remote_sys_id>6d2c74ebd4e38fe56981a249380b6477</remote_sys_id>
+<state>loaded</state>
+<sys_id>6d2c74ebd4e38fe56981a249380b6477</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Opportunity Management Application">346aff309395f11032e8b8284dba1085</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_chain_2647e7ee3b478750d5260fa693e45a33</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_chain"><sn_adv_appr_mgmt_approval_chain action="INSERT_OR_UPDATE"><approval_configuration display_value="Quote">19ac88482b4b87104deaf02ac891bfcc</approval_configuration><name>Sales Territory Manager</name><order>9</order><sys_class_name>sn_adv_appr_mgmt_approval_chain</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-04 03:36:25</sys_created_on><sys_id>2647e7ee3b478750d5260fa693e45a33</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Sales Territory Manager</sys_name><sys_package display_value="Opportunity Management Application" source="sn_opty_mgmt">346aff309395f11032e8b8284dba1085</sys_package><sys_policy/><sys_scope display_value="Opportunity Management Application">346aff309395f11032e8b8284dba1085</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_chain_2647e7ee3b478750d5260fa693e45a33</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-04 03:36:25</sys_updated_on></sn_adv_appr_mgmt_approval_chain></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Opportunity Management Application]">6d2c74ebd4e38fe56981a249380b6477</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>a9bd53a83d1fef6e876769cf59d175eb</sys_id>
+<table></table>
+<target_name>Sales Territory Manager</target_name>
+<type>Approval Chain</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Opportunity Management Application">346aff309395f11032e8b8284dba1085</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_chain_fa36a7aa3b478750d5260fa693e45add</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_chain"><sn_adv_appr_mgmt_approval_chain action="INSERT_OR_UPDATE"><approval_configuration display_value="Quote">19ac88482b4b87104deaf02ac891bfcc</approval_configuration><name>Marquee Large Deal</name><order>40</order><sys_class_name>sn_adv_appr_mgmt_approval_chain</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-04 03:31:53</sys_created_on><sys_id>fa36a7aa3b478750d5260fa693e45add</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Marquee Large Deal</sys_name><sys_package display_value="Opportunity Management Application" source="sn_opty_mgmt">346aff309395f11032e8b8284dba1085</sys_package><sys_policy/><sys_scope display_value="Opportunity Management Application">346aff309395f11032e8b8284dba1085</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_chain_fa36a7aa3b478750d5260fa693e45add</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-04 03:35:47</sys_updated_on></sn_adv_appr_mgmt_approval_chain></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Opportunity Management Application]">6d2c74ebd4e38fe56981a249380b6477</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>3831fdefa1ea2e5f9bd6cb7a14ef06d9</sys_id>
+<table></table>
+<target_name>Marquee Large Deal</target_name>
+<type>Approval Chain</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<application_name>Quote Management Data Model</application_name>
+<application_scope>sn_quote_mgmt_core</application_scope>
+<description>Advanced Approval Management for Quote and Deal Registration: configurations, chains, rules, reminders, trigger conditions, push notification. Source: opmsalescrm1 (captured 2026-10-06 from Default update sets).</description>
+<name>UPDATE-010-advanced-approvals [Quote Management Data Model]</name>
+<origin_sys_id>78507449b095bdf6bdffe602a69b3e6a</origin_sys_id>
+<remote_sys_id>78507449b095bdf6bdffe602a69b3e6a</remote_sys_id>
+<state>loaded</state>
+<sys_id>78507449b095bdf6bdffe602a69b3e6a</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_trigger_condition_ea2fc29c3b874310d5260fa693e45a27</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_trigger_condition"><sn_adv_appr_mgmt_approval_trigger_condition action="INSERT_OR_UPDATE"><active>true</active><advanced_condition>false</advanced_condition><advanced_smart_condition>false</advanced_smart_condition><approval_configuration display_value="Quote">19ac88482b4b87104deaf02ac891bfcc</approval_configuration><condition>account.u_delinquent=true</condition><condition_table>sn_quote_mgmt_core_quote</condition_table><description>Delinquent Account</description><name>Delinquent Account</name><scripted_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_condition><scripted_smart_condition><![CDATA[(function eval(headerGr, conditionGr) {    /* Write your code here    * Script block has access to GlideRecords of headerGr and conditionGr    * Script must set the answer variable to boolean true or false value    * e.g. answer = true;    */})(headerGr, conditionGr);]]]]><![CDATA[></scripted_smart_condition><smart_reapproval>false</smart_reapproval><smart_reapproval_condition/><sys_class_name>sn_adv_appr_mgmt_approval_trigger_condition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 21:27:23</sys_created_on><sys_id>ea2fc29c3b874310d5260fa693e45a27</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Delinquent Account</sys_name><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sn_adv_appr_mgmt_approval_trigger_condition_ea2fc29c3b874310d5260fa693e45a27</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 21:27:23</sys_updated_on></sn_adv_appr_mgmt_approval_trigger_condition></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-010-advanced-approvals [Quote Management Data Model]">78507449b095bdf6bdffe602a69b3e6a</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>7f5015c82bd9b9fac957c1e260bc9304</sys_id>
+<table></table>
+<target_name>Delinquent Account</target_name>
+<type>Approval Trigger Condition</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+</unload>
