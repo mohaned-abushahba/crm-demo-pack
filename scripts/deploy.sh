@@ -17,6 +17,7 @@ fi
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 UPDATE_SETS_DIR="$REPO_ROOT/update-sets"
 SEED_DIR="$REPO_ROOT/seed"
+POST_DEPLOY_DIR="$REPO_ROOT/scripts/post-deploy"
 
 echo "== Sales CRM Golden Demo Deploy =="
 echo "Target instance (MCP name): $INSTANCE"
@@ -55,6 +56,21 @@ else
   echo
   echo "Run each with the execute MCP tool against $INSTANCE, in listed order."
   echo "(Scripted end-to-end invocation to be added once seed/ is populated.)"
+fi
+echo
+
+echo "-- Step 3: Post-deploy config --"
+post_files=("$POST_DEPLOY_DIR"/[0-9]*.js)
+if [[ ${#post_files[@]} -eq 0 ]]; then
+  echo "No post-deploy scripts found in $POST_DEPLOY_DIR."
+else
+  echo "Found ${#post_files[@]} post-deploy script(s) to run, in order:"
+  for f in "${post_files[@]}"; do
+    echo "  - $(basename "$f")"
+  done
+  echo
+  echo "Run each with the execute MCP tool against $INSTANCE, after the Update Sets are committed."
+  echo "These set config by name where an Update Set can't (per-instance sys_ids, private properties)."
 fi
 echo
 

@@ -10,6 +10,9 @@ Naming: `UPDATE-<NNN>-<short-kebab-name>.xml`
 |---|---|---|
 | UPDATE-003 | opmsalescrmstage | Re-applied deliberately with a named Update Set current, then exported |
 | UPDATE-004 … 017 | opmsalescrm1 (stable golden instance) | Captured 2026-10-06 from the instance's customer update payloads (Default update sets), grouped by feature. See `docs/CHANGELOG.md` |
+| UPDATE-018 | opmsalescrm1 | Captured 2026-10-07: UI16 banner image properties plus their image attachments, serialised by hand |
+| UPDATE-019 | opmsalescrm1 | Captured 2026-10-07: published/draft states of the OOB pricing and eligibility rule matrices, serialised from live values |
+| UPDATE-020 | opmsalescrm1 | Captured 2026-10-07: approver groups/users on the Advanced Approval rules, serialised from live values |
 
 UPDATE-004 … 017 each contain **one retrieved update set per application scope**, named
 `UPDATE-NNN-slug [Scope]`, because ServiceNow update sets are scope-bound. After importing a file,
@@ -19,9 +22,13 @@ file's only one), then the scoped ones.
 ## Recommended commit order
 
 Prerequisites: plugins installed. Users, groups, product offerings and price lists must be seeded
-with opmsalescrm1's sys_ids before 006, 010, 011 and 012, because those records reference them.
+with opmsalescrm1's sys_ids before 006, 010, 011, 012 and 020, because those records reference them.
 
-`004 → 005 → 013 → 006 → 007 → 008 → 009 → 010 → 011 → 012 → 014 → 015 → 016 → 017`
+`004 → 005 → 013 → 006 → 007 → 008 → 009 → 010 → 020 → 011 → 012 → 014 → 015 → 016 → 017 → 018 → 019`
+
+018 (UI16 banner image) has no dependencies and can be committed at any point. 019 (pricing matrix
+states) must come after 011, since it sets which OOB versions are live alongside 011's custom
+matrices. 020 (approval approvers) goes right after 010, whose rules it references. Session timeout and outbound email are set after commit by `scripts/post-deploy/01-system-properties.js`, not by an Update Set.
 
 013 goes early because the Sync Process Record BRs in 006/007/012 call `BOProcessChainUtil`.
 
@@ -39,6 +46,12 @@ duplicated in 004–017.
   They are kept as-is by decision (2026-10-07).
 - **UPDATE-015** and **UPDATE-017** modify OOB script includes (`SalesForecastHeaderItemUtil`,
   `CustomerPortalCatalogAccessUtil`). Expect skip/collision prompts in Preview if plugin versions differ.
+- **UPDATE-019** overwrites 10 OOB Rule Matrix records (full field values from opmsalescrm1). Its
+  `rule`, `matrix_type`, context-variable and validation references are OOB sys_ids, confirmed present on a
+  fresh instance (opmsalescrmstage). If a newer plugin version adds fields or versions, check Preview.
+- **UPDATE-020** references SCRM groups (CFO, Deal Desk, Pricing Manager, Shipping Approver, Delinquent
+  Account Approver) and users (Marcus Patel, Derek Sanchez, Cameron Patel) by opmsalescrm1 sys_id. Seed them
+  first, or the approvers import blank. Two orphan Approval Group rows on opmsalescrm1 with no rule were left out.
 - 35 records in **UPDATE-007/011/013** come from tables that ServiceNow does not update-set track:
   L2C mappings, CPQ rule matrices, and the Business Object group + members. Their payloads were
   serialised from live field values. Check them in Preview.

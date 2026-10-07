@@ -14,6 +14,50 @@ File: update-sets/UPDATE-XXX-short-name.xml
 
 ---
 
+## UPDATE-020-approval-rule-approvers (2026-10-07)
+Instance: opmsalescrm1
+What: Approver assignments for the Advanced Approval rules in UPDATE-010. 6 Approval Group records
+(SCRM-CFO, SCRM-Deal Desk, SCRM-Pricing Manager x2, SCRM-Shipping Approver, SCRM-Delinquent Account
+Approver) and 4 Approval User records (Marcus Patel x2, Derek Sanchez, Cameron Patel).
+Why: `sn_adv_appr_mgmt_approval_group` / `_user` are not update-set tracked, so UPDATE-010 imported its
+14 rules with no approvers. The 5 tracked tables (configurations, trigger conditions, rules, chains,
+reminders) were re-checked: all records are in UPDATE-010 and none changed since 2026-10-06. Approval
+Request/Step are runtime data and excluded. Two orphan group rows (no rule) skipped. Payloads verified
+by MD5 against an instance-side serialisation.
+File: update-sets/UPDATE-020-approval-rule-approvers.xml
+
+## UPDATE-019-pricing-matrix-states (2026-10-07)
+Instance: opmsalescrm1
+What: Version states of the 10 OOB CPQ rule matrices (`sn_csm_ctxrul_mgt_rule_matrix`) as set on
+opmsalescrm1. v1 Standard Price Adjustment, Price List Defaulting and Product Offering / Catalog /
+Category Eligibility are published; their v2 versions are draft. A fresh install (opmsalescrmstage)
+ships the reverse (v1 retired, v2 published).
+Why: Rule Matrix is not update-set tracked and has no audit history, so these state changes were
+missing from UPDATE-011, which only covers the custom matrices (Standard Price Adjustment v3/v4/v5,
+Price List Defaulting v3/v4) and the 8 decision tables. Payloads serialised from live field values;
+each verified by MD5 against an instance-side serialisation. Decision tables, matrix types, context
+variables and validations referenced are all OOB and present on a fresh instance.
+File: update-sets/UPDATE-019-pricing-matrix-states.xml
+
+## scripts/post-deploy/01-system-properties.js (2026-10-07)
+Instance: opmsalescrm1
+What: Sets `glide.ui.session_timeout` = 1440 (1-day max) and `glide.email.smtp.active` = true by
+name, via the execute tool, after Update Sets are committed. Idempotent.
+Why: The session-timeout record is created per instance at provisioning, so its sys_id differs
+between instances (opmsalescrm1 vs opmsalescrmstage confirmed). An Update Set would insert a
+duplicate rather than update it. SMTP is a private property that Update Set import can skip.
+File: scripts/post-deploy/01-system-properties.js
+
+## UPDATE-018-ui16-banner-image (2026-10-07)
+Instance: opmsalescrm1
+What: UI16 Basic Configuration banner image set to the Solana Conglomerate logo. The file covers
+`glide.product.image.light` (UI16 banner) and the legacy `glide.product.image`, and embeds each
+property's `sys_attachment` + `sys_attachment_doc` rows (Solana logo.png, 155x28, 4,392 bytes).
+Why: Demo branding. Update sets track only the property value (`<attachment sys_id>.iix`), not the
+image, so the attachment rows were serialised by hand into the payload (same pattern as UPDATE-003).
+Verified the embedded image decodes byte-for-byte to the source PNG.
+File: update-sets/UPDATE-018-ui16-banner-image.xml
+
 ## Removed UPDATE-001 and UPDATE-002 (2026-10-07)
 What: Deleted update-sets/UPDATE-001-quote-approval-500k-threshold.xml and
 update-sets/UPDATE-002-quote-doc-template-solana.xml. Their entries below are kept for history.

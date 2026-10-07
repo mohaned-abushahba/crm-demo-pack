@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-10-07 12:00:00">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<description>Approver assignments for the Advanced Approval rules in UPDATE-010: 6 Approval Group records (SCRM-CFO, Deal Desk, Pricing Manager, Shipping Approver, Delinquent Account Approver) and 4 Approval User records (Marcus Patel, Derek Sanchez, Cameron Patel). These tables are not update-set tracked, so payloads were serialised from live field values. Source: opmsalescrm1 (captured 2026-10-07).</description>
+<name>UPDATE-020-approval-rule-approvers</name>
+<origin_sys_id>b1f67256844845e6989a5a7020a95b38</origin_sys_id>
+<remote_sys_id>b1f67256844845e6989a5a7020a95b38</remote_sys_id>
+<state>loaded</state>
+<sys_id>b1f67256844845e6989a5a7020a95b38</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_group_11884b322bcb43104deaf02ac891bf1c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_group"><sn_adv_appr_mgmt_approval_group action="INSERT_OR_UPDATE"><approval_rule display_value="Net 90 - CFO Approval">ef488b322bcb43104deaf02ac891bf4c</approval_rule><group display_value="SCRM-CFO">b8a4f2d23bf2c310d5260fa693e45a3f</group><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-04 20:00:19</sys_created_on><sys_id>11884b322bcb43104deaf02ac891bf1c</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-04 20:00:19</sys_updated_on></sn_adv_appr_mgmt_approval_group></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-020-approval-rule-approvers">b1f67256844845e6989a5a7020a95b38</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>145a0b16d10f4d2798620d2fe19c4ddb</sys_id>
+<table></table>
+<target_name>SCRM-CFO - Net 90 - CFO Approval</target_name>
+<type>Approval Group</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_group_7c29fdc02b4fc7104deaf02ac891bfa9</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_group"><sn_adv_appr_mgmt_approval_group action="INSERT_OR_UPDATE"><approval_rule display_value="Deal Desk - Payment Term Approval">1d09fd802b4fc7104deaf02ac891bf7f</approval_rule><group display_value="SCRM-Deal Desk">e668318c3b8b4f10d5260fa693e45ac3</group><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 01:10:01</sys_created_on><sys_id>7c29fdc02b4fc7104deaf02ac891bfa9</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 01:10:01</sys_updated_on></sn_adv_appr_mgmt_approval_group></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-020-approval-rule-approvers">b1f67256844845e6989a5a7020a95b38</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>62450fb6decd44919177db56d2ef04c8</sys_id>
+<table></table>
+<target_name>SCRM-Deal Desk - Deal Desk - Payment Term Approval</target_name>
+<type>Approval Group</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_group_9371df7e2b8b43104deaf02ac891bf7d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_group"><sn_adv_appr_mgmt_approval_group action="INSERT_OR_UPDATE"><approval_rule display_value="Pricing Manager - Low Margin Quote Line Approval">4c3193362b0f43104deaf02ac891bfa0</approval_rule><group display_value="SCRM-Pricing Manager">1f9a03293b07cb10d5260fa693e45a7b</group><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-04 20:39:19</sys_created_on><sys_id>9371df7e2b8b43104deaf02ac891bf7d</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-04 20:39:19</sys_updated_on></sn_adv_appr_mgmt_approval_group></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-020-approval-rule-approvers">b1f67256844845e6989a5a7020a95b38</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>dd4e47bfa8c240198b78e9386f21ebac</sys_id>
+<table></table>
+<target_name>SCRM-Pricing Manager - Pricing Manager - Low Margin Quote Line Approval</target_name>
+<type>Approval Group</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_group_9718525c3b474310d5260fa693e45a63</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_group"><sn_adv_appr_mgmt_approval_group action="INSERT_OR_UPDATE"><approval_rule display_value="Shipping Approval">aef79ad83b0b4310d5260fa693e45a81</approval_rule><group display_value="SCRM-Shipping Approver">09a4f2d23bf2c310d5260fa693e45a45</group><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 22:04:16</sys_created_on><sys_id>9718525c3b474310d5260fa693e45a63</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 22:04:16</sys_updated_on></sn_adv_appr_mgmt_approval_group></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-020-approval-rule-approvers">b1f67256844845e6989a5a7020a95b38</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>3a9ca524ba4246bb9f6633ab83c0c82e</sys_id>
+<table></table>
+<target_name>SCRM-Shipping Approver - Shipping Approval</target_name>
+<type>Approval Group</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_group_cae61ad03b0b4310d5260fa693e45a4f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_group"><sn_adv_appr_mgmt_approval_group action="INSERT_OR_UPDATE"><approval_rule display_value="Deal Desk - Delinquent Account Approval">68d656943b0b4310d5260fa693e45a93</approval_rule><group display_value="SCRM-Delinquent Account Approver">70e552142b0b03104deaf02ac891bff0</group><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-27 21:58:32</sys_created_on><sys_id>cae61ad03b0b4310d5260fa693e45a4f</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 21:58:32</sys_updated_on></sn_adv_appr_mgmt_approval_group></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-020-approval-rule-approvers">b1f67256844845e6989a5a7020a95b38</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>29d83e872f004ee09129df2193bd227a</sys_id>
+<table></table>
+<target_name>SCRM-Delinquent Account Approver - Deal Desk - Delinquent Account Approval</target_name>
+<type>Approval Group</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_group_da1c43b62bcb43104deaf02ac891bf3e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_group"><sn_adv_appr_mgmt_approval_group action="INSERT_OR_UPDATE"><approval_rule display_value="Pricing Manager - Low Margin Quote Approval">15db8b3a2bcb43104deaf02ac891bf65</approval_rule><group display_value="SCRM-Pricing Manager">1f9a03293b07cb10d5260fa693e45a7b</group><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-04 20:16:16</sys_created_on><sys_id>da1c43b62bcb43104deaf02ac891bf3e</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-04 20:16:16</sys_updated_on></sn_adv_appr_mgmt_approval_group></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-020-approval-rule-approvers">b1f67256844845e6989a5a7020a95b38</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>a69e01aa12da43e199ff2542801d947a</sys_id>
+<table></table>
+<target_name>SCRM-Pricing Manager - Pricing Manager - Low Margin Quote Approval</target_name>
+<type>Approval Group</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_user_7e52ca622bcb07504deaf02ac891bf54</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_user"><sn_adv_appr_mgmt_approval_user action="INSERT_OR_UPDATE"><approval_rule display_value="Deal Reg Approvals">d89ad3712b8b4f104deaf02ac891bfab</approval_rule><user display_value="Marcus Patel_ENT_PTNR_MGR_AMS">3284fad22b7683104deaf02ac891bff6</user><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-03 20:15:14</sys_created_on><sys_id>7e52ca622bcb07504deaf02ac891bf54</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-03 20:15:14</sys_updated_on></sn_adv_appr_mgmt_approval_user></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-020-approval-rule-approvers">b1f67256844845e6989a5a7020a95b38</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>f5422ee2500940b08748ed68e4b29c7a</sys_id>
+<table></table>
+<target_name>Marcus Patel_ENT_PTNR_MGR_AMS - Deal Reg Approvals</target_name>
+<type>Approval User</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_user_92a1ffb92b8f4f104deaf02ac891bfd4</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_user"><sn_adv_appr_mgmt_approval_user action="INSERT_OR_UPDATE"><approval_rule display_value="1st level goes to Ent Rel Manager of the Partner">cc5c933d2b8b4f104deaf02ac891bf21</approval_rule><user display_value="Marcus Patel_ENT_PTNR_MGR_AMS">3284fad22b7683104deaf02ac891bff6</user><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 20:26:05</sys_created_on><sys_id>92a1ffb92b8f4f104deaf02ac891bfd4</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 20:26:05</sys_updated_on></sn_adv_appr_mgmt_approval_user></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-020-approval-rule-approvers">b1f67256844845e6989a5a7020a95b38</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>430ca9adf7bb40fdbebe664e77610185</sys_id>
+<table></table>
+<target_name>Marcus Patel_ENT_PTNR_MGR_AMS - 1st level goes to Ent Rel Manager of the Partner</target_name>
+<type>Approval User</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_user_aebb598a2b43cf104deaf02ac891bf33</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_user"><sn_adv_appr_mgmt_approval_user action="INSERT_OR_UPDATE"><approval_rule display_value="Marquee Large Deal">ee2315c22bcf8f104deaf02ac891bff7</approval_rule><user display_value="Derek Sanchez_CRO">3109cb212b0f8b104deaf02ac891bf11</user><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 04:09:23</sys_created_on><sys_id>aebb598a2b43cf104deaf02ac891bf33</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-02 04:09:23</sys_updated_on></sn_adv_appr_mgmt_approval_user></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-020-approval-rule-approvers">b1f67256844845e6989a5a7020a95b38</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>2a93ee32bd7b4af8ba2a7e82c395a5ea</sys_id>
+<table></table>
+<target_name>Derek Sanchez_CRO - Marquee Large Deal</target_name>
+<type>Approval User</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_adv_appr_mgmt_approval_user_c251fbb92b8f4f104deaf02ac891bf27</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_adv_appr_mgmt_approval_user"><sn_adv_appr_mgmt_approval_user action="INSERT_OR_UPDATE"><approval_rule display_value="AE Approval">780037f52b8f4f104deaf02ac891bf4a</approval_rule><user display_value="Cameron Patel_TECH_L2">0b843ed22b7683104deaf02ac891bf1d</user><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-01 20:24:58</sys_created_on><sys_id>c251fbb92b8f4f104deaf02ac891bf27</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-01 20:24:58</sys_updated_on></sn_adv_appr_mgmt_approval_user></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-020-approval-rule-approvers">b1f67256844845e6989a5a7020a95b38</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>5e4d18a78bfa45749c9be4eb53487a49</sys_id>
+<table></table>
+<target_name>Cameron Patel_TECH_L2 - AE Approval</target_name>
+<type>Approval User</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+</unload>

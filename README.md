@@ -13,6 +13,7 @@ Playwright validation suite that proves the deployed result actually works.
 update-sets/   Exported Update Set XML — config changes (flows, BRs, roles, ACLs, schema)
 seed/          Demo data seed scripts — accounts, contacts, catalog, price lists, personas
 scripts/       Deploy automation — applies update-sets then seed/ to a target instance
+  post-deploy/ Config set by name after Update Sets commit (per-instance sys_ids, private properties)
 docs/          CHANGELOG and capture conventions
 ```
 
