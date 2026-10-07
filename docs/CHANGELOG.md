@@ -78,6 +78,23 @@ Known limitations / gotchas:
     reverted back to `false` afterward so no persistent schema change was left behind.
 File: update-sets/UPDATE-002-quote-doc-template-solana.xml
 
+## UPDATE-003-enable-business-portal (2026-10-06)
+Instance: opmsalescrmstage
+What: Enabled the "Business Portal" Service Portal (`sp_portal`,
+sys_id f264dbaccbfd52108d3f6a6fc041e4b5) by unchecking its `inactive` flag
+(true → false). No other fields changed.
+Why: User identified this as a necessary standing config for the golden demo
+instance — the Business Portal needs to be active for the automation pack to
+produce a working demo instance out of the box.
+Known limitations / gotchas: none hit — single clean record update, captured on
+the first attempt with no Business Rule interference or role gaps (sp_portal
+write needed no additional role grant). The exported Update Set XML includes the
+portal's two logo attachment records' metadata, but the large base64 image
+payloads were trimmed to placeholder bytes in the committed XML file to avoid
+bloating the repo with binary data unrelated to this change — the logos already
+existed on the instance before this change and aren't being introduced by it.
+File: update-sets/UPDATE-003-enable-business-portal.xml
+
 ## seed/03-ams-west-forecasts.js (2026-10-06)
 Instance: opmsalescrmstage
 What: Created 2026 Q4 sales forecasts for the AMS-West territory, mirroring
