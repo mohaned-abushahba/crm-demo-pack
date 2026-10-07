@@ -4,98 +4,13 @@
 <application display_value="Global">global</application>
 <application_name>Global</application_name>
 <application_scope>global</application_scope>
-<description>Version states (published/draft) of the OOB CPQ pricing and eligibility rule matrices as set on opmsalescrm1: v1 Standard Price Adjustment, Price List Defaulting and the 3 Product Offering / Catalog / Category Eligibility matrices published; their v2 versions set to draft. Rule Matrix is not update-set tracked, so payloads were serialised from live field values. Complements UPDATE-011 (custom matrices v3+ and decision tables). Source: opmsalescrm1 (captured 2026-10-07).</description>
+<description>Sets the OOB Standard Price Adjustment Matrix v2 and Price List Defaulting Matrix v2 to draft, as on opmsalescrm1, so only the custom versions from UPDATE-011 (Standard Price Adjustment v5, Price List Defaulting v4) are live. Rule Matrix is not update-set tracked, so payloads were serialised from live field values. Source: opmsalescrm1 (captured 2026-10-07).</description>
 <name>UPDATE-019-pricing-matrix-states</name>
 <origin_sys_id>cba5d6bded5e4e658c62b6b5c6f5e6e1</origin_sys_id>
 <remote_sys_id>cba5d6bded5e4e658c62b6b5c6f5e6e1</remote_sys_id>
 <state>loaded</state>
 <sys_id>cba5d6bded5e4e658c62b6b5c6f5e6e1</sys_id>
 </sys_remote_update_set>
-<sys_update_xml action="INSERT_OR_UPDATE">
-<action>INSERT_OR_UPDATE</action>
-<application display_value="Global">global</application>
-<category>customer</category>
-<comments/>
-<name>sn_csm_ctxrul_mgt_rule_matrix_475f2f55534a3110bcb5ddeeff7b12d4</name>
-<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_csm_ctxrul_mgt_rule_matrix"><sn_csm_ctxrul_mgt_rule_matrix action="INSERT_OR_UPDATE"><active>1</active><code>STANDARDPRICEADJUSTMENT1</code><context_variables>d02dda83539d31105c0eddeeff7b12e4,41ebe7bc53c23110bcb5ddeeff7b121e,b40a3b3453063110bcb5ddeeff7b1237,c64debfc53c23110bcb5ddeeff7b128f,b53afb3453063110bcb5ddeeff7b1230,5fcaf37453063110bcb5ddeeff7b12ff,854b3f7453063110bcb5ddeeff7b12d4,e91b3b7453063110bcb5ddeeff7b128f,bb6b33b453063110bcb5ddeeff7b121b,bb116e87539d31105c0eddeeff7b1219,81f32bfe53d531105c0eddeeff7b1254,743dc300ebb13110eb6eb489035228b0,737dc1b691e44210f877ae9a9e4c1f2c</context_variables><display_name>Standard Price Adjustment Matrix v1</display_name><end_date/><initial_version display_value="Standard Price Adjustment Matrix v1">475f2f55534a3110bcb5ddeeff7b12d4</initial_version><matrix_type display_value="Standard Price Adjustment">02d9e32bb071b510f877cddafbb9b615</matrix_type><metadata_sysid_code_map/><name>Standard Price Adjustment Matrix</name><query_optimization_variables>81f32bfe53d531105c0eddeeff7b1254</query_optimization_variables><rule display_value="Standard Price Adjustment Matrix v1">01e2fc0743063110b37ee0166bb8f272</rule><rule_metadata/><rule_selection_criteria>all_applicable</rule_selection_criteria><rule_validations>cb760d1643c24210dba4b0e34db8f2fd,5e63015643c24210dba4b0e34db8f289,664f0017438602106191b0e34db8f2e4,b34c499e43c24210dba4b0e34db8f2d7</rule_validations><start_date>2023-10-20</start_date><state>published</state><sys_created_by>admin</sys_created_by><sys_created_on>2023-10-22 09:02:17</sys_created_on><sys_id>475f2f55534a3110bcb5ddeeff7b12d4</sys_id><sys_mod_count>4</sys_mod_count><sys_tags/><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-21 22:57:41</sys_updated_on><system_defined>1</system_defined><version>1</version></sn_csm_ctxrul_mgt_rule_matrix></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-019-pricing-matrix-states">cba5d6bded5e4e658c62b6b5c6f5e6e1</remote_update_set>
-<replace_on_upgrade>false</replace_on_upgrade>
-<sys_id>934027fc35494b4fadb8c4386e7ee208</sys_id>
-<table></table>
-<target_name>Standard Price Adjustment Matrix v1</target_name>
-<type>Rule Matrix</type>
-<update_domain>global</update_domain>
-<update_set/>
-<view></view>
-</sys_update_xml>
-<sys_update_xml action="INSERT_OR_UPDATE">
-<action>INSERT_OR_UPDATE</action>
-<application display_value="Global">global</application>
-<category>customer</category>
-<comments/>
-<name>sn_csm_ctxrul_mgt_rule_matrix_6821446d538a3110bcb5ddeeff7b128f</name>
-<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_csm_ctxrul_mgt_rule_matrix"><sn_csm_ctxrul_mgt_rule_matrix action="INSERT_OR_UPDATE"><active>1</active><code>PRICELISTDEFAULTING1</code><context_variables>d02dda83539d31105c0eddeeff7b12e4,29f8fbb1432e4610dba4b0e34db8f235</context_variables><display_name>Price List Defaulting Matrix v1</display_name><end_date/><initial_version display_value="Price List Defaulting Matrix v1">6821446d538a3110bcb5ddeeff7b128f</initial_version><matrix_type display_value="Price List Defaulting">85308008b046f510f877cddafbb9b6d1</matrix_type><metadata_sysid_code_map/><name>Price List Defaulting Matrix</name><query_optimization_variables/><rule display_value="Price List Defaulting Matrix v1">13c2b40743063110b37ee0166bb8f2fb</rule><rule_metadata/><rule_selection_criteria>single</rule_selection_criteria><rule_validations>cb760d1643c24210dba4b0e34db8f2fd,5e63015643c24210dba4b0e34db8f289,664f0017438602106191b0e34db8f2e4,6da4919643064210dba4b0e34db8f2be</rule_validations><start_date>2023-10-20</start_date><state>published</state><sys_created_by>admin</sys_created_by><sys_created_on>2023-10-22 10:18:27</sys_created_on><sys_id>6821446d538a3110bcb5ddeeff7b128f</sys_id><sys_mod_count>3</sys_mod_count><sys_tags/><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-21 22:57:41</sys_updated_on><system_defined>1</system_defined><version>1</version></sn_csm_ctxrul_mgt_rule_matrix></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-019-pricing-matrix-states">cba5d6bded5e4e658c62b6b5c6f5e6e1</remote_update_set>
-<replace_on_upgrade>false</replace_on_upgrade>
-<sys_id>5ed260979f2b4e4c9405d9f7485b7ae8</sys_id>
-<table></table>
-<target_name>Price List Defaulting Matrix v1</target_name>
-<type>Rule Matrix</type>
-<update_domain>global</update_domain>
-<update_set/>
-<view></view>
-</sys_update_xml>
-<sys_update_xml action="INSERT_OR_UPDATE">
-<action>INSERT_OR_UPDATE</action>
-<application display_value="Global">global</application>
-<category>customer</category>
-<comments/>
-<name>sn_csm_ctxrul_mgt_rule_matrix_05ba86d2434a4e10765ee0166bb8f22f</name>
-<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_csm_ctxrul_mgt_rule_matrix"><sn_csm_ctxrul_mgt_rule_matrix action="INSERT_OR_UPDATE"><active>1</active><code>PRODUCTOFF1</code><context_variables>743dc300ebb13110eb6eb489035228b0,bb6b33b453063110bcb5ddeeff7b121b,e91b3b7453063110bcb5ddeeff7b128f,d02dda83539d31105c0eddeeff7b12e4,854b3f7453063110bcb5ddeeff7b12d4,5fcaf37453063110bcb5ddeeff7b12ff</context_variables><display_name>Product Offering Eligibility Matrix v1</display_name><end_date/><initial_version display_value="Product Offering Eligibility Matrix v1">05ba86d2434a4e10765ee0166bb8f22f</initial_version><matrix_type display_value="Product Offering Eligibility">4788e5da43424e10765ee0166bb8f22c</matrix_type><metadata_sysid_code_map/><name>Product Offering Eligibility Matrix</name><query_optimization_variables/><rule display_value="Product Offering Eligibility Matrix v1">a8dabb8743ca0210765ee0166bb8f25d</rule><rule_metadata/><rule_selection_criteria>all_applicable</rule_selection_criteria><rule_validations>cb760d1643c24210dba4b0e34db8f2fd,5e63015643c24210dba4b0e34db8f289,664f0017438602106191b0e34db8f2e4,a04d834e43da4210dba4b0e34db8f2bf</rule_validations><start_date>2024-05-10</start_date><state>published</state><sys_created_by>admin</sys_created_by><sys_created_on>2024-05-11 00:28:30</sys_created_on><sys_id>05ba86d2434a4e10765ee0166bb8f22f</sys_id><sys_mod_count>3</sys_mod_count><sys_tags/><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-21 22:57:41</sys_updated_on><system_defined>1</system_defined><version>1</version></sn_csm_ctxrul_mgt_rule_matrix></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-019-pricing-matrix-states">cba5d6bded5e4e658c62b6b5c6f5e6e1</remote_update_set>
-<replace_on_upgrade>false</replace_on_upgrade>
-<sys_id>3903c27aad4a40e6a8856f6b4c64b410</sys_id>
-<table></table>
-<target_name>Product Offering Eligibility Matrix v1</target_name>
-<type>Rule Matrix</type>
-<update_domain>global</update_domain>
-<update_set/>
-<view></view>
-</sys_update_xml>
-<sys_update_xml action="INSERT_OR_UPDATE">
-<action>INSERT_OR_UPDATE</action>
-<application display_value="Global">global</application>
-<category>customer</category>
-<comments/>
-<name>sn_csm_ctxrul_mgt_rule_matrix_1b3c025a434a4e10765ee0166bb8f2c9</name>
-<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_csm_ctxrul_mgt_rule_matrix"><sn_csm_ctxrul_mgt_rule_matrix action="INSERT_OR_UPDATE"><active>1</active><code>PRODUCTOFF2</code><context_variables>bb6b33b453063110bcb5ddeeff7b121b,854b3f7453063110bcb5ddeeff7b12d4,5fcaf37453063110bcb5ddeeff7b12ff,743dc300ebb13110eb6eb489035228b0,d02dda83539d31105c0eddeeff7b12e4,e91b3b7453063110bcb5ddeeff7b128f</context_variables><display_name>Product Offering Catalog Eligibility Matrix v1</display_name><end_date/><initial_version display_value="Product Offering Catalog Eligibility Matrix v1">1b3c025a434a4e10765ee0166bb8f2c9</initial_version><matrix_type display_value="Product Offering Catalog Eligibility">9e2a6d5243824e10765ee0166bb8f221</matrix_type><metadata_sysid_code_map/><name>Product Offering Catalog Eligibility Matrix</name><query_optimization_variables/><rule display_value="Product Offering Catalog Eligibility Matrix v1">72eda857438e0210765ee0166bb8f230</rule><rule_metadata/><rule_selection_criteria>all_applicable</rule_selection_criteria><rule_validations>cb760d1643c24210dba4b0e34db8f2fd,5e63015643c24210dba4b0e34db8f289,664f0017438602106191b0e34db8f2e4,a04d834e43da4210dba4b0e34db8f2bf</rule_validations><start_date>2024-05-10</start_date><state>published</state><sys_created_by>admin</sys_created_by><sys_created_on>2024-05-11 00:33:10</sys_created_on><sys_id>1b3c025a434a4e10765ee0166bb8f2c9</sys_id><sys_mod_count>3</sys_mod_count><sys_tags/><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-21 22:57:41</sys_updated_on><system_defined>1</system_defined><version>1</version></sn_csm_ctxrul_mgt_rule_matrix></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-019-pricing-matrix-states">cba5d6bded5e4e658c62b6b5c6f5e6e1</remote_update_set>
-<replace_on_upgrade>false</replace_on_upgrade>
-<sys_id>a804c9e7f6c64753986b573cd7d0f6dd</sys_id>
-<table></table>
-<target_name>Product Offering Catalog Eligibility Matrix v1</target_name>
-<type>Rule Matrix</type>
-<update_domain>global</update_domain>
-<update_set/>
-<view></view>
-</sys_update_xml>
-<sys_update_xml action="INSERT_OR_UPDATE">
-<action>INSERT_OR_UPDATE</action>
-<application display_value="Global">global</application>
-<category>customer</category>
-<comments/>
-<name>sn_csm_ctxrul_mgt_rule_matrix_e6bc4eda434a4e10765ee0166bb8f216</name>
-<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_csm_ctxrul_mgt_rule_matrix"><sn_csm_ctxrul_mgt_rule_matrix action="INSERT_OR_UPDATE"><active>1</active><code>PRODUCTOFF3</code><context_variables>e91b3b7453063110bcb5ddeeff7b128f,854b3f7453063110bcb5ddeeff7b12d4,6e21723eeb823110eb6eb489035228cb,5fcaf37453063110bcb5ddeeff7b12ff,743dc300ebb13110eb6eb489035228b0,bb6b33b453063110bcb5ddeeff7b121b</context_variables><display_name>Product Offering Category Eligibility Matrix v1</display_name><end_date/><initial_version display_value="Product Offering Category Eligibility Matrix v1">e6bc4eda434a4e10765ee0166bb8f216</initial_version><matrix_type display_value="Product Offering Category Eligibility">1dea291643824e10765ee0166bb8f2ae</matrix_type><metadata_sysid_code_map/><name>Product Offering Category Eligibility Matrix</name><query_optimization_variables/><rule display_value="Product Offering Category Eligibility Matrix v1">c36b9453434e0210765ee0166bb8f25b</rule><rule_metadata/><rule_selection_criteria>all_applicable</rule_selection_criteria><rule_validations>cb760d1643c24210dba4b0e34db8f2fd,5e63015643c24210dba4b0e34db8f289,664f0017438602106191b0e34db8f2e4,a04d834e43da4210dba4b0e34db8f2bf</rule_validations><start_date>2024-05-10</start_date><state>published</state><sys_created_by>admin</sys_created_by><sys_created_on>2024-05-11 00:35:04</sys_created_on><sys_id>e6bc4eda434a4e10765ee0166bb8f216</sys_id><sys_mod_count>3</sys_mod_count><sys_tags/><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-21 22:57:41</sys_updated_on><system_defined>1</system_defined><version>1</version></sn_csm_ctxrul_mgt_rule_matrix></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-019-pricing-matrix-states">cba5d6bded5e4e658c62b6b5c6f5e6e1</remote_update_set>
-<replace_on_upgrade>false</replace_on_upgrade>
-<sys_id>e558a45c793c45fe9689fd3b28ab9cb1</sys_id>
-<table></table>
-<target_name>Product Offering Category Eligibility Matrix v1</target_name>
-<type>Rule Matrix</type>
-<update_domain>global</update_domain>
-<update_set/>
-<view></view>
-</sys_update_xml>
 <sys_update_xml action="INSERT_OR_UPDATE">
 <action>INSERT_OR_UPDATE</action>
 <application display_value="Global">global</application>
@@ -125,57 +40,6 @@
 <sys_id>1c0df1d7b3dd41998b44abf10a7cdcc6</sys_id>
 <table></table>
 <target_name>Price List Defaulting Matrix v2</target_name>
-<type>Rule Matrix</type>
-<update_domain>global</update_domain>
-<update_set/>
-<view></view>
-</sys_update_xml>
-<sys_update_xml action="INSERT_OR_UPDATE">
-<action>INSERT_OR_UPDATE</action>
-<application display_value="Global">global</application>
-<category>customer</category>
-<comments/>
-<name>sn_csm_ctxrul_mgt_rule_matrix_a9f03f9677bb02104bebbcc2fa5a99af</name>
-<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_csm_ctxrul_mgt_rule_matrix"><sn_csm_ctxrul_mgt_rule_matrix action="INSERT_OR_UPDATE"><active>1</active><code>PRODUCTOFF1</code><context_variables>743dc300ebb13110eb6eb489035228b0,bb6b33b453063110bcb5ddeeff7b121b,e91b3b7453063110bcb5ddeeff7b128f,d02dda83539d31105c0eddeeff7b12e4,854b3f7453063110bcb5ddeeff7b12d4,5fcaf37453063110bcb5ddeeff7b12ff,98f16c0d93fb421057b08a22928918fa,1ad2208d93fb421057b08a22928918e9,6942644d93fb421057b08a2292891881,61a2684d93fb421057b08a2292891822</context_variables><display_name>Product Offering Eligibility Matrix v2</display_name><end_date/><initial_version display_value="Product Offering Eligibility Matrix v1">05ba86d2434a4e10765ee0166bb8f22f</initial_version><matrix_type display_value="Product Offering Eligibility">4788e5da43424e10765ee0166bb8f22c</matrix_type><metadata_sysid_code_map/><name>Product Offering Eligibility Matrix</name><query_optimization_variables/><rule display_value="Product Offering Eligibility Matrix v2">7d41f7d677bb02104bebbcc2fa5a9974</rule><rule_metadata/><rule_selection_criteria>all_applicable</rule_selection_criteria><rule_validations>cb760d1643c24210dba4b0e34db8f2fd,5e63015643c24210dba4b0e34db8f289,664f0017438602106191b0e34db8f2e4,a04d834e43da4210dba4b0e34db8f2bf</rule_validations><start_date>2024-08-06</start_date><state>draft</state><sys_created_by>admin</sys_created_by><sys_created_on>2024-08-06 07:42:14</sys_created_on><sys_id>a9f03f9677bb02104bebbcc2fa5a99af</sys_id><sys_mod_count>3</sys_mod_count><sys_tags/><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-21 22:57:41</sys_updated_on><system_defined>0</system_defined><version>2</version></sn_csm_ctxrul_mgt_rule_matrix></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-019-pricing-matrix-states">cba5d6bded5e4e658c62b6b5c6f5e6e1</remote_update_set>
-<replace_on_upgrade>false</replace_on_upgrade>
-<sys_id>1e49536794fb4e3ea30fcdd911d4e07c</sys_id>
-<table></table>
-<target_name>Product Offering Eligibility Matrix v2</target_name>
-<type>Rule Matrix</type>
-<update_domain>global</update_domain>
-<update_set/>
-<view></view>
-</sys_update_xml>
-<sys_update_xml action="INSERT_OR_UPDATE">
-<action>INSERT_OR_UPDATE</action>
-<application display_value="Global">global</application>
-<category>customer</category>
-<comments/>
-<name>sn_csm_ctxrul_mgt_rule_matrix_4142132a777302104bebbcc2fa5a992a</name>
-<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_csm_ctxrul_mgt_rule_matrix"><sn_csm_ctxrul_mgt_rule_matrix action="INSERT_OR_UPDATE"><active>1</active><code>PRODUCTOFF3</code><context_variables>e91b3b7453063110bcb5ddeeff7b128f,854b3f7453063110bcb5ddeeff7b12d4,6e21723eeb823110eb6eb489035228cb,5fcaf37453063110bcb5ddeeff7b12ff,743dc300ebb13110eb6eb489035228b0,bb6b33b453063110bcb5ddeeff7b121b,98f16c0d93fb421057b08a22928918fa,1ad2208d93fb421057b08a22928918e9,6942644d93fb421057b08a2292891881,61a2684d93fb421057b08a2292891822</context_variables><display_name>Product Offering Category Eligibility Matrix v2</display_name><end_date/><initial_version display_value="Product Offering Category Eligibility Matrix v1">e6bc4eda434a4e10765ee0166bb8f216</initial_version><matrix_type display_value="Product Offering Category Eligibility">1dea291643824e10765ee0166bb8f2ae</matrix_type><metadata_sysid_code_map/><name>Product Offering Category Eligibility Matrix</name><query_optimization_variables/><rule display_value="Product Offering Category Eligibility Matrix v2">eb82572a777302104bebbcc2fa5a99e6</rule><rule_metadata/><rule_selection_criteria>all_applicable</rule_selection_criteria><rule_validations>cb760d1643c24210dba4b0e34db8f2fd,5e63015643c24210dba4b0e34db8f289,664f0017438602106191b0e34db8f2e4,a04d834e43da4210dba4b0e34db8f2bf</rule_validations><start_date>2024-08-07</start_date><state>draft</state><sys_created_by>admin</sys_created_by><sys_created_on>2024-08-07 00:06:37</sys_created_on><sys_id>4142132a777302104bebbcc2fa5a992a</sys_id><sys_mod_count>3</sys_mod_count><sys_tags/><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-21 22:57:41</sys_updated_on><system_defined>0</system_defined><version>2</version></sn_csm_ctxrul_mgt_rule_matrix></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-019-pricing-matrix-states">cba5d6bded5e4e658c62b6b5c6f5e6e1</remote_update_set>
-<replace_on_upgrade>false</replace_on_upgrade>
-<sys_id>0b439dcdcb4d45c2a34bff8bd8e4f045</sys_id>
-<table></table>
-<target_name>Product Offering Category Eligibility Matrix v2</target_name>
-<type>Rule Matrix</type>
-<update_domain>global</update_domain>
-<update_set/>
-<view></view>
-</sys_update_xml>
-<sys_update_xml action="INSERT_OR_UPDATE">
-<action>INSERT_OR_UPDATE</action>
-<application display_value="Global">global</application>
-<category>customer</category>
-<comments/>
-<name>sn_csm_ctxrul_mgt_rule_matrix_d3d62bae77b302104bebbcc2fa5a9982</name>
-<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_csm_ctxrul_mgt_rule_matrix"><sn_csm_ctxrul_mgt_rule_matrix action="INSERT_OR_UPDATE"><active>1</active><code>PRODUCTOFF2</code><context_variables>bb6b33b453063110bcb5ddeeff7b121b,854b3f7453063110bcb5ddeeff7b12d4,5fcaf37453063110bcb5ddeeff7b12ff,743dc300ebb13110eb6eb489035228b0,d02dda83539d31105c0eddeeff7b12e4,e91b3b7453063110bcb5ddeeff7b128f,98f16c0d93fb421057b08a22928918fa,1ad2208d93fb421057b08a22928918e9,6942644d93fb421057b08a2292891881,61a2684d93fb421057b08a2292891822</context_variables><display_name>Product Offering Catalog Eligibility Matrix v2</display_name><end_date/><initial_version display_value="Product Offering Catalog Eligibility Matrix v1">1b3c025a434a4e10765ee0166bb8f2c9</initial_version><matrix_type display_value="Product Offering Catalog Eligibility">9e2a6d5243824e10765ee0166bb8f221</matrix_type><metadata_sysid_code_map/><name>Product Offering Catalog Eligibility Matrix</name><query_optimization_variables/><rule display_value="Product Offering Catalog Eligibility Matrix v2">51176fae77b302104bebbcc2fa5a995f</rule><rule_metadata/><rule_selection_criteria>all_applicable</rule_selection_criteria><rule_validations>cb760d1643c24210dba4b0e34db8f2fd,5e63015643c24210dba4b0e34db8f289,664f0017438602106191b0e34db8f2e4,a04d834e43da4210dba4b0e34db8f2bf</rule_validations><start_date>2024-08-07</start_date><state>draft</state><sys_created_by>admin</sys_created_by><sys_created_on>2024-08-07 01:36:36</sys_created_on><sys_id>d3d62bae77b302104bebbcc2fa5a9982</sys_id><sys_mod_count>3</sys_mod_count><sys_tags/><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-21 22:57:41</sys_updated_on><system_defined>0</system_defined><version>2</version></sn_csm_ctxrul_mgt_rule_matrix></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-019-pricing-matrix-states">cba5d6bded5e4e658c62b6b5c6f5e6e1</remote_update_set>
-<replace_on_upgrade>false</replace_on_upgrade>
-<sys_id>3889267b9fa5437da9ba72e2a4f8b4d3</sys_id>
-<table></table>
-<target_name>Product Offering Catalog Eligibility Matrix v2</target_name>
 <type>Rule Matrix</type>
 <update_domain>global</update_domain>
 <update_set/>
