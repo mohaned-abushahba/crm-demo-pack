@@ -14,6 +14,20 @@ File: update-sets/UPDATE-XXX-short-name.xml
 
 ---
 
+## UPDATE-021-persona-landing-dashboards (2026-10-07)
+Instance: opmsalescrm1
+What: The 3 persona landing page dashboards (`par_dashboard`): Sales Agent Golden Landing Page,
+Sales Manager Golden Landing Page, SDR Golden Landing Page.
+Why: opmsalescrm1 never wrote `sys_update_xml` rows for these parent records (the table is tracked,
+but the Platform Analytics editor did not record them), so UPDATE-016 carried their 8 tabs, 11
+canvases, 39 widgets, 7 permissions and 3 user-metadata rows without the dashboards themselves.
+Gap check (2026-10-07) of every report, dashboard and workspace page record changed since the
+baseline found nothing else missing: other uncaptured items were plugin installs (`system` author),
+deletes, or non-CRM workspaces. Everything the widgets reference (PA indicators, breakdowns,
+filters, chart components, opportunity stages, colours) is OOB and present on a fresh instance;
+the base dashboard "Sales Agent Landing Page OOB" too. Payloads verified by MD5.
+File: update-sets/UPDATE-021-persona-landing-dashboards.xml
+
 ## UPDATE-019 trimmed to the two v2 drafts (2026-10-07)
 What: Removed 8 of the 10 Rule Matrix records from update-sets/UPDATE-019-pricing-matrix-states.xml:
 the 6 Product Offering / Catalog / Category Eligibility matrices (v1 and v2) and Standard Price
