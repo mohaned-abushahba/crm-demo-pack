@@ -14,6 +14,17 @@ File: update-sets/UPDATE-XXX-short-name.xml
 
 ---
 
+## UPDATE-019 trimmed to the two v2 drafts (2026-10-07)
+What: Removed 8 of the 10 Rule Matrix records from update-sets/UPDATE-019-pricing-matrix-states.xml:
+the 6 Product Offering / Catalog / Category Eligibility matrices (v1 and v2) and Standard Price
+Adjustment v1 + Price List Defaulting v1. It now holds 2 records: Standard Price Adjustment v2 and
+Price List Defaulting v2, both set to draft (changed on opmsalescrm1 2026-08-26 and 2026-09-03).
+Why: Confirmed with the team that nobody changed the Eligibility matrices. Those 6 and the two v1
+records all carry the same pre-baseline timestamp (2026-08-21 22:57:41), so their states came from
+plugin setup and a fresh instance should keep its own defaults. The live pricing versions come from
+UPDATE-011 (Standard Price Adjustment v5, Price List Defaulting v4).
+File: update-sets/UPDATE-019-pricing-matrix-states.xml
+
 ## UPDATE-020-approval-rule-approvers (2026-10-07)
 Instance: opmsalescrm1
 What: Approver assignments for the Advanced Approval rules in UPDATE-010. 6 Approval Group records
