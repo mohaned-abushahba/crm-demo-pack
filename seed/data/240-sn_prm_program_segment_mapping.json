@@ -1,0 +1,85 @@
+{
+  "table": "sn_prm_program_segment_mapping",
+  "key": [],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "segment": "sn_seg_segment",
+    "program": "sn_prm_partner_program"
+  },
+  "records": [
+    {
+      "number": "PRGSGM0001006",
+      "sys_id": "2238e52d2bcb4b104deaf02ac891bf64",
+      "segment": "b359498c3b034f10d5260fa693e45a1d",
+      "active": "true",
+      "program": "d0698d082b07c7104deaf02ac891bfa6",
+      "is_default": "false"
+    },
+    {
+      "number": "PRGSGM0001002",
+      "sys_id": "40e015882b47c7104deaf02ac891bf75",
+      "segment": "b359498c3b034f10d5260fa693e45a1d",
+      "active": "true",
+      "program": "18698d082b07c7104deaf02ac891bfa0",
+      "is_default": "true"
+    },
+    {
+      "number": "PRGSGM0001009",
+      "sys_id": "49d8e56d2bcb4b104deaf02ac891bf6c",
+      "segment": "f359c58c3b034f10d5260fa693e45a55",
+      "active": "true",
+      "program": "18698d082b07c7104deaf02ac891bfa0",
+      "is_default": "false"
+    },
+    {
+      "number": "PRGSGM0001005",
+      "sys_id": "6308ad252bcb4b104deaf02ac891bf24",
+      "segment": "f359c58c3b034f10d5260fa693e45a55",
+      "active": "true",
+      "program": "d0698d082b07c7104deaf02ac891bfa6",
+      "is_default": "false"
+    },
+    {
+      "number": "PRGSGM0001001",
+      "sys_id": "80e011842b47c7104deaf02ac891bf44",
+      "segment": "f359c58c3b034f10d5260fa693e45a55",
+      "active": "true",
+      "program": "44698d082b07c7104deaf02ac891bf95",
+      "is_default": "true"
+    },
+    {
+      "number": "PRGSGM0001010",
+      "sys_id": "8ee8656d2bcb4b104deaf02ac891bf34",
+      "segment": "33598d082b07c7104deaf02ac891bf8c",
+      "active": "true",
+      "program": "18698d082b07c7104deaf02ac891bfa0",
+      "is_default": "false"
+    },
+    {
+      "number": "PRGSGM0001007",
+      "sys_id": "9668ede92bcb4b104deaf02ac891bfa5",
+      "segment": "b359498c3b034f10d5260fa693e45a1d",
+      "active": "true",
+      "program": "44698d082b07c7104deaf02ac891bf95",
+      "is_default": "false"
+    },
+    {
+      "number": "PRGSGM0001008",
+      "sys_id": "bf98ade52bcb4b104deaf02ac891bf10",
+      "segment": "33598d082b07c7104deaf02ac891bf8c",
+      "active": "true",
+      "program": "44698d082b07c7104deaf02ac891bf95",
+      "is_default": "false"
+    },
+    {
+      "number": "PRGSGM0001003",
+      "sys_id": "d0e0d9403b834f10d5260fa693e45a36",
+      "segment": "33598d082b07c7104deaf02ac891bf8c",
+      "active": "true",
+      "program": "d0698d082b07c7104deaf02ac891bfa6",
+      "is_default": "false"
+    }
+  ]
+}

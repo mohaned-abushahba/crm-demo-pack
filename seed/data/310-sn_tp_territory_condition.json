@@ -1,0 +1,188 @@
+{
+  "table": "sn_tp_territory_condition",
+  "key": [],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "territory": "sn_tp_territory",
+    "territory_model_source": "sn_tp_territory_model_source"
+  },
+  "records": [
+    {
+      "sys_id": "0589c2a93b4b8b10d5260fa693e45a3e",
+      "condition": "stateINOR, Oregon, WA, Washington^industry=technology_services^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "307902a93b4b8b10d5260fa693e45a32"
+    },
+    {
+      "sys_id": "0e0ccdd43b0fcf10d5260fa693e45a0f",
+      "condition": "industry=technology_services^countryINUSA,Canada,^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "6dfe4e1b2bb243104deaf02ac891bf30"
+    },
+    {
+      "sys_id": "0e0ccdd43b0fcf10d5260fa693e45a15",
+      "condition": "industry=technology_services^countryINUnited Kingdom,Germany,^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "e5fe4e1b2bb243104deaf02ac891bf37"
+    },
+    {
+      "sys_id": "120c815c2bcb4b104deaf02ac891bf0a",
+      "condition": "account.countryINSingapore,Australia,Japan",
+      "territory_model_source": "58dc5167b7666210794ef561ae11a906",
+      "table_name": "sn_opty_mgmt_core_opportunity",
+      "territory": "e1fec65b3bf24710d5260fa693e45acf"
+    },
+    {
+      "sys_id": "269063c82bd78f104deaf02ac891bf95",
+      "condition": "industry=technology_services^country=Brazil^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "bb5a72cc2b138f104deaf02ac891bfb9"
+    },
+    {
+      "sys_id": "2ebd97802bd78f104deaf02ac891bfbb",
+      "condition": "industry=technology_services^country=KSA^ORcountry=Saudi Arabia^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "855a76043bd7cb10d5260fa693e45ae1"
+    },
+    {
+      "sys_id": "327f93c42bd78f104deaf02ac891bf6c",
+      "condition": "industry=technology_services^country=Singapore^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "d15a3e8c2b138f104deaf02ac891bfe7"
+    },
+    {
+      "sys_id": "3ad09f002b578f104deaf02ac891bf08",
+      "condition": "industry=technology_services^country=Mexico^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "bb5a72cc2b138f104deaf02ac891bfc0"
+    },
+    {
+      "sys_id": "467013e53b47cb10d5260fa693e45aba",
+      "condition": "industry=technology_services^country=Germany^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "350e83a93b07cb10d5260fa693e45a93"
+    },
+    {
+      "sys_id": "4c702f882bd78f104deaf02ac891bf9d",
+      "condition": "industry=technology_services^country=India^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "595a32cc2b138f104deaf02ac891bf8d"
+    },
+    {
+      "sys_id": "7a10ef482bd78f104deaf02ac891bf6c",
+      "condition": "industry=technology_services^country=Japan^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "595a32cc2b138f104deaf02ac891bf86"
+    },
+    {
+      "sys_id": "7d0c8dd43b0fcf10d5260fa693e45ad0",
+      "condition": "industry=technology_services",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "cfee8a1b2bb243104deaf02ac891bf8b"
+    },
+    {
+      "sys_id": "94b05be53b47cb10d5260fa693e45a3c",
+      "condition": "industry=technology_services^country=United Kingdom^ORcountry=UK^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "310e8ba12b4f8b104deaf02ac891bf2c"
+    },
+    {
+      "sys_id": "950d9b002bd78f104deaf02ac891bf68",
+      "condition": "country=France^industry=technology_services^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "0d5a36043bd7cb10d5260fa693e45a13"
+    },
+    {
+      "sys_id": "af9b158a2b43cf104deaf02ac891bf5d",
+      "condition": "state=North Carolina^ORstate=NC^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "856a9dce3bcbcf10d5260fa693e45ad7"
+    },
+    {
+      "sys_id": "b58f4f253b47cb10d5260fa693e45a36",
+      "condition": "stateINNew York, NY, Pennsylvania, PA, New Jersey, NJ, Massachusetts, MA, Connecticut, CT^industry=technology_services^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "effdc3ed2b0f8b104deaf02ac891bfb0"
+    },
+    {
+      "sys_id": "bd0c8dd43b0fcf10d5260fa693e45ad7",
+      "condition": "industry=manufacturing",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "5fee465b3bf24710d5260fa693e45aa4"
+    },
+    {
+      "sys_id": "be2c978c2b978f104deaf02ac891bf1e",
+      "condition": "countryINBrazil, Mexico, Costa Rica, Argentina^industry=technology_services^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "ac4a3e8c2b138f104deaf02ac891bfde"
+    },
+    {
+      "sys_id": "c20ccdd43b0fcf10d5260fa693e45a28",
+      "condition": "industry=technology_services^countryINSingapore,Australia,Japan",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "e1fec65b3bf24710d5260fa693e45acf"
+    },
+    {
+      "sys_id": "c60c415c2bcb4b104deaf02ac891bfef",
+      "condition": "industry=technology_services^stateINCA,OR,WA",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "5ffec65b3bf24710d5260fa693e45ad5"
+    },
+    {
+      "sys_id": "d0e0ebc82bd78f104deaf02ac891bf59",
+      "condition": "industry=technology_services^country=Argentina^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "b35ab6043bd7cb10d5260fa693e45a28"
+    },
+    {
+      "sys_id": "d17ddb402bd78f104deaf02ac891bf75",
+      "condition": "industry=technology_services^country=UAE^ORcountry=United Arab Emirates^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "855a76043bd7cb10d5260fa693e45ada"
+    },
+    {
+      "sys_id": "d20ccdd43b0fcf10d5260fa693e45a2e",
+      "condition": "industry=technology_services^state=CA^ORstate=California^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "290f42173bf24710d5260fa693e45a00"
+    },
+    {
+      "sys_id": "dd3f53842bd78f104deaf02ac891bfd0",
+      "condition": "industry=technology_services^country=Australia^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "855a76043bd7cb10d5260fa693e45ae8"
+    },
+    {
+      "sys_id": "ebff0f653b47cb10d5260fa693e45a0a",
+      "condition": "industry=technology_services^state=NY^ORstate=New York^EQ",
+      "territory_model_source": "e35419a7b7266210794ef561ae11a928",
+      "table_name": "customer_account",
+      "territory": "fd0e4ba12b4f8b104deaf02ac891bf06"
+    }
+  ]
+}

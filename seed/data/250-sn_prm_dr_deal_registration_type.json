@@ -1,0 +1,52 @@
+{
+  "table": "sn_prm_dr_deal_registration_type",
+  "key": [
+    "name"
+  ],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {},
+  "records": [
+    {
+      "short_description": "Partner refers customer, no commission",
+      "active": "true",
+      "details_url": "",
+      "number": "DTYPE0001001",
+      "sys_id": "08929ad82bc703104deaf02ac891bfec",
+      "sys_domain": "global",
+      "applicable_to_all_programs": "true",
+      "name": "Referral without Fee"
+    },
+    {
+      "short_description": "Partner refers customer, receives commission",
+      "active": "true",
+      "details_url": "",
+      "number": "DTYPE0001003",
+      "sys_id": "0d93929c2bc703104deaf02ac891bf61",
+      "sys_domain": "global",
+      "applicable_to_all_programs": "true",
+      "name": "Referral with Fee"
+    },
+    {
+      "short_description": "Partner selling along with the Enterprise",
+      "active": "true",
+      "details_url": "",
+      "number": "DTYPE0001004",
+      "sys_id": "34a3169c2bc703104deaf02ac891bf65",
+      "sys_domain": "global",
+      "applicable_to_all_programs": "true",
+      "name": "Co-Sell"
+    },
+    {
+      "short_description": "Partner purchases and resells to end customer",
+      "active": "true",
+      "details_url": "",
+      "number": "DTYPE0001002",
+      "sys_id": "a8531a5c2bc703104deaf02ac891bff0",
+      "sys_domain": "global",
+      "applicable_to_all_programs": "true",
+      "name": "Resale"
+    }
+  ]
+}

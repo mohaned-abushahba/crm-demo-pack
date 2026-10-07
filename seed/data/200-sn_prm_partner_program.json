@@ -1,0 +1,48 @@
+{
+  "table": "sn_prm_partner_program",
+  "key": [
+    "name"
+  ],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {},
+  "records": [
+    {
+      "end_date": "",
+      "activity": "",
+      "active": "true",
+      "description": "Partners implement, configure, and integrate Boxeo offerings as part of broader technology deployments and managed services for customers.\n\n— Created via ServiceNow Forge (Claude)",
+      "number": "PRG0001002",
+      "sys_id": "18698d082b07c7104deaf02ac891bfa0",
+      "sys_domain": "global",
+      "name": "System Integrator",
+      "start_date": "2025-01-01 00:00:00",
+      "status": "approved"
+    },
+    {
+      "end_date": "",
+      "activity": "",
+      "active": "true",
+      "description": "Partners resell Product offerings directly to end customers under their own commercial and billing relationship.\n\n— Created via ServiceNow Forge (Claude)",
+      "number": "PRG0001001",
+      "sys_id": "44698d082b07c7104deaf02ac891bf95",
+      "sys_domain": "global",
+      "name": "Sell-through",
+      "start_date": "2025-01-01 00:00:00",
+      "status": "approved"
+    },
+    {
+      "end_date": "",
+      "activity": "",
+      "active": "true",
+      "description": "Partners embed, bundle, or white-label Boxeo offerings within their own branded products for dealer-channel resale.\n\n— Created via ServiceNow Forge (Claude)",
+      "number": "PRG0001003",
+      "sys_id": "d0698d082b07c7104deaf02ac891bfa6",
+      "sys_domain": "global",
+      "name": "OEM Dealer",
+      "start_date": "2025-01-01 00:00:00",
+      "status": "approved"
+    }
+  ]
+}

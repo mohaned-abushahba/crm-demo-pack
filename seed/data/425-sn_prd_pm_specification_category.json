@@ -1,0 +1,28 @@
+{
+  "table": "sn_prd_pm_specification_category",
+  "key": [],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "category": "cmdb_model_category"
+  },
+  "records": [
+    {
+      "sys_id": "310c185e2b4343504deaf02ac891bf6d",
+      "code": "DATA STORA1",
+      "name": "Data Storage Solution Spec Category",
+      "external_id": "",
+      "category": "7d0c185e2b4343504deaf02ac891bf56",
+      "external_source": ""
+    },
+    {
+      "sys_id": "c2f479dc3b0f0310d5260fa693e45a8f",
+      "code": "BASE SPECI1",
+      "name": "Base Specification Category",
+      "external_id": "",
+      "category": "4af479dc3b0f0310d5260fa693e45a5d",
+      "external_source": ""
+    }
+  ]
+}

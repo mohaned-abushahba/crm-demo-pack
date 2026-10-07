@@ -1,0 +1,82 @@
+{
+  "_comment": "Deliberate exceptions to 'opmsalescrm1 wins'. Applied by tools/extract.py after extraction, by sys_id, so re-extracting keeps them. Each entry says why.",
+  "overrides": [
+    {
+      "reason": "Golden Gate AI is a real company; the sheet's fictional Gatelynx AI replaces it. Same record (sys_id kept), so contacts, addresses, quotes and opportunities stay linked.",
+      "table": "customer_account",
+      "sys_id": "19320b2d2b8b8b104deaf02ac891bf01",
+      "set": {
+        "name": "Gatelynx AI",
+        "legal_entity_name": "Gatelynx AI Corporation",
+        "email": "contact@gatelynxai.com",
+        "website": "https://www.gatelynxai.com",
+        "account_code": "ACCT-GATELYNX-000"
+      }
+    },
+    {
+      "reason": "Gatelynx rename",
+      "table": "cmn_location",
+      "sys_id": "ba928b6d2b8b8b104deaf02ac891bf31",
+      "set": {
+        "name": "Gatelynx AI - HQ",
+        "full_name": "Gatelynx AI - HQ"
+      }
+    },
+    {
+      "reason": "Gatelynx rename",
+      "table": "cmn_location",
+      "sys_id": "f2928b6d2b8b8b104deaf02ac891bf9c",
+      "set": {
+        "name": "Gatelynx AI - Billing",
+        "full_name": "Gatelynx AI - Billing"
+      }
+    },
+    {
+      "reason": "Gatelynx rename",
+      "table": "cmn_location",
+      "sys_id": "36928b6d2b8b8b104deaf02ac891bfa3",
+      "set": {
+        "name": "Gatelynx AI - Shipping",
+        "full_name": "Gatelynx AI - Shipping"
+      }
+    },
+    {
+      "reason": "Gatelynx rename",
+      "table": "cmn_location",
+      "sys_id": "76928b6d2b8b8b104deaf02ac891bfaa",
+      "set": {
+        "name": "Gatelynx AI - Installation",
+        "full_name": "Gatelynx AI - Installation"
+      }
+    },
+    {
+      "reason": "Gatelynx rename: drop the real company's email domain (sheet value)",
+      "table": "customer_contact",
+      "sys_id": "2e52cf213bc3cb10d5260fa693e45a47",
+      "set": {
+        "email": "daniel.foster@example.com"
+      }
+    },
+    {
+      "reason": "Gatelynx rename: drop the real company's email domain (sheet value)",
+      "table": "customer_contact",
+      "sys_id": "36528f2d2b8b8b104deaf02ac891bf6c",
+      "set": {
+        "email": "steven.wu@example.com"
+      }
+    },
+    {
+      "reason": "Gatelynx rename: drop the real company's email domain (sheet value)",
+      "table": "customer_contact",
+      "sys_id": "be52cb692b8b8b104deaf02ac891bf2e",
+      "set": {
+        "email": "carla.jimenez@example.com"
+      }
+    }
+  ],
+  "_forbidden_comment": "Extraction fails if any extracted string still matches one of these (case-insensitive regex) \u2014 catches real-company names creeping back in.",
+  "forbidden_patterns": [
+    "golden\\s*gate",
+    "goldengate"
+  ]
+}

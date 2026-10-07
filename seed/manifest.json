@@ -1,0 +1,369 @@
+{
+  "_comment": "Master-data seed manifest. Tables are extracted from the source instance and loaded onto the target in this order. Scope = records created inside any 'windows' range (2026-08-22 is skipped: plugin activation day, run as admin), ANDed with the table's 'query'. 'key' is the business key used to detect a record that already exists on the target with a different sys_id; on_conflict 'fail' stops the load, 'adopt' keeps the target's record (used for join rows that platform automation may already have created).",
+  "source_instance": "opmsalescrm1",
+  "exclude_fields": [
+    "sys_created_by",
+    "sys_created_on",
+    "sys_updated_by",
+    "sys_updated_on",
+    "sys_mod_count",
+    "sys_tags",
+    "sys_domain_path",
+    "sys_package"
+  ],
+  "tables": [
+    {
+      "file": "010-cmn_department",
+      "table": "cmn_department",
+      "key": [
+        "name"
+      ]
+    },
+    {
+      "file": "020-cmn_location",
+      "table": "cmn_location",
+      "key": [
+        "name"
+      ]
+    },
+    {
+      "file": "025-cmdb_model_category",
+      "table": "cmdb_model_category",
+      "key": [
+        "name"
+      ],
+      "query": "nameINBase Spec Category,Data Storage Solution Model Category"
+    },
+    {
+      "file": "030-sys_user",
+      "table": "sys_user",
+      "key": [
+        "user_name"
+      ],
+      "query": "sys_class_name!=customer_contact",
+      "exclude": [
+        "user_password",
+        "last_login",
+        "last_login_time",
+        "last_login_device",
+        "failed_attempts",
+        "last_password",
+        "password_needs_reset"
+      ],
+      "exclude_records": {
+        "_reason": "integration service accounts \u2014 not demo data, credentials don't carry over",
+        "user_name": [
+          "sn-icu-service-account",
+          "agent-miner-api-svc-account",
+          "agent-miner-svc-account",
+          "logik.intg",
+          "conv-insights-svc-account",
+          "mwsalescrm.integration@servicenow.com"
+        ]
+      }
+    },
+    {
+      "file": "040-sys_user_group",
+      "table": "sys_user_group",
+      "key": [
+        "name"
+      ]
+    },
+    {
+      "file": "050-sys_user_grmember",
+      "table": "sys_user_grmember",
+      "key": [
+        "user",
+        "group"
+      ],
+      "on_conflict": "adopt",
+      "require_in_fixtures": [
+        "user"
+      ]
+    },
+    {
+      "file": "060-sys_user_has_role",
+      "table": "sys_user_has_role",
+      "key": [
+        "user",
+        "role"
+      ],
+      "query": "inherited=false",
+      "exclude": [
+        "granted_by"
+      ],
+      "on_conflict": "adopt",
+      "require_in_fixtures": [
+        "user"
+      ]
+    },
+    {
+      "file": "070-sys_group_has_role",
+      "table": "sys_group_has_role",
+      "key": [
+        "group",
+        "role"
+      ],
+      "exclude": [
+        "granted_by"
+      ],
+      "on_conflict": "adopt"
+    },
+    {
+      "file": "100-customer_account",
+      "table": "customer_account",
+      "key": [
+        "number"
+      ],
+      "query": "sys_class_name=customer_account"
+    },
+    {
+      "file": "105-core_company",
+      "table": "core_company",
+      "key": [
+        "name"
+      ],
+      "query": "sys_class_name=core_company"
+    },
+    {
+      "file": "110-customer_contact",
+      "table": "customer_contact",
+      "key": [
+        "user_name"
+      ],
+      "exclude": [
+        "user_password",
+        "last_login",
+        "last_login_time",
+        "last_login_device",
+        "failed_attempts",
+        "last_password",
+        "password_needs_reset"
+      ]
+    },
+    {
+      "file": "120-account_address_relationship",
+      "table": "account_address_relationship",
+      "key": [
+        "account",
+        "location",
+        "type"
+      ]
+    },
+    {
+      "file": "190-sn_seg_segment",
+      "table": "sn_seg_segment",
+      "key": [
+        "name"
+      ]
+    },
+    {
+      "file": "200-sn_prm_partner_program",
+      "table": "sn_prm_partner_program",
+      "key": [
+        "name"
+      ]
+    },
+    {
+      "file": "210-sn_prm_channel_partner",
+      "table": "sn_prm_channel_partner",
+      "key": [
+        "name"
+      ]
+    },
+    {
+      "file": "220-sn_prm_partner_program_relationship",
+      "table": "sn_prm_partner_program_relationship",
+      "key": []
+    },
+    {
+      "file": "230-sn_prm_program_segment_criteria",
+      "table": "sn_prm_program_segment_criteria",
+      "key": []
+    },
+    {
+      "file": "240-sn_prm_program_segment_mapping",
+      "table": "sn_prm_program_segment_mapping",
+      "key": []
+    },
+    {
+      "file": "250-sn_prm_dr_deal_registration_type",
+      "table": "sn_prm_dr_deal_registration_type",
+      "key": [
+        "name"
+      ]
+    },
+    {
+      "file": "300-sn_tp_territory",
+      "table": "sn_tp_territory",
+      "key": [
+        "name"
+      ]
+    },
+    {
+      "file": "310-sn_tp_territory_condition",
+      "table": "sn_tp_territory_condition",
+      "key": []
+    },
+    {
+      "file": "320-sn_tp_territory_manager",
+      "table": "sn_tp_territory_manager",
+      "key": []
+    },
+    {
+      "file": "330-sn_tp_territory_membership_override",
+      "table": "sn_tp_territory_membership_override",
+      "key": []
+    },
+    {
+      "file": "340-sn_tp_crm_extn_territory_membership_responsibility",
+      "table": "sn_tp_crm_extn_territory_membership_responsibility",
+      "key": []
+    },
+    {
+      "file": "400-sn_prd_pm_uom",
+      "table": "sn_prd_pm_uom",
+      "key": [
+        "name"
+      ]
+    },
+    {
+      "file": "405-sn_prd_pm_characteristic",
+      "table": "sn_prd_pm_characteristic",
+      "key": [
+        "name"
+      ]
+    },
+    {
+      "file": "410-sn_prd_pm_characteristic_option",
+      "table": "sn_prd_pm_characteristic_option",
+      "key": []
+    },
+    {
+      "file": "415-sn_prd_pm_specification",
+      "table": "sn_prd_pm_specification",
+      "key": [
+        "number"
+      ]
+    },
+    {
+      "file": "420-sn_prd_pm_specification_characteristic",
+      "table": "sn_prd_pm_specification_characteristic",
+      "key": []
+    },
+    {
+      "file": "425-sn_prd_pm_specification_category",
+      "table": "sn_prd_pm_specification_category",
+      "key": []
+    },
+    {
+      "file": "430-sn_prd_pm_product_offering_catalog",
+      "table": "sn_prd_pm_product_offering_catalog",
+      "key": [
+        "code"
+      ]
+    },
+    {
+      "file": "435-sn_prd_pm_product_offering_category",
+      "table": "sn_prd_pm_product_offering_category",
+      "key": [
+        "code"
+      ]
+    },
+    {
+      "file": "440-sn_prd_pm_catalog_category_relationship",
+      "table": "sn_prd_pm_catalog_category_relationship",
+      "key": []
+    },
+    {
+      "file": "445-sn_prd_pm_product_offering_family",
+      "table": "sn_prd_pm_product_offering_family",
+      "key": [
+        "name"
+      ]
+    },
+    {
+      "file": "450-sn_prd_pm_product_offering",
+      "table": "sn_prd_pm_product_offering",
+      "key": [
+        "code"
+      ]
+    },
+    {
+      "file": "455-sn_prd_pm_product_offering_category_relationship",
+      "table": "sn_prd_pm_product_offering_category_relationship",
+      "key": []
+    },
+    {
+      "file": "460-sn_prd_pm_product_offering_uom",
+      "table": "sn_prd_pm_product_offering_uom",
+      "key": []
+    },
+    {
+      "file": "465-sn_prd_pm_product_offering_characteristic",
+      "table": "sn_prd_pm_product_offering_characteristic",
+      "key": []
+    },
+    {
+      "file": "475-sn_prd_pm_product_offering_relationship",
+      "table": "sn_prd_pm_product_offering_relationship",
+      "key": []
+    },
+    {
+      "file": "480-sn_prd_pm_product_offering_relationship_characteristic",
+      "table": "sn_prd_pm_product_offering_relationship_characteristic",
+      "key": []
+    },
+    {
+      "file": "485-sn_prd_pm_visuals",
+      "table": "sn_prd_pm_visuals",
+      "key": []
+    },
+    {
+      "file": "490-sn_prd_pm_product_offering_translation",
+      "table": "sn_prd_pm_product_offering_translation",
+      "key": []
+    },
+    {
+      "file": "495-sn_prd_pm_ra_offering_recommendation",
+      "table": "sn_prd_pm_ra_offering_recommendation",
+      "key": []
+    },
+    {
+      "file": "500-sn_csm_pricing_price_list",
+      "table": "sn_csm_pricing_price_list",
+      "key": [
+        "name"
+      ]
+    },
+    {
+      "file": "510-sn_csm_pricing_price_list_line",
+      "table": "sn_csm_pricing_price_list_line",
+      "key": [
+        "code"
+      ]
+    },
+    {
+      "file": "520-sn_csm_pricing_cost_book",
+      "table": "sn_csm_pricing_cost_book",
+      "key": [
+        "name"
+      ]
+    },
+    {
+      "file": "530-sn_csm_pricing_cost_book_line",
+      "table": "sn_csm_pricing_cost_book_line",
+      "key": []
+    }
+  ],
+  "windows": [
+    [
+      "2026-08-21 00:00:00",
+      "2026-08-22 00:00:00"
+    ],
+    [
+      "2026-08-23 00:00:00",
+      null
+    ]
+  ]
+}

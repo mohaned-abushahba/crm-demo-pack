@@ -1,0 +1,142 @@
+{
+  "table": "sn_tp_crm_extn_territory_membership_responsibility",
+  "key": [],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "responsibility": "sn_customerservice_responsibility_def",
+    "territory_membership": "sn_tp_territory_membership_override",
+    "member_role": "sn_customerservice_related_party_configuration"
+  },
+  "records": [
+    {
+      "territory_membership": "96c083843b1bcb10d5260fa693e45ad3",
+      "member_role": "9228dacdff803210583effffffffff2d",
+      "sys_id": "441347082b938f104deaf02ac891bffa",
+      "responsibility": "cf533e9e43a7a610583ecd60afb8f251",
+      "sys_domain": "global",
+      "order": ""
+    },
+    {
+      "territory_membership": "bdd087843b1bcb10d5260fa693e45aa3",
+      "member_role": "9228dacdff803210583effffffffff2d",
+      "sys_id": "506303882b938f104deaf02ac891bfa2",
+      "responsibility": "cf533e9e43a7a610583ecd60afb8f251",
+      "sys_domain": "global",
+      "order": ""
+    },
+    {
+      "territory_membership": "44d0c3843b1bcb10d5260fa693e45a45",
+      "member_role": "9228dacdff803210583effffffffff2d",
+      "sys_id": "51b38f882b938f104deaf02ac891bfc9",
+      "responsibility": "cf533e9e43a7a610583ecd60afb8f251",
+      "sys_domain": "global",
+      "order": ""
+    },
+    {
+      "territory_membership": "d4e00fc02b938f104deaf02ac891bf2a",
+      "member_role": "9228dacdff803210583effffffffff2d",
+      "sys_id": "53f30bc82b938f104deaf02ac891bfff",
+      "responsibility": "cf533e9e43a7a610583ecd60afb8f251",
+      "sys_domain": "global",
+      "order": ""
+    },
+    {
+      "territory_membership": "cdd00bc02b938f104deaf02ac891bffe",
+      "member_role": "9228dacdff803210583effffffffff2d",
+      "sys_id": "5894c34c2b938f104deaf02ac891bf97",
+      "responsibility": "cf533e9e43a7a610583ecd60afb8f251",
+      "sys_domain": "global",
+      "order": ""
+    },
+    {
+      "territory_membership": "22c007c02b938f104deaf02ac891bffd",
+      "member_role": "9228dacdff803210583effffffffff2d",
+      "sys_id": "83624bc42b938f104deaf02ac891bf22",
+      "responsibility": "cf533e9e43a7a610583ecd60afb8f251",
+      "sys_domain": "global",
+      "order": ""
+    },
+    {
+      "territory_membership": "8ef217ed3b47cb10d5260fa693e45a70",
+      "member_role": "9228dacdff803210583effffffffff2d",
+      "sys_id": "9a131fed3b47cb10d5260fa693e45aaa",
+      "responsibility": "cf533e9e43a7a610583ecd60afb8f251",
+      "sys_domain": "global",
+      "order": ""
+    },
+    {
+      "territory_membership": "0560f2542b0f03104deaf02ac891bfe7",
+      "member_role": "9228dacdff803210583effffffffff2d",
+      "sys_id": "bfb13a182b0f03104deaf02ac891bf78",
+      "responsibility": "cf533e9e43a7a610583ecd60afb8f251",
+      "sys_domain": "global",
+      "order": ""
+    },
+    {
+      "territory_membership": "62d087843b1bcb10d5260fa693e45ab6",
+      "member_role": "9228dacdff803210583effffffffff2d",
+      "sys_id": "cb14030c2b938f104deaf02ac891bf5a",
+      "responsibility": "cf533e9e43a7a610583ecd60afb8f251",
+      "sys_domain": "global",
+      "order": ""
+    },
+    {
+      "territory_membership": "85d047843b1bcb10d5260fa693e45ad0",
+      "member_role": "9228dacdff803210583effffffffff2d",
+      "sys_id": "d233cb082b938f104deaf02ac891bfd1",
+      "responsibility": "cf533e9e43a7a610583ecd60afb8f251",
+      "sys_domain": "global",
+      "order": ""
+    },
+    {
+      "territory_membership": "2bd0cbc02b938f104deaf02ac891bf42",
+      "member_role": "9228dacdff803210583effffffffff2d",
+      "sys_id": "e1640f0c2b938f104deaf02ac891bfae",
+      "responsibility": "cf533e9e43a7a610583ecd60afb8f251",
+      "sys_domain": "global",
+      "order": ""
+    },
+    {
+      "territory_membership": "a9c083843b1bcb10d5260fa693e45ac2",
+      "member_role": "9228dacdff803210583effffffffff2d",
+      "sys_id": "e3b2c7082b938f104deaf02ac891bf4e",
+      "responsibility": "cf533e9e43a7a610583ecd60afb8f251",
+      "sys_domain": "global",
+      "order": ""
+    },
+    {
+      "territory_membership": "1b6a19062b43cf104deaf02ac891bfd9",
+      "member_role": "9228dacdff803210583effffffffff2d",
+      "sys_id": "e54b554a2b43cf104deaf02ac891bf88",
+      "responsibility": "cf533e9e43a7a610583ecd60afb8f251",
+      "sys_domain": "global",
+      "order": ""
+    },
+    {
+      "territory_membership": "58d003c02b938f104deaf02ac891bf87",
+      "member_role": "9228dacdff803210583effffffffff2d",
+      "sys_id": "e8d383c82b938f104deaf02ac891bf3b",
+      "responsibility": "cf533e9e43a7a610583ecd60afb8f251",
+      "sys_domain": "global",
+      "order": ""
+    },
+    {
+      "territory_membership": "9da397613b87cb10d5260fa693e45a58",
+      "member_role": "9228dacdff803210583effffffffff2d",
+      "sys_id": "ebb3db613b87cb10d5260fa693e45a85",
+      "responsibility": "cf533e9e43a7a610583ecd60afb8f251",
+      "sys_domain": "global",
+      "order": ""
+    },
+    {
+      "territory_membership": "13c007843b1bcb10d5260fa693e45a2b",
+      "member_role": "9228dacdff803210583effffffffff2d",
+      "sys_id": "ed8387882b938f104deaf02ac891bf7c",
+      "responsibility": "cf533e9e43a7a610583ecd60afb8f251",
+      "sys_domain": "global",
+      "order": ""
+    }
+  ]
+}

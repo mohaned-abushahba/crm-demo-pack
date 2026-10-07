@@ -1,0 +1,93 @@
+{
+  "table": "sn_prd_pm_ra_offering_recommendation",
+  "key": [],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "recommended_product_offering": "sn_prd_pm_product_offering",
+    "source_product_offering": "sn_prd_pm_product_offering"
+  },
+  "records": [
+    {
+      "code": "5-DAY ONSI1",
+      "active": "true",
+      "description": "5-day onsite training",
+      "type": "upsell",
+      "source_product_offering": "6f7e75df3b324710d5260fa693e45a9a",
+      "sys_id": "14c23b6e3bc78750d5260fa693e45ac2",
+      "recommended_product_offering": "78cba9042bcbc7104deaf02ac891bf37",
+      "order": "10"
+    },
+    {
+      "code": "VOLTAGE RE1",
+      "active": "true",
+      "description": "Voltage Regulator",
+      "type": "upsell",
+      "source_product_offering": "d2f479dc3b0f0310d5260fa693e45ac9",
+      "sys_id": "2923f3ae3bc78750d5260fa693e45aac",
+      "recommended_product_offering": "206007fd3b438f10d5260fa693e45a74",
+      "order": "10"
+    },
+    {
+      "code": "VIRTUAL TR2",
+      "active": "true",
+      "description": "Virtual training",
+      "type": "upsell",
+      "source_product_offering": "d2f479dc3b0f0310d5260fa693e45ac9",
+      "sys_id": "3d5373ee3bc78750d5260fa693e45a7c",
+      "recommended_product_offering": "f0cba9042bcbc7104deaf02ac891bf3a",
+      "order": "10"
+    },
+    {
+      "code": "SUBSCRIBE 1",
+      "active": "true",
+      "description": "Subscribe to the trade journal",
+      "type": "upsell",
+      "source_product_offering": "d2f479dc3b0f0310d5260fa693e45ac9",
+      "sys_id": "5b0377ae3bc78750d5260fa693e45a3e",
+      "recommended_product_offering": "0ff43ddc3b0f0310d5260fa693e45a73",
+      "order": "10"
+    },
+    {
+      "code": "REGISTER F1",
+      "active": "true",
+      "description": "Register for the upcoming conference",
+      "type": "upsell",
+      "source_product_offering": "6f7e75df3b324710d5260fa693e45a9a",
+      "sys_id": "7592b36e3bc78750d5260fa693e45a20",
+      "recommended_product_offering": "fccba9042bcbc7104deaf02ac891bf34",
+      "order": "10"
+    },
+    {
+      "code": "VIRTUAL TR1",
+      "active": "true",
+      "description": "Virtual training for quick ramp up",
+      "type": "upsell",
+      "source_product_offering": "6f7e75df3b324710d5260fa693e45a9a",
+      "sys_id": "84e27f6e3bc78750d5260fa693e45afb",
+      "recommended_product_offering": "f0cba9042bcbc7104deaf02ac891bf3a",
+      "order": "10"
+    },
+    {
+      "code": "STAY CURRE1",
+      "active": "true",
+      "description": "Stay current with Generators Monthly alongside your Generator Repair Manual",
+      "type": "cross_sell",
+      "source_product_offering": "43f43ddc3b0f0310d5260fa693e45a72",
+      "sys_id": "ad05b5103b4f0310d5260fa693e45a8e",
+      "recommended_product_offering": "0ff43ddc3b0f0310d5260fa693e45a73",
+      "order": "40"
+    },
+    {
+      "code": "GENERATOR 1",
+      "active": "true",
+      "description": "Generator Repair Manual",
+      "type": "upsell",
+      "source_product_offering": "d2f479dc3b0f0310d5260fa693e45ac9",
+      "sys_id": "e905b5103b4f0310d5260fa693e45a8c",
+      "recommended_product_offering": "43f43ddc3b0f0310d5260fa693e45a72",
+      "order": "20"
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "table": "sn_tp_territory_membership_override",
+  "key": [],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "territory": "sn_tp_territory",
+    "user": "sys_user"
+  },
+  "records": [
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "0560f2542b0f03104deaf02ac891bfe7",
+      "from": "2026-08-27 23:49:48",
+      "to": "2030-01-01 00:50:47",
+      "user": "9b84f6563bf2c310d5260fa693e45a74",
+      "territory": "290f42173bf24710d5260fa693e45a00"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "13c007843b1bcb10d5260fa693e45a2b",
+      "from": "2026-09-01 00:00:00",
+      "to": "2030-01-02 00:00:00",
+      "user": "b86ffe0c2b538f104deaf02ac891bfeb",
+      "territory": "855a76043bd7cb10d5260fa693e45ada"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "1b6a19062b43cf104deaf02ac891bfd9",
+      "from": "2026-09-02 04:03:34",
+      "to": "",
+      "user": "b479154e3bcbcf10d5260fa693e45aa7",
+      "territory": "856a9dce3bcbcf10d5260fa693e45ad7"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "22c007c02b938f104deaf02ac891bffd",
+      "from": "2026-09-01 00:00:00",
+      "to": "2030-01-02 00:00:00",
+      "user": "6c6ffe0c2b538f104deaf02ac891bfe2",
+      "territory": "0d5a36043bd7cb10d5260fa693e45a13"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "2bd0cbc02b938f104deaf02ac891bf42",
+      "from": "2026-09-01 00:00:00",
+      "to": "2030-01-02 00:00:00",
+      "user": "696f324c2b538f104deaf02ac891bf77",
+      "territory": "bb5a72cc2b138f104deaf02ac891bfc0"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "387253ad3b47cb10d5260fa693e45a25",
+      "from": "2026-08-31 23:31:00",
+      "to": "2028-08-31 23:31:09",
+      "user": "f9098f613b07cb10d5260fa693e45ae3",
+      "territory": "effdc3ed2b0f8b104deaf02ac891bfb0"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "44d0c3843b1bcb10d5260fa693e45a45",
+      "from": "2026-09-01 00:00:00",
+      "to": "2030-01-02 00:00:00",
+      "user": "f46ffe0c2b538f104deaf02ac891bff4",
+      "territory": "855a76043bd7cb10d5260fa693e45ae1"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "4cc0c3c02b938f104deaf02ac891bf6d",
+      "from": "2026-01-01 00:00:00",
+      "to": "2029-12-31 00:00:00",
+      "user": "556f3ecc3bd7cb10d5260fa693e45a03",
+      "territory": "115a32cc2b138f104deaf02ac891bfa1"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "58d003c02b938f104deaf02ac891bf87",
+      "from": "2026-09-01 00:00:00",
+      "to": "2030-01-02 00:00:00",
+      "user": "cd6f324c2b538f104deaf02ac891bf1e",
+      "territory": "855a76043bd7cb10d5260fa693e45ae8"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "62d087843b1bcb10d5260fa693e45ab6",
+      "from": "2026-09-01 00:00:00",
+      "to": "2030-01-02 00:00:00",
+      "user": "916f3ecc3bd7cb10d5260fa693e45a20",
+      "territory": "bb5a72cc2b138f104deaf02ac891bfb9"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "69b0c3482b538f104deaf02ac891bfe4",
+      "from": "2026-01-01 00:00:00",
+      "to": "2029-12-31 00:00:00",
+      "user": "946ff60c2b538f104deaf02ac891bfc2",
+      "territory": "a04af2043bd7cb10d5260fa693e45ab8"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "6e3172d42b0f03104deaf02ac891bfbf",
+      "from": "2026-08-27 23:53:28",
+      "to": "2030-01-01 00:53:41",
+      "user": "9384f6563bf2c310d5260fa693e45a6d",
+      "territory": "5ffec65b3bf24710d5260fa693e45ad5"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "7ea00f802b938f104deaf02ac891bf8d",
+      "from": "2026-01-01 00:00:00",
+      "to": "2029-12-31 00:00:00",
+      "user": "986fbe8c3bd7cb10d5260fa693e45a67",
+      "territory": "e5fe4e1b2bb243104deaf02ac891bf37"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "85d047843b1bcb10d5260fa693e45ad0",
+      "from": "2026-09-01 00:00:00",
+      "to": "2030-01-02 00:00:00",
+      "user": "896f324c2b538f104deaf02ac891bf40",
+      "territory": "595a32cc2b138f104deaf02ac891bf86"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "8ef217ed3b47cb10d5260fa693e45a70",
+      "from": "2026-08-31 23:33:16",
+      "to": "2028-03-31 23:33:25",
+      "user": "b9098b212b0f8b104deaf02ac891bfc9",
+      "territory": "307902a93b4b8b10d5260fa693e45a32"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "96c083843b1bcb10d5260fa693e45ad3",
+      "from": "2026-09-01 00:00:00",
+      "to": "2030-01-02 00:00:00",
+      "user": "206ffe0c2b538f104deaf02ac891bfda",
+      "territory": "350e83a93b07cb10d5260fa693e45a93"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "9da397613b87cb10d5260fa693e45a58",
+      "from": "2026-08-31 23:36:14",
+      "to": "2027-05-29 23:36:20",
+      "user": "f1098f613b07cb10d5260fa693e45af8",
+      "territory": "fd0e4ba12b4f8b104deaf02ac891bf06"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "9eb0cf443b1bcb10d5260fa693e45a48",
+      "from": "2026-01-01 00:00:00",
+      "to": "2029-12-31 00:00:00",
+      "user": "546ffacc3bd7cb10d5260fa693e45a83",
+      "territory": "784af2043bd7cb10d5260fa693e45ac0"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "a9c083843b1bcb10d5260fa693e45ac2",
+      "from": "2026-09-01 00:00:00",
+      "to": "2030-01-02 00:00:00",
+      "user": "2c6ffe0c2b538f104deaf02ac891bfc4",
+      "territory": "310e8ba12b4f8b104deaf02ac891bf2c"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "bcc007c02b938f104deaf02ac891bf86",
+      "from": "2026-01-01 00:00:00",
+      "to": "2029-12-31 00:00:00",
+      "user": "dd6f3ecc3bd7cb10d5260fa693e45a17",
+      "territory": "955a76043bd7cb10d5260fa693e45aef"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "bdd087843b1bcb10d5260fa693e45aa3",
+      "from": "2026-09-01 00:00:00",
+      "to": "2030-01-02 00:00:00",
+      "user": "0d6f324c2b538f104deaf02ac891bf6e",
+      "territory": "595a32cc2b138f104deaf02ac891bf8d"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "c7b003843b1bcb10d5260fa693e45a26",
+      "from": "2026-01-01 00:00:00",
+      "to": "2029-12-31 00:00:00",
+      "user": "bc6ffacc3bd7cb10d5260fa693e45ad1",
+      "territory": "f44af2043bd7cb10d5260fa693e45ae0"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "cdd00bc02b938f104deaf02ac891bffe",
+      "from": "2026-09-01 00:00:00",
+      "to": "2030-01-02 00:00:00",
+      "user": "096ffacc3bd7cb10d5260fa693e45ae6",
+      "territory": "d15a3e8c2b138f104deaf02ac891bfe7"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "cfb083c02b938f104deaf02ac891bf9e",
+      "from": "2026-01-01 00:00:00",
+      "to": "2029-12-31 00:00:00",
+      "user": "346ffe0c2b538f104deaf02ac891bffd",
+      "territory": "3c4a36043bd7cb10d5260fa693e45a0c"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "d4e00fc02b938f104deaf02ac891bf2a",
+      "from": "2026-09-01 00:00:00",
+      "to": "2030-01-02 00:00:00",
+      "user": "a16f324c2b538f104deaf02ac891bfb2",
+      "territory": "b35ab6043bd7cb10d5260fa693e45a28"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "e4b0cf802b938f104deaf02ac891bf70",
+      "from": "2026-01-01 00:00:00",
+      "to": "2029-12-31 00:00:00",
+      "user": "c96ffacc3bd7cb10d5260fa693e45aee",
+      "territory": "ac4a3e8c2b138f104deaf02ac891bfde"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "e78132182b0f03104deaf02ac891bfd5",
+      "from": "2026-08-27 23:54:53",
+      "to": "2030-01-01 00:55:00",
+      "user": "0b843ed22b7683104deaf02ac891bf1d",
+      "territory": "cfee8a1b2bb243104deaf02ac891bf8b"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "f471bad42b0f03104deaf02ac891bfe2",
+      "from": "2026-08-27 23:54:26",
+      "to": "2030-01-01 00:54:32",
+      "user": "07843ed22b7683104deaf02ac891bf31",
+      "territory": "6dfe4e1b2bb243104deaf02ac891bf30"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "f7a00f802b938f104deaf02ac891bf97",
+      "from": "2026-01-01 00:00:00",
+      "to": "2029-12-31 00:00:00",
+      "user": "386ffacc3bd7cb10d5260fa693e45a8b",
+      "territory": "e1fec65b3bf24710d5260fa693e45acf"
+    },
+    {
+      "active": "true",
+      "membershiptype": "primary",
+      "sys_id": "fd1e2e742b1b87504deaf02ac891bf2a",
+      "from": "2026-09-10 23:12:24",
+      "to": "2030-01-01 00:12:42",
+      "user": "61098b212b0f8b104deaf02ac891bf79",
+      "territory": "f3de465b3bf24710d5260fa693e45a9d"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "table": "sn_prd_pm_product_offering_family",
+  "key": [
+    "name"
+  ],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "parent": "sn_prd_pm_product_offering_family"
+  },
+  "records": [
+    {
+      "parent": "",
+      "code": "FAM-INTANL",
+      "description": "Intelligence & Analytics product family",
+      "external_id": "",
+      "number": "PRDFA0001004",
+      "sys_id": "044cf59b3b324710d5260fa693e45aac",
+      "name": "Intelligence & Analytics",
+      "external_source": ""
+    },
+    {
+      "parent": "",
+      "code": "FAM-AIAUTO",
+      "description": "AI & Automation product family",
+      "external_id": "",
+      "number": "PRDFA0001003",
+      "sys_id": "203c7d1b2bfe03104deaf02ac891bf06",
+      "name": "AI & Automation",
+      "external_source": ""
+    },
+    {
+      "parent": "",
+      "code": "FAM-REVENB",
+      "description": "Revenue Enablement product family",
+      "external_id": "",
+      "number": "PRDFA0001001",
+      "sys_id": "5a1cb95b3b324710d5260fa693e45a51",
+      "name": "Revenue Enablement",
+      "external_source": ""
+    },
+    {
+      "parent": "",
+      "code": "FAM-LRNEVT",
+      "description": "Learning & Events product family",
+      "external_id": "",
+      "number": "PRDFA0001002",
+      "sys_id": "a12cf19b3b324710d5260fa693e45a63",
+      "name": "Learning & Events",
+      "external_source": ""
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "table": "sn_prd_pm_uom",
+  "key": [
+    "name"
+  ],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "uom_class": "sn_prd_pm_uom_class"
+  },
+  "records": [
+    {
+      "code": "API",
+      "description": "Custom Unit of Measure of # of API calls",
+      "external_id": "",
+      "sys_id": "13a362212b478b104deaf02ac891bf58",
+      "name": "API Calls ",
+      "uom_class": "7c62e5d153020110286eddeeff7b124e",
+      "external_source": ""
+    }
+  ]
+}

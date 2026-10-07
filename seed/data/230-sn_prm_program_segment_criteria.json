@@ -1,0 +1,31 @@
+{
+  "table": "sn_prm_program_segment_criteria",
+  "key": [],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "program_segment_mapping": "sn_prm_program_segment_mapping",
+    "criteria": "sn_req_criteria_customer_condition"
+  },
+  "records": [
+    {
+      "sys_id": "17bf656d2b0f4b104deaf02ac891bf6b",
+      "criteria": "1019e52d2bcb4b104deaf02ac891bf6e",
+      "active": "true",
+      "program_segment_mapping": "d0e0d9403b834f10d5260fa693e45a36"
+    },
+    {
+      "sys_id": "3360fdad2b0f4b104deaf02ac891bfda",
+      "criteria": "f93a296d2bcb4b104deaf02ac891bf79",
+      "active": "true",
+      "program_segment_mapping": "9668ede92bcb4b104deaf02ac891bfa5"
+    },
+    {
+      "sys_id": "462075ad2b0f4b104deaf02ac891bfcb",
+      "criteria": "b3a929ad2bcb4b104deaf02ac891bf80",
+      "active": "true",
+      "program_segment_mapping": "49d8e56d2bcb4b104deaf02ac891bf6c"
+    }
+  ]
+}

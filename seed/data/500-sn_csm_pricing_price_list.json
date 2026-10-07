@@ -1,0 +1,46 @@
+{
+  "table": "sn_csm_pricing_price_list",
+  "key": [
+    "name"
+  ],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "currency": "fx_currency",
+    "account": "customer_account",
+    "sales_agreement": "sn_sales_agmt_core_sales_agreement"
+  },
+  "records": [
+    {
+      "end_date": "2028-04-30 23:41:36",
+      "code": "PARTNER-PL-01",
+      "description": "Partner price list for Channel Partner Quoting in the Partner Portal. Cloned from Standard Price List, scoped to Solana Revenue Enablement Platform product offerings.",
+      "external_id": "",
+      "sales_agreement": "",
+      "defaultflag": "false",
+      "number": "PL0001003",
+      "sys_id": "8a6a804e2b838f104deaf02ac891bf54",
+      "name": "Partner Price list",
+      "currency": "USD",
+      "state": "Published",
+      "account": "",
+      "start_date": "2025-12-31 16:00:00"
+    },
+    {
+      "end_date": "",
+      "code": "STD-PL-01",
+      "description": "Standard Price List",
+      "external_id": "",
+      "sales_agreement": "",
+      "defaultflag": "true",
+      "number": "PL0001002",
+      "sys_id": "94ed8a972bb243104deaf02ac891bf4f",
+      "name": "Standard Price List",
+      "currency": "USD",
+      "state": "published",
+      "account": "",
+      "start_date": "2026-01-01 00:00:00"
+    }
+  ]
+}

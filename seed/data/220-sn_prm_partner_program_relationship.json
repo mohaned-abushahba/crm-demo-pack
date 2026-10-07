@@ -1,0 +1,62 @@
+{
+  "table": "sn_prm_partner_program_relationship",
+  "key": [],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "channel_partner": "sn_prm_channel_partner",
+    "program": "sn_prm_partner_program",
+    "segment": "sn_seg_segment"
+  },
+  "records": [
+    {
+      "activity": "",
+      "active": "true",
+      "program": "d0698d082b07c7104deaf02ac891bfa6",
+      "onboarded_date": "2025-01-01 00:00:00",
+      "offboarded_date": "",
+      "number": "PPGM0001003",
+      "sys_id": "22c90dcc3b034f10d5260fa693e45a4b",
+      "channel_partner": "997901cc3b034f10d5260fa693e45a62",
+      "segment": "33598d082b07c7104deaf02ac891bf8c",
+      "status": "approved"
+    },
+    {
+      "activity": "",
+      "active": "false",
+      "program": "44698d082b07c7104deaf02ac891bf95",
+      "onboarded_date": "2025-01-01 00:00:00",
+      "offboarded_date": "",
+      "number": "PPGM0001001",
+      "sys_id": "9ec9498c3b034f10d5260fa693e45a23",
+      "channel_partner": "2a698d483b034f10d5260fa693e45a09",
+      "segment": "b359498c3b034f10d5260fa693e45a1d",
+      "status": "retired"
+    },
+    {
+      "activity": "",
+      "active": "true",
+      "program": "44698d082b07c7104deaf02ac891bf95",
+      "onboarded_date": "",
+      "offboarded_date": "",
+      "number": "PPGM0001005",
+      "sys_id": "b42331652b4f4b104deaf02ac891bff2",
+      "channel_partner": "2a698d483b034f10d5260fa693e45a09",
+      "segment": "b359498c3b034f10d5260fa693e45a1d",
+      "status": "approved"
+    },
+    {
+      "activity": "",
+      "active": "true",
+      "program": "18698d082b07c7104deaf02ac891bfa0",
+      "onboarded_date": "2025-01-01 00:00:00",
+      "offboarded_date": "",
+      "number": "PPGM0001002",
+      "sys_id": "e2c90dcc3b034f10d5260fa693e45a45",
+      "channel_partner": "997901cc3b034f10d5260fa693e45a31",
+      "segment": "f359c58c3b034f10d5260fa693e45a55",
+      "status": "approved"
+    }
+  ]
+}

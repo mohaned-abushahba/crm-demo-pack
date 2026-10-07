@@ -1,0 +1,485 @@
+{
+  "table": "sys_group_has_role",
+  "key": [
+    "group",
+    "role"
+  ],
+  "on_conflict": "adopt",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "role": "sys_user_role",
+    "granted_by": "sys_user_group",
+    "group": "sys_user_group"
+  },
+  "records": [
+    {
+      "sys_id": "06c8b9442b4fc7104deaf02ac891bffa",
+      "role": "afbf155f43453110a530cd60afb8f264",
+      "inherits": "true",
+      "group": "e668318c3b8b4f10d5260fa693e45ac3"
+    },
+    {
+      "sys_id": "0890ca003b0f4f10d5260fa693e45ac0",
+      "role": "7fcaa702933002009c8579b4f47ffbde",
+      "inherits": "true",
+      "group": "15a4ba563bf2c310d5260fa693e45a16"
+    },
+    {
+      "sys_id": "08b238e23b4b0750d5260fa693e45ab0",
+      "role": "f66afe3b3f032210caf1293d001f8b5e",
+      "inherits": "true",
+      "group": "eca4f6563bf2c310d5260fa693e45a8d"
+    },
+    {
+      "sys_id": "0dff75842b8fc7104deaf02ac891bfc8",
+      "role": "6fa3347fff1fa2105061ffffffffff66",
+      "inherits": "true",
+      "group": "30a4fed22b7683104deaf02ac891bf33"
+    },
+    {
+      "sys_id": "0fc8bd442b4fc7104deaf02ac891bf36",
+      "role": "54840553ff8bee10583effffffffff2b",
+      "inherits": "true",
+      "group": "e668318c3b8b4f10d5260fa693e45ac3"
+    },
+    {
+      "sys_id": "0feef90c3bcb4f10d5260fa693e45ac4",
+      "role": "3be5d3d1b7103300dff9fa13ee11a987",
+      "inherits": "true",
+      "group": "09a4f2d23bf2c310d5260fa693e45a45"
+    },
+    {
+      "sys_id": "11908e003b0f4f10d5260fa693e45a27",
+      "role": "42001515ff33e6105ce2ffffffffffb6",
+      "inherits": "true",
+      "group": "15a4ba563bf2c310d5260fa693e45a16"
+    },
+    {
+      "sys_id": "154a9c962b4343504deaf02ac891bf23",
+      "role": "ed60b9d4ffb132105b0fffffffffff1c",
+      "inherits": "true",
+      "group": "f77950d22b4343504deaf02ac891bfdb"
+    },
+    {
+      "sys_id": "15908e003b0f4f10d5260fa693e45a6a",
+      "role": "53b474a6ff9726105ce2ffffffffff5c",
+      "inherits": "true",
+      "group": "15a4ba563bf2c310d5260fa693e45a16"
+    },
+    {
+      "sys_id": "1890ca003b0f4f10d5260fa693e45ac8",
+      "role": "a464e79aff4ce2101970ffffffffff6e",
+      "inherits": "true",
+      "group": "15a4ba563bf2c310d5260fa693e45a16"
+    },
+    {
+      "sys_id": "1d4ad8962b4343504deaf02ac891bf6a",
+      "role": "debab85bff02110053ccffffffffffb6",
+      "inherits": "true",
+      "group": "f77950d22b4343504deaf02ac891bfdb"
+    },
+    {
+      "sys_id": "25fff5842b8fc7104deaf02ac891bf34",
+      "role": "0c0e92f0c3750110d367f55a8840ddfc",
+      "inherits": "true",
+      "group": "30a4fed22b7683104deaf02ac891bf33"
+    },
+    {
+      "sys_id": "27a0f6e12bc78b104deaf02ac891bfc3",
+      "role": "ed60b9d4ffb132105b0fffffffffff1c",
+      "inherits": "true",
+      "group": "09a4f2d23bf2c310d5260fa693e45a45"
+    },
+    {
+      "sys_id": "27ef71842b8fc7104deaf02ac891bf21",
+      "role": "59078a2753710110286eddeeff7b125b",
+      "inherits": "true",
+      "group": "30a4fed22b7683104deaf02ac891bf33"
+    },
+    {
+      "sys_id": "2804fcd23b038350d5260fa693e45a3c",
+      "role": "a08c6110ffb132105b0fffffffffff0e",
+      "inherits": "true",
+      "group": "eca4f6563bf2c310d5260fa693e45a8d"
+    },
+    {
+      "sys_id": "2c39bdcc3b8b4f10d5260fa693e45a78",
+      "role": "0e474bb543000210144160b6ccb8f26b",
+      "inherits": "true",
+      "group": "a4a47ed22b7683104deaf02ac891bff3"
+    },
+    {
+      "sys_id": "2e6a7d482b4fc7104deaf02ac891bfca",
+      "role": "309f515f43453110a530cd60afb8f27b",
+      "inherits": "true",
+      "group": "f8a47a563bf2c310d5260fa693e45aad"
+    },
+    {
+      "sys_id": "3411f6252bc78b104deaf02ac891bf14",
+      "role": "ed60b9d4ffb132105b0fffffffffff1c",
+      "inherits": "true",
+      "group": "01a4fed22b7683104deaf02ac891bf39"
+    },
+    {
+      "sys_id": "3582eea22b0347504deaf02ac891bfc5",
+      "role": "a8707bd47fd212101441353efb86650c",
+      "inherits": "true",
+      "group": "f8a47a563bf2c310d5260fa693e45aad"
+    },
+    {
+      "sys_id": "39d7d1662b0707504deaf02ac891bfe5",
+      "role": "259e90f6c3223100d6d210c422d3aefb",
+      "inherits": "true",
+      "group": "b31947612b0f8b104deaf02ac891bf07"
+    },
+    {
+      "sys_id": "3bc213ed3b47cb10d5260fa693e45a6c",
+      "role": "3be5d3d1b7103300dff9fa13ee11a987",
+      "inherits": "true",
+      "group": "91c21fad3b47cb10d5260fa693e45a0e"
+    },
+    {
+      "sys_id": "3cfc4fb63bcb0310d5260fa693e45a1e",
+      "role": "debab85bff02110053ccffffffffffb6",
+      "inherits": "true",
+      "group": "1f9a03293b07cb10d5260fa693e45a7b"
+    },
+    {
+      "sys_id": "3ece39c02b8fc7104deaf02ac891bf91",
+      "role": "59078a2753710110286eddeeff7b125b",
+      "inherits": "true",
+      "group": "85a4ba563bf2c310d5260fa693e45a10"
+    },
+    {
+      "sys_id": "40a150b447e787109ada569fe16d43a9",
+      "role": "a64d0d7dc36431100f24c87af040ddf9",
+      "inherits": "true",
+      "group": "eca4f6563bf2c310d5260fa693e45a8d"
+    },
+    {
+      "sys_id": "427357e12b8f8b104deaf02ac891bf0d",
+      "role": "3be5d3d1b7103300dff9fa13ee11a987",
+      "inherits": "true",
+      "group": "60639ba12b8f8b104deaf02ac891bf88"
+    },
+    {
+      "sys_id": "4323dfed3b47cb10d5260fa693e45a81",
+      "role": "3be5d3d1b7103300dff9fa13ee11a987",
+      "inherits": "true",
+      "group": "891397a12b8f8b104deaf02ac891bfe9"
+    },
+    {
+      "sys_id": "4490ca003b0f4f10d5260fa693e45aac",
+      "role": "20d2eaa35320330030c3ddeeff7b1213",
+      "inherits": "true",
+      "group": "15a4ba563bf2c310d5260fa693e45a16"
+    },
+    {
+      "sys_id": "45904e003b0f4f10d5260fa693e45af2",
+      "role": "af9fe46aff5726105ce2ffffffffffc4",
+      "inherits": "true",
+      "group": "15a4ba563bf2c310d5260fa693e45a16"
+    },
+    {
+      "sys_id": "45ff75842b8fc7104deaf02ac891bf57",
+      "role": "aa61ad5affeb22108002fffffffffff9",
+      "inherits": "true",
+      "group": "30a4fed22b7683104deaf02ac891bf33"
+    },
+    {
+      "sys_id": "4beef90c3bcb4f10d5260fa693e45abe",
+      "role": "debab85bff02110053ccffffffffffb6",
+      "inherits": "true",
+      "group": "09a4f2d23bf2c310d5260fa693e45a45"
+    },
+    {
+      "sys_id": "504a149e3bcb4350d5260fa693e45a30",
+      "role": "3be5d3d1b7103300dff9fa13ee11a987",
+      "inherits": "true",
+      "group": "f77950d22b4343504deaf02ac891bfdb"
+    },
+    {
+      "sys_id": "54b238e23b4b0750d5260fa693e45adc",
+      "role": "a8707bd47fd212101441353efb86650c",
+      "inherits": "true",
+      "group": "eca4f6563bf2c310d5260fa693e45a8d"
+    },
+    {
+      "sys_id": "54fff1842b8fc7104deaf02ac891bfb7",
+      "role": "b5cc70adffc43210794effffffffffb3",
+      "inherits": "true",
+      "group": "30a4fed22b7683104deaf02ac891bf33"
+    },
+    {
+      "sys_id": "57ef31842b8fc7104deaf02ac891bff6",
+      "role": "2d53ff04ff79b2104790ffffffffff04",
+      "inherits": "true",
+      "group": "30a4fed22b7683104deaf02ac891bf33"
+    },
+    {
+      "sys_id": "61f2ae6a3bcb4750d5260fa693e45adf",
+      "role": "1c7f4c3cff336210ea03ffffffffffe2",
+      "inherits": "true",
+      "group": "a79a03293b07cb10d5260fa693e45a95"
+    },
+    {
+      "sys_id": "64a2215a3bc78350d5260fa693e45adf",
+      "role": "b9cd9177931f265033f17608648918ea",
+      "inherits": "true",
+      "group": "f8a47a563bf2c310d5260fa693e45aad"
+    },
+    {
+      "sys_id": "65ffb5842b8fc7104deaf02ac891bf89",
+      "role": "75d5be7c53a12210163d78d130e5e611",
+      "inherits": "true",
+      "group": "30a4fed22b7683104deaf02ac891bf33"
+    },
+    {
+      "sys_id": "69f2ae6a3bcb4750d5260fa693e45ae3",
+      "role": "a8707bd47fd212101441353efb86650c",
+      "inherits": "true",
+      "group": "a79a03293b07cb10d5260fa693e45a95"
+    },
+    {
+      "sys_id": "6d2132653b03cb10d5260fa693e45a35",
+      "role": "ed60b9d4ffb132105b0fffffffffff1c",
+      "inherits": "true",
+      "group": "f4a47a563bf2c310d5260fa693e45ab3"
+    },
+    {
+      "sys_id": "6df2ee6a3bcb4750d5260fa693e45a34",
+      "role": "20eaf53dffc0b2108a0dffffffffff9d",
+      "inherits": "true",
+      "group": "a79a03293b07cb10d5260fa693e45a95"
+    },
+    {
+      "sys_id": "7182aea22b0347504deaf02ac891bf7e",
+      "role": "f66afe3b3f032210caf1293d001f8b5e",
+      "inherits": "true",
+      "group": "f8a47a563bf2c310d5260fa693e45aad"
+    },
+    {
+      "sys_id": "7d0bf1043bcb4f10d5260fa693e45acd",
+      "role": "f37e91e11b302000aebbfbcd2c07139f",
+      "inherits": "true",
+      "group": "01a4fed22b7683104deaf02ac891bf39"
+    },
+    {
+      "sys_id": "822273713b8b8f10d5260fa693e45a95",
+      "role": "ed60b9d4ffb132105b0fffffffffff1c",
+      "inherits": "true",
+      "group": "15a4ba563bf2c310d5260fa693e45a16"
+    },
+    {
+      "sys_id": "879ab1c03bcb4f10d5260fa693e45ad8",
+      "role": "3be5d3d1b7103300dff9fa13ee11a987",
+      "inherits": "true",
+      "group": "f4a47a563bf2c310d5260fa693e45ab3"
+    },
+    {
+      "sys_id": "8c397dcc3b8b4f10d5260fa693e45a2b",
+      "role": "9d79e252ff9a8610b85dffffffffff45",
+      "inherits": "true",
+      "group": "a4a47ed22b7683104deaf02ac891bff3"
+    },
+    {
+      "sys_id": "95908e003b0f4f10d5260fa693e45a2d",
+      "role": "43f4fca6ff9726105ce2ffffffffff21",
+      "inherits": "true",
+      "group": "15a4ba563bf2c310d5260fa693e45a16"
+    },
+    {
+      "sys_id": "95dab1c82b4fc7104deaf02ac891bfe1",
+      "role": "debab85bff02110053ccffffffffffb6",
+      "inherits": "true",
+      "group": "01a4fed22b7683104deaf02ac891bf39"
+    },
+    {
+      "sys_id": "95dab1c82b4fc7104deaf02ac891bfe8",
+      "role": "3be5d3d1b7103300dff9fa13ee11a987",
+      "inherits": "true",
+      "group": "01a4fed22b7683104deaf02ac891bf39"
+    },
+    {
+      "sys_id": "95ffb5842b8fc7104deaf02ac891bf34",
+      "role": "6ef85b1c7b521a1032b7e865b38cb6de",
+      "inherits": "true",
+      "group": "30a4fed22b7683104deaf02ac891bf33"
+    },
+    {
+      "sys_id": "98b238e23b4b0750d5260fa693e45afb",
+      "role": "b94bb1bdffc0b2108a0dffffffffff11",
+      "inherits": "true",
+      "group": "eca4f6563bf2c310d5260fa693e45a8d"
+    },
+    {
+      "sys_id": "9cfc837e2bcb43104deaf02ac891bff3",
+      "role": "3be5d3d1b7103300dff9fa13ee11a987",
+      "inherits": "true",
+      "group": "1f9a03293b07cb10d5260fa693e45a7b"
+    },
+    {
+      "sys_id": "a0900e003b0f4f10d5260fa693e45ae1",
+      "role": "a5c37b2eff8026101970ffffffffff81",
+      "inherits": "true",
+      "group": "15a4ba563bf2c310d5260fa693e45a16"
+    },
+    {
+      "sys_id": "a0a2215a3bc78350d5260fa693e45aad",
+      "role": "67b6089ffff42210f465ffffffffffde",
+      "inherits": "true",
+      "group": "f8a47a563bf2c310d5260fa693e45aad"
+    },
+    {
+      "sys_id": "a0f6a44043212110929da2e69ab8f2a1",
+      "role": "2dccdf6343912110929da2e69ab8f2db",
+      "inherits": "true",
+      "group": "02b6e04043212110929da2e69ab8f212"
+    },
+    {
+      "sys_id": "a4d25f612b8f8b104deaf02ac891bfc4",
+      "role": "ed60b9d4ffb132105b0fffffffffff1c",
+      "inherits": "true",
+      "group": "91c21fad3b47cb10d5260fa693e45a0e"
+    },
+    {
+      "sys_id": "a590ce003b0f4f10d5260fa693e45a1e",
+      "role": "a14374a2ff9726105ce2ffffffffff8a",
+      "inherits": "true",
+      "group": "15a4ba563bf2c310d5260fa693e45a16"
+    },
+    {
+      "sys_id": "a7d0bee12bc78b104deaf02ac891bf95",
+      "role": "ed60b9d4ffb132105b0fffffffffff1c",
+      "inherits": "true",
+      "group": "f8a47a563bf2c310d5260fa693e45aad"
+    },
+    {
+      "sys_id": "ae5c550e2b43cf104deaf02ac891bff3",
+      "role": "ed60b9d4ffb132105b0fffffffffff1c",
+      "inherits": "true",
+      "group": "a79a03293b07cb10d5260fa693e45a95"
+    },
+    {
+      "sys_id": "b4ff75842b8fc7104deaf02ac891bf43",
+      "role": "dbc6e0ac4323121020955457acb8f2e9",
+      "inherits": "true",
+      "group": "30a4fed22b7683104deaf02ac891bf33"
+    },
+    {
+      "sys_id": "b7702ce42bdf43504deaf02ac891bfee",
+      "role": "54840553ff8bee10583effffffffff2b",
+      "inherits": "true",
+      "group": "eca4f6563bf2c310d5260fa693e45a8d"
+    },
+    {
+      "sys_id": "bd2731802b4fc7104deaf02ac891bf72",
+      "role": "4d5f5d1f43453110a530cd60afb8f21a",
+      "inherits": "true",
+      "group": "eca4f6563bf2c310d5260fa693e45a8d"
+    },
+    {
+      "sys_id": "ce3e7ea53b83cb10d5260fa693e45abd",
+      "role": "4fe9634f77a0b110ce3ea465ae5a9904",
+      "inherits": "true",
+      "group": "eca4f6563bf2c310d5260fa693e45a8d"
+    },
+    {
+      "sys_id": "dcc900423b8f8f10d5260fa693e45adb",
+      "role": "3bf8d5b65344130084acddeeff7b122b",
+      "inherits": "true",
+      "group": "15a4ba563bf2c310d5260fa693e45a16"
+    },
+    {
+      "sys_id": "e1317e252bc78b104deaf02ac891bf58",
+      "role": "ed60b9d4ffb132105b0fffffffffff1c",
+      "inherits": "true",
+      "group": "70e552142b0b03104deaf02ac891bff0"
+    },
+    {
+      "sys_id": "e1908e003b0f4f10d5260fa693e45ac5",
+      "role": "3635f4e6ff9726105ce2ffffffffff36",
+      "inherits": "true",
+      "group": "15a4ba563bf2c310d5260fa693e45a16"
+    },
+    {
+      "sys_id": "e3aaf9882b4fc7104deaf02ac891bfc1",
+      "role": "3be5d3d1b7103300dff9fa13ee11a987",
+      "inherits": "true",
+      "group": "b8a4f2d23bf2c310d5260fa693e45a3f"
+    },
+    {
+      "sys_id": "e414d1e63b8f0750d5260fa693e45a5c",
+      "role": "320ba38f77a0b110ce3ea465ae5a9953",
+      "inherits": "true",
+      "group": "b31947612b0f8b104deaf02ac891bf07"
+    },
+    {
+      "sys_id": "e72397a12b8f8b104deaf02ac891bff2",
+      "role": "ed60b9d4ffb132105b0fffffffffff1c",
+      "inherits": "true",
+      "group": "891397a12b8f8b104deaf02ac891bfe9"
+    },
+    {
+      "sys_id": "e73d20163bcf4350d5260fa693e45a3c",
+      "role": "ee8040deff05e210aa95ffffffffffc0",
+      "inherits": "true",
+      "group": "eca4f6563bf2c310d5260fa693e45a8d"
+    },
+    {
+      "sys_id": "e8ff35842b8fc7104deaf02ac891bfb6",
+      "role": "bc9f6c27c30310105252716b7d40dd89",
+      "inherits": "true",
+      "group": "30a4fed22b7683104deaf02ac891bf33"
+    },
+    {
+      "sys_id": "ebef71842b8fc7104deaf02ac891bfde",
+      "role": "320ba38f77a0b110ce3ea465ae5a9953",
+      "inherits": "true",
+      "group": "30a4fed22b7683104deaf02ac891bf33"
+    },
+    {
+      "sys_id": "ec39bdcc3b8b4f10d5260fa693e45a90",
+      "role": "54840553ff8bee10583effffffffff2b",
+      "inherits": "true",
+      "group": "a4a47ed22b7683104deaf02ac891bff3"
+    },
+    {
+      "sys_id": "f27397e12b8f8b104deaf02ac891bfcc",
+      "role": "ed60b9d4ffb132105b0fffffffffff1c",
+      "inherits": "true",
+      "group": "60639ba12b8f8b104deaf02ac891bf88"
+    },
+    {
+      "sys_id": "f904dcfc47e787109ada569fe16d436d",
+      "role": "cf3dc80ceb81a2109ddaff45cad0cd3b",
+      "inherits": "true",
+      "group": "eca4f6563bf2c310d5260fa693e45a8d"
+    },
+    {
+      "sys_id": "f982eea22b0347504deaf02ac891bfef",
+      "role": "b94bb1bdffc0b2108a0dffffffffff11",
+      "inherits": "true",
+      "group": "f8a47a563bf2c310d5260fa693e45aad"
+    },
+    {
+      "sys_id": "fcfcc37e2bcb43104deaf02ac891bfaa",
+      "role": "ed60b9d4ffb132105b0fffffffffff1c",
+      "inherits": "true",
+      "group": "1f9a03293b07cb10d5260fa693e45a7b"
+    },
+    {
+      "sys_id": "fd294cc33b074310d5260fa693e45a31",
+      "role": "ed60b9d4ffb132105b0fffffffffff1c",
+      "inherits": "true",
+      "group": "b8a4f2d23bf2c310d5260fa693e45a3f"
+    },
+    {
+      "sys_id": "ff1366aa3bcb4750d5260fa693e45a9b",
+      "role": "309f515f43453110a530cd60afb8f27b",
+      "inherits": "true",
+      "group": "a79a03293b07cb10d5260fa693e45a95"
+    }
+  ]
+}

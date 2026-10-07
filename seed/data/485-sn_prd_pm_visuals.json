@@ -1,0 +1,155 @@
+{
+  "table": "sn_prd_pm_visuals",
+  "key": [],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "product_offering": "sn_prd_pm_product_offering"
+  },
+  "records": [
+    {
+      "image": "0a8c6ea62b4347504deaf02ac891bff7",
+      "thumbnail": "",
+      "product_offering": "eccb69042bcbc7104deaf02ac891bff0",
+      "active": "true",
+      "external_id": "",
+      "sys_id": "098c2ea22b4347504deaf02ac891bf5f",
+      "name": "Solana Conference 1-Day Pass",
+      "external_source": "",
+      "primary": "true"
+    },
+    {
+      "image": "ed4eaaae2b4347504deaf02ac891bf97",
+      "thumbnail": "",
+      "product_offering": "6f7e75df3b324710d5260fa693e45a9a",
+      "active": "true",
+      "external_id": "",
+      "sys_id": "2af61cf12b8bcb104deaf02ac891bf07",
+      "name": "Revenue Enablement Platform ",
+      "external_source": "",
+      "primary": "true"
+    },
+    {
+      "image": "dfbd66ae2b4347504deaf02ac891bf90",
+      "thumbnail": "",
+      "product_offering": "f0cba9042bcbc7104deaf02ac891bf3a",
+      "active": "true",
+      "external_id": "",
+      "sys_id": "35bde66e2b4347504deaf02ac891bf2a",
+      "name": "Virtual Training 3-Day",
+      "external_source": "",
+      "primary": "true"
+    },
+    {
+      "image": "1d0e442b2ba64b10c472f5b4f291bf55",
+      "thumbnail": "370e84ab2ba64b10c472f5b4f291bf17",
+      "product_offering": "c60c185e2b4343504deaf02ac891bfad",
+      "active": "true",
+      "external_id": "",
+      "sys_id": "530c985e2b4343504deaf02ac891bfe9",
+      "name": "Data Storage Visual",
+      "external_source": "",
+      "primary": "true"
+    },
+    {
+      "image": "074556d9935acfd0306ff9a3b503d68f",
+      "thumbnail": "",
+      "product_offering": "160c185e2b4343504deaf02ac891bfe8",
+      "active": "true",
+      "external_id": "",
+      "sys_id": "5b0c985e2b4343504deaf02ac891bfea",
+      "name": "impls",
+      "external_source": "",
+      "primary": "true"
+    },
+    {
+      "image": "ec88726a2bc347504deaf02ac891bf2c",
+      "thumbnail": "",
+      "product_offering": "acc007313b838f10d5260fa693e45a53",
+      "active": "true",
+      "external_id": "",
+      "sys_id": "5b78b66a2bc347504deaf02ac891bf7a",
+      "name": "Spark Plug",
+      "external_source": "",
+      "primary": "true"
+    },
+    {
+      "image": "19ec62aa2b4347504deaf02ac891bf29",
+      "thumbnail": "",
+      "product_offering": "43f43ddc3b0f0310d5260fa693e45a72",
+      "active": "true",
+      "external_id": "",
+      "sys_id": "6405b1103b4f0310d5260fa693e45a45",
+      "name": "pgm2",
+      "external_source": "",
+      "primary": "true"
+    },
+    {
+      "image": "a3c50039931ac314306ff9a3b503d63a",
+      "thumbnail": "25c5c039931ac314306ff9a3b503d6d7",
+      "product_offering": "5e8b1ee92bc38b104deaf02ac891bfa4",
+      "active": "true",
+      "external_id": "",
+      "sys_id": "7a8b5ee92bc38b104deaf02ac891bf21",
+      "name": "Integration Gateway",
+      "external_source": "",
+      "primary": "true"
+    },
+    {
+      "image": "49bca6aa2b4347504deaf02ac891bf65",
+      "thumbnail": "",
+      "product_offering": "fccba9042bcbc7104deaf02ac891bf34",
+      "active": "true",
+      "external_id": "",
+      "sys_id": "93ace6aa2b4347504deaf02ac891bf12",
+      "name": "Solana Conference 3-Day Pass",
+      "external_source": "",
+      "primary": "true"
+    },
+    {
+      "image": "792d6eea2b4347504deaf02ac891bfa0",
+      "thumbnail": "",
+      "product_offering": "0ff43ddc3b0f0310d5260fa693e45a73",
+      "active": "true",
+      "external_id": "",
+      "sys_id": "ac05b1103b4f0310d5260fa693e45a45",
+      "name": "pgmt",
+      "external_source": "",
+      "primary": "true"
+    },
+    {
+      "image": "5a5d2eea2b4347504deaf02ac891bfde",
+      "thumbnail": "",
+      "product_offering": "78cba9042bcbc7104deaf02ac891bf37",
+      "active": "true",
+      "external_id": "",
+      "sys_id": "bc5daa2e2b4347504deaf02ac891bf71",
+      "name": "In-Person Training - 5 day",
+      "external_source": "",
+      "primary": "true"
+    },
+    {
+      "image": "6d49ae222b4347504deaf02ac891bfa5",
+      "thumbnail": "32167c3f3b8bb2d09b9db7dc73e45af0",
+      "product_offering": "d2f479dc3b0f0310d5260fa693e45ac9",
+      "active": "true",
+      "external_id": "",
+      "sys_id": "e805b1103b4f0310d5260fa693e45a43",
+      "name": "V1",
+      "external_source": "",
+      "primary": "true"
+    },
+    {
+      "image": "29683e2a2bc347504deaf02ac891bf7e",
+      "thumbnail": "",
+      "product_offering": "206007fd3b438f10d5260fa693e45a74",
+      "active": "true",
+      "external_id": "",
+      "sys_id": "ec683a2a2bc347504deaf02ac891bf8b",
+      "name": "Automatic Voltage Regulator",
+      "external_source": "",
+      "primary": "true"
+    }
+  ]
+}

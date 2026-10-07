@@ -1,0 +1,26 @@
+{
+  "table": "sn_csm_pricing_cost_book",
+  "key": [
+    "name"
+  ],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "currency": "fx_currency"
+  },
+  "records": [
+    {
+      "end_date": "",
+      "code": "STD-CB-01",
+      "description": "",
+      "defaultflag": "true",
+      "number": "CB0001001",
+      "sys_id": "e6dd92322b0743104deaf02ac891bf2e",
+      "name": "Standard Cost Book",
+      "currency": "USD",
+      "state": "published",
+      "start_date": "2026-09-04 00:00:00"
+    }
+  ]
+}

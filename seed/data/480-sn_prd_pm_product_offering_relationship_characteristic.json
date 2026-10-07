@@ -1,0 +1,63 @@
+{
+  "table": "sn_prd_pm_product_offering_relationship_characteristic",
+  "key": [],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "characteristic_option": "sn_prd_pm_characteristic_option",
+    "target": "sn_prd_pm_product_offering",
+    "product_offering_relationship": "sn_prd_pm_product_offering_relationship",
+    "characteristic": "sn_prd_pm_characteristic"
+  },
+  "records": [
+    {
+      "characteristic_option": "528b1ee92bc38b104deaf02ac891bfa3",
+      "code": "DATA RETEN4",
+      "external_id": "",
+      "characteristic": "1a8b1ee92bc38b104deaf02ac891bfa0",
+      "target": "ee8b1ee92bc38b104deaf02ac891bfbe",
+      "sys_id": "3a8b5ee92bc38b104deaf02ac891bf1e",
+      "product_offering_relationship": "268b1ee92bc38b104deaf02ac891bfe9",
+      "value": "",
+      "external_source": "",
+      "order": ""
+    },
+    {
+      "characteristic_option": "528b1ee92bc38b104deaf02ac891bfa1",
+      "code": "DATA RETEN6",
+      "external_id": "",
+      "characteristic": "1a8b1ee92bc38b104deaf02ac891bfa0",
+      "target": "ee8b1ee92bc38b104deaf02ac891bfbe",
+      "sys_id": "3a8b5ee92bc38b104deaf02ac891bf20",
+      "product_offering_relationship": "268b1ee92bc38b104deaf02ac891bfe9",
+      "value": "",
+      "external_source": "",
+      "order": ""
+    },
+    {
+      "characteristic_option": "",
+      "code": "TOKENS2",
+      "external_id": "",
+      "characteristic": "968b1ee92bc38b104deaf02ac891bf9e",
+      "target": "ae8b1ee92bc38b104deaf02ac891bfbc",
+      "sys_id": "6a8b5ee92bc38b104deaf02ac891bf1c",
+      "product_offering_relationship": "e28b1ee92bc38b104deaf02ac891bfe6",
+      "value": "250000",
+      "external_source": "",
+      "order": ""
+    },
+    {
+      "characteristic_option": "9a8b1ee92bc38b104deaf02ac891bfa3",
+      "code": "DATA RETEN5",
+      "external_id": "",
+      "characteristic": "1a8b1ee92bc38b104deaf02ac891bfa0",
+      "target": "ee8b1ee92bc38b104deaf02ac891bfbe",
+      "sys_id": "7a8b5ee92bc38b104deaf02ac891bf1f",
+      "product_offering_relationship": "268b1ee92bc38b104deaf02ac891bfe9",
+      "value": "",
+      "external_source": "",
+      "order": ""
+    }
+  ]
+}

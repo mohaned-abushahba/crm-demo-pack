@@ -1,0 +1,18 @@
+{
+  "table": "sn_prd_pm_product_offering_translation",
+  "key": [],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "product_offering": "sn_prd_pm_product_offering"
+  },
+  "records": [
+    {
+      "sys_id": "e96ef6a0472347109ada569fe16d438d",
+      "configuration_json": "{\"schema_version\":10,\"product\":{\"attributes\":{\"sys_id\":{\"value\":\"05908ad73b724710d5260fa693e45a6f\",\"displayValue\":\"05908ad73b724710d5260fa693e45a6f\"},\"product_specification\":{\"value\":null,\"displayValue\":null},\"prod_spec_name\":{\"value\":\"\",\"displayValue\":null},\"prod_spec_desc\":{\"value\":\"\",\"displayValue\":null},\"prod_spec_code\":{\"value\":\"\",\"displayValue\":\"\"},\"product_offering\":{\"value\":\"05908ad73b724710d5260fa693e45a6f\",\"displayValue\":\"05908ad73b724710d5260fa693e45a6f\"},\"name\":{\"value\":\"Micro Apps\",\"displayValue\":\"Micro Apps\"},\"description\":{\"value\":\"MicroApps\",\"displayValue\":\"MicroApps\"},\"periodicity\":{\"value\":\"monthly\",\"displayValue\":\"Monthly\"},\"pricing_method\":{\"value\":\"recurring\",\"displayValue\":\"Recurring\"},\"code\":{\"value\":\"USR-MICROAPPS\",\"displayValue\":\"USR-MICROAPPS\"},\"unit_of_measure\":{\"value\":\"cb2795d553020110286eddeeff7b12ff\",\"displayValue\":\"Each\"},\"copy_child_spec_chars\":{\"value\":\"1\",\"displayValue\":\"true\"},\"initial_version\":{\"value\":\"05908ad73b724710d5260fa693e45a6f\",\"displayValue\":\"Micro Apps\"},\"version\":{\"value\":\"1\",\"displayValue\":\"1\"},\"visual\":{\"value\":\"\",\"displayValue\":\"\"}},\"is_transient\":\"0\",\"allow_multiple_configurations\":false,\"enable_ramps\":false,\"is_configurable\":false,\"offer_type\":\"simple\",\"characteristics\":[],\"relationship_group\":[],\"parent_sys_id\":null,\"parent_type\":null,\"has_rolledup_chars\":false,\"node_path\":{\"value\":\"USR-MICROAPPS\",\"displayValue\":\"Micro Apps\",\"id\":\"F7C64F451BB7F11CB7FA008D7614FEE1\"}}}",
+      "product_offering": "05908ad73b724710d5260fa693e45a6f",
+      "locale": "en"
+    }
+  ]
+}

@@ -1,0 +1,1390 @@
+{
+  "table": "sn_prd_pm_product_offering_uom",
+  "key": [],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "unit_of_measure": "sn_prd_pm_uom",
+    "product_offering": "sn_prd_pm_product_offering"
+  },
+  "records": [
+    {
+      "is_active": "true",
+      "product_offering": "43208ed32b3243104deaf02ac891bf68",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "03c982df2b7243104deaf02ac891bfcd",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "6e1042573b724710d5260fa693e45a66",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "03c982df2b7243104deaf02ac891bfd2",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "8bceb19f2bfe03104deaf02ac891bf01",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "03c982df2b7243104deaf02ac891bfd7",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "b6efb9932b3243104deaf02ac891bf76",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "03c982df2b7243104deaf02ac891bfdc",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "e0bff9d33b724710d5260fa693e45a2d",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "03c982df2b7243104deaf02ac891bfe1",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "231f35df2bfe03104deaf02ac891bfed",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "07c982df2b7243104deaf02ac891bfc9",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "4c00c2573b724710d5260fa693e45a08",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "07c982df2b7243104deaf02ac891bfce",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "717fbd533b724710d5260fa693e45ade",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "07c982df2b7243104deaf02ac891bfd3",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "9410c6573b724710d5260fa693e45aee",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "07c982df2b7243104deaf02ac891bfd8",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "bfbf7dd33b724710d5260fa693e45afd",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "07c982df2b7243104deaf02ac891bfdd",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "e3900e972b3243104deaf02ac891bf59",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "07c982df2b7243104deaf02ac891bfe2",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "1b10c2573b724710d5260fa693e45add",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "07c9ce9f2b7243104deaf02ac891bf7a",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "343ff9533b724710d5260fa693e45a11",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "0bc982df2b7243104deaf02ac891bfca",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "51d0ca1b3b724710d5260fa693e45ad2",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "0bc982df2b7243104deaf02ac891bfcf",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "7b8ef9572bbe03104deaf02ac891bf45",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "0bc982df2b7243104deaf02ac891bfd4",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "a4200e573b724710d5260fa693e45a97",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "0bc982df2b7243104deaf02ac891bfd9",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "c9b0821b3b724710d5260fa693e45aa6",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "0bc982df2b7243104deaf02ac891bfde",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "f0aeb95f2bfe03104deaf02ac891bf47",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "0bc982df2b7243104deaf02ac891bfe3",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "3e7042972b3243104deaf02ac891bf94",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "0fc982df2b7243104deaf02ac891bfcb",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "60c0ce972b3243104deaf02ac891bfe5",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "0fc982df2b7243104deaf02ac891bfd0",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "836ff5132b3243104deaf02ac891bf1e",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "0fc982df2b7243104deaf02ac891bfd5",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "abeff9173b724710d5260fa693e45ae5",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "0fc982df2b7243104deaf02ac891bfda",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "d0be3d5f2bfe03104deaf02ac891bf97",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "0fc982df2b7243104deaf02ac891bfdf",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "fb2ff5df2bfe03104deaf02ac891bff7",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "0fc982df2b7243104deaf02ac891bfe4",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "460c185e2b4343504deaf02ac891bfe0",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "120c585e2b4343504deaf02ac891bf74",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "560c585e2b4343504deaf02ac891bf2b",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "120c585e2b4343504deaf02ac891bf7f",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "ce0c185e2b4343504deaf02ac891bfd9",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "160c585e2b4343504deaf02ac891bf71",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "520c585e2b4343504deaf02ac891bf25",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "160c585e2b4343504deaf02ac891bf7c",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "4e0c185e2b4343504deaf02ac891bfcf",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "1a0c585e2b4343504deaf02ac891bf6e",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "de0c185e2b4343504deaf02ac891bfec",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "1a0c585e2b4343504deaf02ac891bf79",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "460c185e2b4343504deaf02ac891bfc9",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "1e0c585e2b4343504deaf02ac891bf6b",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "5a0c185e2b4343504deaf02ac891bfe6",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "1e0c585e2b4343504deaf02ac891bf76",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "120c585e2b4343504deaf02ac891bf65",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "1e0c585e2b4343504deaf02ac891bf81",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "ae8b1ee92bc38b104deaf02ac891bfbc",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "228b1ee92bc38b104deaf02ac891bfe0",
+      "unit_of_measure": "13a362212b478b104deaf02ac891bf58",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "5e8b1ee92bc38b104deaf02ac891bfa4",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "268b1ee92bc38b104deaf02ac891bfdd",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "2ba239cc3b4b4f10d5260fa693e45ac6",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "2ba279cc3b4b4f10d5260fa693e45a0c",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "12b0461b3b724710d5260fa693e45a03",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "32c9ce9f2b7243104deaf02ac891bf79",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "3fbefd5f2bfe03104deaf02ac891bf80",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "43c982df2b7243104deaf02ac891bfcc",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "635046572b3243104deaf02ac891bfa7",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "43c982df2b7243104deaf02ac891bfd1",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "84aff5132b3243104deaf02ac891bf1b",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "43c982df2b7243104deaf02ac891bfd6",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "acfe799f2bfe03104deaf02ac891bfbb",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "43c982df2b7243104deaf02ac891bfdb",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "d2604a572b3243104deaf02ac891bf54",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "43c982df2b7243104deaf02ac891bfe0",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "fedfb5173b724710d5260fa693e45a17",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "43c982df2b7243104deaf02ac891bfe5",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "1cdff1932b3243104deaf02ac891bf05",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "47c982df2b7243104deaf02ac891bfc8",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "441fb1533b724710d5260fa693e45af0",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "47c982df2b7243104deaf02ac891bfcd",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "6f7e75df3b324710d5260fa693e45a9a",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "47c982df2b7243104deaf02ac891bfd2",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "8c210a1b2b3243104deaf02ac891bfdd",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "47c982df2b7243104deaf02ac891bfd7",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "b9e0ced72b3243104deaf02ac891bf8e",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "47c982df2b7243104deaf02ac891bfdc",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "e27f3d933b724710d5260fa693e45a8a",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "47c982df2b7243104deaf02ac891bfe1",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "184fbd533b724710d5260fa693e45ad7",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "47c9ce9f2b7243104deaf02ac891bf79",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "28aff5d33b724710d5260fa693e45a63",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "4bc982df2b7243104deaf02ac891bfc9",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "4eefb9932b3243104deaf02ac891bf6f",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "4bc982df2b7243104deaf02ac891bfce",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "73ffbd932b3243104deaf02ac891bf42",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "4bc982df2b7243104deaf02ac891bfd3",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "9830ced32b3243104deaf02ac891bfd8",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "4bc982df2b7243104deaf02ac891bfd8",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "c2afb5532b3243104deaf02ac891bf4b",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "4bc982df2b7243104deaf02ac891bfdd",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "e99f71933b724710d5260fa693e45ad3",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "4bc982df2b7243104deaf02ac891bfe2",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "35bff9d33b724710d5260fa693e45a34",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "4fc982df2b7243104deaf02ac891bfca",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "5c4f79133b724710d5260fa693e45ac5",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "4fc982df2b7243104deaf02ac891bfcf",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "7e404e172b3243104deaf02ac891bf36",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "4fc982df2b7243104deaf02ac891bfd4",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "a700ca532b3243104deaf02ac891bf5a",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "4fc982df2b7243104deaf02ac891bfd9",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "cb00c2d32b3243104deaf02ac891bf12",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "4fc982df2b7243104deaf02ac891bfde",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "f690cad73b724710d5260fa693e45a24",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "4fc982df2b7243104deaf02ac891bfe3",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "0e0c185e2b4343504deaf02ac891bfc7",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "520c585e2b4343504deaf02ac891bf6b",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "120c185e2b4343504deaf02ac891bfe5",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "520c585e2b4343504deaf02ac891bf76",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "d60c585e2b4343504deaf02ac891bf63",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "520c585e2b4343504deaf02ac891bf81",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "c60c185e2b4343504deaf02ac891bfad",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "560c585e2b4343504deaf02ac891bf67",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "0e0c185e2b4343504deaf02ac891bfde",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "560c585e2b4343504deaf02ac891bf73",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "1e0c585e2b4343504deaf02ac891bf29",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "560c585e2b4343504deaf02ac891bf7e",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "8a0c185e2b4343504deaf02ac891bfd7",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "5a0c585e2b4343504deaf02ac891bf70",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "1a0c585e2b4343504deaf02ac891bf23",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "5a0c585e2b4343504deaf02ac891bf7b",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "060c185e2b4343504deaf02ac891bfce",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "5e0c585e2b4343504deaf02ac891bf6d",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "960c185e2b4343504deaf02ac891bfeb",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "5e0c585e2b4343504deaf02ac891bf78",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "78cba9042bcbc7104deaf02ac891bf37",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "70cba9042bcbc7104deaf02ac891bf38",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "365046572b3243104deaf02ac891bfa0",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "83c982df2b7243104deaf02ac891bfcb",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "5f300a573b724710d5260fa693e45a8a",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "83c982df2b7243104deaf02ac891bfd0",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "80d0461b3b724710d5260fa693e45a7a",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "83c982df2b7243104deaf02ac891bfd5",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "aa608e973b724710d5260fa693e45a86",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "83c982df2b7243104deaf02ac891bfda",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "cdcf35532b3243104deaf02ac891bfc1",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "83c982df2b7243104deaf02ac891bfdf",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "f7afb9532b3243104deaf02ac891bfd6",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "83c982df2b7243104deaf02ac891bfe4",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "408046d73b724710d5260fa693e45aa0",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "87c982df2b7243104deaf02ac891bfcc",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "6a404e172b3243104deaf02ac891bf7c",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "87c982df2b7243104deaf02ac891bfd1",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "874f79133b724710d5260fa693e45acc",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "87c982df2b7243104deaf02ac891bfd6",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "b40082d32b3243104deaf02ac891bf5d",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "87c982df2b7243104deaf02ac891bfdb",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "d2cf71932b3243104deaf02ac891bf5e",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "87c982df2b7243104deaf02ac891bfe0",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "d2f479dc3b0f0310d5260fa693e45ac9",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "87f43ddc3b0f0310d5260fa693e45ae6",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "1e6fb5933b724710d5260fa693e45a32",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "8bc982df2b7243104deaf02ac891bfc8",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "4adfb5932b3243104deaf02ac891bf1d",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "8bc982df2b7243104deaf02ac891bfcd",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "70ef71df2bfe03104deaf02ac891bf6c",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "8bc982df2b7243104deaf02ac891bfd2",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "8f4086973b724710d5260fa693e45a66",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "8bc982df2b7243104deaf02ac891bfd7",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "bb60ce973b724710d5260fa693e45afa",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "8bc982df2b7243104deaf02ac891bfdc",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "e2deb19f2bfe03104deaf02ac891bf08",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "8bc982df2b7243104deaf02ac891bfe1",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "1a8006972b3243104deaf02ac891bf3b",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "8bc9ce9f2b7243104deaf02ac891bf79",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "2b20ced32b3243104deaf02ac891bf48",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "8fc982df2b7243104deaf02ac891bfc9",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "4f6ff5132b3243104deaf02ac891bf14",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "8fc982df2b7243104deaf02ac891bfce",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "781ff1533b724710d5260fa693e45aab",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "8fc982df2b7243104deaf02ac891bfd3",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "998f79933b724710d5260fa693e45ab5",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "8fc982df2b7243104deaf02ac891bfd8",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "c45f799f2bfe03104deaf02ac891bfc2",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "8fc982df2b7243104deaf02ac891bfdd",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "ee8ff5132b3243104deaf02ac891bf24",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "8fc982df2b7243104deaf02ac891bfe2",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "ca0c185e2b4343504deaf02ac891bfcc",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "920c585e2b4343504deaf02ac891bf6d",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "5e0c185e2b4343504deaf02ac891bfe9",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "920c585e2b4343504deaf02ac891bf78",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "c20c185e2b4343504deaf02ac891bfc6",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "960c585e2b4343504deaf02ac891bf6a",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "d60c185e2b4343504deaf02ac891bfe3",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "960c585e2b4343504deaf02ac891bf75",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "5a0c585e2b4343504deaf02ac891bf2e",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "960c585e2b4343504deaf02ac891bf80",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "c20c185e2b4343504deaf02ac891bfdd",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "9a0c585e2b4343504deaf02ac891bf72",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "d20c585e2b4343504deaf02ac891bf28",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "9a0c585e2b4343504deaf02ac891bf7d",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "0a0c185e2b4343504deaf02ac891bfd4",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "9e0c585e2b4343504deaf02ac891bf6f",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "520c185e2b4343504deaf02ac891bff0",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "9e0c585e2b4343504deaf02ac891bf7a",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "ee8b1ee92bc38b104deaf02ac891bfbe",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "b3822e2d2b078b104deaf02ac891bf11",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "a28b1ee92bc38b104deaf02ac891bfd9",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "b472e2e12b078b104deaf02ac891bfd9",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "eccb69042bcbc7104deaf02ac891bff0",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "b4cb69042bcbc7104deaf02ac891bfff",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "090f31533b724710d5260fa693e45a7a",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "b6c9ce9f2b7243104deaf02ac891bf78",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "05908ad73b724710d5260fa693e45a6f",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "bac9ce9f2b7243104deaf02ac891bf76",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "2c9f31532b3243104deaf02ac891bfab",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "c3c982df2b7243104deaf02ac891bfca",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "500fb95f3b324710d5260fa693e45a6d",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "c3c982df2b7243104deaf02ac891bfcf",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "79eef1133b724710d5260fa693e45aac",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "c3c982df2b7243104deaf02ac891bfd4",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "9c2f35533b724710d5260fa693e45a2e",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "c3c982df2b7243104deaf02ac891bfd9",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "c7d04ed73b724710d5260fa693e45acc",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "c3c982df2b7243104deaf02ac891bfde",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "ef5fb5933b724710d5260fa693e45a2b",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "c3c982df2b7243104deaf02ac891bfe3",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "0ff43ddc3b0f0310d5260fa693e45a73",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "c6e363392b0f4f104deaf02ac891bfb1",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "3e21ce5b3b724710d5260fa693e45ac7",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "c7c982df2b7243104deaf02ac891bfcb",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "5f308a573b724710d5260fa693e45ace",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "c7c982df2b7243104deaf02ac891bfd0",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "82f04ed73b724710d5260fa693e45ac0",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "c7c982df2b7243104deaf02ac891bfd5",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "aaa0ce972b3243104deaf02ac891bfdc",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "c7c982df2b7243104deaf02ac891bfda",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "d0110a1b2b3243104deaf02ac891bfd7",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "c7c982df2b7243104deaf02ac891bfdf",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "fa5f7d133b724710d5260fa693e45a9b",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "c7c982df2b7243104deaf02ac891bfe4",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "ea8b1ee92bc38b104deaf02ac891bfd3",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "c882a62d2b078b104deaf02ac891bf1f",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "42a0ca972b3243104deaf02ac891bf8f",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "cbc982df2b7243104deaf02ac891bfcc",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "6dfe795b2bfe03104deaf02ac891bf28",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "cbc982df2b7243104deaf02ac891bfd1",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "87bf3dd33b724710d5260fa693e45a27",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "cbc982df2b7243104deaf02ac891bfd6",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "b69f35532b3243104deaf02ac891bfbb",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "cbc982df2b7243104deaf02ac891bfdb",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "db30c6172b3243104deaf02ac891bfaf",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "cbc982df2b7243104deaf02ac891bfe0",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "1fcf71932b3243104deaf02ac891bf64",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "cfc982df2b7243104deaf02ac891bfc8",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "4ae0025b3b724710d5260fa693e45ad2",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "cfc982df2b7243104deaf02ac891bfcd",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "715086973b724710d5260fa693e45a6f",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "cfc982df2b7243104deaf02ac891bfd2",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "8f7f3d132b3243104deaf02ac891bf0b",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "cfc982df2b7243104deaf02ac891bfd7",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "bc018ad72b3243104deaf02ac891bf87",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "cfc982df2b7243104deaf02ac891bfdc",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "e38f31532b3243104deaf02ac891bfa5",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "cfc982df2b7243104deaf02ac891bfe1",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "1ac0c6d72b3243104deaf02ac891bf72",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "cfc9ce9f2b7243104deaf02ac891bf79",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "860c185e2b4343504deaf02ac891bfd1",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "d20c585e2b4343504deaf02ac891bf6f",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "1a0c185e2b4343504deaf02ac891bfee",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "d20c585e2b4343504deaf02ac891bf7a",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "020c185e2b4343504deaf02ac891bfcb",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "d60c585e2b4343504deaf02ac891bf6c",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "160c185e2b4343504deaf02ac891bfe8",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "d60c585e2b4343504deaf02ac891bf77",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "2e8b1ee92bc38b104deaf02ac891bfc0",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "d9a2a2e92b078b104deaf02ac891bf1a",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "8a0c185e2b4343504deaf02ac891bfc4",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "da0c585e2b4343504deaf02ac891bf69",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "9e0c185e2b4343504deaf02ac891bfe1",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "da0c585e2b4343504deaf02ac891bf74",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "9e0c585e2b4343504deaf02ac891bf2c",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "da0c585e2b4343504deaf02ac891bf7f",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "0a0c185e2b4343504deaf02ac891bfdb",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "de0c585e2b4343504deaf02ac891bf71",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "9a0c585e2b4343504deaf02ac891bf26",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "de0c585e2b4343504deaf02ac891bf7c",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "ee8b1ee92bc38b104deaf02ac891bfda",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "de6366ed2b078b104deaf02ac891bfbe",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "fccba9042bcbc7104deaf02ac891bf34",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "f4cba9042bcbc7104deaf02ac891bf35",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "f0cba9042bcbc7104deaf02ac891bf3a",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "f8cba9042bcbc7104deaf02ac891bf3a",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "11ffbd932b3243104deaf02ac891bf3b",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "fac9ce9f2b7243104deaf02ac891bf78",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "e68b1ee92bc38b104deaf02ac891bfba",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "fc23e6ad2b078b104deaf02ac891bf9d",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "table": "cmdb_model_category",
+  "key": [
+    "name"
+  ],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^nameINBase Spec Category,Data Storage Solution Model Category^NQsys_created_on>=2026-08-23 00:00:00^nameINBase Spec Category,Data Storage Solution Model Category",
+  "references": {
+    "parent_cateogry": "cmdb_model_category",
+    "sys_package": "sys_package",
+    "sys_scope": "sys_scope"
+  },
+  "records": [
+    {
+      "code": "",
+      "description": "",
+      "allow_pre_allocation": "false",
+      "parent_cateogry": "",
+      "sys_class_name": "cmdb_model_category",
+      "install_base_item_class": "",
+      "sys_id": "4af479dc3b0f0310d5260fa693e45a5d",
+      "enforce_verification": "false",
+      "allow_in_bundle": "false",
+      "sys_domain": "global",
+      "sys_name": "Base Spec Category",
+      "sys_scope": "global",
+      "bundle": "false",
+      "is_product_instance": "false",
+      "asset_class": "",
+      "picture": "",
+      "ootb_category": "n",
+      "sys_update_name": "cmdb_model_category_4af479dc3b0f0310d5260fa693e45a5d",
+      "name": "Base Spec Category",
+      "product_model_class": "",
+      "allow_as_master": "false",
+      "cmdb_ci_class": "",
+      "sys_policy": ""
+    },
+    {
+      "code": "",
+      "description": "",
+      "allow_pre_allocation": "false",
+      "parent_cateogry": "",
+      "sys_class_name": "cmdb_model_category",
+      "install_base_item_class": "",
+      "sys_id": "7d0c185e2b4343504deaf02ac891bf56",
+      "enforce_verification": "false",
+      "allow_in_bundle": "false",
+      "sys_domain": "global",
+      "sys_name": "Data Storage Solution Model Category",
+      "sys_scope": "global",
+      "bundle": "false",
+      "is_product_instance": "false",
+      "asset_class": "",
+      "picture": "",
+      "ootb_category": "n",
+      "sys_update_name": "cmdb_model_category_7d0c185e2b4343504deaf02ac891bf56",
+      "name": "Data Storage Solution Model Category",
+      "product_model_class": "",
+      "allow_as_master": "false",
+      "cmdb_ci_class": "",
+      "sys_policy": ""
+    }
+  ]
+}

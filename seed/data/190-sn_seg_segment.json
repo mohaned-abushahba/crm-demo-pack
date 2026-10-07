@@ -1,0 +1,45 @@
+{
+  "table": "sn_seg_segment",
+  "key": [
+    "name"
+  ],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {},
+  "records": [
+    {
+      "active": "true",
+      "description": "Top-tier strategic partners; highest margins, dedicated partner manager support, and priority deal registration.\n\n— Created via ServiceNow Forge (Claude)",
+      "number": "SGM0001003",
+      "sys_id": "33598d082b07c7104deaf02ac891bf8c",
+      "sys_domain": "global",
+      "name": "Gold",
+      "work_notes": "",
+      "order": "",
+      "status": "approved"
+    },
+    {
+      "active": "true",
+      "description": "Mid-tier partners; enhanced margins, deal registration protection, and MDF (Marketing Development Funds) eligibility.\n\n— Created via ServiceNow Forge (Claude)",
+      "number": "SGM0001002",
+      "sys_id": "b359498c3b034f10d5260fa693e45a1d",
+      "sys_domain": "global",
+      "name": "Silver",
+      "work_notes": "",
+      "order": "",
+      "status": "approved"
+    },
+    {
+      "active": "true",
+      "description": "Entry-tier partners; standard margins, self-service enablement, and quarterly business reviews.\n\n— Created via ServiceNow Forge (Claude)",
+      "number": "SGM0001001",
+      "sys_id": "f359c58c3b034f10d5260fa693e45a55",
+      "sys_domain": "global",
+      "name": "Bronze",
+      "work_notes": "",
+      "order": "",
+      "status": "approved"
+    }
+  ]
+}

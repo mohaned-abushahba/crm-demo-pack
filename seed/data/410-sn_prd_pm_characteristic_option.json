@@ -1,0 +1,309 @@
+{
+  "table": "sn_prd_pm_characteristic_option",
+  "key": [],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "characteristic": "sn_prd_pm_characteristic"
+  },
+  "records": [
+    {
+      "code": "RAM-16_GB",
+      "external_id": "",
+      "characteristic": "f10cd45e2b4343504deaf02ac891bf62",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "310c185e2b4343504deaf02ac891bf4f",
+      "external_source": "",
+      "option": "16 GB"
+    },
+    {
+      "code": "DS_RAID_LEVEL_CHARACTERISTIC-4",
+      "external_id": "",
+      "characteristic": "b90cd45e2b4343504deaf02ac891bf5f",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "350c185e2b4343504deaf02ac891bf46",
+      "external_source": "",
+      "option": "4"
+    },
+    {
+      "code": "SYSTEM_BOARD-ADVANCED",
+      "external_id": "",
+      "characteristic": "750cd45e2b4343504deaf02ac891bf61",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "350c185e2b4343504deaf02ac891bf4b",
+      "external_source": "",
+      "option": "Advanced"
+    },
+    {
+      "code": "RAM-32_GB",
+      "external_id": "",
+      "characteristic": "f10cd45e2b4343504deaf02ac891bf62",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "350c185e2b4343504deaf02ac891bf50",
+      "external_source": "",
+      "option": "32 GB"
+    },
+    {
+      "code": "DS_RAID_LEVEL_CHARACTERISTIC-2",
+      "external_id": "",
+      "characteristic": "b90cd45e2b4343504deaf02ac891bf5f",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "390c185e2b4343504deaf02ac891bf48",
+      "external_source": "",
+      "option": "2"
+    },
+    {
+      "code": "GRAPHICS_CARD-NV_STANDARD",
+      "external_id": "",
+      "characteristic": "3d0cd45e2b4343504deaf02ac891bf61",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "390c185e2b4343504deaf02ac891bf4c",
+      "external_source": "",
+      "option": "NV Standard"
+    },
+    {
+      "code": "DS_IMPLEMENTATION_SERVICES-ESSENTIAL",
+      "external_id": "",
+      "characteristic": "b90cd45e2b4343504deaf02ac891bf62",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "390c185e2b4343504deaf02ac891bf51",
+      "external_source": "",
+      "option": "Essential"
+    },
+    {
+      "code": "GRAPHICS_CARD-AM_ADVANCED",
+      "external_id": "",
+      "characteristic": "3d0cd45e2b4343504deaf02ac891bf61",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "3d0c185e2b4343504deaf02ac891bf4d",
+      "external_source": "",
+      "option": "AM Advanced"
+    },
+    {
+      "code": "DS_IMPLEMENTATION_SERVICES-ADVANCED",
+      "external_id": "",
+      "characteristic": "b90cd45e2b4343504deaf02ac891bf62",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "3d0c185e2b4343504deaf02ac891bf52",
+      "external_source": "",
+      "option": "Advanced"
+    },
+    {
+      "code": "BINDING_TYPE-PAPERBACK",
+      "external_id": "",
+      "characteristic": "c6f475dc3b0f0310d5260fa693e45afe",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "46f479dc3b0f0310d5260fa693e45a5a",
+      "external_source": "",
+      "option": "Paperback"
+    },
+    {
+      "code": "RETENTION-90_DAYS",
+      "external_id": "",
+      "characteristic": "1a8b1ee92bc38b104deaf02ac891bfa0",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "528b1ee92bc38b104deaf02ac891bfa1",
+      "external_source": "",
+      "option": "90 Days"
+    },
+    {
+      "code": "RETENTION-30_DAYS",
+      "external_id": "",
+      "characteristic": "1a8b1ee92bc38b104deaf02ac891bfa0",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "528b1ee92bc38b104deaf02ac891bfa3",
+      "external_source": "",
+      "option": "30 Days"
+    },
+    {
+      "code": "DS_SUPPORT_SERVICES-PROFESSIONAL",
+      "external_id": "",
+      "characteristic": "b50c185e2b4343504deaf02ac891bf43",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "710c185e2b4343504deaf02ac891bf56",
+      "external_source": "",
+      "option": "Professional"
+    },
+    {
+      "code": "GRAPHICS_CARD-NV_ADVANCED",
+      "external_id": "",
+      "characteristic": "3d0cd45e2b4343504deaf02ac891bf61",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "750c185e2b4343504deaf02ac891bf4e",
+      "external_source": "",
+      "option": "NV Advanced"
+    },
+    {
+      "code": "SYSTEM_BOARD-INTERMEDIATE",
+      "external_id": "",
+      "characteristic": "750cd45e2b4343504deaf02ac891bf61",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "790c185e2b4343504deaf02ac891bf4a",
+      "external_source": "",
+      "option": "Intermediate"
+    },
+    {
+      "code": "DS_RAID_LEVEL_CHARACTERISTIC-5",
+      "external_id": "",
+      "characteristic": "b90cd45e2b4343504deaf02ac891bf5f",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "7d0c185e2b4343504deaf02ac891bf46",
+      "external_source": "",
+      "option": "5"
+    },
+    {
+      "code": "SYSTEM_BOARD-STANDARD",
+      "external_id": "",
+      "characteristic": "750cd45e2b4343504deaf02ac891bf61",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "7d0c185e2b4343504deaf02ac891bf4b",
+      "external_source": "",
+      "option": "Standard"
+    },
+    {
+      "code": "RAM-64_GB",
+      "external_id": "",
+      "characteristic": "f10cd45e2b4343504deaf02ac891bf62",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "7d0c185e2b4343504deaf02ac891bf50",
+      "external_source": "",
+      "option": "64 GB"
+    },
+    {
+      "code": "BINDING_TYPE-HARDBACK",
+      "external_id": "",
+      "characteristic": "c6f475dc3b0f0310d5260fa693e45afe",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "86f479dc3b0f0310d5260fa693e45a5c",
+      "external_source": "",
+      "option": "Hardback"
+    },
+    {
+      "code": "RETENTION-60_DAYS",
+      "external_id": "",
+      "characteristic": "1a8b1ee92bc38b104deaf02ac891bfa0",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "9a8b1ee92bc38b104deaf02ac891bfa3",
+      "external_source": "",
+      "option": "60 Days"
+    },
+    {
+      "code": "DS_LICENSE_TYPE-BASIC",
+      "external_id": "",
+      "characteristic": "fd0c185e2b4343504deaf02ac891bf42",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "b10c185e2b4343504deaf02ac891bf54",
+      "external_source": "",
+      "option": "Basic"
+    },
+    {
+      "code": "DS_RAID_LEVEL_CHARACTERISTIC-6",
+      "external_id": "",
+      "characteristic": "b90cd45e2b4343504deaf02ac891bf5f",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "b50c185e2b4343504deaf02ac891bf47",
+      "external_source": "",
+      "option": "6"
+    },
+    {
+      "code": "DS_SUPPORT_SERVICES-STANDARD",
+      "external_id": "",
+      "characteristic": "b50c185e2b4343504deaf02ac891bf43",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "b50c185e2b4343504deaf02ac891bf55",
+      "external_source": "",
+      "option": "Standard"
+    },
+    {
+      "code": "PROCESSOR-AM-CPU",
+      "external_id": "",
+      "characteristic": "bd0cd45e2b4343504deaf02ac891bf60",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "bd0c185e2b4343504deaf02ac891bf49",
+      "external_source": "",
+      "option": "AM-CPU"
+    },
+    {
+      "code": "BINDING_TYPE-RECYCLED_PAPERBACK",
+      "external_id": "",
+      "characteristic": "c6f475dc3b0f0310d5260fa693e45afe",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "cef479dc3b0f0310d5260fa693e45a5c",
+      "external_source": "",
+      "option": "Recycled Paperback"
+    },
+    {
+      "code": "PROCESSOR-INT-CPU",
+      "external_id": "",
+      "characteristic": "bd0cd45e2b4343504deaf02ac891bf60",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "f10c185e2b4343504deaf02ac891bf49",
+      "external_source": "",
+      "option": "INT-CPU"
+    },
+    {
+      "code": "GRAPHICS_CARD-AM_STANDARD",
+      "external_id": "",
+      "characteristic": "3d0cd45e2b4343504deaf02ac891bf61",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "f10c185e2b4343504deaf02ac891bf4d",
+      "external_source": "",
+      "option": "AM Standard"
+    },
+    {
+      "code": "DS_IMPLEMENTATION_SERVICES-ENTERPRISE",
+      "external_id": "",
+      "characteristic": "b90cd45e2b4343504deaf02ac891bf62",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "f10c185e2b4343504deaf02ac891bf52",
+      "external_source": "",
+      "option": "Enterprise"
+    },
+    {
+      "code": "DS_LICENSE_TYPE-PROFESSIONAL",
+      "external_id": "",
+      "characteristic": "fd0c185e2b4343504deaf02ac891bf42",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "f50c185e2b4343504deaf02ac891bf53",
+      "external_source": "",
+      "option": "Professional"
+    },
+    {
+      "code": "RAM-128_GB",
+      "external_id": "",
+      "characteristic": "f10cd45e2b4343504deaf02ac891bf62",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "f90c185e2b4343504deaf02ac891bf4f",
+      "external_source": "",
+      "option": "128 GB"
+    },
+    {
+      "code": "DS_LICENSE_TYPE-UNLIMITED",
+      "external_id": "",
+      "characteristic": "fd0c185e2b4343504deaf02ac891bf42",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "f90c185e2b4343504deaf02ac891bf54",
+      "external_source": "",
+      "option": "Unlimited"
+    },
+    {
+      "code": "DS_RAID_LEVEL_CHARACTERISTIC-3",
+      "external_id": "",
+      "characteristic": "b90cd45e2b4343504deaf02ac891bf5f",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "fd0c185e2b4343504deaf02ac891bf43",
+      "external_source": "",
+      "option": "3"
+    },
+    {
+      "code": "DS_RAID_LEVEL_CHARACTERISTIC-1",
+      "external_id": "",
+      "characteristic": "b90cd45e2b4343504deaf02ac891bf5f",
+      "sys_class_name": "sn_prd_pm_characteristic_option",
+      "sys_id": "fd0c185e2b4343504deaf02ac891bf47",
+      "external_source": "",
+      "option": "1"
+    }
+  ]
+}

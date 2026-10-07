@@ -1,0 +1,139 @@
+{
+  "table": "sn_tp_territory_manager",
+  "key": [],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "manager": "sys_user",
+    "territory": "sn_tp_territory"
+  },
+  "records": [
+    {
+      "manager_type": "territory_manager",
+      "manager": "986fbe8c3bd7cb10d5260fa693e45a67",
+      "sys_id": "16e2c8fa472783509ada569fe16d43e8",
+      "from": "2026-09-29",
+      "to": "4100-01-01",
+      "primary": "true",
+      "territory": "e5fe4e1b2bb243104deaf02ac891bf37"
+    },
+    {
+      "manager_type": "territory_manager",
+      "manager": "61098b212b0f8b104deaf02ac891bf79",
+      "sys_id": "1c86487a476783509ada569fe16d43a6",
+      "from": "2026-09-29",
+      "to": "4100-01-01",
+      "primary": "true",
+      "territory": "f3de465b3bf24710d5260fa693e45a9d"
+    },
+    {
+      "manager_type": "territory_manager",
+      "manager": "9384f6563bf2c310d5260fa693e45a6d",
+      "sys_id": "3d99ea742bd787504deaf02ac891bfce",
+      "from": "2026-09-11",
+      "to": "4100-01-01",
+      "primary": "true",
+      "territory": "5ffec65b3bf24710d5260fa693e45ad5"
+    },
+    {
+      "manager_type": "territory_manager",
+      "manager": "386ffacc3bd7cb10d5260fa693e45a8b",
+      "sys_id": "4cf384fe472783509ada569fe16d4356",
+      "from": "2026-09-29",
+      "to": "4100-01-01",
+      "primary": "true",
+      "territory": "e1fec65b3bf24710d5260fa693e45acf"
+    },
+    {
+      "manager_type": "territory_manager",
+      "manager": "07843ed22b7683104deaf02ac891bf31",
+      "sys_id": "64a20cba472783509ada569fe16d4304",
+      "from": "2026-09-29",
+      "to": "4100-01-01",
+      "primary": "true",
+      "territory": "6dfe4e1b2bb243104deaf02ac891bf30"
+    },
+    {
+      "manager_type": "territory_manager",
+      "manager": "946ff60c2b538f104deaf02ac891bfc2",
+      "sys_id": "71c30cbe472783509ada569fe16d437c",
+      "from": "2026-09-29",
+      "to": "4100-01-01",
+      "primary": "true",
+      "territory": "a04af2043bd7cb10d5260fa693e45ab8"
+    },
+    {
+      "manager_type": "territory_manager",
+      "manager": "546ffacc3bd7cb10d5260fa693e45a83",
+      "sys_id": "8263487e472783509ada569fe16d4338",
+      "from": "2026-09-29",
+      "to": "4100-01-01",
+      "primary": "true",
+      "territory": "784af2043bd7cb10d5260fa693e45ac0"
+    },
+    {
+      "manager_type": "territory_manager",
+      "manager": "bc6ffacc3bd7cb10d5260fa693e45ad1",
+      "sys_id": "87640072476783509ada569fe16d43f5",
+      "from": "2026-09-29",
+      "to": "4100-01-01",
+      "primary": "true",
+      "territory": "f44af2043bd7cb10d5260fa693e45ae0"
+    },
+    {
+      "manager_type": "territory_manager",
+      "manager": "0b843ed22b7683104deaf02ac891bf1d",
+      "sys_id": "8f7204ba472783509ada569fe16d4341",
+      "from": "2026-09-29",
+      "to": "4100-01-01",
+      "primary": "true",
+      "territory": "cfee8a1b2bb243104deaf02ac891bf8b"
+    },
+    {
+      "manager_type": "territory_manager",
+      "manager": "dd6f3ecc3bd7cb10d5260fa693e45a17",
+      "sys_id": "ae93c0be472783509ada569fe16d4314",
+      "from": "2026-09-29",
+      "to": "4100-01-01",
+      "primary": "true",
+      "territory": "955a76043bd7cb10d5260fa693e45aef"
+    },
+    {
+      "manager_type": "territory_manager",
+      "manager": "346ffe0c2b538f104deaf02ac891bffd",
+      "sys_id": "bc23883e472783509ada569fe16d4354",
+      "from": "2026-09-29",
+      "to": "4100-01-01",
+      "primary": "true",
+      "territory": "3c4a36043bd7cb10d5260fa693e45a0c"
+    },
+    {
+      "manager_type": "territory_manager",
+      "manager": "f9098f613b07cb10d5260fa693e45ae3",
+      "sys_id": "d2248032476783509ada569fe16d4347",
+      "from": "2026-09-29",
+      "to": "4100-01-01",
+      "primary": "true",
+      "territory": "effdc3ed2b0f8b104deaf02ac891bfb0"
+    },
+    {
+      "manager_type": "territory_manager",
+      "manager": "556f3ecc3bd7cb10d5260fa693e45a03",
+      "sys_id": "e503043e472783509ada569fe16d436c",
+      "from": "2026-09-29",
+      "to": "4100-01-01",
+      "primary": "true",
+      "territory": "115a32cc2b138f104deaf02ac891bfa1"
+    },
+    {
+      "manager_type": "territory_manager",
+      "manager": "c96ffacc3bd7cb10d5260fa693e45aee",
+      "sys_id": "ebb2c0fa472783509ada569fe16d4309",
+      "from": "2026-09-29",
+      "to": "4100-01-01",
+      "primary": "true",
+      "territory": "ac4a3e8c2b138f104deaf02ac891bfde"
+    }
+  ]
+}

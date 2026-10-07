@@ -2,3 +2,7 @@
 .env.*
 node_modules/
 *.log
+
+# Demo login passwords collected from the sheet (seed/tools/passwords.py)
+seed/secrets/
+__pycache__/

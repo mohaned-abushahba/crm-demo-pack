@@ -1,0 +1,117 @@
+{
+  "table": "sn_prd_pm_catalog_category_relationship",
+  "key": [],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "source": "sn_prd_pm_product_offering_catalog",
+    "target": "sn_prd_pm_product_offering_category"
+  },
+  "records": [
+    {
+      "sys_id": "1be039c83b4b4f10d5260fa693e45a21",
+      "display_order": "999999",
+      "external_id": "",
+      "source": "beab315b3b324710d5260fa693e45a18",
+      "external_source": "",
+      "target": "1be0b5c83b4b4f10d5260fa693e45a04"
+    },
+    {
+      "sys_id": "210c351b2bfe03104deaf02ac891bf82",
+      "display_order": "999999",
+      "external_id": "",
+      "source": "beab315b3b324710d5260fa693e45a18",
+      "external_source": "",
+      "target": "6bebb95b3b324710d5260fa693e45a48"
+    },
+    {
+      "sys_id": "315a14d62b4343504deaf02ac891bf16",
+      "display_order": "999999",
+      "external_id": "",
+      "source": "f95a14d62b4343504deaf02ac891bf14",
+      "external_source": "",
+      "target": "9c695c922b4343504deaf02ac891bf81"
+    },
+    {
+      "sys_id": "468a4d042b0b87104deaf02ac891bf95",
+      "display_order": "999999",
+      "external_id": "",
+      "source": "91e9c9cc2b4f87104deaf02ac891bf79",
+      "external_source": "",
+      "target": "b53a8dc02b8707104deaf02ac891bf10"
+    },
+    {
+      "sys_id": "4a2431543b0f0310d5260fa693e45ab5",
+      "display_order": "999999",
+      "external_id": "",
+      "source": "c224fd143b0f0310d5260fa693e45ac3",
+      "external_source": "",
+      "target": "4a24fd143b0f0310d5260fa693e45ac5"
+    },
+    {
+      "sys_id": "61f5107a2b4387504deaf02ac891bf8a",
+      "display_order": "999999",
+      "external_id": "",
+      "source": "91e9c9cc2b4f87104deaf02ac891bf79",
+      "external_source": "",
+      "target": "422431543b0f0310d5260fa693e45aae"
+    },
+    {
+      "sys_id": "727acd482b07c7104deaf02ac891bf5c",
+      "display_order": "999999",
+      "external_id": "",
+      "source": "beab315b3b324710d5260fa693e45a18",
+      "external_source": "",
+      "target": "b53a8dc02b8707104deaf02ac891bf10"
+    },
+    {
+      "sys_id": "795a14d62b4343504deaf02ac891bf1a",
+      "display_order": "999999",
+      "external_id": "",
+      "source": "f95a14d62b4343504deaf02ac891bf14",
+      "external_source": "",
+      "target": "7e8b5ee92bc38b104deaf02ac891bf2a"
+    },
+    {
+      "sys_id": "8c6f2dc22b87cf104deaf02ac891bf0e",
+      "display_order": "999999",
+      "external_id": "",
+      "source": "747418bd2b4bcb104deaf02ac891bfa6",
+      "external_source": "",
+      "target": "ff65d8312b8bcb104deaf02ac891bff9"
+    },
+    {
+      "sys_id": "922471543b0f0310d5260fa693e45a27",
+      "display_order": "999999",
+      "external_id": "",
+      "source": "c224fd143b0f0310d5260fa693e45ac3",
+      "external_source": "",
+      "target": "0a2431543b0f0310d5260fa693e45ab3"
+    },
+    {
+      "sys_id": "c97f21062b87cf104deaf02ac891bf2b",
+      "display_order": "999999",
+      "external_id": "",
+      "source": "747418bd2b4bcb104deaf02ac891bfa6",
+      "external_source": "",
+      "target": "bb95d0712b8bcb104deaf02ac891bf34"
+    },
+    {
+      "sys_id": "da2431543b0f0310d5260fa693e45acd",
+      "display_order": "999999",
+      "external_id": "",
+      "source": "c224fd143b0f0310d5260fa693e45ac3",
+      "external_source": "",
+      "target": "422431543b0f0310d5260fa693e45aae"
+    },
+    {
+      "sys_id": "f60350322b4387504deaf02ac891bf96",
+      "display_order": "999999",
+      "external_id": "",
+      "source": "beab315b3b324710d5260fa693e45a18",
+      "external_source": "",
+      "target": "9f62dcb22b0f47504deaf02ac891bf9b"
+    }
+  ]
+}
