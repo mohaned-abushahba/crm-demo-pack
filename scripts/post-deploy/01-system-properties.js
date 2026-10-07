@@ -7,6 +7,10 @@
 //                                     matches by sys_id and would insert a duplicate.
 //   glide.email.smtp.active = true    Outbound email on. Private property (is_private=true),
 //                                     which Update Set import can skip.
+//   sn_prd_pm.show_product_visuals_on_catalog_ui = true
+//                                     Show product visuals on the catalog UI. Plugin-owned
+//                                     (Product Catalog Management Core); setting it by name
+//                                     avoids a scoped Update Set for one property.
 //
 // Matches each property by name, so it works whatever the sys_id is on the target.
 // Idempotent: only writes when the value differs; creates the property if missing.
@@ -19,6 +23,8 @@ const PROPERTIES = [
     description: "Sets the session timeout, in minutes. Values exceeding 1440 minutes will be treated as one day." },
   { name: "glide.email.smtp.active", value: "true", type: "boolean",
     description: "Email sending enabled" },
+  { name: "sn_prd_pm.show_product_visuals_on_catalog_ui", value: "true", type: "boolean",
+    description: "This flag, when true, loades the product visuals on the catalog UI. If an product do not have any visuals, a placeholder text is shown. If the flag is false, the visuals will not be loaded." },
 ];
 
 async function run() {

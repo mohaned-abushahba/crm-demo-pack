@@ -72,6 +72,9 @@ Why: The session-timeout record is created per instance at provisioning, so its 
 between instances (opmsalescrm1 vs opmsalescrmstage confirmed). An Update Set would insert a
 duplicate rather than update it. SMTP is a private property that Update Set import can skip.
 File: scripts/post-deploy/01-system-properties.js
+Update (2026-10-07): added `sn_prd_pm.show_product_visuals_on_catalog_ui` = true (product visuals
+on the catalog UI). Plugin-owned property (Product Catalog Management Core, sys_id cf5224b5…ddbf),
+set on opmsalescrm1 2026-09-01; set by name here rather than in a one-record scoped Update Set.
 
 ## UPDATE-018-ui16-banner-image (2026-10-07)
 Instance: opmsalescrm1
