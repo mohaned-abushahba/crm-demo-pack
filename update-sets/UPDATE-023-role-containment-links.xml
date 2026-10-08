@@ -5,7 +5,7 @@
 <application_name>Business Location</application_name>
 <application_scope>sn_bus_loc</application_scope>
 <description>Role containment links missing on targets (both roles exist, the link doesn't): Sales Agent/Manager/Ops -> territory roles, inbound_queue_read -> entity_mapping_viewer, quote_viewer -> product_inventory_viewer, svc_location_manager_contributor -> account/consumer_contributor. Copied from opmsalescrm1 with the same sys_ids, 2026-10-08.</description>
-<name>UPDATE-021-role-containment-links [Business Location]</name>
+<name>UPDATE-023-role-containment-links [Business Location]</name>
 <origin_sys_id>7720e9678daa55d19d5437e5fff067a5</origin_sys_id>
 <remote_sys_id>7720e9678daa55d19d5437e5fff067a5</remote_sys_id>
 <state>loaded</state>
@@ -33,7 +33,7 @@
 <sys_updated_by>admin</sys_updated_by>
 <sys_updated_on>2026-08-22 03:58:52</sys_updated_on>
 </sys_user_role_contains></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-021-role-containment-links [Business Location]">7720e9678daa55d19d5437e5fff067a5</remote_update_set>
+<remote_update_set display_value="UPDATE-023-role-containment-links [Business Location]">7720e9678daa55d19d5437e5fff067a5</remote_update_set>
 <replace_on_upgrade>false</replace_on_upgrade>
 <sys_id>4066b098893f589e84fa604241751d9f</sys_id>
 <table/>
@@ -65,7 +65,7 @@
 <sys_updated_by>admin</sys_updated_by>
 <sys_updated_on>2026-08-22 03:58:53</sys_updated_on>
 </sys_user_role_contains></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-021-role-containment-links [Business Location]">7720e9678daa55d19d5437e5fff067a5</remote_update_set>
+<remote_update_set display_value="UPDATE-023-role-containment-links [Business Location]">7720e9678daa55d19d5437e5fff067a5</remote_update_set>
 <replace_on_upgrade>false</replace_on_upgrade>
 <sys_id>f72eeb79270a5d17a202d75a8c6f3fc8</sys_id>
 <table/>
@@ -80,7 +80,7 @@
 <application_name>Quote Management Data Model</application_name>
 <application_scope>sn_quote_mgmt_core</application_scope>
 <description>Role containment links missing on targets (both roles exist, the link doesn't): Sales Agent/Manager/Ops -> territory roles, inbound_queue_read -> entity_mapping_viewer, quote_viewer -> product_inventory_viewer, svc_location_manager_contributor -> account/consumer_contributor. Copied from opmsalescrm1 with the same sys_ids, 2026-10-08.</description>
-<name>UPDATE-021-role-containment-links [Quote Management Data Model]</name>
+<name>UPDATE-023-role-containment-links [Quote Management Data Model]</name>
 <origin_sys_id>0f7733c734bd55f0a1199dd3a87962f4</origin_sys_id>
 <remote_sys_id>0f7733c734bd55f0a1199dd3a87962f4</remote_sys_id>
 <state>loaded</state>
@@ -108,7 +108,7 @@
 <sys_updated_by>admin</sys_updated_by>
 <sys_updated_on>2024-03-14 05:10:19</sys_updated_on>
 </sys_user_role_contains></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-021-role-containment-links [Quote Management Data Model]">0f7733c734bd55f0a1199dd3a87962f4</remote_update_set>
+<remote_update_set display_value="UPDATE-023-role-containment-links [Quote Management Data Model]">0f7733c734bd55f0a1199dd3a87962f4</remote_update_set>
 <replace_on_upgrade>false</replace_on_upgrade>
 <sys_id>5da3bdf2073e5e4dbee54e301ba87292</sys_id>
 <table/>
@@ -123,7 +123,7 @@
 <application_name>Sales Common</application_name>
 <application_scope>sn_sales_common</application_scope>
 <description>Role containment links missing on targets (both roles exist, the link doesn't): Sales Agent/Manager/Ops -> territory roles, inbound_queue_read -> entity_mapping_viewer, quote_viewer -> product_inventory_viewer, svc_location_manager_contributor -> account/consumer_contributor. Copied from opmsalescrm1 with the same sys_ids, 2026-10-08.</description>
-<name>UPDATE-021-role-containment-links [Sales Common]</name>
+<name>UPDATE-023-role-containment-links [Sales Common]</name>
 <origin_sys_id>f9abb27e04015683b8fab7e13ab8ee0c</origin_sys_id>
 <remote_sys_id>f9abb27e04015683b8fab7e13ab8ee0c</remote_sys_id>
 <state>loaded</state>
@@ -151,7 +151,7 @@
 <sys_updated_by>system</sys_updated_by>
 <sys_updated_on>2026-01-05 20:52:25</sys_updated_on>
 </sys_user_role_contains></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-021-role-containment-links [Sales Common]">f9abb27e04015683b8fab7e13ab8ee0c</remote_update_set>
+<remote_update_set display_value="UPDATE-023-role-containment-links [Sales Common]">f9abb27e04015683b8fab7e13ab8ee0c</remote_update_set>
 <replace_on_upgrade>false</replace_on_upgrade>
 <sys_id>f14c871f4c905b57bef77832ab6b481f</sys_id>
 <table/>
@@ -183,7 +183,7 @@
 <sys_updated_by>system</sys_updated_by>
 <sys_updated_on>2025-05-22 13:56:24</sys_updated_on>
 </sys_user_role_contains></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-021-role-containment-links [Sales Common]">f9abb27e04015683b8fab7e13ab8ee0c</remote_update_set>
+<remote_update_set display_value="UPDATE-023-role-containment-links [Sales Common]">f9abb27e04015683b8fab7e13ab8ee0c</remote_update_set>
 <replace_on_upgrade>false</replace_on_upgrade>
 <sys_id>e660702a3817585d83bb04f439581b37</sys_id>
 <table/>
@@ -215,7 +215,7 @@
 <sys_updated_by>system</sys_updated_by>
 <sys_updated_on>2025-05-22 13:56:05</sys_updated_on>
 </sys_user_role_contains></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-021-role-containment-links [Sales Common]">f9abb27e04015683b8fab7e13ab8ee0c</remote_update_set>
+<remote_update_set display_value="UPDATE-023-role-containment-links [Sales Common]">f9abb27e04015683b8fab7e13ab8ee0c</remote_update_set>
 <replace_on_upgrade>false</replace_on_upgrade>
 <sys_id>f18c3df78baa51129c13209b747dad86</sys_id>
 <table/>
@@ -247,7 +247,7 @@
 <sys_updated_by>system</sys_updated_by>
 <sys_updated_on>2025-05-22 13:56:05</sys_updated_on>
 </sys_user_role_contains></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-021-role-containment-links [Sales Common]">f9abb27e04015683b8fab7e13ab8ee0c</remote_update_set>
+<remote_update_set display_value="UPDATE-023-role-containment-links [Sales Common]">f9abb27e04015683b8fab7e13ab8ee0c</remote_update_set>
 <replace_on_upgrade>false</replace_on_upgrade>
 <sys_id>d71d455a6b5e535587d4e1bbd0b25c98</sys_id>
 <table/>
@@ -262,7 +262,7 @@
 <application_name>CRM API Core</application_name>
 <application_scope>sn_tmt_core</application_scope>
 <description>Role containment links missing on targets (both roles exist, the link doesn't): Sales Agent/Manager/Ops -> territory roles, inbound_queue_read -> entity_mapping_viewer, quote_viewer -> product_inventory_viewer, svc_location_manager_contributor -> account/consumer_contributor. Copied from opmsalescrm1 with the same sys_ids, 2026-10-08.</description>
-<name>UPDATE-021-role-containment-links [CRM API Core]</name>
+<name>UPDATE-023-role-containment-links [CRM API Core]</name>
 <origin_sys_id>fa08752d0c6d52b0b240d1334364fde7</origin_sys_id>
 <remote_sys_id>fa08752d0c6d52b0b240d1334364fde7</remote_sys_id>
 <state>loaded</state>
@@ -290,7 +290,7 @@
 <sys_updated_by>admin</sys_updated_by>
 <sys_updated_on>2025-09-03 08:17:52</sys_updated_on>
 </sys_user_role_contains></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-021-role-containment-links [CRM API Core]">fa08752d0c6d52b0b240d1334364fde7</remote_update_set>
+<remote_update_set display_value="UPDATE-023-role-containment-links [CRM API Core]">fa08752d0c6d52b0b240d1334364fde7</remote_update_set>
 <replace_on_upgrade>false</replace_on_upgrade>
 <sys_id>b712874b9ee257c788f16821e18d2c46</sys_id>
 <table/>

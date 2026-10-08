@@ -14,7 +14,7 @@ File: update-sets/UPDATE-XXX-short-name.xml
 
 ---
 
-## UPDATE-021-role-containment-links (2026-10-08)
+## UPDATE-023-role-containment-links (2026-10-08)
 Instance: opmsalescrm1
 What: 8 sys_user_role_contains links (Sales Agent/Manager/Ops -> territory roles, inbound_queue_read ->
 entity_mapping_viewer, quote_viewer -> product_inventory_viewer, svc_location_manager_contributor ->
@@ -23,7 +23,9 @@ Why: Both roles exist on the target but the link doesn't (stage lost them in the
 cleanup), so users didn't inherit those roles. With this set and Contract Management for Sales CRM
 (sn_som_clm 1.2.6) installed, the stage role check passes for 59/63 users; the 4 remaining gaps are
 tracked in docs/OPEN-ITEMS.md.
-File: update-sets/UPDATE-021-role-containment-links.xml
+File: update-sets/UPDATE-023-role-containment-links.xml
+Note: renumbered from UPDATE-021 at merge (main already had UPDATE-021/022). opmsalescrmstage committed it
+under the old name, UPDATE-021-role-containment-links.
 
 ## Seed loader: ON_CONFLICT option and price-list-line date rule (2026-10-08)
 What: loader.js gains `ON_CONFLICT = 'insert'` (load bundle records alongside existing ones on test
@@ -32,6 +34,40 @@ instances, reported under `duplicates`); companies adopt existing records by nam
 Business Rule accepts them. Bundle regenerated.
 Why: First full load on opmsalescrmstage (2,615/2,616 records).
 Files: skills/golden-demo-seed-loader/, seed/
+
+## UPDATE-022-audit-gap-fixes (2026-10-08)
+Instance: opmsalescrm1
+What: Business Portal logo (Solana, attachment embedded); approval delegation Derek Sanchez (CRO) →
+Rebecca Smith (CFO) for Marquee Large Deal approvals until 2027-12-31 (granular delegate, rule link,
+delegation rule + 2 rule tables); 3 SOW Landing Page homepage destination rules set inactive;
+system-default preference `workspace.showAgentAssist=false` (sidebar off unless a user set it);
+system properties `glide.product.name` = Solana Conglomerate, `glide.sys.date_format` = MM-dd-yyyy,
+`glide.sys.time_format` = hh:mm:ss a, `glide.system.locale` = en.US, `glide.i18n.single_currency` = true,
+`allow_edit_on_published_matrices` = true (Context Rule Management scope). These 6 have the same OOB
+sys_ids on a fresh instance (checked on opmsalescrmstage), so they ship in the Update Set.
+Post-deploy script now also sets `glide.login.home`,
+`sn_opty_mgmt.glide.ui.landing_page_default_dashboard` and `sn_sales_territory.default_sales_model`.
+Why: Audit of `docs/golden demo changes made.docx` against opmsalescrm1 and UPDATE-003…021. These
+were the doc items made on the instance but not captured. UPDATE-003's portal record came from stage
+and carried the coral logo; opmsalescrm1's own update payload also embedded the old attachment, so the
+new one (SHA-256 60a153d0…, 8,101 bytes) was embedded by hand and checked against the source.
+Excluded for now (not yet made on opmsalescrm1, per user 2026-10-08): Probability % from Category rule;
+removing the Location column from Quote Involved Parties; email display name "Solana Conglomerate".
+File: update-sets/UPDATE-022-audit-gap-fixes.xml, scripts/post-deploy/01-system-properties.js
+
+## UPDATE-021-persona-landing-dashboards (2026-10-07)
+Instance: opmsalescrm1
+What: The 3 persona landing page dashboards (`par_dashboard`): Sales Agent Golden Landing Page,
+Sales Manager Golden Landing Page, SDR Golden Landing Page.
+Why: opmsalescrm1 never wrote `sys_update_xml` rows for these parent records (the table is tracked,
+but the Platform Analytics editor did not record them), so UPDATE-016 carried their 8 tabs, 11
+canvases, 39 widgets, 7 permissions and 3 user-metadata rows without the dashboards themselves.
+Gap check (2026-10-07) of every report, dashboard and workspace page record changed since the
+baseline found nothing else missing: other uncaptured items were plugin installs (`system` author),
+deletes, or non-CRM workspaces. Everything the widgets reference (PA indicators, breakdowns,
+filters, chart components, opportunity stages, colours) is OOB and present on a fresh instance;
+the base dashboard "Sales Agent Landing Page OOB" too. Payloads verified by MD5.
+File: update-sets/UPDATE-021-persona-landing-dashboards.xml
 
 ## UPDATE-019 trimmed to the two v2 drafts (2026-10-07)
 What: Removed 8 of the 10 Rule Matrix records from update-sets/UPDATE-019-pricing-matrix-states.xml:
@@ -77,6 +113,9 @@ Why: The session-timeout record is created per instance at provisioning, so its 
 between instances (opmsalescrm1 vs opmsalescrmstage confirmed). An Update Set would insert a
 duplicate rather than update it. SMTP is a private property that Update Set import can skip.
 File: scripts/post-deploy/01-system-properties.js
+Update (2026-10-07): added `sn_prd_pm.show_product_visuals_on_catalog_ui` = true (product visuals
+on the catalog UI). Plugin-owned property (Product Catalog Management Core, sys_id cf5224b5…ddbf),
+set on opmsalescrm1 2026-09-01; set by name here rather than in a one-record scoped Update Set.
 
 ## UPDATE-018-ui16-banner-image (2026-10-07)
 Instance: opmsalescrm1
