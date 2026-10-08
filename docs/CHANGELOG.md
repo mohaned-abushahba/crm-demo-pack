@@ -14,6 +14,24 @@ File: update-sets/UPDATE-XXX-short-name.xml
 
 ---
 
+## UPDATE-022-audit-gap-fixes (2026-10-08)
+Instance: opmsalescrm1
+What: Business Portal logo (Solana, attachment embedded); approval delegation Derek Sanchez (CRO) →
+Rebecca Smith (CFO) for Marquee Large Deal approvals until 2027-12-31 (granular delegate, rule link,
+delegation rule + 2 rule tables); 3 SOW Landing Page homepage destination rules set inactive;
+system-default preference `workspace.showAgentAssist=false` (sidebar off unless a user set it).
+Post-deploy script now also sets `glide.email.username`, `glide.login.home`,
+`sn_opty_mgmt.glide.ui.landing_page_default_dashboard` and `sn_sales_territory.default_sales_model`.
+Why: Audit of `docs/golden demo changes made.docx` against opmsalescrm1 and UPDATE-003…021. These
+were the doc items made on the instance but not captured. UPDATE-003's portal record came from stage
+and carried the coral logo; opmsalescrm1's own update payload also embedded the old attachment, so the
+new one (SHA-256 60a153d0…, 8,101 bytes) was embedded by hand and checked against the source.
+Not captured, not found on opmsalescrm1: Probability % from Category rule; removing the Location column
+from Quote Involved Parties. Email display name: opmsalescrm1's live value is still "IT Service Desk"
+(last sent email 10-02 also used it), although its 09-01 update payload says "Solana Conglomerate".
+The post-deploy script sets the documented value.
+File: update-sets/UPDATE-022-audit-gap-fixes.xml, scripts/post-deploy/01-system-properties.js
+
 ## UPDATE-021-persona-landing-dashboards (2026-10-07)
 Instance: opmsalescrm1
 What: The 3 persona landing page dashboards (`par_dashboard`): Sales Agent Golden Landing Page,
