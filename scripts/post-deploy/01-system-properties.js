@@ -11,11 +11,6 @@
 //                                     Show product visuals on the catalog UI. Plugin-owned
 //                                     (Product Catalog Management Core); setting it by name
 //                                     avoids a scoped Update Set for one property.
-//   glide.email.username = Solana Conglomerate
-//                                     Outgoing mail display name (was "IT Service Desk").
-//                                     Private property. Note: opmsalescrm1's live value had
-//                                     reverted to "IT Service Desk" at the 2026-10-08 audit,
-//                                     although its update payload records this value.
 //   glide.login.home = /now/cwf/agent/home
 //                                     Land users in the CRM Workspace after login.
 //   sn_opty_mgmt.glide.ui.landing_page_default_dashboard = 7fc64331…bf1a
@@ -38,8 +33,6 @@ const PROPERTIES = [
     description: "Email sending enabled" },
   { name: "sn_prd_pm.show_product_visuals_on_catalog_ui", value: "true", type: "boolean",
     description: "This flag, when true, loades the product visuals on the catalog UI. If an product do not have any visuals, a placeholder text is shown. If the flag is false, the visuals will not be loaded." },
-  { name: "glide.email.username", value: "Solana Conglomerate", type: "string",
-    description: "Outgoing mail display name (e.g. \"Help Desk\")" },
   { name: "glide.login.home", value: "/now/cwf/agent/home", type: "string",
     description: "Default page to open after login" },
   { name: "sn_opty_mgmt.glide.ui.landing_page_default_dashboard", value: "7fc643312bc74f104deaf02ac891bf1a", type: "string",

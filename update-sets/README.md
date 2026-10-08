@@ -12,7 +12,7 @@ Naming: `UPDATE-<NNN>-<short-kebab-name>.xml`
 | UPDATE-004 … 017 | opmsalescrm1 (stable golden instance) | Captured 2026-10-06 from the instance's customer update payloads (Default update sets), grouped by feature. See `docs/CHANGELOG.md` |
 | UPDATE-018 | opmsalescrm1 | Captured 2026-10-07: UI16 banner image properties plus their image attachments, serialised by hand |
 | UPDATE-019 | opmsalescrm1 | Captured 2026-10-07: OOB Standard Price Adjustment v2 / Price List Defaulting v2 matrices set to draft, serialised from live values |
-| UPDATE-022 | opmsalescrm1 | Captured 2026-10-08: gaps from the audit of the golden demo change list (Business Portal logo, CRO→CFO approval delegation, SOW homepage rules off, sidebar-off default preference) |
+| UPDATE-022 | opmsalescrm1 | Captured 2026-10-08: gaps from the audit of the golden demo change list (Business Portal logo, CRO→CFO approval delegation, SOW homepage rules off, sidebar-off default preference, branding/date/locale/currency/matrix-edit properties) |
 | UPDATE-020 | opmsalescrm1 | Captured 2026-10-07: approver groups/users on the Advanced Approval rules, serialised from live values |
 | UPDATE-021 | opmsalescrm1 | Captured 2026-10-07: the 3 persona landing page dashboards (parent records missing from 016), serialised from live values |
 

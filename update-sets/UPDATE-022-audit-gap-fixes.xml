@@ -4,7 +4,7 @@
 <application display_value="Global">global</application>
 <application_name>Global</application_name>
 <application_scope>global</application_scope>
-<description>Gaps found in the 2026-10-08 audit of the golden demo change list against opmsalescrm1: Approval delegation Derek Sanchez (CRO) to Rebecca Smith (CFO) for Marquee Large Deal approvals until 2027-12-31 (granular delegate + rule link + approval-group rule table), and the system-default workspace.showAgentAssist=false preference (sidebar off by default). sys_granular_delegate and sys_m2m_delegate_rule are not update-set tracked, so those payloads were serialised from live field values. Source: opmsalescrm1 (captured 2026-10-08).</description>
+<description>Gaps found in the 2026-10-08 audit of the golden demo change list against opmsalescrm1: System properties glide.product.name=Solana Conglomerate, glide.sys.date_format=MM-dd-yyyy, glide.sys.time_format=hh:mm:ss a, glide.system.locale=en.US, glide.i18n.single_currency=true. Approval delegation Derek Sanchez (CRO) to Rebecca Smith (CFO) for Marquee Large Deal approvals until 2027-12-31 (granular delegate + rule link + approval-group rule table), and the system-default workspace.showAgentAssist=false preference (sidebar off by default). sys_granular_delegate and sys_m2m_delegate_rule are not update-set tracked, so those payloads were serialised from live field values. Source: opmsalescrm1 (captured 2026-10-08).</description>
 <name>UPDATE-022-audit-gap-fixes</name>
 <origin_sys_id>cddae8160f6c737b77cacdd03a1f59f5</origin_sys_id>
 <remote_sys_id>cddae8160f6c737b77cacdd03a1f59f5</remote_sys_id>
@@ -54,6 +54,17 @@
 <remote_sys_id>b4a331326a9451d1a842ee4ca05e39f5</remote_sys_id>
 <state>loaded</state>
 <sys_id>b4a331326a9451d1a842ee4ca05e39f5</sys_id>
+</sys_remote_update_set>
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Context Rule Management">6836e9cc537471105c0eddeeff7b123a</application>
+<application_name>Context Rule Management</application_name>
+<application_scope>sn_csm_ctxrul_mgt</application_scope>
+<description>Gaps found in the 2026-10-08 audit of the golden demo change list against opmsalescrm1: allow_edit_on_published_matrices=true (published rule matrices stay editable). Source: opmsalescrm1 (captured 2026-10-08).</description>
+<name>UPDATE-022-audit-gap-fixes [Context Rule Management]</name>
+<origin_sys_id>ced15709fe7c38a4bc1f9b0f49e1779b</origin_sys_id>
+<remote_sys_id>ced15709fe7c38a4bc1f9b0f49e1779b</remote_sys_id>
+<state>loaded</state>
+<sys_id>ced15709fe7c38a4bc1f9b0f49e1779b</sys_id>
 </sys_remote_update_set>
 <sys_update_xml action="INSERT_OR_UPDATE">
 <action>INSERT_OR_UPDATE</action>
@@ -119,6 +130,96 @@
 <table></table>
 <target_name>workspace.showAgentAssist</target_name>
 <type>User Preference</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_4fad40f6c611228e01172f8f67a17549</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Browser tab title</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>glide.product.name</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>fred.luddy</sys_created_by><sys_created_on>2005-01-08 00:15:49</sys_created_on><sys_id>4fad40f6c611228e01172f8f67a17549</sys_id><sys_mod_count>7</sys_mod_count><sys_name>glide.product.name</sys_name><sys_package display_value="System (apps/system2)" source="apps/system2">2f1b06022b3203104deaf02ac891bf3c</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_properties_4fad40f6c611228e01172f8f67a17549</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 04:22:33</sys_updated_on><type>string</type><value>Solana Conglomerate</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=4fad40f6c611228e01172f8f67a17549"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-022-audit-gap-fixes">cddae8160f6c737b77cacdd03a1f59f5</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>7bbdab6ff93051e0f3df6b5ea5bb4ec3</sys_id>
+<table></table>
+<target_name>glide.product.name</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_24de57037f000001002b3574b0ad5187</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Date format</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>glide.sys.date_format</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>glide.maint</sys_created_by><sys_created_on>2005-12-13 16:05:17</sys_created_on><sys_id>24de57037f000001002b3574b0ad5187</sys_id><sys_mod_count>13</sys_mod_count><sys_name>glide.sys.date_format</sys_name><sys_package display_value="System (glidesoft)" source="glidesoft">1e4b8e022b3203104deaf02ac891bffc</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_properties_24de57037f000001002b3574b0ad5187</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 04:22:33</sys_updated_on><type>date_format</type><value>MM-dd-yyyy</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=24de57037f000001002b3574b0ad5187"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-022-audit-gap-fixes">cddae8160f6c737b77cacdd03a1f59f5</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>f944230aae570394d5835454ce8c74cb</sys_id>
+<table></table>
+<target_name>glide.sys.date_format</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_2851c40e0a607c35003b014cd3e4343b</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Time format</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>glide.sys.time_format</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>glide.maint</sys_created_by><sys_created_on>2005-12-16 21:10:13</sys_created_on><sys_id>2851c40e0a607c35003b014cd3e4343b</sys_id><sys_mod_count>16</sys_mod_count><sys_name>glide.sys.time_format</sys_name><sys_package display_value="System (glidesoft)" source="glidesoft">1e4b8e022b3203104deaf02ac891bffc</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_properties_2851c40e0a607c35003b014cd3e4343b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 04:22:34</sys_updated_on><type>time_format</type><value>hh:mm:ss a</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=2851c40e0a607c35003b014cd3e4343b"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-022-audit-gap-fixes">cddae8160f6c737b77cacdd03a1f59f5</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>216db8484f125b80642c548885303f7f</sys_id>
+<table></table>
+<target_name>glide.sys.time_format</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_976c364ec0a8000500555538944bbbf6</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Locale code to use for localization. Format is [language code].[country code] (e.g. en.GB for Britain fr.FR for France, de.DE for Germany, or ja.JP for Japan).&lt;br/&gt;&#13;
+&lt;br/&gt;&#13;
+NOTE: Do not change this value once a system has gone into production. If a user's locale must be changed, update the "Country code" field on the user record.&lt;br/&gt;&#13;
+&lt;br/&gt;&#13;
+The value of this property determines the system's default currency into which all prices are automatically converted before other sums or conversions are performed.&lt;br/&gt;&#13;
+Changing this property after any price or currency fields have been given a value (for Service Catalog items, Assets, Project Tasks, etc.) may result in improper conversion or prices that sum incorrectly.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>glide.system.locale</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>glide.maint</sys_created_by><sys_created_on>2006-07-22 18:08:06</sys_created_on><sys_id>976c364ec0a8000500555538944bbbf6</sys_id><sys_mod_count>18</sys_mod_count><sys_name>glide.system.locale</sys_name><sys_package display_value="System (glidesoft)" source="glidesoft">1e4b8e022b3203104deaf02ac891bffc</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_properties_976c364ec0a8000500555538944bbbf6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 04:34:30</sys_updated_on><type>string</type><value>en.US</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=976c364ec0a8000500555538944bbbf6"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-022-audit-gap-fixes">cddae8160f6c737b77cacdd03a1f59f5</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>26afa5db098c70adfc8af70dbb5734de</sys_id>
+<table></table>
+<target_name>glide.system.locale</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_4a44f58f0a0a0b020010d628bb00f1d8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Use a single currency model. Display all currencies in the same currency code, regardless of a user's locale, country, or language code</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>glide.i18n.single_currency</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>pat.casey</sys_created_by><sys_created_on>2010-04-29 15:53:29</sys_created_on><sys_id>4a44f58f0a0a0b020010d628bb00f1d8</sys_id><sys_mod_count>6</sys_mod_count><sys_name>glide.i18n.single_currency</sys_name><sys_package display_value="Currency support (costs and pricing)" source="com.glide.currency">8b9c8ace2b3203104deaf02ac891bf5d</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_properties_4a44f58f0a0a0b020010d628bb00f1d8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 04:33:23</sys_updated_on><type>boolean</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=4a44f58f0a0a0b020010d628bb00f1d8"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-022-audit-gap-fixes">cddae8160f6c737b77cacdd03a1f59f5</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>76ec983060552d878663101771faf013</sys_id>
+<table></table>
+<target_name>glide.i18n.single_currency</target_name>
+<type>System Property</type>
 <update_domain>global</update_domain>
 <update_set/>
 <view/>
@@ -221,6 +322,23 @@
 <table></table>
 <target_name>sn_adv_appr_mgmt_approval_step</target_name>
 <type>Delegation Rule Table</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Context Rule Management">6836e9cc537471105c0eddeeff7b123a</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_4c1ad13dff103210998fffffffffffe3</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description/><ignore_cache>true</ignore_cache><is_private>false</is_private><name>allow_edit_on_published_matrices</name><read_roles/><suffix>allow_edit_on_published_matrices</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-30 20:20:06</sys_created_on><sys_id>4c1ad13dff103210998fffffffffffe3</sys_id><sys_mod_count>30</sys_mod_count><sys_name>allow_edit_on_published_matrices</sys_name><sys_package display_value="Context Rule Management" source="sn_csm_ctxrul_mgt">6836e9cc537471105c0eddeeff7b123a</sys_package><sys_policy/><sys_scope display_value="Context Rule Management">6836e9cc537471105c0eddeeff7b123a</sys_scope><sys_update_name>sys_properties_4c1ad13dff103210998fffffffffffe3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-27 19:50:04</sys_updated_on><type>boolean</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=4c1ad13dff103210998fffffffffffe3"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-022-audit-gap-fixes [Context Rule Management]">ced15709fe7c38a4bc1f9b0f49e1779b</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>44aa4354f241d0cab16a27ad1dbd3bec</sys_id>
+<table></table>
+<target_name>allow_edit_on_published_matrices</target_name>
+<type>System Property</type>
 <update_domain>global</update_domain>
 <update_set/>
 <view/>
