@@ -14,6 +14,15 @@ File: update-sets/UPDATE-XXX-short-name.xml
 
 ---
 
+## UPDATE-021-persona-landing-dashboards removed (2026-10-08)
+Instance: n/a (repo clean-up)
+What: Deleted update-sets/UPDATE-021-persona-landing-dashboards.xml. Its 3 par_dashboard parents
+(Sales Agent / Sales Manager / SDR Golden Landing Page) are also in UPDATE-016, which is the copy
+deployed to opmsalescrmstage.
+Why: The branch merge left the same 3 records in two Update Sets. The field values match; only the XML
+serialisation differs. 021 is left unused instead of renumbering 022/023.
+File: update-sets/UPDATE-016-workspace-landing-pages-dashboards.xml
+
 ## UPDATE-023-role-containment-links (2026-10-08)
 Instance: opmsalescrm1
 What: 8 sys_user_role_contains links (Sales Agent/Manager/Ops -> territory roles, inbound_queue_read ->
