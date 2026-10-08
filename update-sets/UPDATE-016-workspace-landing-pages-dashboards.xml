@@ -33,23 +33,6 @@
 <application display_value="Global">global</application>
 <category>customer</category>
 <comments/>
-<name>par_dashboard_user_metadata_958685ca2b4f8f104deaf02ac891bfec</name>
-<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_user_metadata"><par_dashboard_user_metadata action="INSERT_OR_UPDATE"><background_color>--now-color_background--primary</background_color><cache_expiration_time>24</cache_expiration_time><card_bg_image/><created_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</created_by_user><created_on>2026-09-02 02:36:36</created_on><dashboard display_value="SDR Golden Landing Page">918685ca2b4f8f104deaf02ac891bfad</dashboard><edit_locked/><enable_data_cache>false</enable_data_cache><include_custom_insights>true</include_custom_insights><include_insight_sentiment>false</include_insight_sentiment><include_key_contributors>true</include_key_contributors><include_kpi_signals>true</include_kpi_signals><include_predictive_target>true</include_predictive_target><include_predictive_thresholds>true</include_predictive_thresholds><include_process_mining>true</include_process_mining><include_severity>true</include_severity><include_target>true</include_target><include_thresholds>true</include_thresholds><include_trends>true</include_trends><include_widget_notification>true</include_widget_notification><last_deactivated_on/><last_updated_on>2026-09-28 18:28:31</last_updated_on><po_project_id_list>[]</po_project_id_list><refresh_information>false</refresh_information><refresh_interval>-1</refresh_interval><requested_by_user/><schedule_repetition>false</schedule_repetition><show_ai_insights_panel>false</show_ai_insights_panel><show_ai_summary>false</show_ai_summary><show_insights_panel>true</show_insights_panel><sys_class_name>par_dashboard_user_metadata</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-02 02:36:36</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>958685ca2b4f8f104deaf02ac891bfec</sys_id><sys_mod_count>68</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>par_dashboard_user_metadata_958685ca2b4f8f104deaf02ac891bfec</sys_update_name><sys_updated_by>rosaalie.shah@snc</sys_updated_by><sys_updated_on>2026-09-28 18:28:45</sys_updated_on><updated_by_user display_value="">rosaalie.shah@snc</updated_by_user><use_custom_tab_colors>false</use_custom_tab_colors><widgets_margin>$now-global-space--sm</widgets_margin></par_dashboard_user_metadata></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-016-workspace-landing-pages-dashboards [Global]">0e5f514ff13252869602b0b1c469a87d</remote_update_set>
-<replace_on_upgrade>false</replace_on_upgrade>
-<sys_id>91a7080540785b08be15c909980b922c</sys_id>
-<table></table>
-<target_name></target_name>
-<type>PAR Dashboard Metadata</type>
-<update_domain>global</update_domain>
-<update_set/>
-<view></view>
-</sys_update_xml>
-<sys_update_xml action="INSERT_OR_UPDATE">
-<action>INSERT_OR_UPDATE</action>
-<application display_value="Global">global</application>
-<category>customer</category>
-<comments/>
 <name>par_dashboard_user_metadata_d2520a202bd3c3504deaf02ac891bf3e</name>
 <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_user_metadata"><par_dashboard_user_metadata action="INSERT_OR_UPDATE"><background_color>--now-color_background--primary</background_color><cache_expiration_time>24</cache_expiration_time><card_bg_image/><created_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</created_by_user><created_on>2026-09-10 01:22:49</created_on><dashboard display_value="Sales Manager Golden Landing Page">16520a202bd3c3504deaf02ac891bf19</dashboard><edit_locked/><enable_data_cache>false</enable_data_cache><include_custom_insights>true</include_custom_insights><include_insight_sentiment>false</include_insight_sentiment><include_key_contributors>true</include_key_contributors><include_kpi_signals>true</include_kpi_signals><include_predictive_target>true</include_predictive_target><include_predictive_thresholds>true</include_predictive_thresholds><include_process_mining>true</include_process_mining><include_severity>true</include_severity><include_target>true</include_target><include_thresholds>true</include_thresholds><include_trends>true</include_trends><include_widget_notification>true</include_widget_notification><last_deactivated_on/><last_updated_on>2026-09-10 08:18:27</last_updated_on><po_project_id_list>[]</po_project_id_list><refresh_information>false</refresh_information><refresh_interval/><requested_by_user/><schedule_repetition>false</schedule_repetition><show_ai_insights_panel>false</show_ai_insights_panel><show_ai_summary>true</show_ai_summary><show_insights_panel>true</show_insights_panel><sys_class_name>par_dashboard_user_metadata</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-10 01:22:49</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>d2520a202bd3c3504deaf02ac891bf3e</sys_id><sys_mod_count>137</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>par_dashboard_user_metadata_d2520a202bd3c3504deaf02ac891bf3e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-10 08:18:27</sys_updated_on><updated_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</updated_by_user><use_custom_tab_colors>false</use_custom_tab_colors><widgets_margin>$now-global-space--sm</widgets_margin></par_dashboard_user_metadata></record_update>]]></payload>
 <remote_update_set display_value="UPDATE-016-workspace-landing-pages-dashboards [Global]">0e5f514ff13252869602b0b1c469a87d</remote_update_set>
@@ -1529,23 +1512,6 @@
 <application display_value="Global">global</application>
 <category>customer</category>
 <comments/>
-<name>par_visualization_permission_18f3f9a42b13c3504deaf02ac891bff0</name>
-<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="par_visualization_permission"><par_visualization_permission action="INSERT_OR_UPDATE"><can_share>true</can_share><component display_value="Sales Funnel Report">dcf3f9a42b13c3504deaf02ac891bf56</component><group/><owner>true</owner><role/><sys_class_name>par_visualization_permission</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-10 00:19:53</sys_created_on><sys_id>18f3f9a42b13c3504deaf02ac891bff0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>dcf3f9a42b13c3504deaf02ac891bf56</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>par_visualization_permission_18f3f9a42b13c3504deaf02ac891bff0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-10 00:19:53</sys_updated_on><user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</user><write>true</write></par_visualization_permission></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-016-workspace-landing-pages-dashboards [Global]">0e5f514ff13252869602b0b1c469a87d</remote_update_set>
-<replace_on_upgrade>false</replace_on_upgrade>
-<sys_id>8bfa0e21b0e986a6a4314aa197fc43d9</sys_id>
-<table></table>
-<target_name>dcf3f9a42b13c3504deaf02ac891bf56</target_name>
-<type>PAR Visualization Permission</type>
-<update_domain>global</update_domain>
-<update_set/>
-<view></view>
-</sys_update_xml>
-<sys_update_xml action="INSERT_OR_UPDATE">
-<action>INSERT_OR_UPDATE</action>
-<application display_value="Global">global</application>
-<category>customer</category>
-<comments/>
 <name>par_visualization_permission_277af5282b53c3504deaf02ac891bf0d</name>
 <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="par_visualization_permission"><par_visualization_permission action="INSERT_OR_UPDATE"><can_share>true</can_share><component display_value="Sales Funnel Report">1b7af1282b53c3504deaf02ac891bffa</component><group/><owner>true</owner><role/><sys_class_name>par_visualization_permission</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-10 00:48:29</sys_created_on><sys_id>277af5282b53c3504deaf02ac891bf0d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1b7af1282b53c3504deaf02ac891bffa</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>par_visualization_permission_277af5282b53c3504deaf02ac891bf0d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-10 00:48:29</sys_updated_on><user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</user><write>true</write></par_visualization_permission></record_update>]]></payload>
 <remote_update_set display_value="UPDATE-016-workspace-landing-pages-dashboards [Global]">0e5f514ff13252869602b0b1c469a87d</remote_update_set>
@@ -1614,23 +1580,6 @@
 <application display_value="Global">global</application>
 <category>customer</category>
 <comments/>
-<name>par_visualization_permission_5cf5b12c2b13c3504deaf02ac891bf20</name>
-<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="par_visualization_permission"><par_visualization_permission action="INSERT_OR_UPDATE"><can_share>true</can_share><component display_value="Sales Lead Funnel">90f5312c2b13c3504deaf02ac891bfff</component><group/><owner>true</owner><role/><sys_class_name>par_visualization_permission</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-10 00:28:37</sys_created_on><sys_id>5cf5b12c2b13c3504deaf02ac891bf20</sys_id><sys_mod_count>0</sys_mod_count><sys_name>90f5312c2b13c3504deaf02ac891bfff</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>par_visualization_permission_5cf5b12c2b13c3504deaf02ac891bf20</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-10 00:28:37</sys_updated_on><user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</user><write>true</write></par_visualization_permission></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-016-workspace-landing-pages-dashboards [Global]">0e5f514ff13252869602b0b1c469a87d</remote_update_set>
-<replace_on_upgrade>false</replace_on_upgrade>
-<sys_id>8a75339e4c2879d1f532a50c1eb3f1fc</sys_id>
-<table></table>
-<target_name>90f5312c2b13c3504deaf02ac891bfff</target_name>
-<type>PAR Visualization Permission</type>
-<update_domain>global</update_domain>
-<update_set/>
-<view></view>
-</sys_update_xml>
-<sys_update_xml action="INSERT_OR_UPDATE">
-<action>INSERT_OR_UPDATE</action>
-<application display_value="Global">global</application>
-<category>customer</category>
-<comments/>
 <name>par_visualization_permission_735351642b9b83504deaf02ac891bf15</name>
 <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="par_visualization_permission"><par_visualization_permission action="INSERT_OR_UPDATE"><can_share>true</can_share><component display_value="Opportunities by Stage">7b53dd242b9b83504deaf02ac891bf8b</component><group/><owner>true</owner><role/><sys_class_name>par_visualization_permission</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-09 21:57:34</sys_created_on><sys_id>735351642b9b83504deaf02ac891bf15</sys_id><sys_mod_count>0</sys_mod_count><sys_name>7b53dd242b9b83504deaf02ac891bf8b</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>par_visualization_permission_735351642b9b83504deaf02ac891bf15</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-09 21:57:34</sys_updated_on><user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</user><write>true</write></par_visualization_permission></record_update>]]></payload>
 <remote_update_set display_value="UPDATE-016-workspace-landing-pages-dashboards [Global]">0e5f514ff13252869602b0b1c469a87d</remote_update_set>
@@ -1638,23 +1587,6 @@
 <sys_id>71dfbbc239f1d609ea1ea0ad2ea540d0</sys_id>
 <table></table>
 <target_name>7b53dd242b9b83504deaf02ac891bf8b</target_name>
-<type>PAR Visualization Permission</type>
-<update_domain>global</update_domain>
-<update_set/>
-<view></view>
-</sys_update_xml>
-<sys_update_xml action="INSERT_OR_UPDATE">
-<action>INSERT_OR_UPDATE</action>
-<application display_value="Global">global</application>
-<category>customer</category>
-<comments/>
-<name>par_visualization_permission_82bcfd6c2b53c3504deaf02ac891bfd4</name>
-<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="par_visualization_permission"><par_visualization_permission action="INSERT_OR_UPDATE"><can_share>true</can_share><component display_value="Sales Funnel Report">0abc3d6c2b53c3504deaf02ac891bf78</component><group/><owner>true</owner><role/><sys_class_name>par_visualization_permission</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-10 00:58:13</sys_created_on><sys_id>82bcfd6c2b53c3504deaf02ac891bfd4</sys_id><sys_mod_count>0</sys_mod_count><sys_name>0abc3d6c2b53c3504deaf02ac891bf78</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>par_visualization_permission_82bcfd6c2b53c3504deaf02ac891bfd4</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-10 00:58:13</sys_updated_on><user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</user><write>true</write></par_visualization_permission></record_update>]]></payload>
-<remote_update_set display_value="UPDATE-016-workspace-landing-pages-dashboards [Global]">0e5f514ff13252869602b0b1c469a87d</remote_update_set>
-<replace_on_upgrade>false</replace_on_upgrade>
-<sys_id>2fe744ce8a4d43edcdfcced13b57979f</sys_id>
-<table></table>
-<target_name>0abc3d6c2b53c3504deaf02ac891bf78</target_name>
 <type>PAR Visualization Permission</type>
 <update_domain>global</update_domain>
 <update_set/>
@@ -16330,5 +16262,143 @@ function handler({api, event, helpers, imports}) {
 <update_domain>global</update_domain>
 <update_set/>
 <view></view>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>par_dashboard_7fc643312bc74f104deaf02ac891bf1a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard"><par_dashboard action="INSERT_OR_UPDATE">
+<active>true</active>
+<base_dashboard display_value="Sales Agent Landing Page OOB">f12593b4ff600710e4d5ffffffffff89</base_dashboard>
+<certified>false</certified>
+<description/>
+<experience display_value=""/>
+<grid>48</grid>
+<name>Sales Agent Golden Landing Page</name>
+<ready_to_migrate>Not Applicable</ready_to_migrate>
+<sys_class_name>par_dashboard</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-09-01 17:18:38</sys_created_on>
+<sys_domain>global</sys_domain>
+<sys_domain_path>/</sys_domain_path>
+<sys_id>7fc643312bc74f104deaf02ac891bf1a</sys_id>
+<sys_mod_count>35</sys_mod_count>
+<sys_name>Sales Agent Golden Landing Page</sys_name>
+<sys_overrides display_value=""/>
+<sys_package display_value="Global" source="global">global</sys_package>
+<sys_policy/>
+<sys_scope display_value="Global">global</sys_scope>
+<sys_update_name>par_dashboard_7fc643312bc74f104deaf02ac891bf1a</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-09-10 08:13:10</sys_updated_on>
+<sys_ux_app_config display_value=""/>
+<sys_ux_app_route display_value=""/>
+<sys_ux_macroponent display_value=""/>
+<sys_ux_screen display_value=""/>
+<sys_ux_screen_type display_value=""/>
+</par_dashboard></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-016-workspace-landing-pages-dashboards [Global]">0e5f514ff13252869602b0b1c469a87d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>8bed2e337a825bccbb6d4c0a4c0699f7</sys_id>
+<table/>
+<target_name>Sales Agent Golden Landing Page</target_name>
+<type>PAR Dashboard</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>par_dashboard_16520a202bd3c3504deaf02ac891bf19</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard"><par_dashboard action="INSERT_OR_UPDATE">
+<active>true</active>
+<base_dashboard display_value="Sales Agent Golden Landing Page">7fc643312bc74f104deaf02ac891bf1a</base_dashboard>
+<certified>false</certified>
+<description>Sales Manager Golden Landing Page</description>
+<experience display_value=""/>
+<grid>48</grid>
+<name>Sales Manager Golden Landing Page</name>
+<ready_to_migrate>Not Applicable</ready_to_migrate>
+<sys_class_name>par_dashboard</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-09-10 01:22:49</sys_created_on>
+<sys_domain>global</sys_domain>
+<sys_domain_path>/</sys_domain_path>
+<sys_id>16520a202bd3c3504deaf02ac891bf19</sys_id>
+<sys_mod_count>69</sys_mod_count>
+<sys_name>Sales Manager Golden Landing Page</sys_name>
+<sys_overrides display_value=""/>
+<sys_package display_value="Global" source="global">global</sys_package>
+<sys_policy/>
+<sys_scope display_value="Global">global</sys_scope>
+<sys_update_name>par_dashboard_16520a202bd3c3504deaf02ac891bf19</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-09-10 08:18:26</sys_updated_on>
+<sys_ux_app_config display_value=""/>
+<sys_ux_app_route display_value=""/>
+<sys_ux_macroponent display_value=""/>
+<sys_ux_screen display_value=""/>
+<sys_ux_screen_type display_value=""/>
+</par_dashboard></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-016-workspace-landing-pages-dashboards [Global]">0e5f514ff13252869602b0b1c469a87d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>28233a4ab3d55c52b3ebd304b449cc65</sys_id>
+<table/>
+<target_name>Sales Manager Golden Landing Page</target_name>
+<type>PAR Dashboard</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>par_dashboard_918685ca2b4f8f104deaf02ac891bfad</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard"><par_dashboard action="INSERT_OR_UPDATE">
+<active>true</active>
+<base_dashboard display_value="Sales Agent Golden Landing Page">7fc643312bc74f104deaf02ac891bf1a</base_dashboard>
+<certified>false</certified>
+<description>Sales Development Rep Landing Page</description>
+<experience display_value=""/>
+<grid>48</grid>
+<name>SDR Golden Landing Page</name>
+<ready_to_migrate>Not Applicable</ready_to_migrate>
+<sys_class_name>par_dashboard</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-09-02 02:36:36</sys_created_on>
+<sys_domain>global</sys_domain>
+<sys_domain_path>/</sys_domain_path>
+<sys_id>918685ca2b4f8f104deaf02ac891bfad</sys_id>
+<sys_mod_count>37</sys_mod_count>
+<sys_name>SDR Golden Landing Page</sys_name>
+<sys_overrides display_value=""/>
+<sys_package display_value="Global" source="global">global</sys_package>
+<sys_policy/>
+<sys_scope display_value="Global">global</sys_scope>
+<sys_update_name>par_dashboard_918685ca2b4f8f104deaf02ac891bfad</sys_update_name>
+<sys_updated_by>rosaalie.shah@snc</sys_updated_by>
+<sys_updated_on>2026-09-28 18:28:29</sys_updated_on>
+<sys_ux_app_config display_value=""/>
+<sys_ux_app_route display_value=""/>
+<sys_ux_macroponent display_value=""/>
+<sys_ux_screen display_value=""/>
+<sys_ux_screen_type display_value=""/>
+</par_dashboard></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-016-workspace-landing-pages-dashboards [Global]">0e5f514ff13252869602b0b1c469a87d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>6c0453e49e0050c59f87b7e0fbcaf023</sys_id>
+<table/>
+<target_name>SDR Golden Landing Page</target_name>
+<type>PAR Dashboard</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
 </sys_update_xml>
 </unload>
