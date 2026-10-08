@@ -6,3 +6,4 @@ node_modules/
 # Demo login passwords collected from the sheet (seed/tools/passwords.py)
 seed/secrets/
 __pycache__/
+backups/
