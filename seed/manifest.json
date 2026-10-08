@@ -1,5 +1,5 @@
 {
-  "_comment": "Master-data seed manifest. Tables are extracted from the source instance and loaded onto the target in this order. Scope = records created inside any 'windows' range (2026-08-22 is skipped: plugin activation day, run as admin), ANDed with the table's 'query'. 'key' is the business key used to detect a record that already exists on the target with a different sys_id; on_conflict 'fail' stops the load, 'adopt' keeps the target's record (used for join rows that platform automation may already have created).",
+  "_comment": "Master-data seed manifest. Tables are extracted from the source instance and loaded onto the target in this order. Scope = records created inside any 'windows' range (2026-08-22 is skipped: plugin activation day, run as admin), ANDed with the table's 'query'. 'key' is the business key used to detect a record that already exists on the target with a different sys_id; on_conflict 'fail' stops the load, 'adopt' keeps the target's record (used for join rows that platform automation may already have created). 'insert_as' gives temporary values used on insert; the real values are applied after every table is loaded (e.g. children can only be added while a price list is draft).",
   "source_instance": "opmsalescrm1",
   "exclude_fields": [
     "sys_created_by",
@@ -86,7 +86,8 @@
       "table": "sys_user_has_role",
       "key": [
         "user",
-        "role"
+        "role",
+        "inherited"
       ],
       "query": "inherited=false",
       "exclude": [
@@ -113,7 +114,7 @@
       "file": "100-customer_account",
       "table": "customer_account",
       "key": [
-        "number"
+        "name"
       ],
       "query": "sys_class_name=customer_account"
     },
@@ -243,8 +244,11 @@
       "file": "415-sn_prd_pm_specification",
       "table": "sn_prd_pm_specification",
       "key": [
-        "number"
-      ]
+        "name"
+      ],
+      "insert_as": {
+        "status": "draft"
+      }
     },
     {
       "file": "420-sn_prd_pm_specification_characteristic",
@@ -261,14 +265,20 @@
       "table": "sn_prd_pm_product_offering_catalog",
       "key": [
         "code"
-      ]
+      ],
+      "insert_as": {
+        "status": "draft"
+      }
     },
     {
       "file": "435-sn_prd_pm_product_offering_category",
       "table": "sn_prd_pm_product_offering_category",
       "key": [
         "code"
-      ]
+      ],
+      "insert_as": {
+        "status": "draft"
+      }
     },
     {
       "file": "440-sn_prd_pm_catalog_category_relationship",
@@ -287,7 +297,10 @@
       "table": "sn_prd_pm_product_offering",
       "key": [
         "code"
-      ]
+      ],
+      "insert_as": {
+        "status": "draft"
+      }
     },
     {
       "file": "455-sn_prd_pm_product_offering_category_relationship",
@@ -334,7 +347,10 @@
       "table": "sn_csm_pricing_price_list",
       "key": [
         "name"
-      ]
+      ],
+      "insert_as": {
+        "state": "draft"
+      }
     },
     {
       "file": "510-sn_csm_pricing_price_list_line",
@@ -348,7 +364,10 @@
       "table": "sn_csm_pricing_cost_book",
       "key": [
         "name"
-      ]
+      ],
+      "insert_as": {
+        "state": "draft"
+      }
     },
     {
       "file": "530-sn_csm_pricing_cost_book_line",
