@@ -14,6 +14,25 @@ File: update-sets/UPDATE-XXX-short-name.xml
 
 ---
 
+## UPDATE-021-role-containment-links (2026-10-08)
+Instance: opmsalescrm1
+What: 8 sys_user_role_contains links (Sales Agent/Manager/Ops -> territory roles, inbound_queue_read ->
+entity_mapping_viewer, quote_viewer -> product_inventory_viewer, svc_location_manager_contributor ->
+account/consumer_contributor), copied with the same sys_ids.
+Why: Both roles exist on the target but the link doesn't (stage lost them in the 2026-10-05 dangling-role
+cleanup), so users didn't inherit those roles. With this set and Contract Management for Sales CRM
+(sn_som_clm 1.2.6) installed, the stage role check passes for 59/63 users; the 4 remaining gaps are
+tracked in docs/OPEN-ITEMS.md.
+File: update-sets/UPDATE-021-role-containment-links.xml
+
+## Seed loader: ON_CONFLICT option and price-list-line date rule (2026-10-08)
+What: loader.js gains `ON_CONFLICT = 'insert'` (load bundle records alongside existing ones on test
+instances, reported under `duplicates`); companies adopt existing records by name. overrides.json gains
+`where` rules; one gives Partner Price list lines the list's end date (2028-04-30) so the date-range
+Business Rule accepts them. Bundle regenerated.
+Why: First full load on opmsalescrmstage (2,615/2,616 records).
+Files: skills/golden-demo-seed-loader/, seed/
+
 ## UPDATE-019 trimmed to the two v2 drafts (2026-10-07)
 What: Removed 8 of the 10 Rule Matrix records from update-sets/UPDATE-019-pricing-matrix-states.xml:
 the 6 Product Offering / Catalog / Category Eligibility matrices (v1 and v2) and Standard Price

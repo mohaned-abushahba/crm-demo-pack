@@ -77,7 +77,11 @@ the first ~10 lines of the file give `format`, `source`, `record_count`,
      user. Do not create them yourself.
    - `conflicts`: same business key, different sys_id. Stop and report each
      one (table, key, existing record). Don't delete or rename target records
-     without the user's explicit approval.
+     without the user's explicit approval. If the user says the old records
+     may stay (e.g. a test instance with earlier demo data), set
+     `ON_CONFLICT = 'insert'`: the bundle records are then loaded alongside
+     them and listed under `duplicates` instead. Never use it on a demo
+     instance meant for customers.
    - `tables[]`: planned `insert` / `update` / `adopt` per table. On a fresh
      instance almost everything is `insert`; on a re-run, `update`.
 6. **Load.** When the dry run shows no missing prerequisites and no conflicts,

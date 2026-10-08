@@ -13,9 +13,11 @@ var BUNDLE_ATTACHMENT = '';    // sys_attachment.sys_id of golden-demo-seed.json
 var PASSWORDS_ATTACHMENT = ''; // optional: sys_attachment.sys_id of passwords.json
 var DRY_RUN = true;
 var ROLE_CHECK_ONLY = false;   // true: skip the load, only run the role check (Phase 6)
+var ON_CONFLICT = 'fail';      // 'fail': stop on a business-key clash. 'insert': load the bundle
+                               // record alongside the existing one (test instances with old demo data)
 
 (function () {
-    var report = { dry_run: DRY_RUN, missing_prerequisites: [], conflicts: [], errors: [], tables: [] };
+    var report = { dry_run: DRY_RUN, on_conflict: ON_CONFLICT, missing_prerequisites: [], conflicts: [], duplicates: [], errors: [], tables: [] };
 
     function readJson(attachmentId) {
         var stream = new GlideSysAttachment().getContentStream(attachmentId);
@@ -100,6 +102,9 @@ var ROLE_CHECK_ONLY = false;   // true: skip the load, only run the role check (
                     if (t.on_conflict === 'adopt') {
                         action = 'adopt';
                         idMap[r.sys_id] = q.getUniqueValue();
+                    } else if (ON_CONFLICT === 'insert') {
+                        report.duplicates.push({ table: t.table, sys_id: r.sys_id, key: t.key,
+                            existing_sys_id: q.getUniqueValue(), display: q.getDisplayValue() });
                     } else {
                         action = 'conflict';
                         report.conflicts.push({ table: t.table, sys_id: r.sys_id, key: t.key,

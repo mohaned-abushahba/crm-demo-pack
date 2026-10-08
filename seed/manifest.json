@@ -124,7 +124,8 @@
       "key": [
         "name"
       ],
-      "query": "sys_class_name=core_company"
+      "query": "sys_class_name=core_company",
+      "on_conflict": "adopt"
     },
     {
       "file": "110-customer_contact",

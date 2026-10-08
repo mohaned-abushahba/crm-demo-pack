@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-10-08 12:00:00">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Business Location">919c6622b3930010700b4d43c6a8dc1b</application>
+<application_name>Business Location</application_name>
+<application_scope>sn_bus_loc</application_scope>
+<description>Role containment links missing on targets (both roles exist, the link doesn't): Sales Agent/Manager/Ops -> territory roles, inbound_queue_read -> entity_mapping_viewer, quote_viewer -> product_inventory_viewer, svc_location_manager_contributor -> account/consumer_contributor. Copied from opmsalescrm1 with the same sys_ids, 2026-10-08.</description>
+<name>UPDATE-021-role-containment-links [Business Location]</name>
+<origin_sys_id>7720e9678daa55d19d5437e5fff067a5</origin_sys_id>
+<remote_sys_id>7720e9678daa55d19d5437e5fff067a5</remote_sys_id>
+<state>loaded</state>
+<sys_id>7720e9678daa55d19d5437e5fff067a5</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Business Location">919c6622b3930010700b4d43c6a8dc1b</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_contains_a2f61d4b5355c1102c14ddeeff7b1291</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE">
+<contains display_value="sn_customerservice.consumer_contributor" name="sn_customerservice.consumer_contributor">86dafa09b31a1010a9dce6e316a8dcf2</contains>
+<role display_value="sn_customerservice.svc_location_manager_contributor" name="sn_customerservice.svc_location_manager_contributor">34272720531501102c14ddeeff7b1239</role>
+<sys_class_name>sys_user_role_contains</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-08-22 03:58:52</sys_created_on>
+<sys_id>a2f61d4b5355c1102c14ddeeff7b1291</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name>sn_customerservice.consumer_contributor.sn_customerservice.svc_location_manager_contributor</sys_name>
+<sys_package display_value="Business Location" source="sn_bus_loc">919c6622b3930010700b4d43c6a8dc1b</sys_package>
+<sys_policy/>
+<sys_scope display_value="Business Location">919c6622b3930010700b4d43c6a8dc1b</sys_scope>
+<sys_update_name>sys_user_role_contains_a2f61d4b5355c1102c14ddeeff7b1291</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-08-22 03:58:52</sys_updated_on>
+</sys_user_role_contains></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-021-role-containment-links [Business Location]">7720e9678daa55d19d5437e5fff067a5</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>4066b098893f589e84fa604241751d9f</sys_id>
+<table/>
+<target_name>sn_customerservice.svc_location_manager_contributor contains sn_customerservice.consumer_contributor</target_name>
+<type>Contains Role</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Business Location">919c6622b3930010700b4d43c6a8dc1b</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_contains_aef61d4b5355c1102c14ddeeff7b1289</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE">
+<contains display_value="sn_customerservice.account_contributor" name="sn_customerservice.account_contributor">eb338041b3021010a9dce6e316a8dcd9</contains>
+<role display_value="sn_customerservice.svc_location_manager_contributor" name="sn_customerservice.svc_location_manager_contributor">34272720531501102c14ddeeff7b1239</role>
+<sys_class_name>sys_user_role_contains</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-08-22 03:58:53</sys_created_on>
+<sys_id>aef61d4b5355c1102c14ddeeff7b1289</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name>sn_customerservice.account_contributor.sn_customerservice.svc_location_manager_contributor</sys_name>
+<sys_package display_value="Business Location" source="sn_bus_loc">919c6622b3930010700b4d43c6a8dc1b</sys_package>
+<sys_policy/>
+<sys_scope display_value="Business Location">919c6622b3930010700b4d43c6a8dc1b</sys_scope>
+<sys_update_name>sys_user_role_contains_aef61d4b5355c1102c14ddeeff7b1289</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-08-22 03:58:53</sys_updated_on>
+</sys_user_role_contains></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-021-role-containment-links [Business Location]">7720e9678daa55d19d5437e5fff067a5</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>f72eeb79270a5d17a202d75a8c6f3fc8</sys_id>
+<table/>
+<target_name>sn_customerservice.svc_location_manager_contributor contains sn_customerservice.account_contributor</target_name>
+<type>Contains Role</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<application_name>Quote Management Data Model</application_name>
+<application_scope>sn_quote_mgmt_core</application_scope>
+<description>Role containment links missing on targets (both roles exist, the link doesn't): Sales Agent/Manager/Ops -> territory roles, inbound_queue_read -> entity_mapping_viewer, quote_viewer -> product_inventory_viewer, svc_location_manager_contributor -> account/consumer_contributor. Copied from opmsalescrm1 with the same sys_ids, 2026-10-08.</description>
+<name>UPDATE-021-role-containment-links [Quote Management Data Model]</name>
+<origin_sys_id>0f7733c734bd55f0a1199dd3a87962f4</origin_sys_id>
+<remote_sys_id>0f7733c734bd55f0a1199dd3a87962f4</remote_sys_id>
+<state>loaded</state>
+<sys_id>0f7733c734bd55f0a1199dd3a87962f4</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_contains_daaf5cbb773842102f15916d5b5a99b4</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE">
+<contains display_value="sn_prd_invt.product_inventory_viewer" name="sn_prd_invt.product_inventory_viewer">b2955ba1c3cb3010bc0526083c40ddae</contains>
+<role display_value="sn_quote_mgmt_core.quote_viewer" name="sn_quote_mgmt_core.quote_viewer">d77bbf8e4f2131106a0490df20ce0bcf</role>
+<sys_class_name>sys_user_role_contains</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2024-03-14 05:10:19</sys_created_on>
+<sys_id>daaf5cbb773842102f15916d5b5a99b4</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name>sn_prd_invt.product_inventory_viewer.sn_quote_mgmt_core.quote_viewer</sys_name>
+<sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package>
+<sys_policy/>
+<sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope>
+<sys_update_name>sys_user_role_contains_daaf5cbb773842102f15916d5b5a99b4</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2024-03-14 05:10:19</sys_updated_on>
+</sys_user_role_contains></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-021-role-containment-links [Quote Management Data Model]">0f7733c734bd55f0a1199dd3a87962f4</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>5da3bdf2073e5e4dbee54e301ba87292</sys_id>
+<table/>
+<target_name>sn_quote_mgmt_core.quote_viewer contains sn_prd_invt.product_inventory_viewer</target_name>
+<type>Contains Role</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Sales Common">542ef8579385795032e8b8284dba1023</application>
+<application_name>Sales Common</application_name>
+<application_scope>sn_sales_common</application_scope>
+<description>Role containment links missing on targets (both roles exist, the link doesn't): Sales Agent/Manager/Ops -> territory roles, inbound_queue_read -> entity_mapping_viewer, quote_viewer -> product_inventory_viewer, svc_location_manager_contributor -> account/consumer_contributor. Copied from opmsalescrm1 with the same sys_ids, 2026-10-08.</description>
+<name>UPDATE-021-role-containment-links [Sales Common]</name>
+<origin_sys_id>f9abb27e04015683b8fab7e13ab8ee0c</origin_sys_id>
+<remote_sys_id>f9abb27e04015683b8fab7e13ab8ee0c</remote_sys_id>
+<state>loaded</state>
+<sys_id>f9abb27e04015683b8fab7e13ab8ee0c</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Sales Common">542ef8579385795032e8b8284dba1023</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_contains_01c3850dffd2fa10855fffffffffffbb</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE">
+<contains display_value="sn_sales_territory.sales_territory_viewer" name="sn_sales_territory.sales_territory_viewer">6eef6f4d53616210163d78d130e5e628</contains>
+<role display_value="sn_sales_common.sales_agent" name="sn_sales_common.sales_agent">4d5f5d1f43453110a530cd60afb8f21a</role>
+<sys_class_name>sys_user_role_contains</sys_class_name>
+<sys_created_by>system</sys_created_by>
+<sys_created_on>2026-01-05 20:52:25</sys_created_on>
+<sys_id>01c3850dffd2fa10855fffffffffffbb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name>sn_sales_territory.sales_territory_viewer.sn_sales_common.sales_agent</sys_name>
+<sys_package display_value="Sales Common" source="sn_sales_common">542ef8579385795032e8b8284dba1023</sys_package>
+<sys_policy/>
+<sys_scope display_value="Sales Common">542ef8579385795032e8b8284dba1023</sys_scope>
+<sys_update_name>sys_user_role_contains_01c3850dffd2fa10855fffffffffffbb</sys_update_name>
+<sys_updated_by>system</sys_updated_by>
+<sys_updated_on>2026-01-05 20:52:25</sys_updated_on>
+</sys_user_role_contains></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-021-role-containment-links [Sales Common]">f9abb27e04015683b8fab7e13ab8ee0c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>f14c871f4c905b57bef77832ab6b481f</sys_id>
+<table/>
+<target_name>sn_sales_common.sales_agent contains sn_sales_territory.sales_territory_viewer</target_name>
+<type>Contains Role</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Sales Common">542ef8579385795032e8b8284dba1023</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_contains_441a5da753692610163d78d130e5e65c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE">
+<contains display_value="sn_sales_territory.sales_territory_viewer" name="sn_sales_territory.sales_territory_viewer">6eef6f4d53616210163d78d130e5e628</contains>
+<role display_value="sn_sales_common.sales_ops_specialist" name="sn_sales_common.sales_ops_specialist">afbf155f43453110a530cd60afb8f264</role>
+<sys_class_name>sys_user_role_contains</sys_class_name>
+<sys_created_by>system</sys_created_by>
+<sys_created_on>2025-05-22 13:56:24</sys_created_on>
+<sys_id>441a5da753692610163d78d130e5e65c</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name>sn_sales_territory.sales_territory_viewer.sn_sales_common.sales_ops_specialist</sys_name>
+<sys_package display_value="Sales Common" source="sn_sales_common">542ef8579385795032e8b8284dba1023</sys_package>
+<sys_policy/>
+<sys_scope display_value="Sales Common">542ef8579385795032e8b8284dba1023</sys_scope>
+<sys_update_name>sys_user_role_contains_441a5da753692610163d78d130e5e65c</sys_update_name>
+<sys_updated_by>system</sys_updated_by>
+<sys_updated_on>2025-05-22 13:56:24</sys_updated_on>
+</sys_user_role_contains></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-021-role-containment-links [Sales Common]">f9abb27e04015683b8fab7e13ab8ee0c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>e660702a3817585d83bb04f439581b37</sys_id>
+<table/>
+<target_name>sn_sales_common.sales_ops_specialist contains sn_sales_territory.sales_territory_viewer</target_name>
+<type>Contains Role</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Sales Common">542ef8579385795032e8b8284dba1023</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_contains_93f999a753692610163d78d130e5e6d8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE">
+<contains display_value="sn_sales_territory.sales_territory_manager" name="sn_sales_territory.sales_territory_manager">8b717fcd53616210163d78d130e5e613</contains>
+<role display_value="sn_sales_common.sales_manager" name="sn_sales_common.sales_manager">309f515f43453110a530cd60afb8f27b</role>
+<sys_class_name>sys_user_role_contains</sys_class_name>
+<sys_created_by>system</sys_created_by>
+<sys_created_on>2025-05-22 13:56:05</sys_created_on>
+<sys_id>93f999a753692610163d78d130e5e6d8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name>sn_sales_territory.sales_territory_manager.sn_sales_common.sales_manager</sys_name>
+<sys_package display_value="Sales Common" source="sn_sales_common">542ef8579385795032e8b8284dba1023</sys_package>
+<sys_policy/>
+<sys_scope display_value="Sales Common">542ef8579385795032e8b8284dba1023</sys_scope>
+<sys_update_name>sys_user_role_contains_93f999a753692610163d78d130e5e6d8</sys_update_name>
+<sys_updated_by>system</sys_updated_by>
+<sys_updated_on>2025-05-22 13:56:05</sys_updated_on>
+</sys_user_role_contains></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-021-role-containment-links [Sales Common]">f9abb27e04015683b8fab7e13ab8ee0c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>f18c3df78baa51129c13209b747dad86</sys_id>
+<table/>
+<target_name>sn_sales_common.sales_manager contains sn_sales_territory.sales_territory_manager</target_name>
+<type>Contains Role</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Sales Common">542ef8579385795032e8b8284dba1023</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_contains_9ff9d9a753692610163d78d130e5e63d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE">
+<contains display_value="sn_sales_territory.sales_territory_viewer" name="sn_sales_territory.sales_territory_viewer">6eef6f4d53616210163d78d130e5e628</contains>
+<role display_value="sn_sales_common.sales_manager" name="sn_sales_common.sales_manager">309f515f43453110a530cd60afb8f27b</role>
+<sys_class_name>sys_user_role_contains</sys_class_name>
+<sys_created_by>system</sys_created_by>
+<sys_created_on>2025-05-22 13:56:05</sys_created_on>
+<sys_id>9ff9d9a753692610163d78d130e5e63d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name>sn_sales_territory.sales_territory_viewer.sn_sales_common.sales_manager</sys_name>
+<sys_package display_value="Sales Common" source="sn_sales_common">542ef8579385795032e8b8284dba1023</sys_package>
+<sys_policy/>
+<sys_scope display_value="Sales Common">542ef8579385795032e8b8284dba1023</sys_scope>
+<sys_update_name>sys_user_role_contains_9ff9d9a753692610163d78d130e5e63d</sys_update_name>
+<sys_updated_by>system</sys_updated_by>
+<sys_updated_on>2025-05-22 13:56:05</sys_updated_on>
+</sys_user_role_contains></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-021-role-containment-links [Sales Common]">f9abb27e04015683b8fab7e13ab8ee0c</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>d71d455a6b5e535587d4e1bbd0b25c98</sys_id>
+<table/>
+<target_name>sn_sales_common.sales_manager contains sn_sales_territory.sales_territory_viewer</target_name>
+<type>Contains Role</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="CRM API Core">d271a27eeb4301109e8de88b035228c8</application>
+<application_name>CRM API Core</application_name>
+<application_scope>sn_tmt_core</application_scope>
+<description>Role containment links missing on targets (both roles exist, the link doesn't): Sales Agent/Manager/Ops -> territory roles, inbound_queue_read -> entity_mapping_viewer, quote_viewer -> product_inventory_viewer, svc_location_manager_contributor -> account/consumer_contributor. Copied from opmsalescrm1 with the same sys_ids, 2026-10-08.</description>
+<name>UPDATE-021-role-containment-links [CRM API Core]</name>
+<origin_sys_id>fa08752d0c6d52b0b240d1334364fde7</origin_sys_id>
+<remote_sys_id>fa08752d0c6d52b0b240d1334364fde7</remote_sys_id>
+<state>loaded</state>
+<sys_id>fa08752d0c6d52b0b240d1334364fde7</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="CRM API Core">d271a27eeb4301109e8de88b035228c8</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_contains_77e1f162ff9b6210373dffffffffff87</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE">
+<contains display_value="sn_l2c_core.entity_mapping_viewer" name="sn_l2c_core.entity_mapping_viewer">b5cfeb3cff3f2210a9a7ffffffffff51</contains>
+<role display_value="sn_tmt_core.inbound_queue_read" name="sn_tmt_core.inbound_queue_read">7c1e128bc3a61110856d73ce3640dd3b</role>
+<sys_class_name>sys_user_role_contains</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-08-14 12:56:39</sys_created_on>
+<sys_id>77e1f162ff9b6210373dffffffffff87</sys_id>
+<sys_mod_count>1</sys_mod_count>
+<sys_name>sn_l2c_core.entity_mapping_viewer.sn_tmt_core.inbound_queue_read</sys_name>
+<sys_package display_value="CRM API Core" source="sn_tmt_core">d271a27eeb4301109e8de88b035228c8</sys_package>
+<sys_policy/>
+<sys_scope display_value="CRM API Core">d271a27eeb4301109e8de88b035228c8</sys_scope>
+<sys_update_name>sys_user_role_contains_77e1f162ff9b6210373dffffffffff87</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-03 08:17:52</sys_updated_on>
+</sys_user_role_contains></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-021-role-containment-links [CRM API Core]">fa08752d0c6d52b0b240d1334364fde7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>b712874b9ee257c788f16821e18d2c46</sys_id>
+<table/>
+<target_name>sn_tmt_core.inbound_queue_read contains sn_l2c_core.entity_mapping_viewer</target_name>
+<type>Contains Role</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+</unload>

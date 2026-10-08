@@ -86,6 +86,13 @@ def apply_overrides(docs, cfg):
     forbidden string (e.g. a real company name) is still present."""
     by_id = {(d["table"], r["sys_id"]): r for _, d in docs for r in d["records"]}
     for o in cfg["overrides"]:
+        if "where" in o:  # rule: every record of the table whose fields match
+            hits = [r for (t, _), r in by_id.items() if t == o["table"]
+                    and all(r.get(k, "") == v for k, v in o["where"].items())]
+            for r in hits:
+                r.update(o["set"])
+            print(f"  override rule on {o['table']}: {len(hits)} record(s)")
+            continue
         rec = by_id.get((o["table"], o["sys_id"]))
         if rec is None:
             print(f"  ! override target not extracted: {o['table']} {o['sys_id']}")

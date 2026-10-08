@@ -1,5 +1,5 @@
 {
-  "_comment": "Deliberate exceptions to 'opmsalescrm1 wins'. Applied by tools/extract.py after extraction, by sys_id, so re-extracting keeps them. Each entry says why.",
+  "_comment": "Deliberate exceptions to 'opmsalescrm1 wins'. Applied by tools/extract.py after extraction, so re-extracting keeps them. An entry targets one record by sys_id, or (with 'where') every record of the table whose fields match. Each entry says why.",
   "overrides": [
     {
       "reason": "Golden Gate AI is a real company; the sheet's fictional Gatelynx AI replaces it. Same record (sys_id kept), so contacts, addresses, quotes and opportunities stay linked.",
@@ -71,6 +71,17 @@
       "sys_id": "be52cb692b8b8b104deaf02ac891bf2e",
       "set": {
         "email": "carla.jimenez@example.com"
+      }
+    },
+    {
+      "reason": "Partner Price list ends 2028-04-30 but its lines have no end date; the 'Validate price list line date range' Business Rule rejects such lines on insert. Give them the list's end date (agreed 2026-10-08) rather than bypassing the rule.",
+      "table": "sn_csm_pricing_price_list_line",
+      "where": {
+        "price_list": "8a6a804e2b838f104deaf02ac891bf54",
+        "end_date": ""
+      },
+      "set": {
+        "end_date": "2028-04-30 23:41:36"
       }
     }
   ],
