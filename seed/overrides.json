@@ -83,9 +83,17 @@
       "set": {
         "end_date": "2028-04-30 23:41:36"
       }
+    },
+    {
+      "reason": "Tokens price list line should be in API Calls (the offering's default UOM), not Each. Seed-only: opmsalescrm1's published Standard Price List blocks line edits, so it still holds Each (agreed 2026-10-09).",
+      "table": "sn_csm_pricing_price_list_line",
+      "sys_id": "553bd6ba3b070310d5260fa693e45a4f",
+      "set": {
+        "uom": "13a362212b478b104deaf02ac891bf58"
+      }
     }
   ],
-  "_forbidden_comment": "Extraction fails if any extracted string still matches one of these (case-insensitive regex) \u2014 catches real-company names creeping back in.",
+  "_forbidden_comment": "Extraction fails if any extracted string still matches one of these (case-insensitive regex) — catches real-company names creeping back in.",
   "forbidden_patterns": [
     "golden\\s*gate",
     "goldengate"
