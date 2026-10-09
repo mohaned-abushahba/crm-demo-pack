@@ -362,3 +362,12 @@ Known limitations / gotchas:
     test skill) failed to connect this session (ECONNREFUSED). Deferred; needs that
     connector restarted/fixed, then re-run separately.
 File: seed/02-product-offerings-solana-generators-training.js
+
+## 2026-10-09 — Stage audit fixes: group role grants
+
+What: Added 3 `sys_group_has_role` rows on SCRM-Account Exec Team (`sn_mcp_client.viewer`,
+`sn_mcp_server.viewer`, `sn_qut_sum_skill.quote_ai`; created on opmsalescrm1 2026-10-08, after the
+fixtures were extracted) to seed/data/070 and the bundle, and inserted them on opmsalescrmstage.
+Also rebuilt the empty `configuration_json` cache on 10 published product offerings on stage via
+`ProductCatalogCacheAPI().cacheProductOffering()` (read-only cache field; direct writes are silently discarded).
+Why: Full opmsalescrm1 vs opmsalescrmstage master-data audit.

@@ -480,6 +480,27 @@
       "role": "309f515f43453110a530cd60afb8f27b",
       "inherits": "true",
       "group": "a79a03293b07cb10d5260fa693e45a95"
+    },
+    {
+      "sys_id": "4179e13dc3b34f500918dac4e401313b",
+      "role": "67b6089ffff42210f465ffffffffffde",
+      "inherits": "true",
+      "granted_by": "not-applicable",
+      "group": "eca4f6563bf2c310d5260fa693e45a8d"
+    },
+    {
+      "sys_id": "4567427947b787509ada569fe16d434c",
+      "role": "361f31e33b24cb10d385fadc73e45a40",
+      "inherits": "true",
+      "granted_by": "not-applicable",
+      "group": "eca4f6563bf2c310d5260fa693e45a8d"
+    },
+    {
+      "sys_id": "8179e13dc3b34f500918dac4e40131ee",
+      "role": "b9cd9177931f265033f17608648918ea",
+      "inherits": "true",
+      "granted_by": "not-applicable",
+      "group": "eca4f6563bf2c310d5260fa693e45a8d"
     }
   ]
 }

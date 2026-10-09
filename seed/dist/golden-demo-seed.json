@@ -1,8 +1,8 @@
 {
 "format": "golden-demo-seed/1",
 "source": "opmsalescrm1",
-"generated_on": "2026-10-08 21:13:13",
-"record_count": 2616,
+"generated_on": "2026-10-09 15:18:43",
+"record_count": 2619,
 "table_count": 47,
 "prerequisites": [
 {"table": "fx_currency", "sys_id": "USD", "label": "United States Dollars"},
@@ -576,7 +576,7 @@
 {"role":"ed60b9d4ffb132105b0fffffffffff1c","inh_map":"","included_in_role":"","included_in_role_instance":"","inh_count":"","sys_id":"ff3046962bc383504deaf02ac891bf68","inherited":"false","state":"active","user":"e5098b212b0f8b104deaf02ac891bfc0"},
 {"role":"3a64fc24d7700200e5982cf65e610357","inh_map":"","included_in_role":"","included_in_role_instance":"","inh_count":"","sys_id":"ffa823752b4f4f104deaf02ac891bfcf","inherited":"false","state":"active","user":"37a823752b4f4f104deaf02ac891bfcd"}
 ]},
-{"table": "sys_group_has_role", "key": ["group", "role"], "on_conflict": "adopt", "insert_as": {}, "references": {"role": "sys_user_role", "granted_by": "sys_user_group", "group": "sys_user_group"}, "count": 78, "records": [
+{"table": "sys_group_has_role", "key": ["group", "role"], "on_conflict": "adopt", "insert_as": {}, "references": {"role": "sys_user_role", "granted_by": "sys_user_group", "group": "sys_user_group"}, "count": 81, "records": [
 {"sys_id":"06c8b9442b4fc7104deaf02ac891bffa","role":"afbf155f43453110a530cd60afb8f264","inherits":"true","group":"e668318c3b8b4f10d5260fa693e45ac3"},
 {"sys_id":"0890ca003b0f4f10d5260fa693e45ac0","role":"7fcaa702933002009c8579b4f47ffbde","inherits":"true","group":"15a4ba563bf2c310d5260fa693e45a16"},
 {"sys_id":"08b238e23b4b0750d5260fa693e45ab0","role":"f66afe3b3f032210caf1293d001f8b5e","inherits":"true","group":"eca4f6563bf2c310d5260fa693e45a8d"},
@@ -654,7 +654,10 @@
 {"sys_id":"f982eea22b0347504deaf02ac891bfef","role":"b94bb1bdffc0b2108a0dffffffffff11","inherits":"true","group":"f8a47a563bf2c310d5260fa693e45aad"},
 {"sys_id":"fcfcc37e2bcb43104deaf02ac891bfaa","role":"ed60b9d4ffb132105b0fffffffffff1c","inherits":"true","group":"1f9a03293b07cb10d5260fa693e45a7b"},
 {"sys_id":"fd294cc33b074310d5260fa693e45a31","role":"ed60b9d4ffb132105b0fffffffffff1c","inherits":"true","group":"b8a4f2d23bf2c310d5260fa693e45a3f"},
-{"sys_id":"ff1366aa3bcb4750d5260fa693e45a9b","role":"309f515f43453110a530cd60afb8f27b","inherits":"true","group":"a79a03293b07cb10d5260fa693e45a95"}
+{"sys_id":"ff1366aa3bcb4750d5260fa693e45a9b","role":"309f515f43453110a530cd60afb8f27b","inherits":"true","group":"a79a03293b07cb10d5260fa693e45a95"},
+{"sys_id":"4179e13dc3b34f500918dac4e401313b","role":"67b6089ffff42210f465ffffffffffde","inherits":"true","granted_by":"not-applicable","group":"eca4f6563bf2c310d5260fa693e45a8d"},
+{"sys_id":"4567427947b787509ada569fe16d434c","role":"361f31e33b24cb10d385fadc73e45a40","inherits":"true","granted_by":"not-applicable","group":"eca4f6563bf2c310d5260fa693e45a8d"},
+{"sys_id":"8179e13dc3b34f500918dac4e40131ee","role":"b9cd9177931f265033f17608648918ea","inherits":"true","granted_by":"not-applicable","group":"eca4f6563bf2c310d5260fa693e45a8d"}
 ]},
 {"table": "customer_account", "key": ["name"], "on_conflict": "fail", "insert_as": {}, "references": {"active_escalation": "sn_customerservice_escalation", "sales_owner": "sys_user", "primary_contact": "customer_contact", "account_parent": "customer_account", "primary_sales_territory": "sn_tp_territory", "theme": "sys_ui_theme", "contact": "sys_user", "parent": "core_company"}, "count": 27, "records": [
 {"banner_image_light":"","country":"USA","parent":"","notes":"","minority_ownership_status":"","stock_symbol":"","discount":"","active_escalation":"","apple_icon":"","number":"ACCT0010021","fiscal_year":"","contact":"","rural_based_status":"","u_marquee_account":"true","account_health":"","stock_price":"","banner_image":"","state":"CA","longitude":"","zip":"94404","profits":"0","success_entitlement":"","active":"true","assumed_name":"","duns_number":"","tax_id":"","incorporated_on":"","u_delinquent":"false","fax_phone":"","phone":"(800) 900-8090","u_market_segment":"enterprise","banner_text":"","name":"Progantic Inc.","account_code":"!!!@","coordinates_retrieved_on":"","primary":"false","identification_number":"","city":"San Mateo","latitude":"","industry":"technology_services","sys_class_name":"customer_account","manufacturer":"false","sn_tmt_core_external_id":"","account_parent":"","sys_id":"04b236292bc78b104deaf02ac891bf16","tribal_affiliation_status":"","business_structure":"","market_cap":"0","channel_partner":"false","num_employees":"","rank_tier":"","street":"123 Progantic Lane","vendor":"false","lat_long_error":"","primary_sales_territory":"290f42173bf24710d5260fa693e45a00","theme":"","trademark":"","email":"","vendor_type":"","revenue_per_year":"0","sales_owner":"9b84f6563bf2c310d5260fa693e45a74","website":"www.progantic.com","publicly_traded":"false","women_ownership_status":"","partner":"false","registration_code":"","vendor_manager":"","perceived_health":"","account_path":"!!!@","legal_entity_name":"","primary_contact":"","customer":"false"},
