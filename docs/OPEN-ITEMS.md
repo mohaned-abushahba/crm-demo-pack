@@ -35,11 +35,13 @@ captured by Update Sets or the seed. Needs the model exported from the opmsalesc
 deployed in the stage tenant by someone with Logik admin access. Re-run
 `tests/catalog-guided-configuration.spec.ts` afterwards (it also gates contract-amendment and renewal).
 
-## Forecast hierarchy not seeded on stage — OPEN (found 2026-10-13)
+## Forecast hierarchy not seeded on stage — RESOLVED 2026-10-13
 
-opmsalescrm1 has 29 forecast headers, 26 quotas and 4,184 forecast items; stage has the 3 headers and 3
-quotas from `seed/03-ams-west-forecasts.js` and no items. `tests/sales-forecasting-rollup.spec.ts` needs the
-full opm1 territory/persona hierarchy. Decide whether to seed it or rescope the spec.
+Seeded 2026 Q3/Q4 quotas (10), forecast headers (23, 2026 Q4) and the 18 open Q4 opportunities from
+opmsalescrm1; the platform calculation then generated 342 items. `sales-forecasting-rollup.spec.ts` passes
+on stage (2/2). Not done: 2027 quotas (stage has no 2027 business calendar spans), the 28 opportunities
+that close outside 2026 Q4, and the older "(old stage)" territories/headers/quotas from
+`seed/03-ams-west-forecasts.js`, which are left in place but unused.
 
 ## Candidate records on opmsalescrm1 not in any Update Set — TRIAGED 2026-10-13, nothing to capture
 

@@ -383,3 +383,16 @@ What: Two stage-only defects found by the E2E suite, fixed on stage and scripted
     sn_ind_tmt_orm_order_task.state (plugin baseline on opm1) was missing, so Order Task "Close" set
     "Awaiting information" instead of "Closed complete". Inserted on stage (landed in Global scope).
 Result: order-submission, order-task-fulfillment and order-completion pass on stage.
+
+## seed/04-forecast-hierarchy.js (2026-10-13)
+Instance: opmsalescrmstage
+What: Quotas (2026 Q3/Q4), 23 forecast headers (2026 Q4) and 18 open Q4 opportunities copied from
+opmsalescrm1, then a forecast calculation to generate items. Fixture: seed/data/900-forecast-2026q4.json.
+Why: the forecasting E2E spec needs opmsalescrm1's header names and live opportunities. Headers are never
+created by the calculation, so they have to be seeded.
+Findings: business calendar spans have per-instance sys_ids (resolve by name); stage had no 2027 spans;
+the calculation entry point is `sn_sales_forecast.SalesForecastAsynchronousCalculation` (scoped);
+batch-creating opportunities returned a misleading "403 ACL" when the number collided with an existing
+record, and Forge auto-granted `sn_prm_dr.enterprise_b2c_deal_reg_agent` to the admin while trying to fix it
+(removed again). Applied to stage by hand through the Forge MCP; the script form has not been run end to end.
+File: seed/04-forecast-hierarchy.js

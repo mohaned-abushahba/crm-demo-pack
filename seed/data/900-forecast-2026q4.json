@@ -1,0 +1,549 @@
+{
+ "_comment": "Forecast hierarchy for the 2026 Q3/Q4 periods, copied from opmsalescrm1 (captured 2026-10-13). Periods differ per instance, so they are given by name and resolved at load time. sys_ids are kept so the load is idempotent.",
+ "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+ "quotas": [
+  {
+   "sys_id": "01b83e2c2b1fc3504deaf02ac891bfa1",
+   "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+   "territory": "307902a93b4b8b10d5260fa693e45a32",
+   "period": "2026 Q4",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "08050f652bcb8b104deaf02ac891bf3b",
+   "owner": "9b84f6563bf2c310d5260fa693e45a74",
+   "territory": "290f42173bf24710d5260fa693e45a00",
+   "period": "2026 Q4",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "54c54fe52bcb8b104deaf02ac891bf2d",
+   "owner": "0b843ed22b7683104deaf02ac891bf1d",
+   "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
+   "period": "2026 Q4",
+   "amount": 7000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "749547e52bcb8b104deaf02ac891bfc6",
+   "owner": "07843ed22b7683104deaf02ac891bf31",
+   "territory": "6dfe4e1b2bb243104deaf02ac891bf30",
+   "period": "2026 Q4",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "903583a52bcb8b104deaf02ac891bffb",
+   "owner": "9384f6563bf2c310d5260fa693e45a6d",
+   "territory": "5ffec65b3bf24710d5260fa693e45ad5",
+   "period": "2026 Q4",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "3327ee6e2b0347504deaf02ac891bf88",
+   "owner": "9b84f6563bf2c310d5260fa693e45a74",
+   "territory": "290f42173bf24710d5260fa693e45a00",
+   "period": "2026 Q3",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "7327ee6e2b0347504deaf02ac891bf82",
+   "owner": "9384f6563bf2c310d5260fa693e45a6d",
+   "territory": "5ffec65b3bf24710d5260fa693e45ad5",
+   "period": "2026 Q3",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "7668722c2b1fc3504deaf02ac891bf2f",
+   "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+   "territory": "307902a93b4b8b10d5260fa693e45a32",
+   "period": "2026 Q3",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "b327e6263b0f4750d5260fa693e45aff",
+   "owner": "07843ed22b7683104deaf02ac891bf31",
+   "territory": "6dfe4e1b2bb243104deaf02ac891bf30",
+   "period": "2026 Q3",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "f727ae6e2b0347504deaf02ac891bfc0",
+   "owner": "0b843ed22b7683104deaf02ac891bf1d",
+   "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
+   "period": "2026 Q3",
+   "amount": 7000000,
+   "type": "rollup"
+  }
+ ],
+ "headers": [
+  {
+   "sys_id": "16cda6a7c36383900918dac4e401315b",
+   "name": "Asher Sky_AMS_WEST_CA_TECH_L5",
+   "owner": "9b84f6563bf2c310d5260fa693e45a74",
+   "item_type": "individual",
+   "territory": "290f42173bf24710d5260fa693e45a00",
+   "quota": "08050f652bcb8b104deaf02ac891bf3b",
+   "submission_required": "false"
+  },
+  {
+   "sys_id": "26cda6a7c36383900918dac4e4013174",
+   "name": "AMS-East (Sophia Bennett_AMS_EAST_TECH_L4)",
+   "owner": "f9098f613b07cb10d5260fa693e45ae3",
+   "item_type": "rollup",
+   "territory": "effdc3ed2b0f8b104deaf02ac891bfb0",
+   "quota": "",
+   "submission_required": "true"
+  },
+  {
+   "sys_id": "2acda6a7c36383900918dac4e4013175",
+   "name": "AMS (Avery Chen_AMS_TECH_L3)",
+   "owner": "07843ed22b7683104deaf02ac891bf31",
+   "item_type": "rollup",
+   "territory": "6dfe4e1b2bb243104deaf02ac891bf30",
+   "quota": "749547e52bcb8b104deaf02ac891bfc6",
+   "submission_required": "true"
+  },
+  {
+   "sys_id": "52cda6a7c36383900918dac4e4013110",
+   "name": "Oliver Hughes_EMEA_EUR_UK_TECH_L5",
+   "owner": "2c6ffe0c2b538f104deaf02ac891bfc4",
+   "item_type": "individual",
+   "territory": "e5fe4e1b2bb243104deaf02ac891bf37",
+   "quota": "",
+   "submission_required": "false"
+  },
+  {
+   "sys_id": "52cda6a7c36383900918dac4e401315b",
+   "name": "Jack Turner_APAC_SEA_AU_TECH_L5",
+   "owner": "cd6f324c2b538f104deaf02ac891bf1e",
+   "item_type": "individual",
+   "territory": "d15a3e8c2b138f104deaf02ac891bfe7",
+   "quota": "",
+   "submission_required": "false"
+  },
+  {
+   "sys_id": "56cda6a7c36383900918dac4e401315d",
+   "name": "New York",
+   "owner": "",
+   "item_type": "rollup",
+   "territory": "fd0e4ba12b4f8b104deaf02ac891bf06",
+   "quota": "",
+   "submission_required": "false"
+  },
+  {
+   "sys_id": "5acda6a7c36383900918dac4e401315b",
+   "name": "Grace Lim_APAC_SEA_SG_TECH_L5",
+   "owner": "096ffacc3bd7cb10d5260fa693e45ae6",
+   "item_type": "individual",
+   "territory": "d15a3e8c2b138f104deaf02ac891bfe7",
+   "quota": "",
+   "submission_required": "false"
+  },
+  {
+   "sys_id": "5acda6a7c36383900918dac4e401315d",
+   "name": "California",
+   "owner": "",
+   "item_type": "rollup",
+   "territory": "290f42173bf24710d5260fa693e45a00",
+   "quota": "",
+   "submission_required": "false"
+  },
+  {
+   "sys_id": "5ecda6a7c36383900918dac4e401315a",
+   "name": "",
+   "owner": "",
+   "item_type": "individual",
+   "territory": "fd0e4ba12b4f8b104deaf02ac891bf06",
+   "quota": "",
+   "submission_required": "false"
+  },
+  {
+   "sys_id": "5ecda6a7c36383900918dac4e401315d",
+   "name": "Brazil",
+   "owner": "",
+   "item_type": "rollup",
+   "territory": "bb5a72cc2b138f104deaf02ac891bfb9",
+   "quota": "",
+   "submission_required": "false"
+  },
+  {
+   "sys_id": "6acda6a7c36383900918dac4e4013174",
+   "name": "AMS-West (Taylor Morgan_AMS_WEST_TECH_L4)",
+   "owner": "9384f6563bf2c310d5260fa693e45a6d",
+   "item_type": "rollup",
+   "territory": "5ffec65b3bf24710d5260fa693e45ad5",
+   "quota": "903583a52bcb8b104deaf02ac891bffb",
+   "submission_required": "true"
+  },
+  {
+   "sys_id": "6ecda6a7c36383900918dac4e4013175",
+   "name": "TECH (Cameron Patel_TECH_L2)",
+   "owner": "0b843ed22b7683104deaf02ac891bf1d",
+   "item_type": "rollup",
+   "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
+   "quota": "54c54fe52bcb8b104deaf02ac891bf2d",
+   "submission_required": "true"
+  },
+  {
+   "sys_id": "96cda6a7c36383900918dac4e401315b",
+   "name": "Bruno Costa_LATAM_SAM_BR_TECH_L5",
+   "owner": "916f3ecc3bd7cb10d5260fa693e45a20",
+   "item_type": "individual",
+   "territory": "bb5a72cc2b138f104deaf02ac891bfb9",
+   "quota": "",
+   "submission_required": "false"
+  },
+  {
+   "sys_id": "a2cda6a7c36383900918dac4e4013176",
+   "name": "Global (Marcus Webb_GLOBAL-VP_GLOBAL-ALL)",
+   "owner": "61098b212b0f8b104deaf02ac891bf79",
+   "item_type": "rollup",
+   "territory": "f3de465b3bf24710d5260fa693e45a9d",
+   "quota": "",
+   "submission_required": "true"
+  },
+  {
+   "sys_id": "aecda6a7c36383900918dac4e4013174",
+   "name": "APAC (Wei Tanaka_APAC_TECH_L3)",
+   "owner": "386ffacc3bd7cb10d5260fa693e45a8b",
+   "item_type": "rollup",
+   "territory": "e1fec65b3bf24710d5260fa693e45acf",
+   "quota": "",
+   "submission_required": "true"
+  },
+  {
+   "sys_id": "d2cda6a7c36383900918dac4e401315d",
+   "name": "EMEA (Isabelle Laurent_EMEA_TECH_L3)",
+   "owner": "986fbe8c3bd7cb10d5260fa693e45a67",
+   "item_type": "rollup",
+   "territory": "e5fe4e1b2bb243104deaf02ac891bf37",
+   "quota": "",
+   "submission_required": "true"
+  },
+  {
+   "sys_id": "d6cda6a7c36383900918dac4e401315d",
+   "name": "Oregon-Washington",
+   "owner": "",
+   "item_type": "rollup",
+   "territory": "307902a93b4b8b10d5260fa693e45a32",
+   "quota": "",
+   "submission_required": "false"
+  },
+  {
+   "sys_id": "dacda6a7c36383900918dac4e401315d",
+   "name": "Singapore",
+   "owner": "",
+   "item_type": "rollup",
+   "territory": "d15a3e8c2b138f104deaf02ac891bfe7",
+   "quota": "",
+   "submission_required": "false"
+  },
+  {
+   "sys_id": "decda6a7c36383900918dac4e401310f",
+   "name": "Riley Cole_AMS_WEST_OR_WA_TECH_L5",
+   "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+   "item_type": "individual",
+   "territory": "307902a93b4b8b10d5260fa693e45a32",
+   "quota": "01b83e2c2b1fc3504deaf02ac891bfa1",
+   "submission_required": "false"
+  },
+  {
+   "sys_id": "decda6a7c36383900918dac4e401315a",
+   "name": "Haruto Sato_APAC_NASIA_JP_TECH_L5",
+   "owner": "896f324c2b538f104deaf02ac891bf40",
+   "item_type": "individual",
+   "territory": "d15a3e8c2b138f104deaf02ac891bfe7",
+   "quota": "",
+   "submission_required": "false"
+  },
+  {
+   "sys_id": "e2cda6a7c36383900918dac4e4013167",
+   "name": "Southeast Asia & ANZ (Mei Lin_APAC_SEA_TECH_L4)",
+   "owner": "bc6ffacc3bd7cb10d5260fa693e45ad1",
+   "item_type": "rollup",
+   "territory": "f44af2043bd7cb10d5260fa693e45ae0",
+   "quota": "",
+   "submission_required": "true"
+  },
+  {
+   "sys_id": "e2cda6a7c36383900918dac4e4013175",
+   "name": "LATAM (Camila Rocha_LATAM_TECH_L3)",
+   "owner": "c96ffacc3bd7cb10d5260fa693e45aee",
+   "item_type": "rollup",
+   "territory": "ac4a3e8c2b138f104deaf02ac891bfde",
+   "quota": "",
+   "submission_required": "true"
+  },
+  {
+   "sys_id": "eecda6a7c36383900918dac4e4013173",
+   "name": "South America (Valentina Silva_LATAM_SAM_TECH_L4)",
+   "owner": "dd6f3ecc3bd7cb10d5260fa693e45a17",
+   "item_type": "rollup",
+   "territory": "955a76043bd7cb10d5260fa693e45aef",
+   "quota": "",
+   "submission_required": "true"
+  }
+ ],
+ "opportunities": [
+  {
+   "sys_id": "099e6a713bcf4f10d5260fa693e45af1",
+   "number": "OPTY0001038",
+   "short_description": "Nimbus Analytics new business proposal",
+   "amount": 95000,
+   "estimated_closed_date": "2026-10-15 05:00:00",
+   "probability": 50,
+   "forecast_category": "0f12151a7b3d521032b7e865b38cb6a3",
+   "sales_cycle_type": "4efaf9c893a1c75079d4f7717cba10ab",
+   "stage": "749dfd4093e1c75079d4f7717cba103d",
+   "account": "70320b213bc3cb10d5260fa693e45a82",
+   "assigned_to": "b9098b212b0f8b104deaf02ac891bfc9",
+   "territory": "307902a93b4b8b10d5260fa693e45a32"
+  },
+  {
+   "sys_id": "0f12847d3b0fcb10d5260fa693e45afe",
+   "number": "OPTY0001022",
+   "short_description": "Boxeo EMEA new region rollout",
+   "amount": 95000,
+   "estimated_closed_date": "2026-12-05 00:00:00",
+   "probability": 25,
+   "forecast_category": "6802ddd67b3d521032b7e865b38cb61c",
+   "sales_cycle_type": "9c5bb50c93a1c75079d4f7717cba106e",
+   "stage": "3b6df94093e1c75079d4f7717cba1009",
+   "account": "d79e5bd63bbac310d5260fa693e45ac0",
+   "assigned_to": "2c6ffe0c2b538f104deaf02ac891bfc4",
+   "territory": "e5fe4e1b2bb243104deaf02ac891bf37"
+  },
+  {
+   "sys_id": "3c0f8bc03b9bcb10d5260fa693e45a0f",
+   "number": "OPTY0001097",
+   "short_description": "Hudson Yards Analytics - Enterprise Analytics Platform Expansion",
+   "amount": 1250000,
+   "estimated_closed_date": "2026-11-15 00:00:00",
+   "probability": 60,
+   "forecast_category": "8062d15a7b3d521032b7e865b38cb63e",
+   "sales_cycle_type": "4efaf9c893a1c75079d4f7717cba10ab",
+   "stage": "4f9d718093e1c75079d4f7717cba1024",
+   "account": "9ad547003b5bcb10d5260fa693e45a08",
+   "assigned_to": "f1098f613b07cb10d5260fa693e45af8",
+   "territory": ""
+  },
+  {
+   "sys_id": "3f12c47d3b0fcb10d5260fa693e45aee",
+   "number": "OPTY0001028",
+   "short_description": "Rose City proposal for workflow suite",
+   "amount": 70000,
+   "estimated_closed_date": "2026-10-05 00:00:00",
+   "probability": 50,
+   "forecast_category": "0f12151a7b3d521032b7e865b38cb6a3",
+   "sales_cycle_type": "9c5bb50c93a1c75079d4f7717cba106e",
+   "stage": "749dfd4093e1c75079d4f7717cba103d",
+   "account": "85320b213bc3cb10d5260fa693e45ab6",
+   "assigned_to": "b9098b212b0f8b104deaf02ac891bfc9",
+   "territory": "307902a93b4b8b10d5260fa693e45a32"
+  },
+  {
+   "sys_id": "471fc7882b178f104deaf02ac891bf7b",
+   "number": "OPTY0001107",
+   "short_description": "Azteca Cloud Systems - Revenue Enablement Expansion",
+   "amount": 560000,
+   "estimated_closed_date": "2026-12-20 00:00:00",
+   "probability": 45,
+   "forecast_category": "0f12151a7b3d521032b7e865b38cb6a3",
+   "sales_cycle_type": "4efaf9c893a1c75079d4f7717cba10ab",
+   "stage": "749dfd4093e1c75079d4f7717cba103d",
+   "account": "dfd587002bd38f104deaf02ac891bfed",
+   "assigned_to": "696f324c2b538f104deaf02ac891bf77",
+   "territory": ""
+  },
+  {
+   "sys_id": "478ee6713bcf4f10d5260fa693e45a4d",
+   "number": "OPTY0001035",
+   "short_description": "Acme Co new logo — CRM modernization",
+   "amount": 40000,
+   "estimated_closed_date": "2026-12-10 05:00:00",
+   "probability": 25,
+   "forecast_category": "6802ddd67b3d521032b7e865b38cb61c",
+   "sales_cycle_type": "4efaf9c893a1c75079d4f7717cba10ab",
+   "stage": "3b6df94093e1c75079d4f7717cba1009",
+   "account": "",
+   "assigned_to": "",
+   "territory": "fd0e4ba12b4f8b104deaf02ac891bf06"
+  },
+  {
+   "sys_id": "551f83043b9bcb10d5260fa693e45aa6",
+   "number": "OPTY0001104",
+   "short_description": "Sakura Digital Solutions - AI-Driven Operations Platform",
+   "amount": 1800000,
+   "estimated_closed_date": "2026-11-30 00:00:00",
+   "probability": 65,
+   "forecast_category": "0f12151a7b3d521032b7e865b38cb6a3",
+   "sales_cycle_type": "4efaf9c893a1c75079d4f7717cba10ab",
+   "stage": "749dfd4093e1c75079d4f7717cba103d",
+   "account": "87d547003b5bcb10d5260fa693e45a73",
+   "assigned_to": "896f324c2b538f104deaf02ac891bf40",
+   "territory": "d15a3e8c2b138f104deaf02ac891bfe7"
+  },
+  {
+   "sys_id": "581f03043b9bcb10d5260fa693e45a24",
+   "number": "OPTY0001102",
+   "short_description": "Southern Cross Analytics - Multi-Region Analytics Deployment",
+   "amount": 3200000,
+   "estimated_closed_date": "2026-10-15 00:00:00",
+   "probability": 80,
+   "forecast_category": "8062d15a7b3d521032b7e865b38cb63e",
+   "sales_cycle_type": "4efaf9c893a1c75079d4f7717cba10ab",
+   "stage": "4f9d718093e1c75079d4f7717cba1024",
+   "account": "b6d547003b5bcb10d5260fa693e45a4e",
+   "assigned_to": "cd6f324c2b538f104deaf02ac891bf1e",
+   "territory": "d15a3e8c2b138f104deaf02ac891bfe7"
+  },
+  {
+   "sys_id": "6a1fc3043b9bcb10d5260fa693e45ae6",
+   "number": "OPTY0001106",
+   "short_description": "Ipanema Tech Solutions - Enterprise Intelligence Platform",
+   "amount": 4000000,
+   "estimated_closed_date": "2026-10-05 00:00:00",
+   "probability": 85,
+   "forecast_category": "8062d15a7b3d521032b7e865b38cb63e",
+   "sales_cycle_type": "4efaf9c893a1c75079d4f7717cba10ab",
+   "stage": "4f9d718093e1c75079d4f7717cba1024",
+   "account": "8bd547003b5bcb10d5260fa693e45a8b",
+   "assigned_to": "916f3ecc3bd7cb10d5260fa693e45a20",
+   "territory": ""
+  },
+  {
+   "sys_id": "7b12c47d3b0fcb10d5260fa693e45ab2",
+   "number": "OPTY0001027",
+   "short_description": "Cascadia security module discovery",
+   "amount": 145000,
+   "estimated_closed_date": "2026-10-30 00:00:00",
+   "probability": 35,
+   "forecast_category": "6802ddd67b3d521032b7e865b38cb61c",
+   "sales_cycle_type": "9c5bb50c93a1c75079d4f7717cba106e",
+   "stage": "448d7d4093e1c75079d4f7717cba1048",
+   "account": "fc320b213bc3cb10d5260fa693e45aac",
+   "assigned_to": "b9098b212b0f8b104deaf02ac891bfc9",
+   "territory": "307902a93b4b8b10d5260fa693e45a32"
+  },
+  {
+   "sys_id": "7bf600792bc7cb104deaf02ac891bfd2",
+   "number": "OPTY0001034",
+   "short_description": "Redwood Cloud Technologies — Enterprise Platform Modernization",
+   "amount": 475000,
+   "estimated_closed_date": "2026-10-25 00:00:00",
+   "probability": 50,
+   "forecast_category": "0f12151a7b3d521032b7e865b38cb6a3",
+   "sales_cycle_type": "9c5bb50c93a1c75079d4f7717cba106e",
+   "stage": "749dfd4093e1c75079d4f7717cba103d",
+   "account": "5132c72d2b8b8b104deaf02ac891bff8",
+   "assigned_to": "9b84f6563bf2c310d5260fa693e45a74",
+   "territory": "290f42173bf24710d5260fa693e45a00"
+  },
+  {
+   "sys_id": "7f0fc3882b178f104deaf02ac891bf9d",
+   "number": "OPTY0001101",
+   "short_description": "Desert Peak Technologies - Cloud Platform Modernization",
+   "amount": 675000,
+   "estimated_closed_date": "2026-12-10 00:00:00",
+   "probability": 50,
+   "forecast_category": "5132191a7b3d521032b7e865b38cb699",
+   "sales_cycle_type": "4efaf9c893a1c75079d4f7717cba10ab",
+   "stage": "d68db94093e1c75079d4f7717cba106b",
+   "account": "f2d587002bd38f104deaf02ac891bfd5",
+   "assigned_to": "b86ffe0c2b538f104deaf02ac891bfeb",
+   "territory": ""
+  },
+  {
+   "sys_id": "93124c7d2b87cb104deaf02ac891bf90",
+   "number": "OPTY0001024",
+   "short_description": "Boxeo LATAM proposal in review",
+   "amount": 80000,
+   "estimated_closed_date": "2026-10-10 00:00:00",
+   "probability": 50,
+   "forecast_category": "0f12151a7b3d521032b7e865b38cb6a3",
+   "sales_cycle_type": "9c5bb50c93a1c75079d4f7717cba106e",
+   "stage": "749dfd4093e1c75079d4f7717cba103d",
+   "account": "239e9bd63bbac310d5260fa693e45a49",
+   "assigned_to": "916f3ecc3bd7cb10d5260fa693e45a20",
+   "territory": "bb5a72cc2b138f104deaf02ac891bfb9"
+  },
+  {
+   "sys_id": "960f0fc03b9bcb10d5260fa693e45a37",
+   "number": "OPTY0001099",
+   "short_description": "Rheinland Systems GmbH - AI & Automation Rollout",
+   "amount": 2100000,
+   "estimated_closed_date": "2026-10-30 00:00:00",
+   "probability": 70,
+   "forecast_category": "8062d15a7b3d521032b7e865b38cb63e",
+   "sales_cycle_type": "4efaf9c893a1c75079d4f7717cba10ab",
+   "stage": "4f9d718093e1c75079d4f7717cba1024",
+   "account": "62d587002bd38f104deaf02ac891bfa4",
+   "assigned_to": "206ffe0c2b538f104deaf02ac891bfda",
+   "territory": ""
+  },
+  {
+   "sys_id": "9c22087d3b0fcb10d5260fa693e45a4e",
+   "number": "OPTY0001032",
+   "short_description": "Golden Gate AI expansion identification",
+   "amount": 99000,
+   "estimated_closed_date": "2026-12-15 00:00:00",
+   "probability": 25,
+   "forecast_category": "6802ddd67b3d521032b7e865b38cb61c",
+   "sales_cycle_type": "9c5bb50c93a1c75079d4f7717cba106e",
+   "stage": "3b6df94093e1c75079d4f7717cba1009",
+   "account": "19320b2d2b8b8b104deaf02ac891bf01",
+   "assigned_to": "9b84f6563bf2c310d5260fa693e45a74",
+   "territory": "290f42173bf24710d5260fa693e45a00"
+  },
+  {
+   "sys_id": "c712c47d3b0fcb10d5260fa693e45a22",
+   "number": "OPTY0001023",
+   "short_description": "Boxeo APAC platform discovery",
+   "amount": 150000,
+   "estimated_closed_date": "2026-11-01 00:00:00",
+   "probability": 35,
+   "forecast_category": "6802ddd67b3d521032b7e865b38cb61c",
+   "sales_cycle_type": "9c5bb50c93a1c75079d4f7717cba106e",
+   "stage": "448d7d4093e1c75079d4f7717cba1048",
+   "account": "eb9edfd62bba83104deaf02ac891bfd9",
+   "assigned_to": "096ffacc3bd7cb10d5260fa693e45ae6",
+   "territory": "d15a3e8c2b138f104deaf02ac891bfe7"
+  },
+  {
+   "sys_id": "d212cc3d3b0fcb10d5260fa693e45a43",
+   "number": "OPTY0001020",
+   "short_description": "Boxeo Q4 platform expansion",
+   "amount": 125000,
+   "estimated_closed_date": "2026-11-15 00:00:00",
+   "probability": 20,
+   "forecast_category": "6802ddd67b3d521032b7e865b38cb61c",
+   "sales_cycle_type": "9c5bb50c93a1c75079d4f7717cba106e",
+   "stage": "8f5d394093e1c75079d4f7717cba100c",
+   "account": "425ed7962bba83104deaf02ac891bf4c",
+   "assigned_to": "9b84f6563bf2c310d5260fa693e45a74",
+   "territory": "290f42173bf24710d5260fa693e45a00"
+  },
+  {
+   "sys_id": "e712c47d3b0fcb10d5260fa693e45a82",
+   "number": "OPTY0001026",
+   "short_description": "Nimbus Analytics platform expansion",
+   "amount": 60000,
+   "estimated_closed_date": "2026-11-20 00:00:00",
+   "probability": 20,
+   "forecast_category": "6802ddd67b3d521032b7e865b38cb61c",
+   "sales_cycle_type": "9c5bb50c93a1c75079d4f7717cba106e",
+   "stage": "8f5d394093e1c75079d4f7717cba100c",
+   "account": "70320b213bc3cb10d5260fa693e45a82",
+   "assigned_to": "b9098b212b0f8b104deaf02ac891bfc9",
+   "territory": "307902a93b4b8b10d5260fa693e45a32"
+  }
+ ]
+}
