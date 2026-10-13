@@ -371,3 +371,15 @@ fixtures were extracted) to seed/data/070 and the bundle, and inserted them on o
 Also rebuilt the empty `configuration_json` cache on 10 published product offerings on stage via
 `ProductCatalogCacheAPI().cacheProductOffering()` (read-only cache field; direct writes are silently discarded).
 Why: Full opmsalescrm1 vs opmsalescrmstage master-data audit.
+
+## post-deploy 02 + 03 — E2E blockers on opmsalescrmstage (2026-10-13)
+Instance: opmsalescrmstage
+What: Two stage-only defects found by the E2E suite, fixed on stage and scripted for fresh deploys.
+  - `scripts/post-deploy/02-account-code-counter.js` — property
+    `com.snc.cs_base.last.generated.code.tree.path` lagged behind the seeded account_codes, so every new
+    customer_account insert collided ("Duplicate entry '!!!U'", Table API 403 "Operation Failed").
+    Set to `!!#2` on stage.
+  - `scripts/post-deploy/03-order-task-state-override.js` — dictionary override for
+    sn_ind_tmt_orm_order_task.state (plugin baseline on opm1) was missing, so Order Task "Close" set
+    "Awaiting information" instead of "Closed complete". Inserted on stage (landed in Global scope).
+Result: order-submission, order-task-fulfillment and order-completion pass on stage.
