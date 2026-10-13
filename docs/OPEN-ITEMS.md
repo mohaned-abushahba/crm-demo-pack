@@ -41,11 +41,22 @@ opmsalescrm1 has 29 forecast headers, 26 quotas and 4,184 forecast items; stage 
 quotas from `seed/03-ams-west-forecasts.js` and no items. `tests/sales-forecasting-rollup.spec.ts` needs the
 full opm1 territory/persona hierarchy. Decide whether to seed it or rescope the spec.
 
-## Candidate records on opmsalescrm1 not in any Update Set — OPEN (drift Layer 2, 2026-10-13)
+## Candidate records on opmsalescrm1 not in any Update Set — TRIAGED 2026-10-13, nothing to capture
 
-Not plugin noise, to review and capture (UPDATE-024+) or consciously leave out: two
-`sn_adv_appr_mgmt_approval_group` rows (SCRM-Delinquent Account Approver), `sys_decision_multi_result`
-7e817a90… and flow "TEST Header tasks at submission for new add orders", two `sys_granular_delegate` rows
-(rebecca.smith, 2026-09-02), `customer_contact` and `fx_rate` form sections, and PRM `sys_ui_section`
-3f4b8d88… (Business Profile, UPDATE-014) which is missing on stage. See the e2e repo's
-`drift-reports/`.
+Drift Layer 2 listed records created on opmsalescrm1 since 2026-08-23 that no Update Set contains and that
+are absent on stage. Checked each; none belongs in UPDATE-024:
+
+- Two `sn_adv_appr_mgmt_approval_group` rows (SCRM-Delinquent Account Approver) have no approval rule —
+  orphans, inert. The rule-linked group (cae61ad0…) is already on stage.
+- Two `sys_granular_delegate` rows (Rebecca Smith → Cameron Patel, 2026-09-02) have no delegation rule
+  (`sys_m2m_delegate_rule`), and one expired 2026-09-08 — inert. Derek → Rebecca (UPDATE-022) is the real one.
+- Flow "TEST Header tasks at submission for new add orders" and its `sys_decision_multi_result` row: a test
+  duplicate of the real flow (037f8a9c…, already on stage). Order Task counts match on both instances.
+- `customer_contact` / `fx_rate` Default-view form sections: auto-generated layouts (stage has its own
+  customer_contact one, different sys_id).
+- PRM "Business Profile" Workspace section 3f4b8d88…: stage has the same section under sys_id 553e35ab…
+  (PRM plugin regenerates these per install).
+- Everything else (UI views, ux macroponents/events, encryption/AI properties, Field Service and
+  Employee Experience rules, change-log app) is plugin-install residue.
+
+If any of the first four should be on stage anyway, say so and they get captured as UPDATE-024.
