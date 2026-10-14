@@ -422,4 +422,4 @@ Group product family overridden to Revenue Enablement via seed/overrides.json (o
 Prerequisite: OPTY0001034 comes from the forecast seed (seed/data/900, script 04), not the bundle, so it is listed
 in external-refs.json; load order is account/contacts/family -> group -> members -> association.
 Also: seed/tools/refcheck.py now skips script-loaded fixtures that have no `records` key (it crashed on 900).
-Not yet loaded onto stage.
+Loaded onto opmsalescrmstage 2026-10-14 (1 group, 3 members, 1 opportunity link; re-read and verified).
