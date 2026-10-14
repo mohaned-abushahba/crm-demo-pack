@@ -76,3 +76,17 @@ SDR and Sales Agent dashboards, so dashboard access is fine. The SDR "Leads by S
 visualization whose `par_visualization_permission` rows grant only ITSM/CMDB-style roles (itil, sn_incident_*,
 sn_sd.success_dashboard_read, …) plus `sn_sales_crm_mob.sales_mobile_user`, which Sage does have. The other 8 SDR widgets are
 inline. Next step: reproduce as Sage and see which widget fails.
+
+## Plugin-install REST service not yet identified — OPEN (2026-10-14)
+
+`installer/instance.js` has `startInstall()` and `getProgress()` as placeholders that throw. Need the internal
+REST service that installs/activates plugins and store apps (candidates to check: the CI/CD
+`/api/sn_cicd/plugin/{id}/activate` and `/api/sn_cicd/app_repo/install` endpoints, or whatever the internal
+service is). Implement the two functions keeping their return shapes (see the contract at the top of
+`instance.js`); the engine, retry logic, API and tests need no changes. Until then run the installer against a
+`mock: true` instance.
+
+Also still to confirm:
+- `sn_ai_som_adv` (SOM - Advanced) is on opmsalescrm1 but **not on opmsalescrmstage** (checked 2026-10-14); the other 45
+  scopes match on both. Stage's service account is also ACL-blocked from `sys_store_app` (verify falls back to `sys_scope`).
+- Real per-plugin install order/dependencies (manifest order is the doc's order with Order Management first).

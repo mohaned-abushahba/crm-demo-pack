@@ -1,0 +1,373 @@
+{
+  "_comment": "Source: 'Sales CRM Top Plugins list.docx'. Array order is install order (Order Management first - slowest). All plugins are required: the run only reports ready when every one is verified active. 'heavy' plugins get a longer stall window. Order Management entry confirmed as sn_ind_tmt_orm. Doc note: sn_invoice_case_ss and sn_inv_case_pb pull in many Finance BU dependencies.",
+  "plugins": [
+    {
+      "id": "sn_ind_tmt_orm",
+      "name": "Order Management",
+      "type": "store",
+      "group": "CPQ - Required",
+      "required": true,
+      "heavy": true
+    },
+    {
+      "id": "sn_prd_config_ui",
+      "name": "Product Configurator",
+      "type": "store",
+      "group": "CPQ - Required",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_cpq_intg",
+      "name": "CPQ Integration",
+      "type": "store",
+      "group": "CPQ - Required",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_quote_mgmt",
+      "name": "Quote Management Application",
+      "type": "store",
+      "group": "CPQ - Required",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_csm_price_mtrx",
+      "name": "Product and pricing rules",
+      "type": "store",
+      "group": "CPQ - Required",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_prd_pm_ra",
+      "name": "Product Offering Recommendations",
+      "type": "store",
+      "group": "CPQ - Required",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_ord_mgmt_portal",
+      "name": "Order Management Portal",
+      "type": "store",
+      "group": "CPQ - Required",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_sales_cart",
+      "name": "Sales Cart",
+      "type": "store",
+      "group": "CPQ - Required",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_clm_selfservice",
+      "name": "Customer Life Cycle Management Self Service",
+      "type": "store",
+      "group": "CPQ - Required",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_adv_appr_mgmt",
+      "name": "Advanced Approval Management",
+      "type": "store",
+      "group": "CPQ - Required",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_l2c_cust_flows",
+      "name": "Customer Life Cycle Management Workflows",
+      "type": "store",
+      "group": "CPQ - Required",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_contract_ent_wf",
+      "name": "Contracts and Entitlement Workflows",
+      "type": "store",
+      "group": "CPQ - Required",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_quota_app",
+      "name": "Sales Quota Application",
+      "type": "store",
+      "group": "CPQ - Recommended / Sales Automation",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_opty_mgmt",
+      "name": "Opportunity Management Application",
+      "type": "store",
+      "group": "CPQ - Recommended / Sales Automation",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_sales_agmt_wf",
+      "name": "Sales Agreement Management",
+      "type": "store",
+      "group": "CPQ - Recommended",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_cust_rfq",
+      "name": "Customer Request for Quote",
+      "type": "store",
+      "group": "CPQ - Recommended",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_lead_mgmt",
+      "name": "Lead Management Application",
+      "type": "store",
+      "group": "Sales Automation (SFA)",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_sales_territory",
+      "name": "Sales Territory Management",
+      "type": "store",
+      "group": "Sales Automation (SFA)",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_sales_forecast",
+      "name": "Sales Forecasting",
+      "type": "store",
+      "group": "Sales Automation (SFA)",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_buying_groups",
+      "name": "Buying Groups",
+      "type": "store",
+      "group": "Sales Automation (SFA)",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_crm_sequence",
+      "name": "Customer Engagement Sequences",
+      "type": "store",
+      "group": "Sales Automation (SFA)",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_opty_mgmt_ml",
+      "name": "Opportunity Management ML",
+      "type": "store",
+      "group": "Sales Automation (SFA)",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_crm_outlook",
+      "name": "CRM Outlook Add-in",
+      "type": "store",
+      "group": "Sales Automation (SFA)",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_sales_mobile_cm",
+      "name": "Sales and Order Management Mobile Common",
+      "type": "store",
+      "group": "Sales Automation (SFA)",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_order_case",
+      "name": "Order Operations Case Management",
+      "type": "store",
+      "group": "Order Operations",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_ord_case_ss",
+      "name": "Order Case Self Service",
+      "type": "store",
+      "group": "Order Operations",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_ord_case_pb",
+      "name": "Order Case Playbook",
+      "type": "store",
+      "group": "Order Operations",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_csm_invoice",
+      "name": "Case Management for Invoice Operations",
+      "type": "store",
+      "group": "Order Operations",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_invoice_case_ss",
+      "name": "Invoice Case Self-Service",
+      "type": "store",
+      "group": "Order Operations",
+      "required": true,
+      "heavy": true
+    },
+    {
+      "id": "sn_inv_case_pb",
+      "name": "Invoice Case Playbook",
+      "type": "store",
+      "group": "Order Operations",
+      "required": true,
+      "heavy": true
+    },
+    {
+      "id": "sn_csm_rma_case",
+      "name": "RMA Case Management",
+      "type": "store",
+      "group": "Order Operations",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_prm",
+      "name": "Partner Relationship Management",
+      "type": "store",
+      "group": "Partner Relationship Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_prm_sales",
+      "name": "Sales Common for Channel Partners",
+      "type": "store",
+      "group": "Partner Relationship Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_prm_qm",
+      "name": "Quote Management for Channel Partners",
+      "type": "store",
+      "group": "Partner Relationship Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_prm_dr",
+      "name": "Deal Registration for Channel Partners",
+      "type": "store",
+      "group": "Partner Relationship Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_prm_opptym",
+      "name": "Opportunity Management for Channel Partners",
+      "type": "store",
+      "group": "Partner Relationship Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_prm_orm",
+      "name": "Order Management for Channel Partners",
+      "type": "store",
+      "group": "Partner Relationship Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_quote_ss",
+      "name": "Self Service for Quote Management",
+      "type": "store",
+      "group": "Partner Relationship Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_prm_dr_ai",
+      "name": "AI features for Deal Registration",
+      "type": "store",
+      "group": "Partner Relationship Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_l2c_cockpit",
+      "name": "Lead-to-Cash Process Management",
+      "type": "store",
+      "group": "Others",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "com.snc.pa.premium",
+      "name": "Performance Analytics - Premium",
+      "type": "plugin",
+      "group": "Others",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_ai_som_adv",
+      "name": "SOM - Advanced",
+      "type": "store",
+      "group": "AI Plugins",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_som_gen_ai_cpq",
+      "name": "ServiceNow Otto for CPQ",
+      "type": "store",
+      "group": "AI Plugins",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_som_gen_ai",
+      "name": "ServiceNow Otto for Sales Automation",
+      "type": "store",
+      "group": "AI Plugins",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_opty_mgmt_ai",
+      "name": "ServiceNow Otto for Opportunity Management",
+      "type": "store",
+      "group": "AI Plugins",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_som_gen_ai_om",
+      "name": "ServiceNow Otto for Order Management",
+      "type": "store",
+      "group": "AI Plugins",
+      "required": true,
+      "heavy": false
+    }
+  ]
+}

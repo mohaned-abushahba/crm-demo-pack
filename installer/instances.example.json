@@ -1,0 +1,4 @@
+{
+  "opmsalescrmstage": { "url": "https://<instance>.service-now.com", "userEnv": "SN_STAGE_USER", "passEnv": "SN_STAGE_PASSWORD" },
+  "mock": { "mock": true, "durationMs": 3000 }
+}

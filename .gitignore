@@ -7,3 +7,7 @@ node_modules/
 seed/secrets/
 __pycache__/
 backups/
+
+# Installer runtime state and per-environment config
+installer/runs/
+installer/instances.json
