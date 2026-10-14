@@ -14,6 +14,21 @@ File: update-sets/UPDATE-XXX-short-name.xml
 
 ---
 
+## UPDATE-024-sdr-dashboard-metadata (2026-10-13)
+Instance: opmsalescrm1
+What: One `par_dashboard_user_metadata` record (958685ca…) for the SDR Golden Landing Page. Must be
+committed after UPDATE-016 (it references the dashboard).
+Why: Audit of the persona landing page dashboards on opmsalescrm1. Everything else was already in
+UPDATE-016: the 3 dashboards (Sales Agent / Sales Manager / SDR Golden Landing Page), 8 tabs, 11 canvases,
+39 widgets, 7 dashboard permissions, 14 visualizations + permissions, and the other 2 metadata rows. The SDR
+metadata row was missed because its only payload sits in an unrelated plugin batch update set.
+Nothing on the par_* tables changed on opmsalescrm1 after 2026-09-28.
+Access model (all group-based, no per-user assignment): SDR Golden Landing Page -> SCRM-Sales Development
+Representative (Sage Reed); Sales Agent Golden Landing Page (default, via
+`sn_opty_mgmt.glide.ui.landing_page_default_dashboard`) -> SCRM-Account Exec Team (Asher Sky) and SDR group;
+Sales Manager Golden Landing Page -> SCRM-Sales Managers (write). Groups and members are in seed/.
+File: update-sets/UPDATE-024-sdr-dashboard-metadata.xml
+
 ## UPDATE-021-persona-landing-dashboards removed (2026-10-08)
 Instance: n/a (repo clean-up)
 What: Deleted update-sets/UPDATE-021-persona-landing-dashboards.xml. Its 3 par_dashboard parents

@@ -62,3 +62,17 @@ are absent on stage. Checked each; none belongs in UPDATE-024:
   Employee Experience rules, change-log app) is plugin-install residue.
 
 If any of the first four should be on stage anyway, say so and they get captured as UPDATE-024.
+
+## Sage Reed cannot access the widgets — OPEN (logged 2026-10-13)
+
+Sage Reed (user in the seed, `seed/data/030-sys_user.json`) is unable to access the widgets. Not yet
+investigated. To pin down: which instance (opmsalescrm1 vs. opmsalescrmstage), which widgets/workspace, and
+the exact symptom (missing, blank, or access denied). Start by comparing Sage's groups, direct roles and
+`sys_user_role_contains` chains against the instance where it works, as was done for john.jason and
+marcus.reed above, then check the widget ACLs / role requirements.
+
+Lead (2026-10-13, not confirmed): on opmsalescrm1 Sage is in SCRM-Sales Development Representative, which has read on the
+SDR and Sales Agent dashboards, so dashboard access is fine. The SDR "Leads by Source" widget is a stored
+visualization whose `par_visualization_permission` rows grant only ITSM/CMDB-style roles (itil, sn_incident_*,
+sn_sd.success_dashboard_read, …) plus `sn_sales_crm_mob.sales_mobile_user`, which Sage does have. The other 8 SDR widgets are
+inline. Next step: reproduce as Sage and see which widget fails.
