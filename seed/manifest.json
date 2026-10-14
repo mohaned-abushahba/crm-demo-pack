@@ -374,6 +374,31 @@
       "file": "530-sn_csm_pricing_cost_book_line",
       "table": "sn_csm_pricing_cost_book_line",
       "key": []
+    },
+    {
+      "file": "910-sn_buying_groups_buying_group",
+      "table": "sn_buying_groups_buying_group",
+      "key": [
+        "number"
+      ]
+    },
+    {
+      "file": "920-sn_buying_groups_buying_group_member",
+      "table": "sn_buying_groups_buying_group_member",
+      "key": [
+        "buying_group",
+        "contact"
+      ],
+      "on_conflict": "adopt"
+    },
+    {
+      "file": "930-sn_opty_mgmt_core_buying_group_opportunity",
+      "table": "sn_opty_mgmt_core_buying_group_opportunity",
+      "key": [
+        "buying_group",
+        "opportunity"
+      ],
+      "on_conflict": "adopt"
     }
   ],
   "windows": [

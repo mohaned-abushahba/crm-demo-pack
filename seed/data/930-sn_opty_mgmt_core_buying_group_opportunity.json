@@ -1,0 +1,22 @@
+{
+  "table": "sn_opty_mgmt_core_buying_group_opportunity",
+  "key": [
+    "buying_group",
+    "opportunity"
+  ],
+  "on_conflict": "adopt",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "buying_group": "sn_buying_groups_buying_group",
+    "opportunity": "sn_opty_mgmt_core_opportunity"
+  },
+  "records": [
+    {
+      "sys_id": "f417c0393b4fcb10d5260fa693e45a55",
+      "buying_group": "3e0700792bc7cb104deaf02ac891bffb",
+      "sys_domain": "global",
+      "opportunity": "7bf600792bc7cb104deaf02ac891bfd2"
+    }
+  ]
+}

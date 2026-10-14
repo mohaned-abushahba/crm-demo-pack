@@ -1,0 +1,42 @@
+{
+  "table": "sn_buying_groups_buying_group_member",
+  "key": [
+    "buying_group",
+    "contact"
+  ],
+  "on_conflict": "adopt",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "buying_group": "sn_buying_groups_buying_group",
+    "contact": "customer_contact",
+    "role": "sn_customerservice_related_party_configuration",
+    "responsibility": "sn_customerservice_responsibility_def"
+  },
+  "records": [
+    {
+      "sys_id": "281784313b4fcb10d5260fa693e45a4d",
+      "buying_group": "3e0700792bc7cb104deaf02ac891bffb",
+      "role": "",
+      "responsibility": "",
+      "contact": "62528f213bc3cb10d5260fa693e45af9",
+      "active": "true"
+    },
+    {
+      "sys_id": "601780792bc7cb104deaf02ac891bf24",
+      "buying_group": "3e0700792bc7cb104deaf02ac891bffb",
+      "role": "",
+      "responsibility": "",
+      "contact": "96528f213bc3cb10d5260fa693e45ae4",
+      "active": "true"
+    },
+    {
+      "sys_id": "6817c0393b4fcb10d5260fa693e45a1d",
+      "buying_group": "3e0700792bc7cb104deaf02ac891bffb",
+      "role": "",
+      "responsibility": "",
+      "contact": "aa52cf213bc3cb10d5260fa693e45a26",
+      "active": "true"
+    }
+  ]
+}

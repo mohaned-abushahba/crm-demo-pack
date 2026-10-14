@@ -411,3 +411,15 @@ batch-creating opportunities returned a misleading "403 ACL" when the number col
 record, and Forge auto-granted `sn_prm_dr.enterprise_b2c_deal_reg_agent` to the admin while trying to fix it
 (removed again). Applied to stage by hand through the Forge MCP; the script form has not been run end to end.
 File: seed/04-forecast-hierarchy.js
+
+## seed buying groups (2026-10-14)
+Instance: opmsalescrm1 (source)
+What: Buying Groups were never captured (not in the Update Sets, drifted on stage). Added three fixtures
+extracted from opmsalescrm1 and registered them in seed/manifest.json: `910-sn_buying_groups_buying_group` (1:
+BYGR0001001 Redwood Cloud Technologies - Platform Modernization), `920-..._buying_group_member` (3 contacts: Robert
+Chang, Nina Patel, Angela Diaz) and `930-sn_opty_mgmt_core_buying_group_opportunity` (1: link to OPTY0001034).
+Group product family overridden to Revenue Enablement via seed/overrides.json (opmsalescrm1 still has Intelligence & Analytics). Bundle rebuilt (2,624 records). The engagement-metric table is empty on source, so nothing to capture.
+Prerequisite: OPTY0001034 comes from the forecast seed (seed/data/900, script 04), not the bundle, so it is listed
+in external-refs.json; load order is account/contacts/family -> group -> members -> association.
+Also: seed/tools/refcheck.py now skips script-loaded fixtures that have no `records` key (it crashed on 900).
+Not yet loaded onto stage.

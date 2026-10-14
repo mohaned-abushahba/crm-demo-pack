@@ -31,6 +31,16 @@
     ]
   },
   {
+    "table": "sn_opty_mgmt_core_opportunity",
+    "sys_id": "7bf600792bc7cb104deaf02ac891bfd2",
+    "label": "OPTY0001034",
+    "exists_on_source": true,
+    "created_in_scope": true,
+    "used_by": [
+      "sn_opty_mgmt_core_buying_group_opportunity.opportunity"
+    ]
+  },
+  {
     "table": "sn_prd_pm_uom",
     "sys_id": "cb2795d553020110286eddeeff7b12ff",
     "label": "Each",
@@ -193,6 +203,16 @@
     ]
   },
   {
+    "table": "sys_user_group",
+    "sys_id": "not-applicable",
+    "label": null,
+    "exists_on_source": false,
+    "created_in_scope": false,
+    "used_by": [
+      "sys_group_has_role.granted_by"
+    ]
+  },
+  {
     "table": "sys_user_role",
     "sys_id": "0c0e92f0c3750110d367f55a8840ddfc",
     "label": "sn_tp.territory_admin",
@@ -333,6 +353,16 @@
     "created_in_scope": false,
     "used_by": [
       "sys_user_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
+    "sys_id": "361f31e33b24cb10d385fadc73e45a40",
+    "label": "sn_qut_sum_skill.quote_ai",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sys_group_has_role.role"
     ]
   },
   {

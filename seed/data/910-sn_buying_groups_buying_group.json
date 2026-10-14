@@ -1,0 +1,28 @@
+{
+  "table": "sn_buying_groups_buying_group",
+  "key": [
+    "number"
+  ],
+  "on_conflict": "fail",
+  "source": "opmsalescrm1",
+  "query": "sys_created_on>=2026-08-21 00:00:00^sys_created_on<2026-08-22 00:00:00^NQsys_created_on>=2026-08-23 00:00:00",
+  "references": {
+    "owner": "sys_user",
+    "product_offering_family": "sn_prd_pm_product_offering_family",
+    "account": "customer_account"
+  },
+  "records": [
+    {
+      "owner": "9b84f6563bf2c310d5260fa693e45a74",
+      "active": "true",
+      "description": "Cross-functional stakeholders evaluating the enterprise platform modernization deal.\n\n— Created via ServiceNow Forge (Claude)",
+      "number": "BYGR0001001",
+      "sys_id": "3e0700792bc7cb104deaf02ac891bffb",
+      "product_offering_family": "5a1cb95b3b324710d5260fa693e45a51",
+      "stage": "1",
+      "name": "Redwood Cloud Technologies — Platform Modernization Buying Group",
+      "work_notes": "",
+      "account": "5132c72d2b8b8b104deaf02ac891bff8"
+    }
+  ]
+}

@@ -1,13 +1,14 @@
 {
 "format": "golden-demo-seed/1",
 "source": "opmsalescrm1",
-"generated_on": "2026-10-09 22:46:01",
-"record_count": 2619,
-"table_count": 47,
+"generated_on": "2026-10-14 20:25:54",
+"record_count": 2624,
+"table_count": 50,
 "prerequisites": [
 {"table": "fx_currency", "sys_id": "USD", "label": "United States Dollars"},
 {"table": "sn_customerservice_related_party_configuration", "sys_id": "9228dacdff803210583effffffffff2d", "label": "Account Executive"},
 {"table": "sn_customerservice_responsibility_def", "sys_id": "cf533e9e43a7a610583ecd60afb8f251", "label": "Account Executive"},
+{"table": "sn_opty_mgmt_core_opportunity", "sys_id": "7bf600792bc7cb104deaf02ac891bfd2", "label": "OPTY0001034"},
 {"table": "sn_prd_pm_uom", "sys_id": "cb2795d553020110286eddeeff7b12ff", "label": "Each"},
 {"table": "sn_prd_pm_uom_class", "sys_id": "7c62e5d153020110286eddeeff7b124e", "label": "Quantity"},
 {"table": "sn_req_criteria_customer_condition", "sys_id": "1019e52d2bcb4b104deaf02ac891bf6e", "label": "Partners with revenue over $10 Million"},
@@ -24,6 +25,7 @@
 {"table": "sys_scope", "sys_id": "global", "label": "Global"},
 {"table": "sys_user_group", "sys_id": "3ccb62b67fb30210674d91fadc8665c2", "label": "MFA Exempted User Group"},
 {"table": "sys_user_group", "sys_id": "5ee74940b70022108d4406dd1e11a918", "label": "Conditional Script Writer"},
+{"table": "sys_user_group", "sys_id": "not-applicable", "label": null},
 {"table": "sys_user_role", "sys_id": "0c0e92f0c3750110d367f55a8840ddfc", "label": "sn_tp.territory_admin"},
 {"table": "sys_user_role", "sys_id": "0e474bb543000210144160b6ccb8f26b", "label": "sn_lead_mgmt_core.lead_writer"},
 {"table": "sys_user_role", "sys_id": "1a1427405310011014caddeeff7b1232", "label": "sn_prd_pm.external_product_viewer"},
@@ -38,6 +40,7 @@
 {"table": "sys_user_role", "sys_id": "309f515f43453110a530cd60afb8f27b", "label": "sn_sales_common.sales_manager"},
 {"table": "sys_user_role", "sys_id": "320ba38f77a0b110ce3ea465ae5a9953", "label": "sn_ind_tmt_orm.order_admin"},
 {"table": "sys_user_role", "sys_id": "3355a31eff4ce2101970ffffffffff04", "label": "sn_prm.external_partner_manager"},
+{"table": "sys_user_role", "sys_id": "361f31e33b24cb10d385fadc73e45a40", "label": "sn_qut_sum_skill.quote_ai"},
 {"table": "sys_user_role", "sys_id": "3635f4e6ff9726105ce2ffffffffff36", "label": "sn_prm_dr.enterprise_deal_reg_agent"},
 {"table": "sys_user_role", "sys_id": "3a64fc24d7700200e5982cf65e610357", "label": "sn_customerservice.customer"},
 {"table": "sys_user_role", "sys_id": "3be5d3d1b7103300dff9fa13ee11a987", "label": "business_stakeholder"},
@@ -2801,6 +2804,17 @@
 {"end_date":"","code":"CBL-0176","cost":"1341.02","product_offering":"d6f4b9dc3b0f0310d5260fa693e45a6a","number":"CBL0001694","sys_id":"fcb1aefa2b0743104deaf02ac891bfc6","uom":"cb2795d553020110286eddeeff7b12ff","cost_book":"e6dd92322b0743104deaf02ac891bf2e","start_date":"2026-09-04 00:00:00"},
 {"end_date":"","code":"CBL-0071","cost":"1346.8","product_offering":"16f4b9dc3b0f0310d5260fa693e45a76","number":"CBL0001589","sys_id":"ffa16efa2b0743104deaf02ac891bf75","uom":"cb2795d553020110286eddeeff7b12ff","cost_book":"e6dd92322b0743104deaf02ac891bf2e","start_date":"2026-09-04 00:00:00"},
 {"end_date":"","code":"CBL-0081","cost":"29.42","product_offering":"9af4b9dc3b0f0310d5260fa693e45a73","number":"CBL0001599","sys_id":"ffa16efa2b0743104deaf02ac891bf87","uom":"cb2795d553020110286eddeeff7b12ff","cost_book":"e6dd92322b0743104deaf02ac891bf2e","start_date":"2026-09-04 00:00:00"}
+]},
+{"table": "sn_buying_groups_buying_group", "key": ["number"], "on_conflict": "fail", "insert_as": {}, "references": {"owner": "sys_user", "product_offering_family": "sn_prd_pm_product_offering_family", "account": "customer_account"}, "count": 1, "records": [
+{"owner":"9b84f6563bf2c310d5260fa693e45a74","active":"true","description":"Cross-functional stakeholders evaluating the enterprise platform modernization deal.\n\n— Created via ServiceNow Forge (Claude)","number":"BYGR0001001","sys_id":"3e0700792bc7cb104deaf02ac891bffb","product_offering_family":"5a1cb95b3b324710d5260fa693e45a51","stage":"1","name":"Redwood Cloud Technologies — Platform Modernization Buying Group","work_notes":"","account":"5132c72d2b8b8b104deaf02ac891bff8"}
+]},
+{"table": "sn_buying_groups_buying_group_member", "key": ["buying_group", "contact"], "on_conflict": "adopt", "insert_as": {}, "references": {"buying_group": "sn_buying_groups_buying_group", "contact": "customer_contact", "role": "sn_customerservice_related_party_configuration", "responsibility": "sn_customerservice_responsibility_def"}, "count": 3, "records": [
+{"sys_id":"281784313b4fcb10d5260fa693e45a4d","buying_group":"3e0700792bc7cb104deaf02ac891bffb","role":"","responsibility":"","contact":"62528f213bc3cb10d5260fa693e45af9","active":"true"},
+{"sys_id":"601780792bc7cb104deaf02ac891bf24","buying_group":"3e0700792bc7cb104deaf02ac891bffb","role":"","responsibility":"","contact":"96528f213bc3cb10d5260fa693e45ae4","active":"true"},
+{"sys_id":"6817c0393b4fcb10d5260fa693e45a1d","buying_group":"3e0700792bc7cb104deaf02ac891bffb","role":"","responsibility":"","contact":"aa52cf213bc3cb10d5260fa693e45a26","active":"true"}
+]},
+{"table": "sn_opty_mgmt_core_buying_group_opportunity", "key": ["buying_group", "opportunity"], "on_conflict": "adopt", "insert_as": {}, "references": {"buying_group": "sn_buying_groups_buying_group", "opportunity": "sn_opty_mgmt_core_opportunity"}, "count": 1, "records": [
+{"sys_id":"f417c0393b4fcb10d5260fa693e45a55","buying_group":"3e0700792bc7cb104deaf02ac891bffb","sys_domain":"global","opportunity":"7bf600792bc7cb104deaf02ac891bfd2"}
 ]}
 ],
 "expected_user_roles": {

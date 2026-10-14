@@ -23,7 +23,7 @@ def main():
     manifest = json.loads((SEED / "manifest.json").read_text())
     client = Client(*credentials(args.instance or manifest["source_instance"]))
 
-    docs = [json.loads(p.read_text()) for p in sorted(DATA.glob("[0-9]*.json"))]
+    docs = [d for d in (json.loads(p.read_text()) for p in sorted(DATA.glob("[0-9]*.json"))) if "records" in d]  # skips script-loaded fixtures (900-forecast)
     known = {r["sys_id"] for d in docs for r in d["records"]}
     external = defaultdict(lambda: defaultdict(set))  # ref_table -> sys_id -> {"table.field"}
     for d in docs:

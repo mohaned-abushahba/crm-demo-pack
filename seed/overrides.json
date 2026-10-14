@@ -91,9 +91,17 @@
       "set": {
         "uom": "13a362212b478b104deaf02ac891bf58"
       }
+    },
+    {
+      "reason": "Buying group BYGR0001001 belongs to the Revenue Enablement product family (agreed 2026-10-14); opmsalescrm1 still holds Intelligence & Analytics.",
+      "table": "sn_buying_groups_buying_group",
+      "sys_id": "3e0700792bc7cb104deaf02ac891bffb",
+      "set": {
+        "product_offering_family": "5a1cb95b3b324710d5260fa693e45a51"
+      }
     }
   ],
-  "_forbidden_comment": "Extraction fails if any extracted string still matches one of these (case-insensitive regex) — catches real-company names creeping back in.",
+  "_forbidden_comment": "Extraction fails if any extracted string still matches one of these (case-insensitive regex) \u2014 catches real-company names creeping back in.",
   "forbidden_patterns": [
     "golden\\s*gate",
     "goldengate"
