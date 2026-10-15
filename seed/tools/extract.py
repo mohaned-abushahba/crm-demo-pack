@@ -122,7 +122,13 @@ def main():
 
     manifest = json.loads((SEED / "manifest.json").read_text())
     instance = args.instance or manifest["source_instance"]
-    client = Client(*credentials(instance))
+    clients = {}
+
+    def client_for(name):
+        if name not in clients:
+            clients[name] = Client(*credentials(name))
+        return clients[name]
+
     only = set(args.only.split(",")) if args.only else None
     DATA.mkdir(exist_ok=True)
     docs = {}
@@ -131,7 +137,10 @@ def main():
         table = spec["table"]
         if only and table not in only:
             continue
-        query = scope_query(manifest["windows"], spec.get("query"))
+        # Transactional specs name their own instance and an explicit record query.
+        inst = spec.get("source_instance", instance)
+        client = client_for(inst)
+        query = spec["scope_query"] if "scope_query" in spec else scope_query(manifest["windows"], spec.get("query"))
         excluded = set(manifest["exclude_fields"]) | set(spec.get("exclude", []))
         records = [{k: v for k, v in r.items() if k not in excluded} for r in client.fetch_all(table, query)]
         for field, values in spec.get("exclude_records", {}).items():
@@ -141,7 +150,7 @@ def main():
             "table": table,
             "key": spec["key"],
             "on_conflict": spec.get("on_conflict", "fail"),
-            "source": instance,
+            "source": inst,
             "query": query,
             "references": client.reference_fields(table),
             "records": records,

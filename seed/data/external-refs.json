@@ -7,7 +7,11 @@
     "created_in_scope": false,
     "used_by": [
       "sn_csm_pricing_cost_book.currency",
-      "sn_csm_pricing_price_list.currency"
+      "sn_csm_pricing_price_list.currency",
+      "sn_ind_tmt_orm_order.order_currency",
+      "sn_opty_mgmt_core_opportunity.currency",
+      "sn_pss_core_service_contract.contract_currency",
+      "sn_quote_mgmt_core_quote.currency"
     ]
   },
   {
@@ -41,6 +45,66 @@
     ]
   },
   {
+    "table": "sn_opty_mgmt_core_opportunity_stage",
+    "sys_id": "42ad718093e1c75079d4f7717cba10c9",
+    "label": "Closed - Won",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity.stage"
+    ]
+  },
+  {
+    "table": "sn_opty_mgmt_core_opportunity_stage",
+    "sys_id": "4f9d718093e1c75079d4f7717cba1024",
+    "label": "Negotiation",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity.stage"
+    ]
+  },
+  {
+    "table": "sn_opty_mgmt_core_opportunity_stage",
+    "sys_id": "749dfd4093e1c75079d4f7717cba103d",
+    "label": "Proposal",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity.stage"
+    ]
+  },
+  {
+    "table": "sn_opty_mgmt_core_sales_cycle_type",
+    "sys_id": "4efaf9c893a1c75079d4f7717cba10ab",
+    "label": "New Business",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity.sales_cycle_type"
+    ]
+  },
+  {
+    "table": "sn_opty_mgmt_core_sales_cycle_type",
+    "sys_id": "9c5bb50c93a1c75079d4f7717cba106e",
+    "label": "Expansion",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity.sales_cycle_type"
+    ]
+  },
+  {
+    "table": "sn_opty_mgmt_core_sales_cycle_type",
+    "sys_id": "dd4bf10c93a1c75079d4f7717cba100a",
+    "label": "Renewal",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity.sales_cycle_type"
+    ]
+  },
+  {
     "table": "sn_prd_pm_uom",
     "sys_id": "cb2795d553020110286eddeeff7b12ff",
     "label": "Each",
@@ -49,7 +113,12 @@
     "used_by": [
       "sn_csm_pricing_cost_book_line.uom",
       "sn_csm_pricing_price_list_line.uom",
-      "sn_prd_pm_product_offering_uom.unit_of_measure"
+      "sn_ind_tmt_orm_order_line_item.unit_of_measurement",
+      "sn_install_base_sold_product.unit_of_measurement",
+      "sn_opty_mgmt_core_opportunity_line_item.unit_of_measurement",
+      "sn_prd_pm_product_offering_uom.unit_of_measure",
+      "sn_pss_core_service_contract_line.unit_of_measurement",
+      "sn_quote_mgmt_core_quote_line_item.unit_of_measurement"
     ]
   },
   {
@@ -90,6 +159,26 @@
     "created_in_scope": true,
     "used_by": [
       "sn_prm_program_segment_criteria.criteria"
+    ]
+  },
+  {
+    "table": "sn_sales_forecast_category",
+    "sys_id": "6802ddd67b3d521032b7e865b38cb61c",
+    "label": "Pipeline",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity.forecast_category"
+    ]
+  },
+  {
+    "table": "sn_sales_forecast_category",
+    "sys_id": "ddd19dd67b3d521032b7e865b38cb6cf",
+    "label": "Won",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity.forecast_category"
     ]
   },
   {
@@ -180,6 +269,16 @@
     "created_in_scope": false,
     "used_by": [
       "cmdb_model_category.sys_scope"
+    ]
+  },
+  {
+    "table": "sys_user",
+    "sys_id": "6816f79cc0a8016401c5a33be04be441",
+    "label": "System Administrator",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity.opened_by"
     ]
   },
   {

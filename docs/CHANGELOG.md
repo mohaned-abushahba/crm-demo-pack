@@ -423,3 +423,27 @@ Prerequisite: OPTY0001034 comes from the forecast seed (seed/data/900, script 04
 in external-refs.json; load order is account/contacts/family -> group -> members -> association.
 Also: seed/tools/refcheck.py now skips script-loaded fixtures that have no `records` key (it crashed on 900).
 Loaded onto opmsalescrmstage 2026-10-14 (1 group, 3 members, 1 opportunity link; re-read and verified).
+
+## seed transactional quotes + orders (2026-10-15)
+Instance: opmsalescrmstage (source)
+What: 7 opportunities, 7 quotes and 5 orders built through the real flow on stage, captured as fixtures 940-971
+and registered in seed/manifest.json (manifest specs with `source_instance` + `scope_query` are read from that
+instance by explicit record numbers; seed/tools/extract.py now supports this). Tables: opportunity (+ lines, team
+members, associated contacts), quote (+ lines, associated contacts), sold product, order (+ lines), contract
+(+ lines). Bundle rebuilt (62 tables, 2,838 records).
+- Full flow, completed: Gatelynx AI new business (OPTY0001084 / QT0001063 / ORD0001029); Hudson Yards Analytics new
+  business 2026 (OPTY0001091 / QT0001064 / ORD0001030) and its 2027 renewal (OPTY0001100 / QT0001067 / ORD0001031,
+  renew quote with +50 seats).
+- Open: Gatelynx AI expansion, quote left in Draft (OPTY0001092 / QT0001065); Redwood Cloud Technologies, quote
+  Approved, no order (OPTY0001093 / QT0001066).
+- Draft orders: Nimbus Analytics ORD0001032 (QT0001069) and Rose City Software ORD0001033 (QT0001070); their quotes
+  were completed directly with no approval chain.
+- 16 contracts (CNTR0010015-30) set Active, including the renewal's CNTR0010026-30.
+Not seeded: platform-generated children (quote/order/opportunity related parties and addresses, allocations,
+snapshots, order tasks, approval requests and steps); quote `document_template` is dropped (stage-only template).
+Opportunity `primary_quote` is deferred (insert_as) because the quote points back at the opportunity.
+Why: transactional demo data for the quote-to-order story; stage already holds it, the repo now reproduces it.
+Caveats: the load is untested. The loader inserts with Business Rules on, so quote pricing, quote state (an
+opportunity update resets a synced quote to Draft) and order/contract creation may behave differently than on stage.
+Opportunity numbers (OPTY0001084-1105) may collide with the forecast seed's opportunities on a fresh instance.
+Fixed on stage first: a mistyped Redwood contact id on the opportunity and quote associated-contact rows.

@@ -1,5 +1,5 @@
 {
-  "_comment": "Master-data seed manifest. Tables are extracted from the source instance and loaded onto the target in this order. Scope = records created inside any 'windows' range (2026-08-22 is skipped: plugin activation day, run as admin), ANDed with the table's 'query'. 'key' is the business key used to detect a record that already exists on the target with a different sys_id; on_conflict 'fail' stops the load, 'adopt' keeps the target's record (used for join rows that platform automation may already have created). 'insert_as' gives temporary values used on insert; the real values are applied after every table is loaded (e.g. children can only be added while a price list is draft).",
+  "_comment": "Master-data seed manifest. Tables are extracted from the source instance and loaded onto the target in this order. Scope = records created inside any 'windows' range (2026-08-22 is skipped: plugin activation day, run as admin), ANDed with the table's 'query'. 'key' is the business key used to detect a record that already exists on the target with a different sys_id; on_conflict 'fail' stops the load, 'adopt' keeps the target's record (used for join rows that platform automation may already have created). 'insert_as' gives temporary values used on insert; the real values are applied after every table is loaded (e.g. children can only be added while a price list is draft). Specs with 'source_instance' + 'scope_query' (940-971, transactional quotes/orders) are read from that instance by explicit record numbers instead of the created-on windows; platform-generated children (related parties, addresses, allocations, snapshots, approvals, order tasks) are not seeded because the platform recreates them.",
   "source_instance": "opmsalescrm1",
   "exclude_fields": [
     "sys_created_by",
@@ -51,7 +51,7 @@
         "password_needs_reset"
       ],
       "exclude_records": {
-        "_reason": "integration service accounts \u2014 not demo data, credentials don't carry over",
+        "_reason": "integration service accounts — not demo data, credentials don't carry over",
         "user_name": [
           "sn-icu-service-account",
           "agent-miner-api-svc-account",
@@ -399,6 +399,126 @@
         "opportunity"
       ],
       "on_conflict": "adopt"
+    },
+    {
+      "file": "940-sn_opty_mgmt_core_opportunity",
+      "table": "sn_opty_mgmt_core_opportunity",
+      "key": [
+        "number"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "numberINOPTY0001084,OPTY0001091,OPTY0001092,OPTY0001093,OPTY0001100,OPTY0001103,OPTY0001105",
+      "insert_as": {
+        "primary_quote": ""
+      }
+    },
+    {
+      "file": "941-sn_opty_mgmt_core_opportunity_line_item",
+      "table": "sn_opty_mgmt_core_opportunity_line_item",
+      "key": [
+        "number"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "opportunity.numberINOPTY0001084,OPTY0001091,OPTY0001092,OPTY0001093,OPTY0001100,OPTY0001103,OPTY0001105"
+    },
+    {
+      "file": "942-sn_opty_mgmt_core_opportunity_team_member",
+      "table": "sn_opty_mgmt_core_opportunity_team_member",
+      "key": [
+        "opportunity",
+        "member"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "opportunity.numberINOPTY0001084,OPTY0001091,OPTY0001092,OPTY0001093,OPTY0001100,OPTY0001103,OPTY0001105",
+      "on_conflict": "adopt"
+    },
+    {
+      "file": "943-sn_opty_mgmt_core_opportunity_associated_contact",
+      "table": "sn_opty_mgmt_core_opportunity_associated_contact",
+      "key": [
+        "opportunity",
+        "contact"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "opportunity.numberINOPTY0001084,OPTY0001091,OPTY0001092,OPTY0001093,OPTY0001100,OPTY0001103,OPTY0001105",
+      "on_conflict": "adopt"
+    },
+    {
+      "file": "950-sn_quote_mgmt_core_quote",
+      "table": "sn_quote_mgmt_core_quote",
+      "key": [
+        "number"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "numberINQT0001063,QT0001064,QT0001065,QT0001066,QT0001067,QT0001069,QT0001070",
+      "exclude": [
+        "document_template"
+      ]
+    },
+    {
+      "file": "951-sn_quote_mgmt_core_quote_line_item",
+      "table": "sn_quote_mgmt_core_quote_line_item",
+      "key": [
+        "number"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "quote.numberINQT0001063,QT0001064,QT0001065,QT0001066,QT0001067,QT0001069,QT0001070"
+    },
+    {
+      "file": "952-sn_quote_mgmt_core_quote_associated_contact",
+      "table": "sn_quote_mgmt_core_quote_associated_contact",
+      "key": [
+        "quote",
+        "contact"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "quote.numberINQT0001063,QT0001064,QT0001065,QT0001066,QT0001067,QT0001069,QT0001070",
+      "on_conflict": "adopt"
+    },
+    {
+      "file": "955-sn_install_base_sold_product",
+      "table": "sn_install_base_sold_product",
+      "key": [
+        "number"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "sys_idIN0e0522c83bc8d7d0916b37f726e45af9,288f5a803b88d7d0916b37f726e45a31,2b61eec493c413d0e84732e548373c4e,2e8fdacc938413d0e84732e548373c89,3361eec493c413d0e84732e548373cd4,576162c83b88d7d0916b37f726e45a4b,648f5a803b88d7d0916b37f726e45a04,71052688930813d0e84732e548373c9c,750522c83bc8d7d0916b37f726e45a72,7d052688930813d0e84732e548373ca4,ab61a2c83b88d7d0916b37f726e45a7d,c20522c83bc8d7d0916b37f726e45aec,c58f9a803b88d7d0916b37f726e45a6a,e48f1a803b88d7d0916b37f726e45ae5,e68fdacc938413d0e84732e548373c97,f361220893c413d0e84732e548373c2c"
+    },
+    {
+      "file": "960-sn_ind_tmt_orm_order",
+      "table": "sn_ind_tmt_orm_order",
+      "key": [
+        "number"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "numberINORD0001029,ORD0001030,ORD0001031,ORD0001032,ORD0001033"
+    },
+    {
+      "file": "961-sn_ind_tmt_orm_order_line_item",
+      "table": "sn_ind_tmt_orm_order_line_item",
+      "key": [
+        "number"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "order.numberINORD0001029,ORD0001030,ORD0001031,ORD0001032,ORD0001033"
+    },
+    {
+      "file": "970-sn_pss_core_service_contract",
+      "table": "sn_pss_core_service_contract",
+      "key": [
+        "number"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "numberINCNTR0010015,CNTR0010016,CNTR0010017,CNTR0010018,CNTR0010019,CNTR0010020,CNTR0010021,CNTR0010022,CNTR0010023,CNTR0010024,CNTR0010025,CNTR0010026,CNTR0010027,CNTR0010028,CNTR0010029,CNTR0010030"
+    },
+    {
+      "file": "971-sn_pss_core_service_contract_line",
+      "table": "sn_pss_core_service_contract_line",
+      "key": [
+        "number"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "contract.numberINCNTR0010015,CNTR0010016,CNTR0010017,CNTR0010018,CNTR0010019,CNTR0010020,CNTR0010021,CNTR0010022,CNTR0010023,CNTR0010024,CNTR0010025,CNTR0010026,CNTR0010027,CNTR0010028,CNTR0010029,CNTR0010030"
     }
   ],
   "windows": [
