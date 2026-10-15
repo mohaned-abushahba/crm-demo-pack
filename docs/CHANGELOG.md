@@ -462,3 +462,18 @@ quote 1713, order 1245, contract 10125) are past our fixture numbers, so raising
 collision is with existing records below the counter.
 Not done: the real load (DRY_RUN = false) was not run. A pre-flight collision check against the target, and
 `scripts/post-deploy/04-number-counters.js`, are still to do. A fresh instance is unaffected.
+
+## seed leads for existing customers (2026-10-15)
+Instance: opmsalescrmstage (source and target)
+What: new fixture `935-sn_lead_mgmt_core_lead` (6 leads, LEAD0001006-1011), all owned by Sage Reed in the SCRM-Sales
+Development Representative group, all `existing_business`. Loads before the opportunities (940), which reference `lead`.
+- LEAD0001006: the hot lead. Gatelynx AI / Daniel Foster, score 76, rating Hot, stage New, Inbound Phone, California.
+  Modelled on LEAD0001094 on opmsalescrm1 (same owner, group, source, industry, stage, score), but with the account
+  and contact filled in, which 1094 lacks.
+- LEAD0001007-1011: Rheinland Systems (Anna Hoffmann, Warm, New), Thames Valley Software (James Whitmore, Hot,
+  Contacted), Sakura Digital (Kenta Yamamoto, Warm, Nurturing), Marina Bay Software (Priya Sharma, Hot, New),
+  Desert Peak (Rashid Ahmed, Cold, Contacted). Same shape as the opmsalescrm1 existing-customer leads.
+Why: lead stage of the lead-to-cash story; stage had only 3 leads of its own (LEAD0001001-1003), none for the golden customers.
+Caveats: the stage's lead numbers (1006-1011) can collide with other records on instances with older leads. The
+platform reassigned Desert Peak's territory from UAE to TECH on insert; the fixture keeps TECH. `lead_score` is
+kept as given on insert; not tested whether scoring automation overwrites it on a fresh instance.

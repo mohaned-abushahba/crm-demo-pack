@@ -401,6 +401,15 @@
       "on_conflict": "adopt"
     },
     {
+      "file": "935-sn_lead_mgmt_core_lead",
+      "table": "sn_lead_mgmt_core_lead",
+      "key": [
+        "number"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "numberINLEAD0001006,LEAD0001007,LEAD0001008,LEAD0001009,LEAD0001010,LEAD0001011"
+    },
+    {
       "file": "940-sn_opty_mgmt_core_opportunity",
       "table": "sn_opty_mgmt_core_opportunity",
       "key": [
