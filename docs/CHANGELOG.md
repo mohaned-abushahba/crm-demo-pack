@@ -447,3 +447,18 @@ Caveats: the load is untested. The loader inserts with Business Rules on, so quo
 opportunity update resets a synced quote to Draft) and order/contract creation may behave differently than on stage.
 Opportunity numbers (OPTY0001084-1105) may collide with the forecast seed's opportunities on a fresh instance.
 Fixed on stage first: a mistyped Redwood contact id on the opportunity and quote associated-contact rows.
+
+## seed dry run on molearning (2026-10-15)
+Instance: molearning (disposable test instance, already carries the golden master data)
+What: loader.js run with DRY_RUN = true and ON_CONFLICT = 'fail' against the rebuilt bundle (62 tables, 2,838 records).
+Nothing was written to data tables. Result: no errors; the only missing prerequisite is the known
+`sys_user_group not-applicable` placeholder. Master-data tables (55 of 62) plan as updates only, plus 3 new
+`sys_group_has_role` rows. 44 business-key conflicts, all on the transactional fixtures (940-971): other records
+on molearning already hold the same `number` (opportunity 3, opportunity line 11, sold product 4, order 3,
+contract 7, contract line 16; e.g. OPTY0001100/1103/1105, ORD0001030/1032/1033, CNTR0010015-18/22/26/27). With the
+default `on_conflict: fail` the real load stops before inserting them.
+Why: confirms the number-collision risk noted in the previous entry. molearning's counters (opportunity 1676,
+quote 1713, order 1245, contract 10125) are past our fixture numbers, so raising counters would not help; the
+collision is with existing records below the counter.
+Not done: the real load (DRY_RUN = false) was not run. A pre-flight collision check against the target, and
+`scripts/post-deploy/04-number-counters.js`, are still to do. A fresh instance is unaffected.
