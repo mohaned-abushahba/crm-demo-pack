@@ -68,7 +68,7 @@ the first ~10 lines of the file give `format`, `source`, `record_count`,
    `golden-demo-seed.json` (and `passwords.json`, if provided) to that Fix
    Script record. Note each attachment's `sys_attachment.sys_id`.
 4. **Configure.** Set `BUNDLE_ATTACHMENT`, `PASSWORDS_ATTACHMENT` (or leave
-   empty), `DRY_RUN = true` and `ROLE_CHECK_ONLY = false` at the top of the
+   empty), `IMAGES_ATTACHMENT` (or leave empty), `DRY_RUN = true` and `ROLE_CHECK_ONLY = false` at the top of the
    script.
 5. **Dry run.** Run the Fix Script as an admin, in the **global** scope. Read
    the JSON report from the system log (`gs.info`, source `*** Script`):
@@ -101,6 +101,27 @@ the first ~10 lines of the file give `format`, `source`, `record_count`,
    nothing.
 8. **Clean up.** Delete the attachments (especially `passwords.json`) from the
    Fix Script after a successful load.
+
+## Images (Product Visuals)
+
+Image-type fields hold a sys_attachment sys_id, and update sets and the record
+fixtures don't carry the file. `seed/tools/extract_images.py` downloads each
+image from the source into `seed/images/` and builds
+`seed/dist/golden-demo-images.json` (`golden-demo-images/1`). Phase 4b of the
+loader writes each file with `GlideSysAttachment.writeBase64` onto its record
+and re-points the field at the new attachment (sys_ids differ from the
+source). The report shows `images: {expected, loaded, unchanged}`; re-runs skip
+fields that already have an attachment of the same size. Fields whose
+attachment is missing on the source itself get a drawn image from
+`seed/tools/generate_catalog_images.py` where one exists (Data Storage,
+Implementation Services, Integration Gateway; flagged `generated` in
+`seed/images/manifest.json`). Thumbnails missing on the source stay empty
+(`still_empty`).
+
+Run the loader as a real Fix Script in the instance UI. Run through the
+Forge MCP `fix_script` action, `writeBase64` returned nothing on 2026-10-15
+(the same code had worked the day before), so images were pushed with the
+Attachment REST API instead.
 
 ## Known platform behaviour
 

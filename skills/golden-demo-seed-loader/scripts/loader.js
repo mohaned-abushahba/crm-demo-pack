@@ -11,6 +11,7 @@
  */
 var BUNDLE_ATTACHMENT = '';    // sys_attachment.sys_id of golden-demo-seed.json
 var PASSWORDS_ATTACHMENT = ''; // optional: sys_attachment.sys_id of passwords.json
+var IMAGES_ATTACHMENT = '';    // optional: sys_attachment.sys_id of golden-demo-images.json (Product Visuals images)
 var DRY_RUN = true;
 var ROLE_CHECK_ONLY = false;   // true: skip the load, only run the role check (Phase 6)
 var ON_CONFLICT = 'fail';      // 'fail': stop on a business-key clash. 'insert': load the bundle
@@ -177,6 +178,29 @@ var ON_CONFLICT = 'fail';      // 'fail': stop on a business-key clash. 'insert'
             if (u.update()) set++;
         }
         report.passwords_set = set;
+    }
+
+    // ---- Phase 4b: images behind Image-type fields (e.g. Product Visuals) ----
+    // Attachments aren't part of the record data, so they ship in golden-demo-images.json.
+    // The platform assigns the new attachment's sys_id, so the field is re-pointed at it.
+    // (The source stores them against table 'ZZ_YY' + table; a server script can't change
+    // sys_attachment.table_name, so here they sit against the plain table. The field renders the same.)
+    // Re-runs skip a field whose attachment already exists with the same size.
+    if (IMAGES_ATTACHMENT) {
+        var imgs = readJson(IMAGES_ATTACHMENT).images, loaded = 0, unchanged = 0;
+        imgs.forEach(function (i) {
+            var rec = getById(i.table, idMap[i.record] || i.record);
+            if (!rec) { report.errors.push({ table: i.table, sys_id: i.record, action: 'image', message: 'record not found' }); return; }
+            var cur = rec.getValue(i.field), att = cur ? getById('sys_attachment', cur) : null;
+            if (att && String(att.getValue('size_bytes')) === String(i.size)) { unchanged++; return; }
+            var newId = new GlideSysAttachment().writeBase64(rec, i.file_name, i.content_type, i.base64);
+            var na = newId ? getById('sys_attachment', newId) : null;
+            if (!na) { report.errors.push({ table: i.table, sys_id: i.record, action: 'image', message: 'attachment write failed: ' + i.field }); return; }
+            rec.setValue(i.field, newId);
+            if (rec.update()) loaded++;
+            else report.errors.push({ table: i.table, sys_id: i.record, action: 'image', message: rec.getLastErrorMessage() });
+        });
+        report.images = { expected: imgs.length, loaded: loaded, unchanged: unchanged };
     }
 
     // ---- Phase 5: verify every bundle record exists on the target ----

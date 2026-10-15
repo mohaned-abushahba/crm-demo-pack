@@ -1,0 +1,32 @@
+{
+  "_comment": "Drawn by generate_catalog_images.py for image fields that are empty on the source instance.",
+  "images": [
+    {
+      "table": "sn_prd_pm_visuals",
+      "record": "530c985e2b4343504deaf02ac891bfe9",
+      "field": "image",
+      "attachment": "1d0e442b2ba64b10c472f5b4f291bf55",
+      "file": "generated/530c985e2b4343504deaf02ac891bfe9-image.jpg",
+      "file_name": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "table": "sn_prd_pm_visuals",
+      "record": "5b0c985e2b4343504deaf02ac891bfea",
+      "field": "image",
+      "attachment": "074556d9935acfd0306ff9a3b503d68f",
+      "file": "generated/5b0c985e2b4343504deaf02ac891bfea-image.jpg",
+      "file_name": "image",
+      "content_type": "image/jpeg"
+    },
+    {
+      "table": "sn_prd_pm_visuals",
+      "record": "7a8b5ee92bc38b104deaf02ac891bf21",
+      "field": "image",
+      "attachment": "a3c50039931ac314306ff9a3b503d63a",
+      "file": "generated/7a8b5ee92bc38b104deaf02ac891bf21-image.jpg",
+      "file_name": "image",
+      "content_type": "image/jpeg"
+    }
+  ]
+}
