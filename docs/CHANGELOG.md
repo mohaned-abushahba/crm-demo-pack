@@ -485,6 +485,7 @@ What: the Solana logo (`Solana logo.png`, 155x28, 4,392 bytes) now ships inside 
   (another instance). Replaced with an inline `data:image/png;base64,...` URI, so it needs no attachment or network access.
 - Quote template "Quote Demo Template for Solana" (`7e06a6d0...`): `header_image` pointed at attachment `a896a654...`, which was never
   deployed. The `sys_attachment` + 2 `sys_attachment_doc` rows are now embedded in the template payload (same pattern as UPDATE-018), keeping the same sys_id.
+- Quote template body: the Solana logo paragraph added at the top of the body (2026-10-16 edit on stage; `<img>` -> attachment `ae51b610...`, 188x34) is captured, along with that attachment (same image as `a896a654...`). The rest of the body is unchanged from UPDATE-009. The retired `... -Old` duplicate template is not captured.
 Why: the update-set payloads only carried a reference, not the image, so any instance other than the source showed a broken logo.
 Tested on stage 2026-10-16: attachment `a896a654...` downloads as 155x28 PNG; email body decodes to a 155x28 image; hotlink gone. The stage
 fix was applied server-side from the image bytes already on stage (MD5 of the base64 matches the repo file); the XML itself was not yet
