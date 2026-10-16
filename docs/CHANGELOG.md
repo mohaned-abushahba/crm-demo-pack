@@ -498,3 +498,10 @@ What: system property `glide.email.username` (the From display name on outbound 
 Also (2026-10-16): the Email Client compose From dropdown ignores that property. It reads `email_user_label` on the "ServiceNow SMTP" `sys_email_account`, which was "IT Service Desk". That table is not update-set tracked and the record has per-instance sys_id and credentials, so it ships as `scripts/post-deploy/05-email-account-label.js` (sets it by name), not in the XML.
 Why: demo emails should come from the Solana brand, not the generic IT desk.
 Caveats: the property is `is_private=true`, which update-set import can skip; if the From name is still "IT Service Desk" after commit, set it by name (as in `scripts/post-deploy/01-system-properties.js`). The XML was not yet imported through the update-set loader. Commit after 022/025; no dependencies.
+
+## UPDATE-027-probability-from-forecast-category (2026-10-16)
+Instance: opmsalescrmstage (source + tested)
+What: Global before-insert/update business rule "Set probability from forecast category" (order 150, condition `forecast_category VALCHANGES`) on `sn_opty_mgmt_core_opportunity`. Sets Probability % from Forecast Category: Pipeline 10, Upside 30, Strong Upside 50, Commit 80, Won 100, Omitted 0. Rule sys_id `e266dfdc...`.
+Why: probability should follow the forecast category instead of being keyed by hand. Runs after OOTB "Set forecast category" (100, stage-driven) and before "Set Amount And Weighted Amount" (550), so weighted amount recalculates.
+Tested on stage 2026-10-16 (OPTY0001038): Upside -> Commit gave 80, Commit -> Upside gave 30; weighted amount recalculated; record restored. Only Commit and Upside exercised. The XML was not yet imported through the update-set loader.
+Caveat: a manual probability is overwritten if the category changes in the same save; it sticks when the category is unchanged. Categories are matched by display name. No dependencies.
