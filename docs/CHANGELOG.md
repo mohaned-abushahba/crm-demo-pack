@@ -477,3 +477,16 @@ Why: lead stage of the lead-to-cash story; stage had only 3 leads of its own (LE
 Caveats: the stage's lead numbers (1006-1011) can collide with other records on instances with older leads. The
 platform reassigned Desert Peak's territory from UAE to TECH on insert; the fixture keeps TECH. `lead_score` is
 kept as given on insert; not tested whether scoring automation overwrites it on a fresh instance.
+
+## UPDATE-025-solana-logo-embedding (2026-10-16)
+Instance: opmsalescrmstage (tested), source payloads from UPDATE-006 / UPDATE-009
+What: the Solana logo (`Solana logo.png`, 155x28, 4,392 bytes) now ships inside the repo for two places that showed a broken image on stage.
+- Email client template "Opportunity Default": the `<img>` was hotlinked to `empksingampalli.service-now.com/sys_attachment.do?...`
+  (another instance). Replaced with an inline `data:image/png;base64,...` URI, so it needs no attachment or network access.
+- Quote template "Quote Demo Template for Solana" (`7e06a6d0...`): `header_image` pointed at attachment `a896a654...`, which was never
+  deployed. The `sys_attachment` + 2 `sys_attachment_doc` rows are now embedded in the template payload (same pattern as UPDATE-018), keeping the same sys_id.
+Why: the update-set payloads only carried a reference, not the image, so any instance other than the source showed a broken logo.
+Tested on stage 2026-10-16: attachment `a896a654...` downloads as 155x28 PNG; email body decodes to a 155x28 image; hotlink gone. The stage
+fix was applied server-side from the image bytes already on stage (MD5 of the base64 matches the repo file); the XML itself was not yet
+imported through the update-set loader. Not covered: stage also has a second "Quote Demo Template for Solana" (`be10ac51...`) with no header image, not in the repo.
+Caveat: Gmail/Outlook web may block `data:` images in a sent email; the Email Client compose preview shows it fine.
