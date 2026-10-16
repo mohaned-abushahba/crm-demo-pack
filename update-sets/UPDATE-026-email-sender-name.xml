@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-10-16 12:00:00">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<description>Outbound email From name changed from "IT Service Desk" to "Solana Sales &amp; Service" (system property glide.email.username). Source: opmsalescrmstage (captured 2026-10-16).</description>
+<name>UPDATE-026-email-sender-name</name>
+<origin_sys_id>075971b7fd60400bb5adff3292f0d43b</origin_sys_id>
+<remote_sys_id>075971b7fd60400bb5adff3292f0d43b</remote_sys_id>
+<state>loaded</state>
+<sys_id>075971b7fd60400bb5adff3292f0d43b</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_f290a941c611227b001d318f777145cc</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Outgoing mail display name (e.g. "Help Desk")</description><ignore_cache>false</ignore_cache><is_private>true</is_private><name>glide.email.username</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>glide.maint</sys_created_by><sys_created_on>2005-07-07 18:31:03</sys_created_on><sys_id>f290a941c611227b001d318f777145cc</sys_id><sys_mod_count>8</sys_mod_count><sys_name>glide.email.username</sys_name><sys_package display_value="System (apps/system2)" source="apps/system2">1eda26313b230310916b37f726e45a3c</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_properties_f290a941c611227b001d318f777145cc</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-10-16 17:04:12</sys_updated_on><type>string</type><value>Solana Sales &amp; Service</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=f290a941c611227b001d318f777145cc"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-026-email-sender-name">075971b7fd60400bb5adff3292f0d43b</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>dd6830a979f44f27b68896e635abe829</sys_id>
+<table></table>
+<target_name>glide.email.username</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+</unload>

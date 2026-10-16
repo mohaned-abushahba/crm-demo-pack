@@ -491,3 +491,9 @@ Tested on stage 2026-10-16: attachment `a896a654...` downloads as 155x28 PNG; em
 fix was applied server-side from the image bytes already on stage (MD5 of the base64 matches the repo file); the XML itself was not yet
 imported through the update-set loader. Not covered: stage also has a second "Quote Demo Template for Solana" (`be10ac51...`) with no header image, not in the repo.
 Caveat: Gmail/Outlook web may block `data:` images in a sent email; the Email Client compose preview shows it fine.
+
+## UPDATE-026-email-sender-name (2026-10-16)
+Instance: opmsalescrmstage (source)
+What: system property `glide.email.username` (the From display name on outbound email) changed from "IT Service Desk" to "Solana Sales & Service". Property sys_id `f290a941...` is the OOB one, same on every instance.
+Why: demo emails should come from the Solana brand, not the generic IT desk.
+Caveats: the property is `is_private=true`, which update-set import can skip; if the From name is still "IT Service Desk" after commit, set it by name (as in `scripts/post-deploy/01-system-properties.js`). The XML was not yet imported through the update-set loader. Commit after 022/025; no dependencies.

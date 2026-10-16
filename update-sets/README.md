@@ -16,6 +16,7 @@ Naming: `UPDATE-<NNN>-<short-kebab-name>.xml`
 | UPDATE-020 | opmsalescrm1 | Captured 2026-10-07: approver groups/users on the Advanced Approval rules, serialised from live values |
 | UPDATE-023 | opmsalescrm1 | Captured 2026-10-08: 8 role-containment links (sys_user_role_contains) missing on stage, copied with the same sys_ids |
 | UPDATE-024 | opmsalescrm1 | Captured 2026-10-13: SDR Golden Landing Page dashboard metadata record missed by the 10-06 capture |
+| UPDATE-026 | opmsalescrmstage | Captured 2026-10-16: outbound email From name `glide.email.username` = Solana Sales & Service (was IT Service Desk) |
 
 UPDATE-004 … 017 each contain **one retrieved update set per application scope**, named
 `UPDATE-NNN-slug [Scope]`, because ServiceNow update sets are scope-bound. After importing a file,
