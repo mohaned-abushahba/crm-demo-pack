@@ -495,5 +495,6 @@ Caveat: Gmail/Outlook web may block `data:` images in a sent email; the Email Cl
 ## UPDATE-026-email-sender-name (2026-10-16)
 Instance: opmsalescrmstage (source)
 What: system property `glide.email.username` (the From display name on outbound email) changed from "IT Service Desk" to "Solana Sales & Service". Property sys_id `f290a941...` is the OOB one, same on every instance.
+Also (2026-10-16): the Email Client compose From dropdown ignores that property. It reads `email_user_label` on the "ServiceNow SMTP" `sys_email_account`, which was "IT Service Desk". That table is not update-set tracked and the record has per-instance sys_id and credentials, so it ships as `scripts/post-deploy/05-email-account-label.js` (sets it by name), not in the XML.
 Why: demo emails should come from the Solana brand, not the generic IT desk.
 Caveats: the property is `is_private=true`, which update-set import can skip; if the From name is still "IT Service Desk" after commit, set it by name (as in `scripts/post-deploy/01-system-properties.js`). The XML was not yet imported through the update-set loader. Commit after 022/025; no dependencies.

@@ -32,6 +32,7 @@ with opmsalescrm1's sys_ids before 006, 010, 011, 012 and 020, because those rec
 
 018 (UI16 banner image) has no dependencies and can be committed at any point. 019 (pricing matrix
 states) must come after 011: it drafts the OOB v2 matrices so 011's custom versions are the live ones. 020 (approval approvers) goes right after 010, whose rules it references.
+The compose-dialog From name (`email_user_label`) is set after commit by `scripts/post-deploy/05-email-account-label.js`.
 Session timeout and outbound email are set after commit by `scripts/post-deploy/01-system-properties.js`, not by an Update Set.
 
 013 goes early because the Sync Process Record BRs in 006/007/012 call `BOProcessChainUtil`.
