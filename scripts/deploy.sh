@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Deploys the Sales CRM golden demo to a target instance.
+# Deploys the CRM demo pack (Sales CRM + Service CRM) to a target instance.
 #
 # Usage: scripts/deploy.sh <mcp-instance-name>
 #
@@ -19,7 +19,7 @@ UPDATE_SETS_DIR="$REPO_ROOT/update-sets"
 SEED_DIR="$REPO_ROOT/seed"
 POST_DEPLOY_DIR="$REPO_ROOT/scripts/post-deploy"
 
-echo "== Sales CRM Golden Demo Deploy =="
+echo "== CRM Demo Pack Deploy =="
 echo "Target instance (MCP name): $INSTANCE"
 echo
 

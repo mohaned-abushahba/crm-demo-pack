@@ -1,6 +1,6 @@
 # Plugin installer (wizard step 1)
 
-Installs the 46 Sales CRM plugins/store apps on a target instance **before** update sets and seed data.
+Installs the 46 Sales CRM plugins/store apps (Service CRM plugins are added to `manifest.json` under their own `group`) on a target instance **before** update sets and seed data.
 Source list: `Sales CRM Top Plugins list.docx` -> `manifest.json`. All 46 are required: a run reports
 `ready: true` only when every one is verified active, and seeding should be gated on that.
 

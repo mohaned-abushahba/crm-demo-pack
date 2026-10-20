@@ -1,7 +1,8 @@
 # Seed scripts
 
-Demo data for the golden demo — accounts, contacts, catalog, price lists, personas,
-quotes/orders — scripted here as idempotent `execute`-tool scripts.
+Demo data for the CRM demo pack (Sales CRM and Service CRM) — accounts, contacts, catalog,
+price lists, personas, quotes/orders, and Service objects such as cases and install base —
+scripted here as idempotent `execute`-tool scripts and JSON fixtures.
 
 Each script uses `SN.TableQuery(...).fetchOne()` to check for an existing record
 (by a unique business key — code/name) before inserting, so re-running the seed

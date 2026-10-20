@@ -1,6 +1,6 @@
 # Update Sets
 
-Exported Update Set XML, one file per logical feature/fix, applied in numeric order.
+Exported Update Set XML, one file per logical feature/fix across Sales CRM and Service CRM, applied in numeric order (one shared sequence).
 
 Naming: `UPDATE-<NNN>-<short-kebab-name>.xml`
 

@@ -146,7 +146,7 @@ Attachment REST API instead.
 
 - Don't edit the bundle or "fix" values in it. It's generated from the golden
   instance; changes belong upstream (seed/overrides.json in the
-  sales-crm-golden-demo repo).
+  crm-demo-pack repo).
 - Don't add records that aren't in the bundle, and don't load it into
   opmsalescrm1 (the source).
 - Don't use names of real companies in demo data. If one appears in an error
