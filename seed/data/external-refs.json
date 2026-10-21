@@ -16,6 +16,46 @@
   },
   {
     "table": "sn_customerservice_related_party_configuration",
+    "sys_id": "2071c40fff1eb2100ddcffffffffffd3",
+    "label": "Economic buyer",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_buying_groups_buying_group_member.role"
+    ]
+  },
+  {
+    "table": "sn_customerservice_related_party_configuration",
+    "sys_id": "31d1044fff1eb2100ddcffffffffff16",
+    "label": "Influencer",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_buying_groups_buying_group_member.role"
+    ]
+  },
+  {
+    "table": "sn_customerservice_related_party_configuration",
+    "sys_id": "35a53402ffcf6210e4d5ffffffffffed",
+    "label": "Decision maker",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity_associated_contact.opportunity_role"
+    ]
+  },
+  {
+    "table": "sn_customerservice_related_party_configuration",
+    "sys_id": "52363442ffcf6210e4d5ffffffffff77",
+    "label": "Influencer",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity_associated_contact.opportunity_role"
+    ]
+  },
+  {
+    "table": "sn_customerservice_related_party_configuration",
     "sys_id": "9228dacdff803210583effffffffff2d",
     "label": "Account Executive",
     "exists_on_source": true,
@@ -25,13 +65,84 @@
     ]
   },
   {
+    "table": "sn_customerservice_related_party_configuration",
+    "sys_id": "a1d5b802ffcf6210e4d5ffffffffffa5",
+    "label": "Evaluator",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity_associated_contact.opportunity_role"
+    ]
+  },
+  {
+    "table": "sn_customerservice_related_party_configuration",
+    "sys_id": "b67c3118ff7b6210e4d5ffffffffff74",
+    "label": "Account Executive",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity_team_member.opportunity_role"
+    ]
+  },
+  {
+    "table": "sn_customerservice_related_party_configuration",
+    "sys_id": "c4c5b402ffcf6210e4d5ffffffffffca",
+    "label": "Economic buyer",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity_associated_contact.opportunity_role"
+    ]
+  },
+  {
+    "table": "sn_customerservice_related_party_configuration",
+    "sys_id": "db8cf118ff7b6210e4d5ffffffffffde",
+    "label": "Solution Sales Executive",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity_team_member.opportunity_role"
+    ]
+  },
+  {
+    "table": "sn_customerservice_related_party_configuration",
+    "sys_id": "f8a14c0fff1eb2100ddcffffffffffad",
+    "label": "Evaluator",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_buying_groups_buying_group_member.role"
+    ]
+  },
+  {
+    "table": "sn_customerservice_related_party_configuration",
+    "sys_id": "fd4dea92ff1272100ddcffffffffff67",
+    "label": "Decision maker",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_buying_groups_buying_group_member.role"
+    ]
+  },
+  {
     "table": "sn_customerservice_responsibility_def",
     "sys_id": "cf533e9e43a7a610583ecd60afb8f251",
     "label": "Account Executive",
     "exists_on_source": true,
     "created_in_scope": false,
     "used_by": [
+      "sn_opty_mgmt_core_opportunity_team_member.responsibility",
       "sn_tp_crm_extn_territory_membership_responsibility.responsibility"
+    ]
+  },
+  {
+    "table": "sn_customerservice_responsibility_def",
+    "sys_id": "f17332de43a7a610583ecd60afb8f234",
+    "label": "Solution Sales Executive",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity_team_member.responsibility"
     ]
   },
   {
@@ -56,6 +167,16 @@
   },
   {
     "table": "sn_opty_mgmt_core_opportunity_stage",
+    "sys_id": "448d7d4093e1c75079d4f7717cba1048",
+    "label": "Discovery",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity.stage"
+    ]
+  },
+  {
+    "table": "sn_opty_mgmt_core_opportunity_stage",
     "sys_id": "4f9d718093e1c75079d4f7717cba1024",
     "label": "Negotiation",
     "exists_on_source": true,
@@ -68,6 +189,16 @@
     "table": "sn_opty_mgmt_core_opportunity_stage",
     "sys_id": "749dfd4093e1c75079d4f7717cba103d",
     "label": "Proposal",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity.stage"
+    ]
+  },
+  {
+    "table": "sn_opty_mgmt_core_opportunity_stage",
+    "sys_id": "8f5d394093e1c75079d4f7717cba100c",
+    "label": "Qualification",
     "exists_on_source": true,
     "created_in_scope": false,
     "used_by": [
@@ -163,8 +294,28 @@
   },
   {
     "table": "sn_sales_forecast_category",
+    "sys_id": "0f12151a7b3d521032b7e865b38cb6a3",
+    "label": "Upside",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity.forecast_category"
+    ]
+  },
+  {
+    "table": "sn_sales_forecast_category",
     "sys_id": "6802ddd67b3d521032b7e865b38cb61c",
     "label": "Pipeline",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sn_opty_mgmt_core_opportunity.forecast_category"
+    ]
+  },
+  {
+    "table": "sn_sales_forecast_category",
+    "sys_id": "8062d15a7b3d521032b7e865b38cb63e",
+    "label": "Commit",
     "exists_on_source": true,
     "created_in_scope": false,
     "used_by": [
@@ -278,7 +429,11 @@
     "exists_on_source": true,
     "created_in_scope": false,
     "used_by": [
-      "sn_opty_mgmt_core_opportunity.opened_by"
+      "sn_crm_touchpoint_touchpoint.opened_by",
+      "sn_crm_touchpoint_touchpoint.resolved_by",
+      "sn_opty_mgmt_core_opportunity.opened_by",
+      "sn_opty_mgmt_core_opportunity_task.closed_by",
+      "sn_opty_mgmt_core_opportunity_task.opened_by"
     ]
   },
   {

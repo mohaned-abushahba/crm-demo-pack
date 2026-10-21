@@ -516,3 +516,18 @@ The family (`044cf59b...`) and category (`6bebb95b...`) were already in the fixt
 How: `seed/tools/extract.py` gained a per-table `also_from` option in `manifest.json` (extra `source_instance` + `scope_query`, merged by sys_id, main source wins), for records that exist only on another instance. Used on 450/455/460/510, pointing at stage by sys_id.
 Why: the offering was created on stage after the opmsalescrm1 capture, so the created-on windows never saw it.
 Caveats: the offering and line numbers (PRDOF01009/01011, PLL0001016) already exist on other fixture rows; the numbers are not unique-constrained, same as earlier duplicates. Both versions share code `MEETING IN1`; the loader's key check runs before any writes, so both insert on a blank instance (same as `GENERATORS1`). Not captured: stage's retired "Meeting Intelligence" `USR-MTG` v2 (`abdde8ff...`), a leftover from the same session. Re-extracting 450 also picked up an unrelated opmsalescrm1 edit to a "Tokens" offering (description, cleared `configuration_json`); that was left out so this change stays scoped, so 450 still has the older value for it. Not loaded onto a blank instance yet; the bundle was rebuilt (2,851 records).
+
+## seed 10 golden opportunities with touchpoints, tasks, competitors (2026-10-21)
+Instance: opmsalescrmstage (source), extraction only, not loaded on a blank instance yet
+What: OPTY0001085, 1086, 1087, 1088, 1089, 1090, 1094, 1095, 1096, 1098 (Nimbus Analytics, Gatelynx AI, Rose City Software, Boxeo x2, Hudson Yards Analytics, Redwood Cloud Technologies, Willamette Data Systems, Piedmont Data Systems, Cascadia Cyber Systems) and what hangs off them:
+- `940`-`943` scope queries extended: opportunities (now 17), line items (114), team members (34), associated contacts (51).
+- `944` touchpoints (60, all `origin_id` = one of the 10 opps; `case_report` excluded, the platform makes it), `945` opportunity tasks (40), `946` competitors (16). New fixtures, loaded after the opportunities and before quotes.
+- `105` + 7 competitor companies (Ashgrove Pipeline Co, Brightquill Sales Labs, Corvane Standby Systems, Halvorsen Grid Systems, Northmere Revenue Systems, Quillon Growth Works, Tallowfield Enablement); `910` + 7 buying groups, `920` + 21 members, `930` + 8 buying group links. All via `also_from` pointing at stage.
+- `overrides.json`: line item OPTYL0001113 had `parent_line_item` = `1103771790` (not a sys_id, matches nothing); blanked.
+Why: these are the demo opportunities for the Revenue Enablement / Power Generator stories; they were built on stage after the opmsalescrm1 capture.
+Caveats:
+- Amounts on stage differ from the planning table (e.g. OPTY0001085 $45,060 vs $36,800; 1088 $284,160 vs $393,480). Stage values are what is captured.
+- The 7 opportunities captured earlier were refreshed from stage too: owner reassigned and probability updated since the 10-15 capture (e.g. probability 50 -> 10 on one, after UPDATE-027).
+- Allocations (10) are not seeded; the platform recreates them (one was last touched by `logik.intg`).
+- Opportunity numbers may collide with existing records on instances that already hold OPTY0001085-1098, same as the earlier note on 1084-1105.
+- refcheck against opmsalescrm1 shows no new dangling references. Touchpoints are task records; whether the loader inserts them without firing notifications/flows is untested.

@@ -99,9 +99,17 @@
       "set": {
         "product_offering_family": "5a1cb95b3b324710d5260fa693e45a51"
       }
+    },
+    {
+      "reason": "OPTYL0001113 on stage has parent_line_item '1103771790', which is not a sys_id and matches no record; blank it so the load has no dangling reference.",
+      "table": "sn_opty_mgmt_core_opportunity_line_item",
+      "sys_id": "5f50a4c63bc45f10916b37f726e45a58",
+      "set": {
+        "parent_line_item": ""
+      }
     }
   ],
-  "_forbidden_comment": "Extraction fails if any extracted string still matches one of these (case-insensitive regex) \u2014 catches real-company names creeping back in.",
+  "_forbidden_comment": "Extraction fails if any extracted string still matches one of these (case-insensitive regex) — catches real-company names creeping back in.",
   "forbidden_patterns": [
     "golden\\s*gate",
     "goldengate"

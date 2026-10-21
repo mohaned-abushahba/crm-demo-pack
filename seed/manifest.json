@@ -125,7 +125,13 @@
         "name"
       ],
       "query": "sys_class_name=core_company",
-      "on_conflict": "adopt"
+      "on_conflict": "adopt",
+      "also_from": [
+        {
+          "source_instance": "opmsalescrmstage",
+          "scope_query": "sys_idIN24e856483b08d7d0916b37f726e45a45,38e85248934413d0e84732e548373c5c,3ce85248934413d0e84732e548373c53,68e856483b08d7d0916b37f726e45a53,ace856483b08d7d0916b37f726e45a4d,b8e85248934413d0e84732e548373c99,fce85248934413d0e84732e548373c93"
+        }
+      ]
     },
     {
       "file": "110-customer_contact",
@@ -404,6 +410,12 @@
       "table": "sn_buying_groups_buying_group",
       "key": [
         "number"
+      ],
+      "also_from": [
+        {
+          "source_instance": "opmsalescrmstage",
+          "scope_query": "sys_idIN3e0700792bc7cb104deaf02ac891bffb,5a1f9a4c938413d0e84732e548373c71,5edb92043b48d7d0916b37f726e45a0c,61b06ec43b88d7d0916b37f726e45a09,a0f81a483b08d7d0916b37f726e45a5e,ac4166883b88d7d0916b37f726e45a6c,d09ed2c8938413d0e84732e548373c51,da4bd200938413d0e84732e548373c1d"
+        }
       ]
     },
     {
@@ -413,7 +425,13 @@
         "buying_group",
         "contact"
       ],
-      "on_conflict": "adopt"
+      "on_conflict": "adopt",
+      "also_from": [
+        {
+          "source_instance": "opmsalescrmstage",
+          "scope_query": "buying_groupIN3e0700792bc7cb104deaf02ac891bffb,5a1f9a4c938413d0e84732e548373c71,5edb92043b48d7d0916b37f726e45a0c,61b06ec43b88d7d0916b37f726e45a09,a0f81a483b08d7d0916b37f726e45a5e,ac4166883b88d7d0916b37f726e45a6c,d09ed2c8938413d0e84732e548373c51,da4bd200938413d0e84732e548373c1d"
+        }
+      ]
     },
     {
       "file": "930-sn_opty_mgmt_core_buying_group_opportunity",
@@ -422,7 +440,13 @@
         "buying_group",
         "opportunity"
       ],
-      "on_conflict": "adopt"
+      "on_conflict": "adopt",
+      "also_from": [
+        {
+          "source_instance": "opmsalescrmstage",
+          "scope_query": "opportunityIN0c8eda88938413d0e84732e548373c37,0e1262c83b88d7d0916b37f726e45a7f,2c2166483b88d7d0916b37f726e45a1f,4d4b5200938413d0e84732e548373c47,5bcbdac03b48d7d0916b37f726e45a39,619f520093c413d0e84732e548373c75,c4b1624893c413d0e84732e548373c63,da0f924c938413d0e84732e548373ce7,e590ae843b88d7d0916b37f726e45afa,f8785ec4934413d0e84732e548373cd9"
+        }
+      ]
     },
     {
       "file": "935-sn_lead_mgmt_core_lead",
@@ -440,7 +464,7 @@
         "number"
       ],
       "source_instance": "opmsalescrmstage",
-      "scope_query": "numberINOPTY0001084,OPTY0001091,OPTY0001092,OPTY0001093,OPTY0001100,OPTY0001103,OPTY0001105",
+      "scope_query": "numberINOPTY0001084,OPTY0001091,OPTY0001092,OPTY0001093,OPTY0001100,OPTY0001103,OPTY0001105,OPTY0001085,OPTY0001086,OPTY0001087,OPTY0001088,OPTY0001089,OPTY0001090,OPTY0001094,OPTY0001095,OPTY0001096,OPTY0001098",
       "insert_as": {
         "primary_quote": ""
       }
@@ -452,7 +476,7 @@
         "number"
       ],
       "source_instance": "opmsalescrmstage",
-      "scope_query": "opportunity.numberINOPTY0001084,OPTY0001091,OPTY0001092,OPTY0001093,OPTY0001100,OPTY0001103,OPTY0001105"
+      "scope_query": "opportunity.numberINOPTY0001084,OPTY0001091,OPTY0001092,OPTY0001093,OPTY0001100,OPTY0001103,OPTY0001105,OPTY0001085,OPTY0001086,OPTY0001087,OPTY0001088,OPTY0001089,OPTY0001090,OPTY0001094,OPTY0001095,OPTY0001096,OPTY0001098"
     },
     {
       "file": "942-sn_opty_mgmt_core_opportunity_team_member",
@@ -462,7 +486,7 @@
         "member"
       ],
       "source_instance": "opmsalescrmstage",
-      "scope_query": "opportunity.numberINOPTY0001084,OPTY0001091,OPTY0001092,OPTY0001093,OPTY0001100,OPTY0001103,OPTY0001105",
+      "scope_query": "opportunity.numberINOPTY0001084,OPTY0001091,OPTY0001092,OPTY0001093,OPTY0001100,OPTY0001103,OPTY0001105,OPTY0001085,OPTY0001086,OPTY0001087,OPTY0001088,OPTY0001089,OPTY0001090,OPTY0001094,OPTY0001095,OPTY0001096,OPTY0001098",
       "on_conflict": "adopt"
     },
     {
@@ -473,8 +497,39 @@
         "contact"
       ],
       "source_instance": "opmsalescrmstage",
-      "scope_query": "opportunity.numberINOPTY0001084,OPTY0001091,OPTY0001092,OPTY0001093,OPTY0001100,OPTY0001103,OPTY0001105",
+      "scope_query": "opportunity.numberINOPTY0001084,OPTY0001091,OPTY0001092,OPTY0001093,OPTY0001100,OPTY0001103,OPTY0001105,OPTY0001085,OPTY0001086,OPTY0001087,OPTY0001088,OPTY0001089,OPTY0001090,OPTY0001094,OPTY0001095,OPTY0001096,OPTY0001098",
       "on_conflict": "adopt"
+    },
+    {
+      "file": "944-sn_crm_touchpoint_touchpoint",
+      "table": "sn_crm_touchpoint_touchpoint",
+      "key": [
+        "number"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "origin_idIN0c8eda88938413d0e84732e548373c37,0e1262c83b88d7d0916b37f726e45a7f,2c2166483b88d7d0916b37f726e45a1f,4d4b5200938413d0e84732e548373c47,5bcbdac03b48d7d0916b37f726e45a39,619f520093c413d0e84732e548373c75,c4b1624893c413d0e84732e548373c63,da0f924c938413d0e84732e548373ce7,e590ae843b88d7d0916b37f726e45afa,f8785ec4934413d0e84732e548373cd9",
+      "exclude": [
+        "case_report"
+      ]
+    },
+    {
+      "file": "945-sn_opty_mgmt_core_opportunity_task",
+      "table": "sn_opty_mgmt_core_opportunity_task",
+      "key": [
+        "number"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "opportunity.numberINOPTY0001085,OPTY0001086,OPTY0001087,OPTY0001088,OPTY0001089,OPTY0001090,OPTY0001094,OPTY0001095,OPTY0001096,OPTY0001098"
+    },
+    {
+      "file": "946-sn_opty_mgmt_core_opportunity_competitor",
+      "table": "sn_opty_mgmt_core_opportunity_competitor",
+      "key": [
+        "opportunity",
+        "competitor_name"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "opportunity.numberINOPTY0001085,OPTY0001086,OPTY0001087,OPTY0001088,OPTY0001089,OPTY0001090,OPTY0001094,OPTY0001095,OPTY0001096,OPTY0001098"
     },
     {
       "file": "950-sn_quote_mgmt_core_quote",

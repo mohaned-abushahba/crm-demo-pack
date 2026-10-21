@@ -23,6 +23,90 @@
       "name": "Redwood Cloud Technologies — Platform Modernization Buying Group",
       "work_notes": "",
       "account": "5132c72d2b8b8b104deaf02ac891bff8"
+    },
+    {
+      "owner": "f1098f613b07cb10d5260fa693e45af8",
+      "active": "true",
+      "description": "Stakeholders evaluating the Sales Visibility Platform Rollout (Solana Enablement Cloud Advanced) for Hudson Yards Analytics.",
+      "number": "BYGR0001006",
+      "sys_id": "5a1f9a4c938413d0e84732e548373c71",
+      "product_offering_family": "5a1cb95b3b324710d5260fa693e45a51",
+      "stage": "3",
+      "name": "Hudson Yards Analytics Revenue Enablement Buying Group",
+      "work_notes": "",
+      "account": "9ad547003b5bcb10d5260fa693e45a08"
+    },
+    {
+      "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+      "active": "true",
+      "description": "Stakeholders evaluating the Revenue Enablement Evaluation (Solana Enablement Cloud Advanced) for Rose City Software.",
+      "number": "BYGR0001004",
+      "sys_id": "5edb92043b48d7d0916b37f726e45a0c",
+      "product_offering_family": "5a1cb95b3b324710d5260fa693e45a51",
+      "stage": "2",
+      "name": "Rose City Software Revenue Enablement Buying Group",
+      "work_notes": "",
+      "account": "85320b213bc3cb10d5260fa693e45ab6"
+    },
+    {
+      "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+      "active": "true",
+      "description": "",
+      "number": "BYGR0001007",
+      "sys_id": "61b06ec43b88d7d0916b37f726e45a09",
+      "product_offering_family": "5a1cb95b3b324710d5260fa693e45a51",
+      "stage": "2",
+      "name": "Willamette Data Systems Revenue Enablement Buying Group",
+      "work_notes": "",
+      "account": "8932072d2b8b8b104deaf02ac891bf40"
+    },
+    {
+      "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+      "active": "true",
+      "description": "Stakeholders evaluating the second team rollout for Nimbus Analytics.",
+      "number": "BYGR0001002",
+      "sys_id": "a0f81a483b08d7d0916b37f726e45a5e",
+      "product_offering_family": "5a1cb95b3b324710d5260fa693e45a51",
+      "stage": "1",
+      "name": "Nimbus Analytics Revenue Enablement Buying Group",
+      "work_notes": "",
+      "account": "70320b213bc3cb10d5260fa693e45a82"
+    },
+    {
+      "owner": "07843ed22b7683104deaf02ac891bf31",
+      "active": "true",
+      "description": "",
+      "number": "BYGR0001008",
+      "sys_id": "ac4166883b88d7d0916b37f726e45a6c",
+      "product_offering_family": "5a1cb95b3b324710d5260fa693e45a51",
+      "stage": "3",
+      "name": "Piedmont Data Systems Revenue Enablement Buying Group",
+      "work_notes": "",
+      "account": "aed587002bd38f104deaf02ac891bf83"
+    },
+    {
+      "owner": "9b84f6563bf2c310d5260fa693e45a74",
+      "active": "true",
+      "description": "Stakeholders evaluating the Revenue Enablement Rollout (Solana Enablement Cloud Ultimate) for Boxeo.",
+      "number": "BYGR0001005",
+      "sys_id": "d09ed2c8938413d0e84732e548373c51",
+      "product_offering_family": "5a1cb95b3b324710d5260fa693e45a51",
+      "stage": "3",
+      "name": "Boxeo Revenue Enablement Buying Group",
+      "work_notes": "",
+      "account": "425ed7962bba83104deaf02ac891bf4c"
+    },
+    {
+      "owner": "9b84f6563bf2c310d5260fa693e45a74",
+      "active": "true",
+      "description": "Stakeholders evaluating the Enablement Cohort Add-On (Solana Enablement Cloud Ultimate) for Gatelynx AI.",
+      "number": "BYGR0001003",
+      "sys_id": "da4bd200938413d0e84732e548373c1d",
+      "product_offering_family": "5a1cb95b3b324710d5260fa693e45a51",
+      "stage": "2",
+      "name": "Gatelynx AI Revenue Enablement Buying Group",
+      "work_notes": "",
+      "account": "19320b2d2b8b8b104deaf02ac891bf01"
     }
   ]
 }
