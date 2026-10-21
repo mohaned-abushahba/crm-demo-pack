@@ -1385,6 +1385,24 @@
       "sys_id": "fc23e6ad2b078b104deaf02ac891bf9d",
       "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
       "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "6d7570bf3b3b83d0916b37f726e45ae5",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "657570bf3b3b83d0916b37f726e45ae8",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
+    },
+    {
+      "is_active": "true",
+      "product_offering": "d202b8333b3b83d0916b37f726e45ab0",
+      "external_id": "",
+      "is_default": "true",
+      "sys_id": "99d2b4373b3b83d0916b37f726e45ab7",
+      "unit_of_measure": "cb2795d553020110286eddeeff7b12ff",
+      "external_source": ""
     }
   ]
 }

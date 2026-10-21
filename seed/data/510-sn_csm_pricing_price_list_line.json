@@ -6759,6 +6759,25 @@
       "ceiling_price": "0",
       "floor_price": "0",
       "start_date": "2026-01-01 00:00:00"
+    },
+    {
+      "end_date": "",
+      "code": "PLLSTANDAR-2C6D55CBC3B6D0DE0C40946B12FB4455",
+      "parent_product_offering": "",
+      "product_offering": "6d7570bf3b3b83d0916b37f726e45ae5",
+      "external_id": "",
+      "list_price": "20",
+      "derived_price": "false",
+      "top_product_offering": "",
+      "number": "PLL0001016",
+      "sys_id": "892638333b7b83d0916b37f726e45a27",
+      "price_list": "94ed8a972bb243104deaf02ac891bf4f",
+      "uom": "cb2795d553020110286eddeeff7b12ff",
+      "parent_price_list_line": "",
+      "name": "",
+      "ceiling_price": "0",
+      "floor_price": "0",
+      "start_date": "2026-01-01 00:00:00"
     }
   ]
 }

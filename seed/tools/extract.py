@@ -142,7 +142,13 @@ def main():
         client = client_for(inst)
         query = spec["scope_query"] if "scope_query" in spec else scope_query(manifest["windows"], spec.get("query"))
         excluded = set(manifest["exclude_fields"]) | set(spec.get("exclude", []))
-        records = [{k: v for k, v in r.items() if k not in excluded} for r in client.fetch_all(table, query)]
+        rows = client.fetch_all(table, query)
+        # Records that exist only on another instance (changes made after the
+        # source-of-truth capture) are pulled in by explicit query; the source wins on a sys_id clash.
+        for extra in spec.get("also_from", []):
+            seen = {r["sys_id"] for r in rows}
+            rows += [r for r in client_for(extra["source_instance"]).fetch_all(table, extra["scope_query"]) if r["sys_id"] not in seen]
+        records = [{k: v for k, v in r.items() if k not in excluded} for r in rows]
         for field, values in spec.get("exclude_records", {}).items():
             if not field.startswith("_"):
                 records = [r for r in records if r.get(field) not in values]

@@ -301,17 +301,35 @@
       ],
       "insert_as": {
         "status": "draft"
-      }
+      },
+      "also_from": [
+        {
+          "source_instance": "opmsalescrmstage",
+          "scope_query": "sys_idINd202b8333b3b83d0916b37f726e45ab0,6d7570bf3b3b83d0916b37f726e45ae5"
+        }
+      ]
     },
     {
       "file": "455-sn_prd_pm_product_offering_category_relationship",
       "table": "sn_prd_pm_product_offering_category_relationship",
-      "key": []
+      "key": [],
+      "also_from": [
+        {
+          "source_instance": "opmsalescrmstage",
+          "scope_query": "product_offeringINd202b8333b3b83d0916b37f726e45ab0,6d7570bf3b3b83d0916b37f726e45ae5"
+        }
+      ]
     },
     {
       "file": "460-sn_prd_pm_product_offering_uom",
       "table": "sn_prd_pm_product_offering_uom",
-      "key": []
+      "key": [],
+      "also_from": [
+        {
+          "source_instance": "opmsalescrmstage",
+          "scope_query": "product_offeringINd202b8333b3b83d0916b37f726e45ab0,6d7570bf3b3b83d0916b37f726e45ae5"
+        }
+      ]
     },
     {
       "file": "465-sn_prd_pm_product_offering_characteristic",
@@ -358,6 +376,12 @@
       "table": "sn_csm_pricing_price_list_line",
       "key": [
         "code"
+      ],
+      "also_from": [
+        {
+          "source_instance": "opmsalescrmstage",
+          "scope_query": "sys_id=892638333b7b83d0916b37f726e45a27"
+        }
       ]
     },
     {

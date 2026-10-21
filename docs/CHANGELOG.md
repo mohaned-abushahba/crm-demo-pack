@@ -505,3 +505,14 @@ What: Global before-insert/update business rule "Set probability from forecast c
 Why: probability should follow the forecast category instead of being keyed by hand. Runs after OOTB "Set forecast category" (100, stage-driven) and before "Set Amount And Weighted Amount" (550), so weighted amount recalculates.
 Tested on stage 2026-10-16 (OPTY0001038): Upside -> Commit gave 80, Commit -> Upside gave 30; weighted amount recalculated; record restored. Only Commit and Upside exercised. The XML was not yet imported through the update-set loader.
 Caveat: a manual probability is overwritten if the category changes in the same save; it sticks when the category is unchanged. Categories are matched by display name. No dependencies.
+
+## seed Meeting Intelligence Dashboard offering (2026-10-21)
+Instance: opmsalescrmstage (source), tested by extraction only
+What: new product offering "Meeting Intelligence Dashboard" (code `MEETING IN1`), monthly recurring, UOM Each, family Intelligence & Analytics, category Revenue Enablement, no catalog. Fixtures now carry it from stage:
+- `450` offering, 2 rows: v1 `d202b833...` (PRDOF01009, Retired) and v2 `6d7570bf...` (PRDOF01011, Published, sellable, ramps enabled, `previous_version` = v1). v1 is kept because v2's `initial_version`/`previous_version` point at it.
+- `455` category link and `460` UOM link, one pair per version (4 rows).
+- `510` price list line `PLL0001016` on Standard Price List: $20, Each, start 2026-01-01, for v2 only.
+The family (`044cf59b...`) and category (`6bebb95b...`) were already in the fixtures from opmsalescrm1, so no change there.
+How: `seed/tools/extract.py` gained a per-table `also_from` option in `manifest.json` (extra `source_instance` + `scope_query`, merged by sys_id, main source wins), for records that exist only on another instance. Used on 450/455/460/510, pointing at stage by sys_id.
+Why: the offering was created on stage after the opmsalescrm1 capture, so the created-on windows never saw it.
+Caveats: the offering and line numbers (PRDOF01009/01011, PLL0001016) already exist on other fixture rows; the numbers are not unique-constrained, same as earlier duplicates. Both versions share code `MEETING IN1`; the loader's key check runs before any writes, so both insert on a blank instance (same as `GENERATORS1`). Not captured: stage's retired "Meeting Intelligence" `USR-MTG` v2 (`abdde8ff...`), a leftover from the same session. Re-extracting 450 also picked up an unrelated opmsalescrm1 edit to a "Tokens" offering (description, cleared `configuration_json`); that was left out so this change stays scoped, so 450 still has the older value for it. Not loaded onto a blank instance yet; the bundle was rebuilt (2,851 records).
