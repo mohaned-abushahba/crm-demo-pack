@@ -14,6 +14,18 @@ File: update-sets/UPDATE-XXX-short-name.xml
 
 ---
 
+## seed/data/900-forecast-2026q4.json quotas (2026-10-21)
+Instance: opmsalescrmstage
+What: Quotas re-captured from stage: 155 `sn_quota_core_sales_quota` rows (was 10). 2026 Q3 unchanged (5);
+2026 Q4 now covers the whole sales team (16 individual quotas) and 2027 Q1-Q4 add the same set per quarter.
+Every quarter from 2026 Q4 on: individual quotas sum to $26M, TECH rollup = $26M, Global rollup = $26M
+(14 rollups per quarter, $104M of rollup rows). The one value change to an existing record: 2026 Q4 TECH
+rollup 54c54fe5… $7M -> $26M. Script 04 comments updated: 2027 spans now required.
+Why: demo uses one industry per instance, so TECH carries the full $26M global target.
+Not captured: the 11 extra 2026 Q4 forecast headers on stage (34 there vs 23 in the fixture); quotas have no
+name field, none contains "old".
+File: seed/data/900-forecast-2026q4.json, seed/04-forecast-hierarchy.js
+
 ## UPDATE-024-sdr-dashboard-metadata (2026-10-13)
 Instance: opmsalescrm1
 What: One `par_dashboard_user_metadata` record (958685ca…) for the SDR Golden Landing Page. Must be

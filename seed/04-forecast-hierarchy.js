@@ -1,4 +1,4 @@
-// Seed: forecast hierarchy for 2026 Q3/Q4 — quotas, forecast headers and the open opportunities
+// Seed: forecast hierarchy for 2026 Q3/Q4 (+ 2027 Q1-Q4 quotas) — quotas, forecast headers and the open opportunities
 // that drive them — copied from opmsalescrm1 (2026-10-13). Fixture: seed/data/900-forecast-2026q4.json
 // (paste its content into FIXTURE below; the execute sandbox has no file access).
 //
@@ -15,8 +15,8 @@
 //      Items fill in asynchronously; wait about two minutes before reading totals.
 //
 // Prereqs on the target: users, territories (same sys_ids as opmsalescrm1 — loaded by the master data
-// seed), accounts, the forecast model, and business calendar spans "2026 Q3"/"2026 Q4". The target's
-// calendar had no 2027 spans, so 2027 quotas are NOT seeded. Run as an admin that holds
+// seed), accounts, the forecast model, and business calendar spans (Quarter calendar) for every quota
+// period in the fixture: "2026 Q3" .. "2027 Q4". The loader throws if a span is missing. Run as an admin that holds
 // sn_quota_core.quota_admin (quotas) — grant it first if missing.
 //
 // Do not run seed/03-ams-west-forecasts.js on the same instance: it creates headers on the

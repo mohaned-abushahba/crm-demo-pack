@@ -1,7 +1,159 @@
 {
- "_comment": "Forecast hierarchy for the 2026 Q3/Q4 periods, copied from opmsalescrm1 (captured 2026-10-13). Periods differ per instance, so they are given by name and resolved at load time. sys_ids are kept so the load is idempotent.",
+ "_comment": "Forecast hierarchy for the 2026 Q3/Q4 periods, copied from opmsalescrm1 (captured 2026-10-13); quotas re-captured from opmsalescrmstage 2026-10-21 (2026 Q4 and 2027 Q1-Q4: 16 individual quotas = 26M, TECH rollup = 26M, Global rollup = 26M per quarter). Periods differ per instance, so they are given by name and resolved at load time. sys_ids are kept so the load is idempotent.",
  "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
  "quotas": [
+  {
+   "sys_id": "7327ee6e2b0347504deaf02ac891bf82",
+   "owner": "9384f6563bf2c310d5260fa693e45a6d",
+   "territory": "5ffec65b3bf24710d5260fa693e45ad5",
+   "period": "2026 Q3",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "b327e6263b0f4750d5260fa693e45aff",
+   "owner": "07843ed22b7683104deaf02ac891bf31",
+   "territory": "6dfe4e1b2bb243104deaf02ac891bf30",
+   "period": "2026 Q3",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "f727ae6e2b0347504deaf02ac891bfc0",
+   "owner": "0b843ed22b7683104deaf02ac891bf1d",
+   "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
+   "period": "2026 Q3",
+   "amount": 7000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "3327ee6e2b0347504deaf02ac891bf88",
+   "owner": "9b84f6563bf2c310d5260fa693e45a74",
+   "territory": "290f42173bf24710d5260fa693e45a00",
+   "period": "2026 Q3",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "7668722c2b1fc3504deaf02ac891bf2f",
+   "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+   "territory": "307902a93b4b8b10d5260fa693e45a32",
+   "period": "2026 Q3",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "519c27903b441310916b37f726e45af6",
+   "owner": "c96ffacc3bd7cb10d5260fa693e45aee",
+   "territory": "ac4a3e8c2b138f104deaf02ac891bfde",
+   "period": "2026 Q4",
+   "amount": 7000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "54c54fe52bcb8b104deaf02ac891bf2d",
+   "owner": "0b843ed22b7683104deaf02ac891bf1d",
+   "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
+   "period": "2026 Q4",
+   "amount": 26000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "559c27903b441310916b37f726e45aed",
+   "owner": "546ffacc3bd7cb10d5260fa693e45a83",
+   "territory": "784af2043bd7cb10d5260fa693e45ac0",
+   "period": "2026 Q4",
+   "amount": 1500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "599c27903b441310916b37f726e45af9",
+   "owner": "556f3ecc3bd7cb10d5260fa693e45a03",
+   "territory": "115a32cc2b138f104deaf02ac891bfa1",
+   "period": "2026 Q4",
+   "amount": 1500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "5d9c27903b441310916b37f726e45ae9",
+   "owner": "946ff60c2b538f104deaf02ac891bfc2",
+   "territory": "a04af2043bd7cb10d5260fa693e45ab8",
+   "period": "2026 Q4",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "5d9c27903b441310916b37f726e45af0",
+   "owner": "346ffe0c2b538f104deaf02ac891bffd",
+   "territory": "3c4a36043bd7cb10d5260fa693e45a0c",
+   "period": "2026 Q4",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "749547e52bcb8b104deaf02ac891bfc6",
+   "owner": "07843ed22b7683104deaf02ac891bf31",
+   "territory": "6dfe4e1b2bb243104deaf02ac891bf30",
+   "period": "2026 Q4",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "763d27143b441310916b37f726e45acf",
+   "owner": "61098b212b0f8b104deaf02ac891bf79",
+   "territory": "f3de465b3bf24710d5260fa693e45a9d",
+   "period": "2026 Q4",
+   "amount": 26000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "903583a52bcb8b104deaf02ac891bffb",
+   "owner": "9384f6563bf2c310d5260fa693e45a6d",
+   "territory": "5ffec65b3bf24710d5260fa693e45ad5",
+   "period": "2026 Q4",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "d59c27903b441310916b37f726e45ae4",
+   "owner": "f9098f613b07cb10d5260fa693e45ae3",
+   "territory": "effdc3ed2b0f8b104deaf02ac891bfb0",
+   "period": "2026 Q4",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "d59c27903b441310916b37f726e45af3",
+   "owner": "bc6ffacc3bd7cb10d5260fa693e45ad1",
+   "territory": "f44af2043bd7cb10d5260fa693e45ae0",
+   "period": "2026 Q4",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "dd9c27903b441310916b37f726e45ae8",
+   "owner": "986fbe8c3bd7cb10d5260fa693e45a67",
+   "territory": "e5fe4e1b2bb243104deaf02ac891bf37",
+   "period": "2026 Q4",
+   "amount": 6500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "dd9c27903b441310916b37f726e45aef",
+   "owner": "386ffacc3bd7cb10d5260fa693e45a8b",
+   "territory": "e1fec65b3bf24710d5260fa693e45acf",
+   "period": "2026 Q4",
+   "amount": 7500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "dd9c27903b441310916b37f726e45af6",
+   "owner": "dd6f3ecc3bd7cb10d5260fa693e45a17",
+   "territory": "955a76043bd7cb10d5260fa693e45aef",
+   "period": "2026 Q4",
+   "amount": 5500000,
+   "type": "rollup"
+  },
   {
    "sys_id": "01b83e2c2b1fc3504deaf02ac891bfa1",
    "owner": "b9098b212b0f8b104deaf02ac891bfc9",
@@ -19,68 +171,1076 @@
    "type": "individual"
   },
   {
-   "sys_id": "54c54fe52bcb8b104deaf02ac891bf2d",
-   "owner": "0b843ed22b7683104deaf02ac891bf1d",
-   "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
+   "sys_id": "519c27903b441310916b37f726e45ae8",
+   "owner": "b479154e3bcbcf10d5260fa693e45aa7",
+   "territory": "856a9dce3bcbcf10d5260fa693e45ad7",
    "period": "2026 Q4",
-   "amount": 7000000,
-   "type": "rollup"
+   "amount": 500000,
+   "type": "individual"
   },
   {
-   "sys_id": "749547e52bcb8b104deaf02ac891bfc6",
-   "owner": "07843ed22b7683104deaf02ac891bf31",
-   "territory": "6dfe4e1b2bb243104deaf02ac891bf30",
+   "sys_id": "519c27903b441310916b37f726e45aef",
+   "owner": "f46ffe0c2b538f104deaf02ac891bff4",
+   "territory": "855a76043bd7cb10d5260fa693e45ae1",
    "period": "2026 Q4",
-   "amount": 5000000,
-   "type": "rollup"
+   "amount": 500000,
+   "type": "individual"
   },
   {
-   "sys_id": "903583a52bcb8b104deaf02ac891bffb",
-   "owner": "9384f6563bf2c310d5260fa693e45a6d",
-   "territory": "5ffec65b3bf24710d5260fa693e45ad5",
+   "sys_id": "559c27903b441310916b37f726e45af4",
+   "owner": "cd6f324c2b538f104deaf02ac891bf1e",
+   "territory": "855a76043bd7cb10d5260fa693e45ae8",
    "period": "2026 Q4",
-   "amount": 2500000,
-   "type": "rollup"
+   "amount": 3500000,
+   "type": "individual"
   },
   {
-   "sys_id": "3327ee6e2b0347504deaf02ac891bf88",
-   "owner": "9b84f6563bf2c310d5260fa693e45a74",
-   "territory": "290f42173bf24710d5260fa693e45a00",
-   "period": "2026 Q3",
+   "sys_id": "599c27903b441310916b37f726e45aeb",
+   "owner": "2c6ffe0c2b538f104deaf02ac891bfc4",
+   "territory": "310e8ba12b4f8b104deaf02ac891bf2c",
+   "period": "2026 Q4",
    "amount": 1500000,
    "type": "individual"
   },
   {
-   "sys_id": "7327ee6e2b0347504deaf02ac891bf82",
-   "owner": "9384f6563bf2c310d5260fa693e45a6d",
-   "territory": "5ffec65b3bf24710d5260fa693e45ad5",
-   "period": "2026 Q3",
-   "amount": 2500000,
-   "type": "rollup"
-  },
-  {
-   "sys_id": "7668722c2b1fc3504deaf02ac891bf2f",
-   "owner": "b9098b212b0f8b104deaf02ac891bfc9",
-   "territory": "307902a93b4b8b10d5260fa693e45a32",
-   "period": "2026 Q3",
+   "sys_id": "599c27903b441310916b37f726e45af2",
+   "owner": "0d6f324c2b538f104deaf02ac891bf6e",
+   "territory": "595a32cc2b138f104deaf02ac891bf8d",
+   "period": "2026 Q4",
    "amount": 1000000,
    "type": "individual"
   },
   {
-   "sys_id": "b327e6263b0f4750d5260fa693e45aff",
+   "sys_id": "5d9c27903b441310916b37f726e45af7",
+   "owner": "916f3ecc3bd7cb10d5260fa693e45a20",
+   "territory": "bb5a72cc2b138f104deaf02ac891bfb9",
+   "period": "2026 Q4",
+   "amount": 4500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "d19c27903b441310916b37f726e45ae7",
+   "owner": "f1098f613b07cb10d5260fa693e45af8",
+   "territory": "fd0e4ba12b4f8b104deaf02ac891bf06",
+   "period": "2026 Q4",
+   "amount": 2000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "d19c27903b441310916b37f726e45aee",
+   "owner": "b86ffe0c2b538f104deaf02ac891bfeb",
+   "territory": "855a76043bd7cb10d5260fa693e45ada",
+   "period": "2026 Q4",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "d19c27903b441310916b37f726e45af5",
+   "owner": "096ffacc3bd7cb10d5260fa693e45ae6",
+   "territory": "d15a3e8c2b138f104deaf02ac891bfe7",
+   "period": "2026 Q4",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "d59c27903b441310916b37f726e45aec",
+   "owner": "6c6ffe0c2b538f104deaf02ac891bfe2",
+   "territory": "0d5a36043bd7cb10d5260fa693e45a13",
+   "period": "2026 Q4",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "d59c27903b441310916b37f726e45afa",
+   "owner": "696f324c2b538f104deaf02ac891bf77",
+   "territory": "bb5a72cc2b138f104deaf02ac891bfc0",
+   "period": "2026 Q4",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "d99c27903b441310916b37f726e45aea",
+   "owner": "206ffe0c2b538f104deaf02ac891bfda",
+   "territory": "350e83a93b07cb10d5260fa693e45a93",
+   "period": "2026 Q4",
+   "amount": 2500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "d99c27903b441310916b37f726e45af1",
+   "owner": "896f324c2b538f104deaf02ac891bf40",
+   "territory": "595a32cc2b138f104deaf02ac891bf86",
+   "period": "2026 Q4",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "d99c27903b441310916b37f726e45af8",
+   "owner": "a16f324c2b538f104deaf02ac891bfb2",
+   "territory": "b35ab6043bd7cb10d5260fa693e45a28",
+   "period": "2026 Q4",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "32af969993c89710e84732e548373c11",
+   "owner": "346ffe0c2b538f104deaf02ac891bffd",
+   "territory": "3c4a36043bd7cb10d5260fa693e45a0c",
+   "period": "2027 Q1",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "32af969993c89710e84732e548373c18",
+   "owner": "f9098f613b07cb10d5260fa693e45ae3",
+   "territory": "effdc3ed2b0f8b104deaf02ac891bfb0",
+   "period": "2027 Q1",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "32af969993c89710e84732e548373c1f",
+   "owner": "386ffacc3bd7cb10d5260fa693e45a8b",
+   "territory": "e1fec65b3bf24710d5260fa693e45acf",
+   "period": "2027 Q1",
+   "amount": 7500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "36af969993c89710e84732e548373c0f",
+   "owner": "556f3ecc3bd7cb10d5260fa693e45a03",
+   "territory": "115a32cc2b138f104deaf02ac891bfa1",
+   "period": "2027 Q1",
+   "amount": 1500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "3aaf969993c89710e84732e548373c14",
+   "owner": "9384f6563bf2c310d5260fa693e45a6d",
+   "territory": "5ffec65b3bf24710d5260fa693e45ad5",
+   "period": "2027 Q1",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "3eaf969993c89710e84732e548373c12",
    "owner": "07843ed22b7683104deaf02ac891bf31",
    "territory": "6dfe4e1b2bb243104deaf02ac891bf30",
-   "period": "2026 Q3",
+   "period": "2027 Q1",
    "amount": 5000000,
    "type": "rollup"
   },
   {
-   "sys_id": "f727ae6e2b0347504deaf02ac891bfc0",
-   "owner": "0b843ed22b7683104deaf02ac891bf1d",
-   "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
-   "period": "2026 Q3",
+   "sys_id": "3eaf969993c89710e84732e548373c19",
+   "owner": "bc6ffacc3bd7cb10d5260fa693e45ad1",
+   "territory": "f44af2043bd7cb10d5260fa693e45ae0",
+   "period": "2027 Q1",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "76af569993c89710e84732e548373cff",
+   "owner": "546ffacc3bd7cb10d5260fa693e45a83",
+   "territory": "784af2043bd7cb10d5260fa693e45ac0",
+   "period": "2027 Q1",
+   "amount": 1500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "7aaf569993c89710e84732e548373cfd",
+   "owner": "c96ffacc3bd7cb10d5260fa693e45aee",
+   "territory": "ac4a3e8c2b138f104deaf02ac891bfde",
+   "period": "2027 Q1",
    "amount": 7000000,
    "type": "rollup"
+  },
+  {
+   "sys_id": "b2af969993c89710e84732e548373c10",
+   "owner": "946ff60c2b538f104deaf02ac891bfc2",
+   "territory": "a04af2043bd7cb10d5260fa693e45ab8",
+   "period": "2027 Q1",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "b2af969993c89710e84732e548373c1e",
+   "owner": "986fbe8c3bd7cb10d5260fa693e45a67",
+   "territory": "e5fe4e1b2bb243104deaf02ac891bf37",
+   "period": "2027 Q1",
+   "amount": 6500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "baaf969993c89710e84732e548373c13",
+   "owner": "61098b212b0f8b104deaf02ac891bf79",
+   "territory": "f3de465b3bf24710d5260fa693e45a9d",
+   "period": "2027 Q1",
+   "amount": 26000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "beaf969993c89710e84732e548373c1f",
+   "owner": "dd6f3ecc3bd7cb10d5260fa693e45a17",
+   "territory": "955a76043bd7cb10d5260fa693e45aef",
+   "period": "2027 Q1",
+   "amount": 5500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "f6af569993c89710e84732e548373cfe",
+   "owner": "0b843ed22b7683104deaf02ac891bf1d",
+   "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
+   "period": "2027 Q1",
+   "amount": 26000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "36af969993c89710e84732e548373c16",
+   "owner": "b86ffe0c2b538f104deaf02ac891bfeb",
+   "territory": "855a76043bd7cb10d5260fa693e45ada",
+   "period": "2027 Q1",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "36af969993c89710e84732e548373c1d",
+   "owner": "a16f324c2b538f104deaf02ac891bfb2",
+   "territory": "b35ab6043bd7cb10d5260fa693e45a28",
+   "period": "2027 Q1",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "3aaf969993c89710e84732e548373c0d",
+   "owner": "2c6ffe0c2b538f104deaf02ac891bfc4",
+   "territory": "310e8ba12b4f8b104deaf02ac891bf2c",
+   "period": "2027 Q1",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "3aaf969993c89710e84732e548373c1b",
+   "owner": "206ffe0c2b538f104deaf02ac891bfda",
+   "territory": "350e83a93b07cb10d5260fa693e45a93",
+   "period": "2027 Q1",
+   "amount": 2500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "7eaf569993c89710e84732e548373cfb",
+   "owner": "b479154e3bcbcf10d5260fa693e45aa7",
+   "territory": "856a9dce3bcbcf10d5260fa693e45ad7",
+   "period": "2027 Q1",
+   "amount": 500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "b2af969993c89710e84732e548373c17",
+   "owner": "096ffacc3bd7cb10d5260fa693e45ae6",
+   "territory": "d15a3e8c2b138f104deaf02ac891bfe7",
+   "period": "2027 Q1",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "b6af969993c89710e84732e548373c0e",
+   "owner": "0d6f324c2b538f104deaf02ac891bf6e",
+   "territory": "595a32cc2b138f104deaf02ac891bf8d",
+   "period": "2027 Q1",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "b6af969993c89710e84732e548373c15",
+   "owner": "f1098f613b07cb10d5260fa693e45af8",
+   "territory": "fd0e4ba12b4f8b104deaf02ac891bf06",
+   "period": "2027 Q1",
+   "amount": 2000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "b6af969993c89710e84732e548373c1c",
+   "owner": "896f324c2b538f104deaf02ac891bf40",
+   "territory": "595a32cc2b138f104deaf02ac891bf86",
+   "period": "2027 Q1",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "baaf969993c89710e84732e548373c1a",
+   "owner": "696f324c2b538f104deaf02ac891bf77",
+   "territory": "bb5a72cc2b138f104deaf02ac891bfc0",
+   "period": "2027 Q1",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "beaf969993c89710e84732e548373c11",
+   "owner": "916f3ecc3bd7cb10d5260fa693e45a20",
+   "territory": "bb5a72cc2b138f104deaf02ac891bfb9",
+   "period": "2027 Q1",
+   "amount": 4500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "beaf969993c89710e84732e548373c18",
+   "owner": "6c6ffe0c2b538f104deaf02ac891bfe2",
+   "territory": "0d5a36043bd7cb10d5260fa693e45a13",
+   "period": "2027 Q1",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "f2af969993c89710e84732e548373c00",
+   "owner": "cd6f324c2b538f104deaf02ac891bf1e",
+   "territory": "855a76043bd7cb10d5260fa693e45ae8",
+   "period": "2027 Q1",
+   "amount": 3500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "f6af569993c89710e84732e548373cf8",
+   "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+   "territory": "307902a93b4b8b10d5260fa693e45a32",
+   "period": "2027 Q1",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "faaf569993c89710e84732e548373cfc",
+   "owner": "f46ffe0c2b538f104deaf02ac891bff4",
+   "territory": "855a76043bd7cb10d5260fa693e45ae1",
+   "period": "2027 Q1",
+   "amount": 500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "feaf569993c89710e84732e548373cfa",
+   "owner": "9b84f6563bf2c310d5260fa693e45a74",
+   "territory": "290f42173bf24710d5260fa693e45a00",
+   "period": "2027 Q1",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "32af969993c89710e84732e548373c26",
+   "owner": "546ffacc3bd7cb10d5260fa693e45a83",
+   "territory": "784af2043bd7cb10d5260fa693e45ac0",
+   "period": "2027 Q2",
+   "amount": 1500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "32af969993c89710e84732e548373c2d",
+   "owner": "07843ed22b7683104deaf02ac891bf31",
+   "territory": "6dfe4e1b2bb243104deaf02ac891bf30",
+   "period": "2027 Q2",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "32af969993c89710e84732e548373c34",
+   "owner": "bc6ffacc3bd7cb10d5260fa693e45ad1",
+   "territory": "f44af2043bd7cb10d5260fa693e45ae0",
+   "period": "2027 Q2",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "36af969993c89710e84732e548373c24",
+   "owner": "c96ffacc3bd7cb10d5260fa693e45aee",
+   "territory": "ac4a3e8c2b138f104deaf02ac891bfde",
+   "period": "2027 Q2",
+   "amount": 7000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "36af969993c89710e84732e548373c2b",
+   "owner": "346ffe0c2b538f104deaf02ac891bffd",
+   "territory": "3c4a36043bd7cb10d5260fa693e45a0c",
+   "period": "2027 Q2",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "36af969993c89710e84732e548373c32",
+   "owner": "f9098f613b07cb10d5260fa693e45ae3",
+   "territory": "effdc3ed2b0f8b104deaf02ac891bfb0",
+   "period": "2027 Q2",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "36af969993c89710e84732e548373c39",
+   "owner": "386ffacc3bd7cb10d5260fa693e45a8b",
+   "territory": "e1fec65b3bf24710d5260fa693e45acf",
+   "period": "2027 Q2",
+   "amount": 7500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "3aaf969993c89710e84732e548373c29",
+   "owner": "556f3ecc3bd7cb10d5260fa693e45a03",
+   "territory": "115a32cc2b138f104deaf02ac891bfa1",
+   "period": "2027 Q2",
+   "amount": 1500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "3eaf969993c89710e84732e548373c2e",
+   "owner": "9384f6563bf2c310d5260fa693e45a6d",
+   "territory": "5ffec65b3bf24710d5260fa693e45ad5",
+   "period": "2027 Q2",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "b2af969993c89710e84732e548373c25",
+   "owner": "0b843ed22b7683104deaf02ac891bf1d",
+   "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
+   "period": "2027 Q2",
+   "amount": 26000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "b2af969993c89710e84732e548373c3a",
+   "owner": "dd6f3ecc3bd7cb10d5260fa693e45a17",
+   "territory": "955a76043bd7cb10d5260fa693e45aef",
+   "period": "2027 Q2",
+   "amount": 5500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "b6af969993c89710e84732e548373c2a",
+   "owner": "946ff60c2b538f104deaf02ac891bfc2",
+   "territory": "a04af2043bd7cb10d5260fa693e45ab8",
+   "period": "2027 Q2",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "b6af969993c89710e84732e548373c38",
+   "owner": "986fbe8c3bd7cb10d5260fa693e45a67",
+   "territory": "e5fe4e1b2bb243104deaf02ac891bf37",
+   "period": "2027 Q2",
+   "amount": 6500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "beaf969993c89710e84732e548373c2d",
+   "owner": "61098b212b0f8b104deaf02ac891bf79",
+   "territory": "f3de465b3bf24710d5260fa693e45a9d",
+   "period": "2027 Q2",
+   "amount": 26000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "3aaf969993c89710e84732e548373c22",
+   "owner": "b479154e3bcbcf10d5260fa693e45aa7",
+   "territory": "856a9dce3bcbcf10d5260fa693e45ad7",
+   "period": "2027 Q2",
+   "amount": 500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "3aaf969993c89710e84732e548373c30",
+   "owner": "b86ffe0c2b538f104deaf02ac891bfeb",
+   "territory": "855a76043bd7cb10d5260fa693e45ada",
+   "period": "2027 Q2",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "3aaf969993c89710e84732e548373c37",
+   "owner": "a16f324c2b538f104deaf02ac891bfb2",
+   "territory": "b35ab6043bd7cb10d5260fa693e45a28",
+   "period": "2027 Q2",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "3eaf969993c89710e84732e548373c20",
+   "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+   "territory": "307902a93b4b8b10d5260fa693e45a32",
+   "period": "2027 Q2",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "3eaf969993c89710e84732e548373c27",
+   "owner": "2c6ffe0c2b538f104deaf02ac891bfc4",
+   "territory": "310e8ba12b4f8b104deaf02ac891bf2c",
+   "period": "2027 Q2",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "3eaf969993c89710e84732e548373c35",
+   "owner": "206ffe0c2b538f104deaf02ac891bfda",
+   "territory": "350e83a93b07cb10d5260fa693e45a93",
+   "period": "2027 Q2",
+   "amount": 2500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "b2af969993c89710e84732e548373c2c",
+   "owner": "916f3ecc3bd7cb10d5260fa693e45a20",
+   "territory": "bb5a72cc2b138f104deaf02ac891bfb9",
+   "period": "2027 Q2",
+   "amount": 4500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "b2af969993c89710e84732e548373c33",
+   "owner": "6c6ffe0c2b538f104deaf02ac891bfe2",
+   "territory": "0d5a36043bd7cb10d5260fa693e45a13",
+   "period": "2027 Q2",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "b6af969993c89710e84732e548373c23",
+   "owner": "f46ffe0c2b538f104deaf02ac891bff4",
+   "territory": "855a76043bd7cb10d5260fa693e45ae1",
+   "period": "2027 Q2",
+   "amount": 500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "b6af969993c89710e84732e548373c31",
+   "owner": "096ffacc3bd7cb10d5260fa693e45ae6",
+   "territory": "d15a3e8c2b138f104deaf02ac891bfe7",
+   "period": "2027 Q2",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "baaf969993c89710e84732e548373c21",
+   "owner": "9b84f6563bf2c310d5260fa693e45a74",
+   "territory": "290f42173bf24710d5260fa693e45a00",
+   "period": "2027 Q2",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "baaf969993c89710e84732e548373c28",
+   "owner": "0d6f324c2b538f104deaf02ac891bf6e",
+   "territory": "595a32cc2b138f104deaf02ac891bf8d",
+   "period": "2027 Q2",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "baaf969993c89710e84732e548373c2f",
+   "owner": "f1098f613b07cb10d5260fa693e45af8",
+   "territory": "fd0e4ba12b4f8b104deaf02ac891bf06",
+   "period": "2027 Q2",
+   "amount": 2000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "baaf969993c89710e84732e548373c36",
+   "owner": "896f324c2b538f104deaf02ac891bf40",
+   "territory": "595a32cc2b138f104deaf02ac891bf86",
+   "period": "2027 Q2",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "beaf969993c89710e84732e548373c26",
+   "owner": "cd6f324c2b538f104deaf02ac891bf1e",
+   "territory": "855a76043bd7cb10d5260fa693e45ae8",
+   "period": "2027 Q2",
+   "amount": 3500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "beaf969993c89710e84732e548373c34",
+   "owner": "696f324c2b538f104deaf02ac891bf77",
+   "territory": "bb5a72cc2b138f104deaf02ac891bfc0",
+   "period": "2027 Q2",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "0baf969993c89710e84732e548373c3e",
+   "owner": "c96ffacc3bd7cb10d5260fa693e45aee",
+   "territory": "ac4a3e8c2b138f104deaf02ac891bfde",
+   "period": "2027 Q3",
+   "amount": 7000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "43af969993c89710e84732e548373c51",
+   "owner": "946ff60c2b538f104deaf02ac891bfc2",
+   "territory": "a04af2043bd7cb10d5260fa693e45ab8",
+   "period": "2027 Q3",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "43af969993c89710e84732e548373c5f",
+   "owner": "986fbe8c3bd7cb10d5260fa693e45a67",
+   "territory": "e5fe4e1b2bb243104deaf02ac891bf37",
+   "period": "2027 Q3",
+   "amount": 6500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "4baf969993c89710e84732e548373c54",
+   "owner": "61098b212b0f8b104deaf02ac891bf79",
+   "territory": "f3de465b3bf24710d5260fa693e45a9d",
+   "period": "2027 Q3",
+   "amount": 26000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "4faf969993c89710e84732e548373c4b",
+   "owner": "0b843ed22b7683104deaf02ac891bf1d",
+   "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
+   "period": "2027 Q3",
+   "amount": 26000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "4faf969993c89710e84732e548373c60",
+   "owner": "dd6f3ecc3bd7cb10d5260fa693e45a17",
+   "territory": "955a76043bd7cb10d5260fa693e45aef",
+   "period": "2027 Q3",
+   "amount": 5500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "c3af969993c89710e84732e548373c50",
+   "owner": "556f3ecc3bd7cb10d5260fa693e45a03",
+   "territory": "115a32cc2b138f104deaf02ac891bfa1",
+   "period": "2027 Q3",
+   "amount": 1500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "c7af969993c89710e84732e548373c55",
+   "owner": "9384f6563bf2c310d5260fa693e45a6d",
+   "territory": "5ffec65b3bf24710d5260fa693e45ad5",
+   "period": "2027 Q3",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "cbaf969993c89710e84732e548373c4c",
+   "owner": "546ffacc3bd7cb10d5260fa693e45a83",
+   "territory": "784af2043bd7cb10d5260fa693e45ac0",
+   "period": "2027 Q3",
+   "amount": 1500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "cbaf969993c89710e84732e548373c53",
+   "owner": "07843ed22b7683104deaf02ac891bf31",
+   "territory": "6dfe4e1b2bb243104deaf02ac891bf30",
+   "period": "2027 Q3",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "cbaf969993c89710e84732e548373c5a",
+   "owner": "bc6ffacc3bd7cb10d5260fa693e45ad1",
+   "territory": "f44af2043bd7cb10d5260fa693e45ae0",
+   "period": "2027 Q3",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "cfaf969993c89710e84732e548373c51",
+   "owner": "346ffe0c2b538f104deaf02ac891bffd",
+   "territory": "3c4a36043bd7cb10d5260fa693e45a0c",
+   "period": "2027 Q3",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "cfaf969993c89710e84732e548373c58",
+   "owner": "f9098f613b07cb10d5260fa693e45ae3",
+   "territory": "effdc3ed2b0f8b104deaf02ac891bfb0",
+   "period": "2027 Q3",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "cfaf969993c89710e84732e548373c5f",
+   "owner": "386ffacc3bd7cb10d5260fa693e45a8b",
+   "territory": "e1fec65b3bf24710d5260fa693e45acf",
+   "period": "2027 Q3",
+   "amount": 7500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "0faf969993c89710e84732e548373c3c",
+   "owner": "b479154e3bcbcf10d5260fa693e45aa7",
+   "territory": "856a9dce3bcbcf10d5260fa693e45ad7",
+   "period": "2027 Q3",
+   "amount": 500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "32af969993c89710e84732e548373c3b",
+   "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+   "territory": "307902a93b4b8b10d5260fa693e45a32",
+   "period": "2027 Q3",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "43af969993c89710e84732e548373c58",
+   "owner": "096ffacc3bd7cb10d5260fa693e45ae6",
+   "territory": "d15a3e8c2b138f104deaf02ac891bfe7",
+   "period": "2027 Q3",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "47af969993c89710e84732e548373c4f",
+   "owner": "0d6f324c2b538f104deaf02ac891bf6e",
+   "territory": "595a32cc2b138f104deaf02ac891bf8d",
+   "period": "2027 Q3",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "47af969993c89710e84732e548373c56",
+   "owner": "f1098f613b07cb10d5260fa693e45af8",
+   "territory": "fd0e4ba12b4f8b104deaf02ac891bf06",
+   "period": "2027 Q3",
+   "amount": 2000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "47af969993c89710e84732e548373c5d",
+   "owner": "896f324c2b538f104deaf02ac891bf40",
+   "territory": "595a32cc2b138f104deaf02ac891bf86",
+   "period": "2027 Q3",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "4baf969993c89710e84732e548373c4d",
+   "owner": "cd6f324c2b538f104deaf02ac891bf1e",
+   "territory": "855a76043bd7cb10d5260fa693e45ae8",
+   "period": "2027 Q3",
+   "amount": 3500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "4baf969993c89710e84732e548373c5b",
+   "owner": "696f324c2b538f104deaf02ac891bf77",
+   "territory": "bb5a72cc2b138f104deaf02ac891bfc0",
+   "period": "2027 Q3",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "4faf969993c89710e84732e548373c52",
+   "owner": "916f3ecc3bd7cb10d5260fa693e45a20",
+   "territory": "bb5a72cc2b138f104deaf02ac891bfb9",
+   "period": "2027 Q3",
+   "amount": 4500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "4faf969993c89710e84732e548373c59",
+   "owner": "6c6ffe0c2b538f104deaf02ac891bfe2",
+   "territory": "0d5a36043bd7cb10d5260fa693e45a13",
+   "period": "2027 Q3",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "8baf969993c89710e84732e548373c3d",
+   "owner": "f46ffe0c2b538f104deaf02ac891bff4",
+   "territory": "855a76043bd7cb10d5260fa693e45ae1",
+   "period": "2027 Q3",
+   "amount": 500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "beaf969993c89710e84732e548373c3b",
+   "owner": "9b84f6563bf2c310d5260fa693e45a74",
+   "territory": "290f42173bf24710d5260fa693e45a00",
+   "period": "2027 Q3",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "c3af969993c89710e84732e548373c57",
+   "owner": "b86ffe0c2b538f104deaf02ac891bfeb",
+   "territory": "855a76043bd7cb10d5260fa693e45ada",
+   "period": "2027 Q3",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "c3af969993c89710e84732e548373c5e",
+   "owner": "a16f324c2b538f104deaf02ac891bfb2",
+   "territory": "b35ab6043bd7cb10d5260fa693e45a28",
+   "period": "2027 Q3",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "c7af969993c89710e84732e548373c4e",
+   "owner": "2c6ffe0c2b538f104deaf02ac891bfc4",
+   "territory": "310e8ba12b4f8b104deaf02ac891bf2c",
+   "period": "2027 Q3",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "c7af969993c89710e84732e548373c5c",
+   "owner": "206ffe0c2b538f104deaf02ac891bfda",
+   "territory": "350e83a93b07cb10d5260fa693e45a93",
+   "period": "2027 Q3",
+   "amount": 2500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "0baf969993c89710e84732e548373c87",
+   "owner": "dd6f3ecc3bd7cb10d5260fa693e45a17",
+   "territory": "955a76043bd7cb10d5260fa693e45aef",
+   "period": "2027 Q4",
+   "amount": 5500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "0faf969993c89710e84732e548373c85",
+   "owner": "986fbe8c3bd7cb10d5260fa693e45a67",
+   "territory": "e5fe4e1b2bb243104deaf02ac891bf37",
+   "period": "2027 Q4",
+   "amount": 6500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "43af969993c89710e84732e548373c66",
+   "owner": "0b843ed22b7683104deaf02ac891bf1d",
+   "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
+   "period": "2027 Q4",
+   "amount": 26000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "47af969993c89710e84732e548373c6b",
+   "owner": "946ff60c2b538f104deaf02ac891bfc2",
+   "territory": "a04af2043bd7cb10d5260fa693e45ab8",
+   "period": "2027 Q4",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "4faf969993c89710e84732e548373c6e",
+   "owner": "61098b212b0f8b104deaf02ac891bf79",
+   "territory": "f3de465b3bf24710d5260fa693e45a9d",
+   "period": "2027 Q4",
+   "amount": 26000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "87af969993c89710e84732e548373c81",
+   "owner": "bc6ffacc3bd7cb10d5260fa693e45ad1",
+   "territory": "f44af2043bd7cb10d5260fa693e45ae0",
+   "period": "2027 Q4",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "8baf969993c89710e84732e548373c7f",
+   "owner": "f9098f613b07cb10d5260fa693e45ae3",
+   "territory": "effdc3ed2b0f8b104deaf02ac891bfb0",
+   "period": "2027 Q4",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "8baf969993c89710e84732e548373c86",
+   "owner": "386ffacc3bd7cb10d5260fa693e45a8b",
+   "territory": "e1fec65b3bf24710d5260fa693e45acf",
+   "period": "2027 Q4",
+   "amount": 7500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "c3af969993c89710e84732e548373c65",
+   "owner": "c96ffacc3bd7cb10d5260fa693e45aee",
+   "territory": "ac4a3e8c2b138f104deaf02ac891bfde",
+   "period": "2027 Q4",
+   "amount": 7000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "c3af969993c89710e84732e548373c6c",
+   "owner": "346ffe0c2b538f104deaf02ac891bffd",
+   "territory": "3c4a36043bd7cb10d5260fa693e45a0c",
+   "period": "2027 Q4",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "c7af969993c89710e84732e548373c6a",
+   "owner": "556f3ecc3bd7cb10d5260fa693e45a03",
+   "territory": "115a32cc2b138f104deaf02ac891bfa1",
+   "period": "2027 Q4",
+   "amount": 1500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "cbaf969993c89710e84732e548373c6f",
+   "owner": "9384f6563bf2c310d5260fa693e45a6d",
+   "territory": "5ffec65b3bf24710d5260fa693e45ad5",
+   "period": "2027 Q4",
+   "amount": 2500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "cfaf969993c89710e84732e548373c66",
+   "owner": "546ffacc3bd7cb10d5260fa693e45a83",
+   "territory": "784af2043bd7cb10d5260fa693e45ac0",
+   "period": "2027 Q4",
+   "amount": 1500000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "cfaf969993c89710e84732e548373c6d",
+   "owner": "07843ed22b7683104deaf02ac891bf31",
+   "territory": "6dfe4e1b2bb243104deaf02ac891bf30",
+   "period": "2027 Q4",
+   "amount": 5000000,
+   "type": "rollup"
+  },
+  {
+   "sys_id": "03af969993c89710e84732e548373c7d",
+   "owner": "f1098f613b07cb10d5260fa693e45af8",
+   "territory": "fd0e4ba12b4f8b104deaf02ac891bf06",
+   "period": "2027 Q4",
+   "amount": 2000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "03af969993c89710e84732e548373c84",
+   "owner": "896f324c2b538f104deaf02ac891bf40",
+   "territory": "595a32cc2b138f104deaf02ac891bf86",
+   "period": "2027 Q4",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "07af969993c89710e84732e548373c82",
+   "owner": "696f324c2b538f104deaf02ac891bf77",
+   "territory": "bb5a72cc2b138f104deaf02ac891bfc0",
+   "period": "2027 Q4",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "0baf969993c89710e84732e548373c80",
+   "owner": "6c6ffe0c2b538f104deaf02ac891bfe2",
+   "territory": "0d5a36043bd7cb10d5260fa693e45a13",
+   "period": "2027 Q4",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "0faf969993c89710e84732e548373c7e",
+   "owner": "096ffacc3bd7cb10d5260fa693e45ae6",
+   "territory": "d15a3e8c2b138f104deaf02ac891bfe7",
+   "period": "2027 Q4",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "43af969993c89710e84732e548373c6d",
+   "owner": "916f3ecc3bd7cb10d5260fa693e45a20",
+   "territory": "bb5a72cc2b138f104deaf02ac891bfb9",
+   "period": "2027 Q4",
+   "amount": 4500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "47af969993c89710e84732e548373c64",
+   "owner": "f46ffe0c2b538f104deaf02ac891bff4",
+   "territory": "855a76043bd7cb10d5260fa693e45ae1",
+   "period": "2027 Q4",
+   "amount": 500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "4baf969993c89710e84732e548373c62",
+   "owner": "9b84f6563bf2c310d5260fa693e45a74",
+   "territory": "290f42173bf24710d5260fa693e45a00",
+   "period": "2027 Q4",
+   "amount": 1500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "4baf969993c89710e84732e548373c69",
+   "owner": "0d6f324c2b538f104deaf02ac891bf6e",
+   "territory": "595a32cc2b138f104deaf02ac891bf8d",
+   "period": "2027 Q4",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "4faf969993c89710e84732e548373c67",
+   "owner": "cd6f324c2b538f104deaf02ac891bf1e",
+   "territory": "855a76043bd7cb10d5260fa693e45ae8",
+   "period": "2027 Q4",
+   "amount": 3500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "83af969993c89710e84732e548373c83",
+   "owner": "206ffe0c2b538f104deaf02ac891bfda",
+   "territory": "350e83a93b07cb10d5260fa693e45a93",
+   "period": "2027 Q4",
+   "amount": 2500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "8faf969993c89710e84732e548373c7d",
+   "owner": "b86ffe0c2b538f104deaf02ac891bfeb",
+   "territory": "855a76043bd7cb10d5260fa693e45ada",
+   "period": "2027 Q4",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "8faf969993c89710e84732e548373c84",
+   "owner": "a16f324c2b538f104deaf02ac891bfb2",
+   "territory": "b35ab6043bd7cb10d5260fa693e45a28",
+   "period": "2027 Q4",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "c7af969993c89710e84732e548373c63",
+   "owner": "b479154e3bcbcf10d5260fa693e45aa7",
+   "territory": "856a9dce3bcbcf10d5260fa693e45ad7",
+   "period": "2027 Q4",
+   "amount": 500000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "cbaf969993c89710e84732e548373c61",
+   "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+   "territory": "307902a93b4b8b10d5260fa693e45a32",
+   "period": "2027 Q4",
+   "amount": 1000000,
+   "type": "individual"
+  },
+  {
+   "sys_id": "cbaf969993c89710e84732e548373c68",
+   "owner": "2c6ffe0c2b538f104deaf02ac891bfc4",
+   "territory": "310e8ba12b4f8b104deaf02ac891bf2c",
+   "period": "2027 Q4",
+   "amount": 1500000,
+   "type": "individual"
   }
  ],
  "headers": [
