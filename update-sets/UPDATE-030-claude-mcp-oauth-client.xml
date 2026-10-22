@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-10-22 12:00:00">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<description>Claude MCP Client OAuth application registration (oauth_entity): auth-code inbound, redirect https://claude.ai/api/mcp/auth_callback, PKCE S256. client_secret is deliberately blank; the target instance generates one on import. Source: opmsalescrmstage (captured 2026-10-22).</description>
+<name>UPDATE-030-claude-mcp-oauth-client</name>
+<origin_sys_id>592cda73b8f74c9684b7c07b7637853b</origin_sys_id>
+<remote_sys_id>592cda73b8f74c9684b7c07b7637853b</remote_sys_id>
+<state>loaded</state>
+<sys_id>592cda73b8f74c9684b7c07b7637853b</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>oauth_entity_de6bbd0493ccdf90e84732e548373c63</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity"><oauth_entity action="INSERT_OR_UPDATE"><access>public</access><access_token_lifespan>8640000</access_token_lifespan><active>true</active><allow_snc_user_exchange>false</allow_snc_user_exchange><auth_aig_client>false</auth_aig_client><auth_cimd_client>false</auth_cimd_client><auth_code_lifespan>60</auth_code_lifespan><auth_url/><bff_cookie_exchange_allowed>false</bff_cookie_exchange_allowed><bind_token_to_session>false</bind_token_to_session><certificate_url/><client_id>5af5b7aaa0da41ff91988398731a005e</client_id><client_secret/><client_type/><client_uuid>1e6bbd0493ccdf90e84732e548373c63</client_uuid><code_challenge_method>S256</code_challenge_method><comments/><default_grant_type>password</default_grant_type><extend_refresh_token_expiry>false</extend_refresh_token_expiry><id_token_lifespan>86400</id_token_lifespan><inbound_grant_type>authz_code</inbound_grant_type><jwt_provider/><login_url/><logo_url/><message_signature_lifespan>60</message_signature_lifespan><mobile_client>false</mobile_client><name>Claude MCP Client</name><oauth_api_script/><only_rest_processor>false</only_rest_processor><protocol_name/><public_client>false</public_client><redirect_url>https://claude.ai/api/mcp/auth_callback</redirect_url><refresh_token_lifespan>8640000</refresh_token_lifespan><refresh_token_url/><restricted_binding>false</restricted_binding><revoke_token_url/><salt/><scope_restriction_status>unrestricted</scope_restriction_status><send_client_credentials_as>request_body_parameter</send_client_credentials_as><skip_authorize>false</skip_authorize><sub_claim>sys_id</sub_claim><sys_class_name>oauth_entity</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-10-15 18:22:38</sys_created_on><sys_id>de6bbd0493ccdf90e84732e548373c63</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Claude MCP Client</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>oauth_entity_de6bbd0493ccdf90e84732e548373c63</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-10-15 18:22:38</sys_updated_on><token_exchange_allowed>false</token_exchange_allowed><token_format>jwt</token_format><token_url/><type>client</type><use_mutual_auth>false</use_mutual_auth><use_pkce>false</use_pkce><user/></oauth_entity></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-030-claude-mcp-oauth-client">592cda73b8f74c9684b7c07b7637853b</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>7ec7552ebdd44975873fdba44caad5c7</sys_id>
+<table></table>
+<target_name>Claude MCP Client</target_name>
+<type>Application Registries</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+</unload>

@@ -561,3 +561,9 @@ Caveats:
 - Allocations (10) are not seeded; the platform recreates them (one was last touched by `logik.intg`).
 - Opportunity numbers may collide with existing records on instances that already hold OPTY0001085-1098, same as the earlier note on 1084-1105.
 - refcheck against opmsalescrm1 shows no new dangling references. Touchpoints are task records; whether the loader inserts them without firing notifications/flows is untested.
+
+## UPDATE-030 Claude MCP Client OAuth registration (2026-10-22)
+Instance: opmsalescrmstage (source)
+What: Application Registry record `Claude MCP Client` (`oauth_entity` `de6bbd04...3c63`, created 2026-10-15 by admin in Default). Auth-code inbound, default grant password, redirect `https://claude.ai/api/mcp/auth_callback`, PKCE S256, JWT tokens, 8,640,000 s access/refresh lifespans.
+Why: lets the Claude MCP client connect to a freshly deployed demo instance.
+Caveats: `client_secret` is blank on purpose (stage's is encrypted with its instance key and would not decrypt elsewhere); after commit, open the record on the target, copy the generated secret into the Claude connector. `client_id` is carried over unchanged. The record stores no username/password; `asher.sky` is already seeded (`030-sys_user.json`) without a password, and none is captured. Not committed on a blank instance yet; blank-secret generation on import is untested.
