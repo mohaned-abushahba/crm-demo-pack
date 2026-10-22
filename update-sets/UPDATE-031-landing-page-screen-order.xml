@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-10-22 12:00:00">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<description>Landing page screen order. CSM Sales Rep (AE) and Sales Manager screens were both order 20 and managers also hold sales_agent, so managers landed on the AE screen. Sales Manager Landing Page 20 -&gt; 10; AE screen (OOB, Opportunity Management) left at 20. SDR left at 30: AEs also hold Lead Agent, so SDR must stay behind AE. Source: opmsalescrm1 (captured 2026-10-22).</description>
+<name>UPDATE-031-landing-page-screen-order</name>
+<origin_sys_id>f57bb2924744df509ada569fe16d4310</origin_sys_id>
+<remote_sys_id>f57bb2924744df509ada569fe16d4310</remote_sys_id>
+<state>loaded</state>
+<sys_id>f57bb2924744df509ada569fe16d4310</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ux_screen_efd686ac2bd3c3504deaf02ac891bfc7</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen"><sys_ux_screen action="INSERT_OR_UPDATE"><active>true</active><app_config display_value="CSM/FSM Configurable Workspace App Config">f224e5a3530210102c30ddeeff7b128d</app_config><description/><disable_auto_reflow>false</disable_auto_reflow><disable_interoperable>false</disable_interoperable><event_mappings>[
+    {
+        "eventMappingId": "HwcsmfZhhDUaaccjjbgFsLQFOAoee",
+        "isConfiguration": null,
+        "offRowStorageId": null,
+        "sourceEventApiName": "global.NAV_ITEM_SELECTED_RELAY_a2d64a6c2bd3c3504deaf02ac891bf38",
+        "sourceEventCorrelationId": null,
+        "sourceEventDefinition": {
+            "apiName": "global.NAV_ITEM_SELECTED_RELAY_a2d64a6c2bd3c3504deaf02ac891bf38",
+            "id": null,
+            "type": "UXEVENT"
+        },
+        "sourceEventSysId": null,
+        "targets": [
+            {
+                "broker": null,
+                "clientScript": null,
+                "clientTransformScript": null,
+                "clientTransformScriptUxValue": null,
+                "conditional": null,
+                "declarativeAction": null,
+                "event": {
+                    "apiName": "sn_canvas_core.NAV_ITEM_SELECTED",
+                    "payload": {
+                        "container": {
+                            "external": {
+                                "binding": {
+                                    "address": [
+                                        "external"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "fields": {
+                                "binding": {
+                                    "address": [
+                                        "fields"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "multiInstField": {
+                                "binding": {
+                                    "address": [
+                                        "multiInstField"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "navigationOptions": {
+                                "binding": {
+                                    "address": [
+                                        "navigationOptions"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "params": {
+                                "binding": {
+                                    "address": [
+                                        "params"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "passiveNavigation": {
+                                "binding": {
+                                    "address": [
+                                        "passiveNavigation"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "redirect": {
+                                "binding": {
+                                    "address": [
+                                        "redirect"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "route": {
+                                "binding": {
+                                    "address": [
+                                        "route"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "targetRoute": {
+                                "binding": {
+                                    "address": [
+                                        "targetRoute"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "title": {
+                                "binding": {
+                                    "address": [
+                                        "title"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            }
+                        },
+                        "type": "MAP_CONTAINER"
+                    },
+                    "sysId": "8b82bf18e5276c8e423b6e4e0889b463"
+                },
+                "operation": null,
+                "targetId": "ddieeddJvveeTBUpQeeddEkEihhjjZErDE",
+                "type": "EVENT"
+            }
+        ]
+    },
+    {
+        "eventMappingId": "pvSkLfxccAkTbeeddLgBrkeehhccYhheegg",
+        "isConfiguration": null,
+        "offRowStorageId": null,
+        "sourceEventApiName": "global.MODAL_SELECTED_RELAY_a2d64a6c2bd3c3504deaf02ac891bf38",
+        "sourceEventCorrelationId": null,
+        "sourceEventDefinition": {
+            "apiName": "global.MODAL_SELECTED_RELAY_a2d64a6c2bd3c3504deaf02ac891bf38",
+            "id": null,
+            "type": "UXEVENT"
+        },
+        "sourceEventSysId": null,
+        "targets": [
+            {
+                "broker": null,
+                "clientScript": null,
+                "clientTransformScript": null,
+                "clientTransformScriptUxValue": null,
+                "conditional": null,
+                "declarativeAction": null,
+                "event": {
+                    "apiName": "sn_canvas_core.MODAL_SELECTED",
+                    "payload": {
+                        "container": {
+                            "bare": {
+                                "binding": {
+                                    "address": [
+                                        "bare"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "displayOptions": {
+                                "binding": {
+                                    "address": [
+                                        "displayOptions"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "headerLabel": {
+                                "binding": {
+                                    "address": [
+                                        "headerLabel"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "modalId": {
+                                "binding": {
+                                    "address": [
+                                        "modalId"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "preserveState": {
+                                "binding": {
+                                    "address": [
+                                        "preserveState"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "showModal": {
+                                "binding": {
+                                    "address": [
+                                        "showModal"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "viewportElementId": {
+                                "binding": {
+                                    "address": [
+                                        "viewportElementId"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "viewportFields": {
+                                "binding": {
+                                    "address": [
+                                        "viewportFields"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "viewportParams": {
+                                "binding": {
+                                    "address": [
+                                        "viewportParams"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "viewportRoute": {
+                                "binding": {
+                                    "address": [
+                                        "viewportRoute"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            }
+                        },
+                        "type": "MAP_CONTAINER"
+                    },
+                    "sysId": "882eed4091382d3a41f1bb3f382ae089"
+                },
+                "operation": null,
+                "targetId": "BeehhNiHfJbbDaafDjjUiiNFTtAdeeddeehhd",
+                "type": "EVENT"
+            }
+        ]
+    },
+    {
+        "eventMappingId": "zHrqeeddeehhWeBEeeMjjriiAZTShhAeese",
+        "isConfiguration": null,
+        "offRowStorageId": null,
+        "sourceEventApiName": "global.MODAL_SELECTED_RELAY_a2d64a6c2bd3c3504deaf02ac891bf38",
+        "sourceEventCorrelationId": null,
+        "sourceEventDefinition": {
+            "apiName": "global.MODAL_SELECTED_RELAY_a2d64a6c2bd3c3504deaf02ac891bf38",
+            "id": null,
+            "type": "UXEVENT"
+        },
+        "sourceEventSysId": null,
+        "targets": [
+            {
+                "broker": null,
+                "clientScript": null,
+                "clientTransformScript": null,
+                "clientTransformScriptUxValue": null,
+                "conditional": null,
+                "declarativeAction": null,
+                "event": {
+                    "apiName": "sn_canvas_core.MODAL_SELECTED",
+                    "payload": {
+                        "container": {
+                            "bare": {
+                                "binding": {
+                                    "address": [
+                                        "bare"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "displayOptions": {
+                                "binding": {
+                                    "address": [
+                                        "displayOptions"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "headerLabel": {
+                                "binding": {
+                                    "address": [
+                                        "headerLabel"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "modalId": {
+                                "binding": {
+                                    "address": [
+                                        "modalId"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "preserveState": {
+                                "binding": {
+                                    "address": [
+                                        "preserveState"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "showModal": {
+                                "binding": {
+                                    "address": [
+                                        "showModal"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "viewportElementId": {
+                                "binding": {
+                                    "address": [
+                                        "viewportElementId"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "viewportFields": {
+                                "binding": {
+                                    "address": [
+                                        "viewportFields"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "viewportParams": {
+                                "binding": {
+                                    "address": [
+                                        "viewportParams"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "viewportRoute": {
+                                "binding": {
+                                    "address": [
+                                        "viewportRoute"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            }
+                        },
+                        "type": "MAP_CONTAINER"
+                    },
+                    "sysId": "882eed4091382d3a41f1bb3f382ae089"
+                },
+                "operation": null,
+                "targetId": "xiidggrAAtAEeehhljjyAJggbAqQrZz",
+                "type": "EVENT"
+            }
+        ]
+    }
+]</event_mappings><macroponent display_value="CSM Sales Rep Landing Page">a2d64a6c2bd3c3504deaf02ac891bf38</macroponent><macroponent_config>{
+    "bare": {
+        "type": "JSON_LITERAL",
+        "value": true
+    },
+    "headerLevel": {
+        "type": "JSON_LITERAL",
+        "value": "1"
+    },
+    "headingOnlyVisibleToScreenReaders": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "interceptNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "label": {
+        "type": "JSON_LITERAL",
+        "value": ""
+    },
+    "propagateNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "scrollable": {
+        "type": "JSON_LITERAL",
+        "value": "y"
+    }
+}</macroponent_config><name>Sales Manager Landing Page</name><order>10</order><parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><required_translations>[ ]</required_translations><rollback_screen/><screen_condition/><screen_type display_value="Landing Page">229c270953b2101043d7ddeeff7b12de</screen_type><sys_class_name>sys_ux_screen</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-10 01:42:33</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>efd686ac2bd3c3504deaf02ac891bfc7</sys_id><sys_mod_count>6</sys_mod_count><sys_name>Sales Manager Landing Page</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ux_screen_efd686ac2bd3c3504deaf02ac891bfc7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-10-22 23:11:41</sys_updated_on></sys_ux_screen><sys_translated_text action="delete_multiple" query="documentkey=efd686ac2bd3c3504deaf02ac891bfc7"/></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-031-landing-page-screen-order">f57bb2924744df509ada569fe16d4310</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>7b7c4ad218144027b0aeb738b3363da1</sys_id>
+<table></table>
+<target_name>Sales Manager Landing Page</target_name>
+<type>UX Screen</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view></view>
+</sys_update_xml>
+</unload>
