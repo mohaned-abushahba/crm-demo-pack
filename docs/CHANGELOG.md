@@ -14,6 +14,15 @@ File: update-sets/UPDATE-XXX-short-name.xml
 
 ---
 
+## UPDATE-029-landing-page-forecast-model-and-collector (2026-10-21)
+Instance: opmsalescrmstage (source; values already applied there); domain Sales CRM
+What: property `sn_opty_mgmt.glide.ui.landing_page_forecast_model` (`56207604fff08310e4d5ffffffffff2f`) = `f7a3e9c14b2d8610a5cf3e7b92d1f480`, the active model; Data Collector job `Collect Sales Amount for Landing Page` (`66adf323ff544710e4d5ffffffffff80`) weekly, Monday, 7:30 AM US/Pacific.
+Why: landing page widgets pointed at the wrong forecast model, so the sales amount did not show; the job's schedule did not carry over. opmsalescrm1 still has the old model `3dac4ce7...` and the job on Saturday in GMT.
+File: update-sets/UPDATE-029-landing-page-forecast-model-and-collector.xml
+Caveats: both records serialised from live values (no tracked sys_update_xml); XML not yet imported through the loader. After commit, flush cache (cache.do), hard-refresh the landing page and run the job once. The note said "for both scores and index": there is one job, and its Collect field is `scores_text`; nothing for an index was found. The model must exist (seeded OOB sys_id, present on both instances).
+
+---
+
 ## UPDATE-028-forecast-schedule-daily-active-model (2026-10-21)
 Instance: opmsalescrm1 and opmsalescrmstage (record serialised from live values; sys_update_xml has no tracked row for it); domain Sales CRM
 What: scheduled job `Sales forecast schedule` (`d4c4b634ff1022102095ffffffffff0b`, scope Sales Forecasting) now runs daily at 7:00 AM US/Pacific (was weekly, Monday; stage had 12:00 AM) and line 1 of its script is `var forecastModelId = 'f7a3e9c14b2d8610a5cf3e7b92d1f480';` (the active model, Opportunity Revenue for Sales Territory) instead of `SalesForecastConstants.DEFAULT_FORECAST_MODEL`.

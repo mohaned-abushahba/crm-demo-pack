@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-10-21 12:00:00">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Opportunity Management Application">346aff309395f11032e8b8284dba1085</application>
+<application_name>Opportunity Management Application</application_name>
+<application_scope>sn_opty_mgmt</application_scope>
+<description>Sales rep landing page widgets: property sn_opty_mgmt.glide.ui.landing_page_forecast_model = active forecast model f7a3e9c14b2d8610a5cf3e7b92d1f480, and the Data Collector job "Collect Sales Amount for Landing Page" weekly Monday 7:30 AM US/Pacific. Source: opmsalescrmstage (captured 2026-10-21).</description>
+<name>UPDATE-029-landing-page-forecast-model-and-collector</name>
+<origin_sys_id>5d2b8e47a1c94f06b7e3d09a4c6f1e82</origin_sys_id>
+<remote_sys_id>5d2b8e47a1c94f06b7e3d09a4c6f1e82</remote_sys_id>
+<state>loaded</state>
+<sys_id>5d2b8e47a1c94f06b7e3d09a4c6f1e82</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Opportunity Management Application">346aff309395f11032e8b8284dba1085</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_56207604fff08310e4d5ffffffffff2f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><description>sys_id of the Forecast Model to display amount on the Sales Agent landing page. Navigate to Forecast Models, open the desired record, and copy its sys_id.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>sn_opty_mgmt.glide.ui.landing_page_forecast_model</name><read_roles>sn_opty_mgmt_core.opportunity_admin</read_roles><sys_package display_value="Opportunity Management Application" source="sn_opty_mgmt">346aff309395f11032e8b8284dba1085</sys_package><sys_scope display_value="Opportunity Management Application">346aff309395f11032e8b8284dba1085</sys_scope><sys_class_name>sys_properties</sys_class_name><sys_id>56207604fff08310e4d5ffffffffff2f</sys_id><sys_name>sn_opty_mgmt.glide.ui.landing_page_forecast_model</sys_name><sys_update_name>sys_properties_56207604fff08310e4d5ffffffffff2f</sys_update_name><type>string</type><value>f7a3e9c14b2d8610a5cf3e7b92d1f480</value><write_roles>sn_opty_mgmt_core.opportunity_admin</write_roles></sys_properties></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-029-landing-page-forecast-model-and-collector">5d2b8e47a1c94f06b7e3d09a4c6f1e82</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>a41c7d95e2b84f3a8c60d1e97b25f3a0</sys_id>
+<table></table>
+<target_name>sn_opty_mgmt.glide.ui.landing_page_forecast_model</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Opportunity Management Application">346aff309395f11032e8b8284dba1085</application>
+<category>customer</category>
+<comments/>
+<name>sysauto_pa_66adf323ff544710e4d5ffffffffff80</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_pa"><sysauto_pa action="INSERT_OR_UPDATE"><active>true</active><advanced>false</advanced><benchmarking>false</benchmarking><collect>scores_text</collect><conditional>false</conditional><description>This job will collectly weekly sales forecast data for the Sales rep Landing page.</description><kill_job>false</kill_job><name>Collect Sales Amount for Landing Page</name><run_as>6816f79cc0a8016401c5a33be04be441</run_as><run_as_tz>US/Pacific</run_as_tz><run_dayofmonth>1</run_dayofmonth><run_dayofweek>1</run_dayofweek><run_start>2026-04-23 14:55:01</run_start><run_time>1970-01-01 15:30:00</run_time><run_type>weekly</run_type><score_fixed_end>00000000</score_fixed_end><score_fixed_start>00000000</score_fixed_start><score_operator>relative</score_operator><score_relative_end>1</score_relative_end><score_relative_end_interval>days</score_relative_end_interval><score_relative_start>1</score_relative_start><score_relative_start_interval>days</score_relative_start_interval><sys_package display_value="Opportunity Management Application" source="sn_opty_mgmt">346aff309395f11032e8b8284dba1085</sys_package><sys_scope display_value="Opportunity Management Application">346aff309395f11032e8b8284dba1085</sys_scope><sys_class_name>sysauto_pa</sys_class_name><sys_id>66adf323ff544710e4d5ffffffffff80</sys_id><sys_name>Collect Sales Amount for Landing Page</sys_name><sys_update_name>sysauto_pa_66adf323ff544710e4d5ffffffffff80</sys_update_name><upgrade_safe>false</upgrade_safe></sysauto_pa></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-029-landing-page-forecast-model-and-collector">5d2b8e47a1c94f06b7e3d09a4c6f1e82</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>e8f20b6c4d7a41958b3e6a1c0d94f7b2</sys_id>
+<table></table>
+<target_name>Collect Sales Amount for Landing Page</target_name>
+<type>Data Collector Job</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+</unload>
