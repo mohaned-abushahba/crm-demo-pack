@@ -14,6 +14,15 @@ File: update-sets/UPDATE-XXX-short-name.xml
 
 ---
 
+## UPDATE-028-forecast-schedule-daily-active-model (2026-10-21)
+Instance: opmsalescrm1 and opmsalescrmstage (record serialised from live values; sys_update_xml has no tracked row for it); domain Sales CRM
+What: scheduled job `Sales forecast schedule` (`d4c4b634ff1022102095ffffffffff0b`, scope Sales Forecasting) now runs daily at 7:00 AM US/Pacific (was weekly, Monday; stage had 12:00 AM) and line 1 of its script is `var forecastModelId = 'f7a3e9c14b2d8610a5cf3e7b92d1f480';` (the active model, Opportunity Revenue for Sales Territory) instead of `SalesForecastConstants.DEFAULT_FORECAST_MODEL`.
+Why: the job's settings did not carry over, so forecast headers were not being created or updated.
+File: update-sets/UPDATE-028-forecast-schedule-daily-active-model.xml
+Caveats: on opmsalescrm1 the job script was `submitForecastCalculationRequest(f7a3e9c1...)` with the id unquoted (a ReferenceError at run time) and line 1 commented out; this set replaces the whole script. The "Product Family" job on opmsalescrm1 (inactive, other model) is not captured. The XML was not yet imported through the update-set loader. The pasted instruction said "weekly daily"; read as daily.
+
+---
+
 ## seed/data/900-forecast-2026q4.json quotas (2026-10-21)
 Instance: opmsalescrmstage
 What: Quotas re-captured from stage: 155 `sn_quota_core_sales_quota` rows (was 10). 2026 Q3 unchanged (5);

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-10-21 12:00:00">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Sales Forecasting">21f236bb43151210144160b6ccb8f22c</application>
+<application_name>Sales Forecasting</application_name>
+<application_scope>sn_sales_forecast</application_scope>
+<description>Sales forecast schedule job: run daily at 7:00 AM US/Pacific and calculate the active model (Opportunity Revenue for Sales Territory, f7a3e9c14b2d8610a5cf3e7b92d1f480) instead of SalesForecastConstants.DEFAULT_FORECAST_MODEL, so forecast headers are created and updated. Captured 2026-10-21.</description>
+<name>UPDATE-028-forecast-schedule-daily-active-model</name>
+<origin_sys_id>7c1e5a92d3f84b0a9e6a41b8c2d70f35</origin_sys_id>
+<remote_sys_id>7c1e5a92d3f84b0a9e6a41b8c2d70f35</remote_sys_id>
+<state>loaded</state>
+<sys_id>7c1e5a92d3f84b0a9e6a41b8c2d70f35</sys_id>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Sales Forecasting">21f236bb43151210144160b6ccb8f22c</application>
+<category>customer</category>
+<comments/>
+<name>sysauto_script_d4c4b634ff1022102095ffffffffff0b</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script"><sysauto_script action="INSERT_OR_UPDATE"><active>true</active><advanced>false</advanced><conditional>false</conditional><entered_time>1970-01-01 07:00:00</entered_time><name>Sales forecast schedule</name><run_as>6816f79cc0a8016401c5a33be04be441</run_as><run_dayofmonth>1</run_dayofmonth><run_dayofweek>1</run_dayofweek><run_daysofweek>1</run_daysofweek><run_month>1</run_month><run_period/><run_start/><run_time>1970-01-01 15:00:00</run_time><run_type>daily</run_type><script>var forecastModelId = 'f7a3e9c14b2d8610a5cf3e7b92d1f480';
+new SalesForecastAsynchronousCalculation().submitForecastCalculationRequest(forecastModelId);</script><sys_class_name>sysauto_script</sys_class_name><sys_id>d4c4b634ff1022102095ffffffffff0b</sys_id><sys_name>Sales forecast schedule</sys_name><sys_package display_value="Sales Forecasting" source="sn_sales_forecast">21f236bb43151210144160b6ccb8f22c</sys_package><sys_policy/><sys_scope display_value="Sales Forecasting">21f236bb43151210144160b6ccb8f22c</sys_scope><sys_update_name>sysauto_script_d4c4b634ff1022102095ffffffffff0b</sys_update_name><time_zone>US/Pacific</time_zone><upgrade_safe>false</upgrade_safe></sysauto_script></record_update>]]></payload>
+<remote_update_set display_value="UPDATE-028-forecast-schedule-daily-active-model">7c1e5a92d3f84b0a9e6a41b8c2d70f35</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_id>b3a94f10e6d24c7d8a52c1f09e7d3b64</sys_id>
+<table></table>
+<target_name>Sales forecast schedule</target_name>
+<type>Scheduled Script Execution</type>
+<update_domain>global</update_domain>
+<update_set/>
+<view/>
+</sys_update_xml>
+</unload>

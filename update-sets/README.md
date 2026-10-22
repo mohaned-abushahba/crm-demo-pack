@@ -17,6 +17,7 @@ Naming: `UPDATE-<NNN>-<short-kebab-name>.xml`
 | UPDATE-023 | opmsalescrm1 | Captured 2026-10-08: 8 role-containment links (sys_user_role_contains) missing on stage, copied with the same sys_ids |
 | UPDATE-024 | opmsalescrm1 | Captured 2026-10-13: SDR Golden Landing Page dashboard metadata record missed by the 10-06 capture |
 | UPDATE-026 | opmsalescrmstage | Captured 2026-10-16: outbound email From name `glide.email.username` = Solana Sales & Service (was IT Service Desk) |
+| UPDATE-028 | opmsalescrm1 / opmsalescrmstage | Captured 2026-10-21: `Sales forecast schedule` job (scope Sales Forecasting) set to daily 7:00 AM US/Pacific and pointed at the active model `f7a3e9c1…` instead of `SalesForecastConstants.DEFAULT_FORECAST_MODEL`; serialised from live values |
 
 UPDATE-004 … 017 each contain **one retrieved update set per application scope**, named
 `UPDATE-NNN-slug [Scope]`, because ServiceNow update sets are scope-bound. After importing a file,
@@ -28,7 +29,7 @@ file's only one), then the scoped ones.
 Prerequisites: plugins installed. Users, groups, product offerings and price lists must be seeded
 with opmsalescrm1's sys_ids before 006, 010, 011, 012 and 020, because those records reference them.
 
-`004 → 005 → 013 → 006 → 007 → 008 → 009 → 010 → 020 → 011 → 012 → 014 → 015 → 016 → 017 → 018 → 019 → 022 → 023 → 024`
+`004 → 005 → 013 → 006 → 007 → 008 → 009 → 010 → 020 → 011 → 012 → 014 → 015 → 016 → 017 → 018 → 019 → 022 → 023 → 024 → 028`
 
 018 (UI16 banner image) has no dependencies and can be committed at any point. 019 (pricing matrix
 states) must come after 011: it drafts the OOB v2 matrices so 011's custom versions are the live ones. 020 (approval approvers) goes right after 010, whose rules it references.
