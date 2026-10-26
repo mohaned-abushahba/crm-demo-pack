@@ -1,8 +1,8 @@
 {
 "format": "golden-demo-seed/1",
 "source": "opmsalescrm1",
-"generated_on": "2026-10-21 23:27:55",
-"record_count": 3155,
+"generated_on": "2026-10-26 21:08:26",
+"record_count": 3170,
 "table_count": 66,
 "prerequisites": [
 {"table": "fx_currency", "sys_id": "USD", "label": "United States Dollars"},
@@ -333,7 +333,7 @@
 {"parent":"","manager":"aa84fad22b7683104deaf02ac891bfb5","roles":"","active":"true","description":"Owns contract terms and redlines at quote-to-order handoff.","source":"","type":"","sys_id":"fb1947612b0f8b104deaf02ac891bfa5","cost_center":"","default_assignee":"","name":"SCRM-Contract Management - Not Used","exclude_manager":"false","vendors":"","email":"","include_members":"false"},
 {"parent":"","manager":"a1094b613b07cb10d5260fa693e45ad9","roles":"","active":"true","description":"Domain-level umbrella for Customer Success Management: onboarding, adoption, success and renewal risk.","source":"","type":"","sys_id":"ff1947612b0f8b104deaf02ac891bfb8","cost_center":"","default_assignee":"","name":"SCRM-Customer Success Team - Not Used","exclude_manager":"false","vendors":"","email":"","include_members":"false"}
 ]},
-{"table": "sys_user_grmember", "key": ["user", "group"], "on_conflict": "adopt", "insert_as": {}, "references": {"user": "sys_user", "group": "sys_user_group"}, "count": 84, "records": [
+{"table": "sys_user_grmember", "key": ["user", "group"], "on_conflict": "adopt", "insert_as": {}, "references": {"user": "sys_user", "group": "sys_user_group"}, "count": 85, "records": [
 {"sys_id":"004f5fe12b03cb104deaf02ac891bff6","user":"195b97652bcf8b104deaf02ac891bf05","group":"5ee74940b70022108d4406dd1e11a918"},
 {"sys_id":"02afb60c2b538f104deaf02ac891bf51","user":"6c6ffe0c2b538f104deaf02ac891bfe2","group":"eca4f6563bf2c310d5260fa693e45a8d"},
 {"sys_id":"039ffe8c3bd7cb10d5260fa693e45a1a","user":"2c6ffe0c2b538f104deaf02ac891bfc4","group":"eca4f6563bf2c310d5260fa693e45a8d"},
@@ -417,7 +417,8 @@
 {"sys_id":"fb6a71882b4fc7104deaf02ac891bf21","user":"07843ed22b7683104deaf02ac891bf31","group":"5ee74940b70022108d4406dd1e11a918"},
 {"sys_id":"fb6a71882b4fc7104deaf02ac891bf22","user":"9384f6563bf2c310d5260fa693e45a6d","group":"5ee74940b70022108d4406dd1e11a918"},
 {"sys_id":"fddf7a803b1bcb10d5260fa693e45af4","user":"a16f324c2b538f104deaf02ac891bfb2","group":"eca4f6563bf2c310d5260fa693e45a8d"},
-{"sys_id":"ff8ff6003b1bcb10d5260fa693e45a95","user":"346ffe0c2b538f104deaf02ac891bffd","group":"f8a47a563bf2c310d5260fa693e45aad"}
+{"sys_id":"ff8ff6003b1bcb10d5260fa693e45a95","user":"346ffe0c2b538f104deaf02ac891bffd","group":"f8a47a563bf2c310d5260fa693e45aad"},
+{"sys_id":"3ec9787793f30f90e84732e548373c51","user":"990987212b0f8b104deaf02ac891bffe","group":"239a47e52b0f8b104deaf02ac891bf3d"}
 ]},
 {"table": "sys_user_has_role", "key": ["user", "role", "inherited"], "on_conflict": "adopt", "insert_as": {}, "references": {"included_in_role_instance": "sys_user_role_contains", "granted_by": "sys_user_group", "included_in_role": "sys_user_has_role", "user": "sys_user", "role": "sys_user_role"}, "count": 182, "records": [
 {"role":"3a64fc24d7700200e5982cf65e610357","inh_map":"","included_in_role":"","included_in_role_instance":"","inh_count":"","sys_id":"00070bc02bd38f104deaf02ac891bf19","inherited":"false","state":"active","user":"c0070bc02bd38f104deaf02ac891bf16"},
@@ -603,7 +604,7 @@
 {"role":"ed60b9d4ffb132105b0fffffffffff1c","inh_map":"","included_in_role":"","included_in_role_instance":"","inh_count":"","sys_id":"ff3046962bc383504deaf02ac891bf68","inherited":"false","state":"active","user":"e5098b212b0f8b104deaf02ac891bfc0"},
 {"role":"3a64fc24d7700200e5982cf65e610357","inh_map":"","included_in_role":"","included_in_role_instance":"","inh_count":"","sys_id":"ffa823752b4f4f104deaf02ac891bfcf","inherited":"false","state":"active","user":"37a823752b4f4f104deaf02ac891bfcd"}
 ]},
-{"table": "sys_group_has_role", "key": ["group", "role"], "on_conflict": "adopt", "insert_as": {}, "references": {"role": "sys_user_role", "granted_by": "sys_user_group", "group": "sys_user_group"}, "count": 81, "records": [
+{"table": "sys_group_has_role", "key": ["group", "role"], "on_conflict": "adopt", "insert_as": {}, "references": {"role": "sys_user_role", "granted_by": "sys_user_group", "group": "sys_user_group"}, "count": 95, "records": [
 {"sys_id":"06c8b9442b4fc7104deaf02ac891bffa","role":"afbf155f43453110a530cd60afb8f264","inherits":"true","group":"e668318c3b8b4f10d5260fa693e45ac3"},
 {"sys_id":"0890ca003b0f4f10d5260fa693e45ac0","role":"7fcaa702933002009c8579b4f47ffbde","inherits":"true","group":"15a4ba563bf2c310d5260fa693e45a16"},
 {"sys_id":"08b238e23b4b0750d5260fa693e45ab0","role":"f66afe3b3f032210caf1293d001f8b5e","inherits":"true","group":"eca4f6563bf2c310d5260fa693e45a8d"},
@@ -628,9 +629,11 @@
 {"sys_id":"3cfc4fb63bcb0310d5260fa693e45a1e","role":"debab85bff02110053ccffffffffffb6","inherits":"true","group":"1f9a03293b07cb10d5260fa693e45a7b"},
 {"sys_id":"3ece39c02b8fc7104deaf02ac891bf91","role":"59078a2753710110286eddeeff7b125b","inherits":"true","group":"85a4ba563bf2c310d5260fa693e45a10"},
 {"sys_id":"40a150b447e787109ada569fe16d43a9","role":"a64d0d7dc36431100f24c87af040ddf9","inherits":"true","group":"eca4f6563bf2c310d5260fa693e45a8d"},
+{"sys_id":"4179e13dc3b34f500918dac4e401313b","role":"67b6089ffff42210f465ffffffffffde","inherits":"true","group":"eca4f6563bf2c310d5260fa693e45a8d"},
 {"sys_id":"427357e12b8f8b104deaf02ac891bf0d","role":"3be5d3d1b7103300dff9fa13ee11a987","inherits":"true","group":"60639ba12b8f8b104deaf02ac891bf88"},
 {"sys_id":"4323dfed3b47cb10d5260fa693e45a81","role":"3be5d3d1b7103300dff9fa13ee11a987","inherits":"true","group":"891397a12b8f8b104deaf02ac891bfe9"},
 {"sys_id":"4490ca003b0f4f10d5260fa693e45aac","role":"20d2eaa35320330030c3ddeeff7b1213","inherits":"true","group":"15a4ba563bf2c310d5260fa693e45a16"},
+{"sys_id":"4567427947b787509ada569fe16d434c","role":"361f31e33b24cb10d385fadc73e45a40","inherits":"true","group":"eca4f6563bf2c310d5260fa693e45a8d"},
 {"sys_id":"45904e003b0f4f10d5260fa693e45af2","role":"af9fe46aff5726105ce2ffffffffffc4","inherits":"true","group":"15a4ba563bf2c310d5260fa693e45a16"},
 {"sys_id":"45ff75842b8fc7104deaf02ac891bf57","role":"aa61ad5affeb22108002fffffffffff9","inherits":"true","group":"30a4fed22b7683104deaf02ac891bf33"},
 {"sys_id":"4beef90c3bcb4f10d5260fa693e45abe","role":"debab85bff02110053ccffffffffffb6","inherits":"true","group":"09a4f2d23bf2c310d5260fa693e45a45"},
@@ -646,6 +649,7 @@
 {"sys_id":"6df2ee6a3bcb4750d5260fa693e45a34","role":"20eaf53dffc0b2108a0dffffffffff9d","inherits":"true","group":"a79a03293b07cb10d5260fa693e45a95"},
 {"sys_id":"7182aea22b0347504deaf02ac891bf7e","role":"f66afe3b3f032210caf1293d001f8b5e","inherits":"true","group":"f8a47a563bf2c310d5260fa693e45aad"},
 {"sys_id":"7d0bf1043bcb4f10d5260fa693e45acd","role":"f37e91e11b302000aebbfbcd2c07139f","inherits":"true","group":"01a4fed22b7683104deaf02ac891bf39"},
+{"sys_id":"8179e13dc3b34f500918dac4e40131ee","role":"b9cd9177931f265033f17608648918ea","inherits":"true","group":"eca4f6563bf2c310d5260fa693e45a8d"},
 {"sys_id":"822273713b8b8f10d5260fa693e45a95","role":"ed60b9d4ffb132105b0fffffffffff1c","inherits":"true","group":"15a4ba563bf2c310d5260fa693e45a16"},
 {"sys_id":"879ab1c03bcb4f10d5260fa693e45ad8","role":"3be5d3d1b7103300dff9fa13ee11a987","inherits":"true","group":"f4a47a563bf2c310d5260fa693e45ab3"},
 {"sys_id":"8c397dcc3b8b4f10d5260fa693e45a2b","role":"9d79e252ff9a8610b85dffffffffff45","inherits":"true","group":"a4a47ed22b7683104deaf02ac891bff3"},
@@ -682,9 +686,20 @@
 {"sys_id":"fcfcc37e2bcb43104deaf02ac891bfaa","role":"ed60b9d4ffb132105b0fffffffffff1c","inherits":"true","group":"1f9a03293b07cb10d5260fa693e45a7b"},
 {"sys_id":"fd294cc33b074310d5260fa693e45a31","role":"ed60b9d4ffb132105b0fffffffffff1c","inherits":"true","group":"b8a4f2d23bf2c310d5260fa693e45a3f"},
 {"sys_id":"ff1366aa3bcb4750d5260fa693e45a9b","role":"309f515f43453110a530cd60afb8f27b","inherits":"true","group":"a79a03293b07cb10d5260fa693e45a95"},
-{"sys_id":"4179e13dc3b34f500918dac4e401313b","role":"67b6089ffff42210f465ffffffffffde","inherits":"true","granted_by":"not-applicable","group":"eca4f6563bf2c310d5260fa693e45a8d"},
-{"sys_id":"4567427947b787509ada569fe16d434c","role":"361f31e33b24cb10d385fadc73e45a40","inherits":"true","granted_by":"not-applicable","group":"eca4f6563bf2c310d5260fa693e45a8d"},
-{"sys_id":"8179e13dc3b34f500918dac4e40131ee","role":"b9cd9177931f265033f17608648918ea","inherits":"true","granted_by":"not-applicable","group":"eca4f6563bf2c310d5260fa693e45a8d"}
+{"sys_id":"028fc21e93809350e84732e548373c76","role":"6b6412a1fff1230048e505f6793bf13a","inherits":"true","group":"eca4f6563bf2c310d5260fa693e45a8d"},
+{"sys_id":"040d0a5293809350e84732e548373cc9","role":"158b7c18ffe53610269cfffffffffff7","inherits":"true","group":"30a4fed22b7683104deaf02ac891bf33"},
+{"sys_id":"1d2b0aa79388df50e84732e548373c65","role":"3aa27a775312211026b6ddeeff7b12f4","inherits":"true","group":"f4a47a563bf2c310d5260fa693e45ab3"},
+{"sys_id":"1d2b0aa79388df50e84732e548373ca8","role":"85eb219bf820ca10f8770eee2240b0bb","inherits":"true","group":"f4a47a563bf2c310d5260fa693e45ab3"},
+{"sys_id":"2d2b4aa79388df50e84732e548373c38","role":"b057173e3775c2109b88d94c24924baa","inherits":"true","group":"f4a47a563bf2c310d5260fa693e45ab3"},
+{"sys_id":"302b86a79388df50e84732e548373c6b","role":"b05cd92943122110596c2f5ab7b8f248","inherits":"true","group":"f4a47a563bf2c310d5260fa693e45ab3"},
+{"sys_id":"3d5c96d293449350e84732e548373c44","role":"6b6412a1fff1230048e505f6793bf13a","inherits":"true","group":"30a4fed22b7683104deaf02ac891bf33"},
+{"sys_id":"5dcccade93409350e84732e548373c9a","role":"158b7c18ffe53610269cfffffffffff7","inherits":"true","group":"eca4f6563bf2c310d5260fa693e45a8d"},
+{"sys_id":"796dca9e3b405350916b37f726e45a4d","role":"158b7c18ffe53610269cfffffffffff7","inherits":"true","group":"f8a47a563bf2c310d5260fa693e45aad"},
+{"sys_id":"880d0a5293809350e84732e548373c3d","role":"14cc7c98ffe53610269cffffffffff42","inherits":"true","group":"30a4fed22b7683104deaf02ac891bf33"},
+{"sys_id":"892b0aa79388df50e84732e548373c4c","role":"e07c5d2943122110596c2f5ab7b8f2bb","inherits":"true","group":"f4a47a563bf2c310d5260fa693e45ab3"},
+{"sys_id":"a92b4aa79388df50e84732e548373c43","role":"b9dbd266eb8d311085f82fd05d522816","inherits":"true","group":"f4a47a563bf2c310d5260fa693e45ab3"},
+{"sys_id":"ad2b4aa79388df50e84732e548373c0d","role":"be56d939e0d04a10f877cb36a2d44bb4","inherits":"true","group":"f4a47a563bf2c310d5260fa693e45ab3"},
+{"sys_id":"f96c9e563b045350916b37f726e45ac9","role":"6b6412a1fff1230048e505f6793bf13a","inherits":"true","group":"f8a47a563bf2c310d5260fa693e45aad"}
 ]},
 {"table": "customer_account", "key": ["name"], "on_conflict": "fail", "insert_as": {}, "references": {"active_escalation": "sn_customerservice_escalation", "sales_owner": "sys_user", "primary_contact": "customer_contact", "account_parent": "customer_account", "primary_sales_territory": "sn_tp_territory", "theme": "sys_ui_theme", "contact": "sys_user", "parent": "core_company"}, "count": 27, "records": [
 {"banner_image_light":"","country":"USA","parent":"","notes":"","minority_ownership_status":"","stock_symbol":"","discount":"","active_escalation":"","apple_icon":"","number":"ACCT0010021","fiscal_year":"","contact":"","rural_based_status":"","u_marquee_account":"true","account_health":"","stock_price":"","banner_image":"","state":"CA","longitude":"","zip":"94404","profits":"0","success_entitlement":"","active":"true","assumed_name":"","duns_number":"","tax_id":"","incorporated_on":"","u_delinquent":"false","fax_phone":"","phone":"(800) 900-8090","u_market_segment":"enterprise","banner_text":"","name":"Progantic Inc.","account_code":"!!!@","coordinates_retrieved_on":"","primary":"false","identification_number":"","city":"San Mateo","latitude":"","industry":"technology_services","sys_class_name":"customer_account","manufacturer":"false","sn_tmt_core_external_id":"","account_parent":"","sys_id":"04b236292bc78b104deaf02ac891bf16","tribal_affiliation_status":"","business_structure":"","market_cap":"0","channel_partner":"false","num_employees":"","rank_tier":"","street":"123 Progantic Lane","vendor":"false","lat_long_error":"","primary_sales_territory":"290f42173bf24710d5260fa693e45a00","theme":"","trademark":"","email":"","vendor_type":"","revenue_per_year":"0","sales_owner":"9b84f6563bf2c310d5260fa693e45a74","website":"www.progantic.com","publicly_traded":"false","women_ownership_status":"","partner":"false","registration_code":"","vendor_manager":"","perceived_health":"","account_path":"!!!@","legal_entity_name":"","primary_contact":"","customer":"false"},
