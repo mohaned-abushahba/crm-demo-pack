@@ -1,7 +1,7 @@
 # Plugin installer (wizard step 1)
 
-Installs the 46 Sales CRM plugins/store apps (Service CRM plugins are added to `manifest.json` under their own `group`) on a target instance **before** update sets and seed data.
-Source list: `Sales CRM Top Plugins list.docx` -> `manifest.json`. All 46 are required: a run reports
+Installs the 51 Sales CRM plugins/store apps, including the 4 Contract Management apps (Service CRM plugins are added to `manifest.json` under their own `group`) on a target instance **before** update sets and seed data.
+Source list: `Sales CRM Top Plugins list.docx` -> `manifest.json`. All 51 are required: a run reports
 `ready: true` only when every one is verified active, and seeding should be gated on that.
 
 ```
@@ -29,7 +29,7 @@ Plugin `state`: `pending`, `installing`, `retrying`, `installed`, `failed`, `can
 
 ## Behavior
 
-- Sequential, in manifest order (Order Management first). Already-active plugins are skipped, so reruns are idempotent.
+- Sequential, in manifest order (Order Management first). Every plugin must end up **active on its latest available version**: not-installed plugins are installed at the latest version, active-but-outdated ones are upgraded, and ones already on the latest are skipped, so reruns are idempotent and bring an existing instance up to date. `ready` requires all of that. Per-plugin `installedVersion` / `latestVersion` are in the run status. Plugins with no store version (`latestVersion` returns null, e.g. platform plugins) only need to be active.
 - No overall timeout. It keeps waiting while the instance reports progress; a plugin only counts as stalled after
   30 min with no change (90 min for `heavy` ones). Tunable in `engine.js` `DEFAULTS`.
 - Failed/stalled installs retry up to 3 attempts (backoff 1, 5, 15 min); each retry first checks whether the plugin
@@ -38,5 +38,5 @@ Plugin `state`: `pending`, `installing`, `retrying`, `installed`, `failed`, `can
 
 ## Not done yet
 
-- `instance.js` `startInstall` / `getProgress` are placeholders (open item in `docs/OPEN-ITEMS.md`).
+- `instance.js` `latestVersion` / `startInstall` / `getProgress` are placeholders (open item in `docs/OPEN-ITEMS.md`).
 - No ETA, no auth on the API, no dependency graph (the instance resolves dependencies itself).

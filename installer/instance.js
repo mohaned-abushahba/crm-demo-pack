@@ -2,10 +2,11 @@
 //
 // Contract used by engine.js:
 //   verify(plugin)        -> { installed: boolean, version?: string }
-//   startInstall(plugin)  -> { id: string }                 (handle for getProgress)
+//   latestVersion(plugin) -> string | null                  (latest available version; null = not versioned, e.g. platform plugins)
+//   startInstall(plugin, { version }) -> { id: string }     (installs, or upgrades if already active; handle for getProgress)
 //   getProgress(handle)   -> { state: 'running'|'succeeded'|'failed', percent?: number, message?: string }
 //
-// verify() is implemented (Table API reads). startInstall()/getProgress() are PLACEHOLDERS
+// verify() is implemented (Table API reads). latestVersion()/startInstall()/getProgress() are PLACEHOLDERS
 // until the internal plugin-install REST service is identified (docs/OPEN-ITEMS.md).
 // Use a `mock: true` instance (see instances.example.json) to exercise the engine meanwhile.
 
@@ -57,7 +58,11 @@ function createClient(cfg) {
     },
 
     // PLACEHOLDER - OPEN ITEM: identify the internal REST service that installs/activates
-    // plugins and store apps, then implement both calls below. Keep the return shapes.
+    // plugins and store apps (and lists their available versions), then implement the calls
+    // below. Keep the return shapes.
+    async latestVersion(plugin) {
+      throw new NotImplementedError(`latestVersion(${plugin.id}): store version lookup not yet identified (see docs/OPEN-ITEMS.md)`);
+    },
     async startInstall(plugin) {
       throw new NotImplementedError(`startInstall(${plugin.id}): plugin-install REST service not yet identified (see docs/OPEN-ITEMS.md)`);
     },

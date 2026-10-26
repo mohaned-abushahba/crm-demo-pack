@@ -1,5 +1,5 @@
 {
-  "_comment": "Source: 'Sales CRM Top Plugins list.docx'. Array order is install order (Order Management first - slowest). All plugins are required: the run only reports ready when every one is verified active. 'heavy' plugins get a longer stall window. Order Management entry confirmed as sn_ind_tmt_orm. Doc note: sn_invoice_case_ss and sn_inv_case_pb pull in many Finance BU dependencies.",
+  "_comment": "Source: 'Sales CRM Top Plugins list.docx'. Array order is install order (Order Management first - slowest). All plugins are required: the run only reports ready when every one is verified active. 'heavy' plugins get a longer stall window. Order Management entry confirmed as sn_ind_tmt_orm. Doc note: sn_invoice_case_ss and sn_inv_case_pb pull in many Finance BU dependencies. Contract Management group added 2026-10-26 (4 apps); sn_som_clm is flagged loadDemoData: its demo data must be loaded after install (informational flag, not yet acted on by the engine). sn_sales_common added 2026-10-26 (ID confirmed on opmsalescrmstage, v8.2.0), placed before Opportunity Management as the shared base. Every plugin is installed/upgraded to the latest available version, see installer/README.md.",
   "plugins": [
     {
       "id": "sn_ind_tmt_orm",
@@ -100,6 +100,14 @@
     {
       "id": "sn_quota_app",
       "name": "Sales Quota Application",
+      "type": "store",
+      "group": "CPQ - Recommended / Sales Automation",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_sales_common",
+      "name": "Sales Common",
       "type": "store",
       "group": "CPQ - Recommended / Sales Automation",
       "required": true,
@@ -366,6 +374,39 @@
       "name": "ServiceNow Otto for Order Management",
       "type": "store",
       "group": "AI Plugins",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_som_clm",
+      "name": "Contract Management for Sales CRM",
+      "type": "store",
+      "group": "Contract Management",
+      "required": true,
+      "heavy": false,
+      "loadDemoData": true
+    },
+    {
+      "id": "sn_cm_pro",
+      "name": "Contract Management Pro",
+      "type": "store",
+      "group": "Contract Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_cm_workspace",
+      "name": "Contract Workspace",
+      "type": "store",
+      "group": "Contract Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_cm_word_addin",
+      "name": "Microsoft Word Add-in for ServiceNow Contracts",
+      "type": "store",
+      "group": "Contract Management",
       "required": true,
       "heavy": false
     }

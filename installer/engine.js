@@ -6,7 +6,8 @@
 //  - Failed or stalled installs are retried with backoff; each attempt re-verifies first,
 //    in case the plugin actually landed.
 //  - A plugin that exhausts its attempts is marked `failed`; the run carries on with the
-//    rest and ends `completed_with_errors`. `ready` is true only when ALL plugins are active.
+//    rest and ends `completed_with_errors`. `ready` is true only when ALL plugins are active
+//    on their latest available version (active-but-outdated plugins are upgraded).
 //  - State is persisted after every change so a restart resumes where it left off.
 const crypto = require("node:crypto");
 const store = require("./store");
@@ -23,6 +24,28 @@ const DEFAULTS = {
 
 const ACTIVE = new Set(["pending", "running"]);
 const now = () => new Date().toISOString();
+
+// Dotted numeric compare ("14.1.12" vs "14.2.0"); non-numeric parts count as 0.
+function compareVersions(a, b) {
+  const pa = String(a || "0").split("."), pb = String(b || "0").split(".");
+  for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+    const d = (parseInt(pa[i], 10) || 0) - (parseInt(pb[i], 10) || 0);
+    if (d) return d < 0 ? -1 : 1;
+  }
+  return 0;
+}
+
+// Done = active AND on the latest available version. A plugin that is active but behind is
+// upgraded by the same install call, so reruns bring an existing instance up to date.
+// Plugins with no store version (latestVersion -> null, e.g. platform plugins) only need to be active.
+async function upToDate(client, p) {
+  const v = await client.verify(p);
+  p.installedVersion = v.version || null;
+  if (!v.installed) return { ok: false, reason: "not installed" };
+  p.latestVersion = await client.latestVersion(p);
+  if (p.latestVersion && compareVersions(v.version, p.latestVersion) < 0) return { ok: false, reason: `behind latest (${v.version} < ${p.latestVersion})` };
+  return { ok: true };
+}
 
 class Engine {
   constructor({ instances, options } = {}) {
@@ -52,7 +75,7 @@ class Engine {
       finishedAt: null,
       plugins: manifest.plugins.map((p) => ({
         ...p, state: "pending", attempts: 0, percent: 0, message: null, error: null,
-        handle: null, startedAt: null, finishedAt: null, lastProgressAt: null,
+        handle: null, installedVersion: null, latestVersion: null, startedAt: null, finishedAt: null, lastProgressAt: null,
       })),
     };
     this.runs.set(run.id, run);
@@ -131,8 +154,7 @@ class Engine {
     // Preflight: anything already active is done; makes reruns and resumes idempotent.
     for (const p of run.plugins) {
       if (p.state !== "pending" && p.state !== "installing" && p.state !== "retrying") continue;
-      const v = await client.verify(p);
-      if (v.installed) this._finish(run, p, "installed", { message: "already active", percent: 100 });
+      if ((await upToDate(client, p)).ok) this._finish(run, p, "installed", { message: "already active, latest version", percent: 100 });
     }
 
     for (const p of run.plugins) {
@@ -162,19 +184,20 @@ class Engine {
         await this._sleep(w, this.opt.backoffMs[Math.min(p.attempts - 1, this.opt.backoffMs.length - 1)]);
         if (w.cancelled) return;
         // It may have landed despite the reported failure.
-        if ((await client.verify(p)).installed) return this._finish(run, p, "installed", { percent: 100, message: "verified active after retry wait" });
+        if ((await upToDate(client, p)).ok) return this._finish(run, p, "installed", { percent: 100, message: "verified active, latest version after retry wait" });
       }
       p.attempts++;
       p.state = "installing"; p.startedAt = p.startedAt || now(); p.lastProgressAt = Date.now();
       try {
         // On resume, keep following the in-flight install instead of starting a duplicate.
-        if (!p.handle) p.handle = await client.startInstall(p);
+        if (!p.handle) p.handle = await client.startInstall(p, { version: p.latestVersion || "latest" });
         store.save(run);
         const out = await this._follow(run, p, client, w);
         if (w.cancelled) return;
         if (out.state === "succeeded") {
-          if ((await client.verify(p)).installed) return this._finish(run, p, "installed", { percent: 100, message: null });
-          throw new Error("install reported success but plugin is not active on the instance");
+          const chk = await upToDate(client, p);
+          if (chk.ok) return this._finish(run, p, "installed", { percent: 100, message: null });
+          throw new Error(`install reported success but plugin is not active on the latest version (${chk.reason})`);
         }
         throw new Error(out.message || "install failed");
       } catch (e) {
@@ -209,4 +232,4 @@ class Engine {
 
 function httpError(status, message) { const e = new Error(message); e.status = status; return e; }
 
-module.exports = { Engine, DEFAULTS };
+module.exports = { Engine, DEFAULTS, compareVersions };

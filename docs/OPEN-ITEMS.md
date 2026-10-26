@@ -79,7 +79,7 @@ inline. Next step: reproduce as Sage and see which widget fails.
 
 ## Plugin-install REST service not yet identified — OPEN (2026-10-14)
 
-`installer/instance.js` has `startInstall()` and `getProgress()` as placeholders that throw. Need the internal
+`installer/instance.js` has `latestVersion()`, `startInstall()` and `getProgress()` as placeholders that throw. `latestVersion(plugin)` must return the newest version available for the app (store/app repo); `startInstall(plugin, {version})` must install that version or upgrade an active-but-older one (the engine requires latest, see installer/README.md). Need the internal
 REST service that installs/activates plugins and store apps (candidates to check: the CI/CD
 `/api/sn_cicd/plugin/{id}/activate` and `/api/sn_cicd/app_repo/install` endpoints, or whatever the internal
 service is). Implement the two functions keeping their return shapes (see the contract at the top of
