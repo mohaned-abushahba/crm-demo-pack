@@ -14,6 +14,62 @@ File: update-sets/UPDATE-XXX-short-name.xml
 
 ---
 
+## Contract Management plugins added to installer manifest (2026-10-26)
+Domain: Sales CRM
+What: Four store apps appended to `installer/manifest.json` under group "Contract Management", in install order: `sn_som_clm` (Contract Management for Sales CRM), `sn_cm_pro` (Contract Management Pro), `sn_cm_workspace` (Contract Workspace), `sn_cm_word_addin` (Microsoft Word Add-in for ServiceNow Contracts). Manifest is now 50 plugins; installer README and mock test count updated.
+Demo data: `sn_som_clm` is flagged `loadDemoData: true`. Its demo data still has to be loaded after install; the flag is informational only (engine ignores it) and no seed fixture exists yet.
+Not verified: plugin IDs are as supplied, not checked against an instance; dependency order between the four is assumed.
+File: installer/manifest.json
+
+---
+
+## Seed: SCRM- group roles and memberships captured from opmsalescrmstage (2026-10-26)
+Domain: Sales CRM
+Instance: opmsalescrmstage (compared against the opmsalescrm1-sourced fixtures)
+What: The 31 `SCRM-` groups already matched the fixtures (040). Stage had 14 group-role rows (`sys_group_has_role`) and 1 group member (`sys_user_grmember`) that the fixtures lacked, now captured in `seed/data/070` (80 -> 94 SCRM rows) and `050`:
+- SCRM-Account Exec Team, SCRM-Sales Managers, SCRM-Sales CRM Admin: `sn_crm_outlook.crm_outlook_user` (Admin also `crm_outlook_admin`) and `sn_outlook_addin.outlook_addin_setup`, added 2026-10-22.
+- SCRM-Legal Approver: `sn_cm_core.contract_admin`, `contract_config`, `contract_fulfiller`, `contract_reviewer`, `contract_user`, `contract_report_publisher`, `contract_report_viewer`, added 2026-10-26.
+- Member: Priya Nair (`990987212b0f8b104deaf02ac891bffe`) in SCRM-Solution Consultants - Not Used.
+How: `seed/manifest.json` entries for 050 and 070 got `also_from` opmsalescrmstage with an explicit `groupIN<31 SCRM group sys_ids>` query (extract.py supports this, as used by 105). The explicit list is deliberate: a new SCRM- group has to be added to it. Re-extracted with `--only` and bundled to `seed/dist`.
+Users inherit these roles through group membership (inherited rows are platform-generated and not seeded), so applying the pack grants them once the group, member and group-role rows are loaded.
+Caveats: `--only` skips the `require_in_fixtures` filter, so the 11 non-fixture-user member rows it pulled back were removed by hand (all already in `dropped.json`). The new roles belong to `sn_cm_core` (Contracts Core), `sn_outlook_addin` (Add-Ins for Microsoft 365) and `sn_crm_outlook`; the first two are not in `installer/manifest.json` and are assumed to arrive as dependencies of the Contract Management / CRM Outlook apps. If they don't, the role rows can't resolve on a new instance. The loader was not run against a blank instance.
+File: seed/data/050-sys_user_grmember.json, seed/data/070-sys_group_has_role.json, seed/manifest.json, seed/dist/golden-demo-seed.json
+
+---
+
+## Installer: Sales Common added, install-to-latest-version (2026-10-26)
+Domain: Sales CRM
+What: (1) `sn_sales_common` (Sales Common, v8.2.0 on opmsalescrmstage) added to `installer/manifest.json` before Opportunity Management; manifest is now 51. The other four requested apps were already in it: `sn_som_gen_ai`, `sn_opty_mgmt_ai`, `sn_opty_mgmt`, `sn_opty_mgmt_ml` (IDs and active state confirmed on opmsalescrmstage). (2) Engine now requires every plugin to be active on its latest available version: outdated ones are upgraded, up-to-date ones skipped, `ready` only when all are current. New client method `latestVersion(plugin)`; mock supports `latestVersions` / `installedVersions`; tests added (9 pass).
+Not working yet: against a real instance `latestVersion`, `startInstall` and `getProgress` are still placeholders (OPEN-ITEMS), so a real run fails until the install/version REST service is identified. Only the mock path is exercised.
+File: installer/engine.js, installer/instance.js, installer/instance.mock.js, installer/manifest.json
+
+---
+
+## post-deploy 06 — admin lands on Sales Manager Golden Landing Page (2026-10-26)
+Instance: opmsalescrm1 (fixed), opmsalescrmstage (already correct)
+What: `scripts/post-deploy/06-admin-landing-dashboard.js` upserts two `sys_user_preference` rows for admin (`6816f79c…be441`): `glide.next_experience.continue_landing_page` = false, and moves the Sales Manager Golden Landing Page (`16520a20…bf19`) to the front of `com.snc.par.dashboards.ui.preferences` "recent".
+Why: admin landed on the SDR Golden Landing Page on opmsalescrm1 and on Sales Manager on opmsalescrmstage. Both load the same screen (Sales Manager Landing Page `efd686ac…`, macroponent `a2d64a6c…`, defaultDashboard = Sales Manager). The home tab opens the user's most recently viewed dashboard, so admin's last view decided it; crm1 admin had last viewed SDR. Screens, applicabilities, dashboard permissions and the default-dashboard property are identical on both instances, so no Update Set content differs.
+Applied: opmsalescrm1 on 2026-10-26 (continue_landing_page true -> false, recents reordered). Verified with 3 fresh admin logins: Sales Manager Golden Landing Page each time. Stage was not changed.
+Why not an Update Set: `sys_user_preference` is not tracked, and the platform re-creates the "recent" row with a new sys_id, so a fixed-sys_id payload would duplicate. The script upserts by user + name and keeps the existing history.
+Caveats: "Sales dashboard landing page" was read as what stage shows, the Sales Manager Golden Landing Page; the Sales Agent one is `7fc64331…bf1a` if that was meant. The page follows the last viewed dashboard, so if admin opens another landing dashboard, that one becomes the landing page until the script is re-run. Stage once showed Sales Agent on a single load during testing, so it is not strictly pinned either. Script not yet run through the `execute` tool; the change on crm1 was made with direct preference writes.
+File: scripts/post-deploy/06-admin-landing-dashboard.js
+
+---
+
+## Persona landing page reconciliation, no new Update Set (2026-10-22)
+Instance: opmsalescrm1
+What: Audit of the AE / SDR / Sales Manager landing pages against opmsalescrm1. Nothing new to capture; every record matched the repo by sys_id, `sys_updated_on` and `sys_mod_count`, and nothing on the instance changed after 2026-10-08.
+Persona map (all in UPDATE-016 unless noted):
+- AE / Sales Rep: role `sn_sales_common.sales_agent` (applicability "Sales Agent") -> screen + macroponent "CSM Sales Rep Landing Page" -> dashboard Sales Agent Golden Landing Page `7fc64331…bf1a`. The applicability row `ba37ab21…` ships with the Opportunity Management plugin (created 2026-04-29), so it is plugin baseline and not in an update set. The screen and macroponent are the customised copies (2026-09-03).
+- SDR: role `sn_lead_mgmt_core.lead_agent` (applicability "Lead Agent") -> screen + macroponent "SDR Landing Page" -> dashboard SDR Golden Landing Page `918685ca…bfad` (applicability row `c2cdf6f5…`; metadata row in UPDATE-024).
+- Sales Manager: role `sn_sales_common.sales_manager` (applicability "Sales Manager") -> screen "Sales Manager Landing Page" -> dashboard Sales Manager Golden Landing Page `16520a20…bf19` (applicability row `abd686ac…`). The screen's macroponent `a2d64a6c…` is a clone that kept the name "CSM Sales Rep Landing Page"; it is the one bound to the Manager dashboard, so do not "fix" the name or merge it with the AE macroponent.
+- Counts on both sides: 3 dashboards, 8 tabs, 11 canvases, 39 widgets (8 carry the 2026-09-28 edit), 7 dashboard permissions, 3 metadata rows, 3 screens, 3 landing-page macroponents.
+Not captured, on purpose: report "Average Response Time Hrs" (`fce4cf11…`, OOB CSM case report on `sn_customerservice_case`, edited 2026-09-09; no persona dashboard uses it).
+Caveat: the three applicability rows all have order 0. A user holding both `sales_agent` and `lead_agent` (e.g. an SDR) could get either page; not tested here.
+File: none (docs only)
+
+---
+
 ## UPDATE-029-landing-page-forecast-model-and-collector (2026-10-21)
 Instance: opmsalescrmstage (source; values already applied there); domain Sales CRM
 What: property `sn_opty_mgmt.glide.ui.landing_page_forecast_model` (`56207604fff08310e4d5ffffffffff2f`) = `f7a3e9c14b2d8610a5cf3e7b92d1f480`, the active model; Data Collector job `Collect Sales Amount for Landing Page` (`66adf323ff544710e4d5ffffffffff80`) weekly, Monday, 7:30 AM US/Pacific.
@@ -567,3 +623,9 @@ Instance: opmsalescrmstage (source)
 What: Application Registry record `Claude MCP Client` (`oauth_entity` `de6bbd04...3c63`, created 2026-10-15 by admin in Default). Auth-code inbound, default grant password, redirect `https://claude.ai/api/mcp/auth_callback`, PKCE S256, JWT tokens, 8,640,000 s access/refresh lifespans.
 Why: lets the Claude MCP client connect to a freshly deployed demo instance.
 Caveats: `client_secret` is blank on purpose (stage's is encrypted with its instance key and would not decrypt elsewhere); after commit, open the record on the target, copy the generated secret into the Claude connector. `client_id` is carried over unchanged. The record stores no username/password; `asher.sky` is already seeded (`030-sys_user.json`) without a password, and none is captured. Not committed on a blank instance yet; blank-secret generation on import is untested.
+
+## UPDATE-031 Sales Manager landing page order (2026-10-22)
+Instance: opmsalescrm1 (source), applied and verified on opmsalescrmstage
+What: `sys_ux_screen` "Sales Manager Landing Page" (`efd686ac...bfc7`) order 20 -> 10. One record.
+Why: the screen winner is `sys_ux_screen.order` (ascending), not the `order` on `sys_ux_applicability_m2m_screen`. The AE screen (CSM Sales Rep, OOB) and the Manager screen were both 20 and managers also hold `sales_agent`, so Taylor Morgan landed on the AE screen / plain "Sales Agent Landing Page".
+Caveats: SDR screen left at 30 on purpose. AEs also hold Lead Agent, so moving SDR ahead of AE (tried at 15) put Asher Sky on the SDR page. Applicability-row `order` was tried first (-20/+20) and has no effect; those edits were reverted. Verified on stage by impersonation: AE -> AE screen, SDR -> SDR screen, Manager -> Manager screen. Not yet committed or pushed.
