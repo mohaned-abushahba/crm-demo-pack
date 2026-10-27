@@ -37,6 +37,13 @@ File: seed/data/050-sys_user_grmember.json, seed/data/070-sys_group_has_role.jso
 
 ---
 
+## Installer: Contracts Core and Add-Ins for Microsoft 365 added explicitly (2026-10-26)
+Domain: Sales CRM
+What: `sn_cm_core` (Contracts Core, v3.6.1 on opmsalescrmstage) added before `sn_som_clm`, and `sn_outlook_addin` (ServiceNow Add-Ins for Microsoft 365, v7.5.1) before `sn_crm_outlook`. The SCRM- group roles in seed 070 belong to these scopes, so they are no longer left to arrive as dependencies. Manifest is now 53 plugins; test counts and installer README updated.
+File: installer/manifest.json
+
+---
+
 ## Installer: Sales Common added, install-to-latest-version (2026-10-26)
 Domain: Sales CRM
 What: (1) `sn_sales_common` (Sales Common, v8.2.0 on opmsalescrmstage) added to `installer/manifest.json` before Opportunity Management; manifest is now 51. The other four requested apps were already in it: `sn_som_gen_ai`, `sn_opty_mgmt_ai`, `sn_opty_mgmt`, `sn_opty_mgmt_ml` (IDs and active state confirmed on opmsalescrmstage). (2) Engine now requires every plugin to be active on its latest available version: outdated ones are upgraded, up-to-date ones skipped, `ready` only when all are current. New client method `latestVersion(plugin)`; mock supports `latestVersions` / `installedVersions`; tests added (9 pass).

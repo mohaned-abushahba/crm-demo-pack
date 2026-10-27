@@ -1,5 +1,5 @@
 {
-  "_comment": "Source: 'Sales CRM Top Plugins list.docx'. Array order is install order (Order Management first - slowest). All plugins are required: the run only reports ready when every one is verified active. 'heavy' plugins get a longer stall window. Order Management entry confirmed as sn_ind_tmt_orm. Doc note: sn_invoice_case_ss and sn_inv_case_pb pull in many Finance BU dependencies. Contract Management group added 2026-10-26 (4 apps); sn_som_clm is flagged loadDemoData: its demo data must be loaded after install (informational flag, not yet acted on by the engine). sn_sales_common added 2026-10-26 (ID confirmed on opmsalescrmstage, v8.2.0), placed before Opportunity Management as the shared base. Every plugin is installed/upgraded to the latest available version, see installer/README.md.",
+  "_comment": "Source: 'Sales CRM Top Plugins list.docx'. Array order is install order (Order Management first - slowest). All plugins are required: the run only reports ready when every one is verified active. 'heavy' plugins get a longer stall window. Order Management entry confirmed as sn_ind_tmt_orm. Doc note: sn_invoice_case_ss and sn_inv_case_pb pull in many Finance BU dependencies. Contract Management group added 2026-10-26 (4 apps); sn_som_clm is flagged loadDemoData: its demo data must be loaded after install (informational flag, not yet acted on by the engine). sn_sales_common added 2026-10-26 (ID confirmed on opmsalescrmstage, v8.2.0), placed before Opportunity Management as the shared base. Every plugin is installed/upgraded to the latest available version, see installer/README.md. sn_cm_core and sn_outlook_addin added explicitly (IDs confirmed on opmsalescrmstage) ahead of the apps that depend on them, because SCRM- group roles seeded later belong to them.",
   "plugins": [
     {
       "id": "sn_ind_tmt_orm",
@@ -182,6 +182,14 @@
       "name": "Opportunity Management ML",
       "type": "store",
       "group": "Sales Automation (SFA)",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_outlook_addin",
+      "name": "ServiceNow Add-Ins for Microsoft 365",
+      "group": "Sales Automation (SFA)",
+      "type": "store",
       "required": true,
       "heavy": false
     },
@@ -374,6 +382,14 @@
       "name": "ServiceNow Otto for Order Management",
       "type": "store",
       "group": "AI Plugins",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_cm_core",
+      "name": "Contracts Core",
+      "group": "Contract Management",
+      "type": "store",
       "required": true,
       "heavy": false
     },
