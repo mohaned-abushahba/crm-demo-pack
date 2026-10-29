@@ -556,6 +556,40 @@
       "vendors": "",
       "email": "",
       "include_members": "false"
+    },
+    {
+      "parent": "",
+      "manager": "",
+      "roles": "",
+      "active": "true",
+      "description": "Resolves customers' inquiries",
+      "source": "",
+      "type": "",
+      "sys_id": "7f2c14dc931c9790e84732e548373ce5",
+      "cost_center": "",
+      "default_assignee": "",
+      "name": "SCRM-CSM-Customer Service",
+      "exclude_manager": "false",
+      "vendors": "",
+      "email": "",
+      "include_members": "false"
+    },
+    {
+      "parent": "",
+      "manager": "",
+      "roles": "",
+      "active": "true",
+      "description": "Resolves technical issues",
+      "source": "",
+      "type": "",
+      "sys_id": "838cd010935c9790e84732e548373cb3",
+      "cost_center": "",
+      "default_assignee": "",
+      "name": "SCRM-CSM-Technical Support",
+      "exclude_manager": "false",
+      "vendors": "",
+      "email": "",
+      "include_members": "false"
     }
   ]
 }

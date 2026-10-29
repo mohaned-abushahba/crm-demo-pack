@@ -2016,6 +2016,116 @@
       "inherited": "false",
       "state": "active",
       "user": "37a823752b4f4f104deaf02ac891bfcd"
+    },
+    {
+      "role": "7506fe2deb2002003e97afcef106fe87",
+      "inh_map": "",
+      "included_in_role": "",
+      "included_in_role_instance": "",
+      "inh_count": "",
+      "sys_id": "00f4f6b993f74750e84732e548373cc1",
+      "inherited": "false",
+      "state": "active",
+      "user": "a684fad22b7683104deaf02ac891bf9b"
+    },
+    {
+      "role": "b610786cf45c4210f877ab914eb49dc6",
+      "inh_map": "",
+      "included_in_role": "",
+      "included_in_role_instance": "",
+      "inh_count": "",
+      "sys_id": "14108298935cd790e84732e548373cd8",
+      "inherited": "false",
+      "state": "active",
+      "user": "a684fad22b7683104deaf02ac891bf9b"
+    },
+    {
+      "role": "2831a114c611228501d4ea6c309d626d",
+      "inh_map": "",
+      "included_in_role": "",
+      "included_in_role_instance": "",
+      "inh_count": "",
+      "sys_id": "9600c214935cd790e84732e548373c44",
+      "inherited": "false",
+      "state": "active",
+      "user": "a684fad22b7683104deaf02ac891bf9b"
+    },
+    {
+      "role": "3120f52cc312310015519f2974d3ae83",
+      "inh_map": "",
+      "included_in_role": "",
+      "included_in_role_instance": "",
+      "inh_count": "",
+      "sys_id": "c8100298935cd790e84732e548373cfa",
+      "inherited": "false",
+      "state": "active",
+      "user": "a684fad22b7683104deaf02ac891bf9b"
+    },
+    {
+      "role": "2831a114c611228501d4ea6c309d626d",
+      "inh_map": "",
+      "included_in_role": "",
+      "included_in_role_instance": "",
+      "inh_count": "",
+      "sys_id": "4b724610939cd790e84732e548373c65",
+      "inherited": "false",
+      "state": "active",
+      "user": "32714694935cd790e84732e548373c75"
+    },
+    {
+      "role": "3120f52cc312310015519f2974d3ae83",
+      "inh_map": "",
+      "included_in_role": "",
+      "included_in_role_instance": "",
+      "inh_count": "",
+      "sys_id": "5882ca10939cd790e84732e548373cd8",
+      "inherited": "false",
+      "state": "active",
+      "user": "32714694935cd790e84732e548373c75"
+    },
+    {
+      "role": "9d11c93737a33110eb21d71964924b93",
+      "inh_map": "",
+      "included_in_role": "",
+      "included_in_role_instance": "",
+      "inh_count": "",
+      "sys_id": "70824e10939cd790e84732e548373c31",
+      "inherited": "false",
+      "state": "active",
+      "user": "32714694935cd790e84732e548373c75"
+    },
+    {
+      "role": "7fcaa702933002009c8579b4f47ffbde",
+      "inh_map": "",
+      "included_in_role": "",
+      "included_in_role_instance": "",
+      "inh_count": "",
+      "sys_id": "dc82ca10939cd790e84732e548373cd2",
+      "inherited": "false",
+      "state": "active",
+      "user": "32714694935cd790e84732e548373c75"
+    },
+    {
+      "role": "b610786cf45c4210f877ab914eb49dc6",
+      "inh_map": "",
+      "included_in_role": "",
+      "included_in_role_instance": "",
+      "inh_count": "",
+      "sys_id": "f4824e10939cd790e84732e548373c24",
+      "inherited": "false",
+      "state": "active",
+      "user": "32714694935cd790e84732e548373c75"
+    },
+    {
+      "role": "7506fe2deb2002003e97afcef106fe87",
+      "inh_map": "",
+      "included_in_role": "",
+      "included_in_role_instance": "",
+      "inh_count": "",
+      "sys_id": "fc824e10939cd790e84732e548373c28",
+      "inherited": "false",
+      "state": "active",
+      "user": "32714694935cd790e84732e548373c75"
     }
   ]
 }

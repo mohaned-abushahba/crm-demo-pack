@@ -1,0 +1,102 @@
+{
+  "table": "sn_install_base_item",
+  "key": [
+    "number"
+  ],
+  "on_conflict": "fail",
+  "source": "opmsalescrmstage",
+  "query": "numberINIBITM0001001,IBITM0001002,IBITM0001003,IBITM0001004,IBITM0001005",
+  "references": {
+    "account": "customer_account",
+    "contact": "customer_contact",
+    "parent": "sn_install_base_item",
+    "root": "sn_install_base_item"
+  },
+  "records": [
+    {
+      "number": "IBITM0001001",
+      "sys_id": "3c82589493d89790e84732e548373c5b",
+      "sys_class_name": "sn_install_base_item",
+      "name": "Configurable Product for Data Storage Solution",
+      "parent": "",
+      "root": "",
+      "account": "19320b2d2b8b8b104deaf02ac891bf01",
+      "contact": "2e52cf213bc3cb10d5260fa693e45a47",
+      "state": "in_use",
+      "life_cycle_stage": "Operational",
+      "life_cycle_stage_status": "In Use",
+      "status": "original",
+      "active": "true",
+      "skip_sync": "false",
+      "sys_domain": "global"
+    },
+    {
+      "number": "IBITM0001002",
+      "sys_id": "ff03185493d89790e84732e548373c24",
+      "sys_class_name": "sn_install_base_item",
+      "name": "Software",
+      "parent": "3c82589493d89790e84732e548373c5b",
+      "root": "3c82589493d89790e84732e548373c5b",
+      "account": "19320b2d2b8b8b104deaf02ac891bf01",
+      "contact": "2e52cf213bc3cb10d5260fa693e45a47",
+      "state": "in_use",
+      "life_cycle_stage": "Operational",
+      "life_cycle_stage_status": "In Use",
+      "status": "original",
+      "active": "true",
+      "skip_sync": "false",
+      "sys_domain": "global"
+    },
+    {
+      "number": "IBITM0001003",
+      "sys_id": "413410d893d89790e84732e548373c37",
+      "sys_class_name": "sn_install_base_item",
+      "name": "Hardware",
+      "parent": "3c82589493d89790e84732e548373c5b",
+      "root": "3c82589493d89790e84732e548373c5b",
+      "account": "19320b2d2b8b8b104deaf02ac891bf01",
+      "contact": "2e52cf213bc3cb10d5260fa693e45a47",
+      "state": "in_use",
+      "life_cycle_stage": "Operational",
+      "life_cycle_stage_status": "In Use",
+      "status": "original",
+      "active": "true",
+      "skip_sync": "false",
+      "sys_domain": "global"
+    },
+    {
+      "number": "IBITM0001004",
+      "sys_id": "94e45c1c93d89790e84732e548373c09",
+      "sys_class_name": "sn_install_base_item",
+      "name": "Cloud Solution",
+      "parent": "3c82589493d89790e84732e548373c5b",
+      "root": "3c82589493d89790e84732e548373c5b",
+      "account": "19320b2d2b8b8b104deaf02ac891bf01",
+      "contact": "2e52cf213bc3cb10d5260fa693e45a47",
+      "state": "in_use",
+      "life_cycle_stage": "Operational",
+      "life_cycle_stage_status": "In Use",
+      "status": "original",
+      "active": "true",
+      "skip_sync": "false",
+      "sys_domain": "global"
+    },
+    {
+      "number": "IBITM0001005",
+      "sys_id": "2a459c5c93d89790e84732e548373ce9",
+      "sys_class_name": "sn_install_base_item",
+      "name": "Services",
+      "parent": "3c82589493d89790e84732e548373c5b",
+      "root": "3c82589493d89790e84732e548373c5b",
+      "account": "19320b2d2b8b8b104deaf02ac891bf01",
+      "contact": "2e52cf213bc3cb10d5260fa693e45a47",
+      "state": "in_use",
+      "life_cycle_stage": "Operational",
+      "life_cycle_stage_status": "In Use",
+      "status": "original",
+      "active": "true",
+      "skip_sync": "false",
+      "sys_domain": "global"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "table": "sn_tech_product_support_case",
+  "key": [
+    "number"
+  ],
+  "on_conflict": "fail",
+  "source": "opmsalescrmstage",
+  "query": "numberINTPSC0001005",
+  "exclude": [
+    "case_report"
+  ],
+  "exclude_reason": {
+    "case_report": "platform-generated child (sn_customerservice_case_report CSR0010198); the platform recreates it"
+  },
+  "references": {
+    "account": "customer_account",
+    "contact": "customer_contact",
+    "assignment_group": "sys_user_group",
+    "assigned_to": "sys_user",
+    "opened_by": "sys_user",
+    "watch_list": "sys_user",
+    "sold_product": "sn_install_base_sold_product"
+  },
+  "records": [
+    {
+      "number": "TPSC0001005",
+      "sys_id": "8a940e94939cd790e84732e548373cb4",
+      "sys_class_name": "sn_tech_product_support_case",
+      "short_description": "Cannot access the documents on the storage account",
+      "description": "Customer cannot access documents stored in the cloud.",
+      "issue_summary": "<p>Customer has problem with access to cloud data storage.</p>",
+      "steps_to_reproduce": "<p>1. Open URL <a href=\"https://storage.solana.com\" rel=\"nofollow\">https://storage.solana.com</a> in a browser<br />2. &#34;Page Not Found&#34; (HTTP 404) error appears</p>",
+      "initial_response": "<p>We are working on issue resolution. Estimated resolution in 2 hours.</p>",
+      "actions_taken": "<p>Diagnostics performed and failing router identified.</p>",
+      "next_steps": "<p>Create Work Order to dispatch technician.</p>",
+      "account": "19320b2d2b8b8b104deaf02ac891bf01",
+      "contact": "2e52cf213bc3cb10d5260fa693e45a47",
+      "contact_type": "phone",
+      "sold_product": "0af071c23b049f10916b37f726e45a07",
+      "assignment_group": "838cd010935c9790e84732e548373cb3",
+      "assigned_to": "32714694935cd790e84732e548373c75",
+      "opened_by": "a684fad22b7683104deaf02ac891bf9b",
+      "watch_list": "a684fad22b7683104deaf02ac891bf9b",
+      "state": "10",
+      "stage": "3",
+      "priority": "1",
+      "impact": "1",
+      "urgency": "3",
+      "category": "1",
+      "subcategory": "0",
+      "active": "true",
+      "approval": "not requested",
+      "escalation": "0",
+      "notify": "1",
+      "proactive": "false",
+      "auto_close": "false",
+      "follow_the_sun": "false",
+      "initiated_as_request": "false",
+      "knowledge": "false",
+      "needs_attention": "false",
+      "notes_to_comments": "false",
+      "sync_driver": "false",
+      "made_sla": "true",
+      "reassignment_count": "2",
+      "opened_at": "2026-10-28 23:56:56",
+      "sys_domain": "global"
+    }
+  ]
+}

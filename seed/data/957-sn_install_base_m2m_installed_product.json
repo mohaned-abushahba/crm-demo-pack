@@ -1,0 +1,22 @@
+{
+  "table": "sn_install_base_m2m_installed_product",
+  "key": [
+    "number"
+  ],
+  "on_conflict": "fail",
+  "source": "opmsalescrmstage",
+  "query": "numberINIBPRD0001001",
+  "references": {
+    "install_base_item": "sn_install_base_item",
+    "sold_product": "sn_install_base_sold_product"
+  },
+  "records": [
+    {
+      "number": "IBPRD0001001",
+      "sys_id": "53271890931c9790e84732e548373c8e",
+      "install_base_item": "3c82589493d89790e84732e548373c5b",
+      "sold_product": "0af071c23b049f10916b37f726e45a07",
+      "sys_domain": "global"
+    }
+  ]
+}

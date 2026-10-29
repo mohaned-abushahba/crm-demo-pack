@@ -1,0 +1,48 @@
+{
+  "table": "interaction",
+  "key": [
+    "number"
+  ],
+  "on_conflict": "fail",
+  "source": "opmsalescrmstage",
+  "query": "numberINIMS0000178",
+  "references": {
+    "account": "customer_account",
+    "contact": "customer_contact",
+    "opened_by": "sys_user",
+    "assigned_to": "sys_user",
+    "closed_by": "sys_user"
+  },
+  "records": [
+    {
+      "number": "IMS0000178",
+      "sys_id": "bfe3c614939cd790e84732e548373c0a",
+      "sys_class_name": "interaction",
+      "short_description": "Cannot access the documents on the storage account",
+      "type": "phone",
+      "direction": "inbound",
+      "state": "closed_complete",
+      "account": "19320b2d2b8b8b104deaf02ac891bf01",
+      "contact": "2e52cf213bc3cb10d5260fa693e45a47",
+      "opened_by": "a684fad22b7683104deaf02ac891bf9b",
+      "assigned_to": "a684fad22b7683104deaf02ac891bf9b",
+      "closed_by": "a684fad22b7683104deaf02ac891bf9b",
+      "opened_at": "2026-10-28 23:54:03",
+      "closed_at": "2026-10-29 00:08:45",
+      "active": "false",
+      "agent_chat": "false",
+      "ai_voice": "false",
+      "auto_resolution": "false",
+      "help_requested": "false",
+      "help_requested_conversation": "false",
+      "resiliency_mode": "false",
+      "supervisor_joined_conversation": "false",
+      "system_wrap_up": "false",
+      "transcript_downloaded": "false",
+      "verified": "false",
+      "virtual_agent": "false",
+      "voice_used": "false",
+      "sys_domain": "global"
+    }
+  ]
+}

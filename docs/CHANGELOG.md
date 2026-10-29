@@ -636,3 +636,23 @@ Instance: opmsalescrm1 (source), applied and verified on opmsalescrmstage
 What: `sys_ux_screen` "Sales Manager Landing Page" (`efd686ac...bfc7`) order 20 -> 10. One record.
 Why: the screen winner is `sys_ux_screen.order` (ascending), not the `order` on `sys_ux_applicability_m2m_screen`. The AE screen (CSM Sales Rep, OOB) and the Manager screen were both 20 and managers also hold `sales_agent`, so Taylor Morgan landed on the AE screen / plain "Sales Agent Landing Page".
 Caveats: SDR screen left at 30 on purpose. AEs also hold Lead Agent, so moving SDR ahead of AE (tried at 15) put Asher Sky on the SDR page. Applicability-row `order` was tried first (-20/+20) and has no effect; those edits were reverted. Verified on stage by impersonation: AE -> AE screen, SDR -> SDR screen, Manager -> Manager screen. Not yet committed or pushed.
+
+## seed Service CRM install base items, CSM groups, Technical Support Case, Interaction (2026-10-29)
+Domain: Service CRM
+Instance: opmsalescrmstage (source — this data was built directly on stage, not on opmsalescrm1; opmsalescrm1 has no `sn_tech_product_support_case` table and an unrelated record under number IMS0000178, so stage is treated as source-of-record for this slice, same precedent as the Meeting Intelligence offering and the 10 golden opportunities)
+What:
+- `030-sys_user.json`: added `ravi.kapoor` (`32714694...c75`, IT Application Support), via `also_from` since he doesn't exist on opmsalescrm1.
+- `040-sys_user_group.json`: added groups `SCRM-CSM-Customer Service` (`7f2c14dc...ce5`) and `SCRM-CSM-Technical Support` (`838cd010...cb3`).
+- `050-sys_user_grmember.json`: `john.jason` -> Customer Service, `ravi.kapoor` -> Technical Support.
+- `060-sys_user_has_role.json` + `expected-user-roles.json`: `ravi.kapoor` direct roles `admin`, `sn_customerservice_agent`, `sn_tech_support.agent`, `sn_cwf_wrkspc.frontline_agent`, `sn_openframe_user`; `john.jason` gained the same four (plus his existing `snc_internal`) since the groups were created. `expected-user-roles.json` was regenerated for just these two users against stage (255 effective roles each, group-inherited roles included) — not for the other 62 users, to keep this change scoped.
+- `955-sn_install_base_sold_product.json`: added `SLPRD0001039` "Configurable Product for Data Storage Solution" (`0af071...a07`), the root sold product the install base items and case below hang off.
+- `956-sn_install_base_item.json` (new): `IBITM0001001`-`IBITM0001005` — root item "Configurable Product for Data Storage Solution" plus 4 children (Software, Hardware, Cloud Solution, Services), all account Gatelynx AI / contact Daniel Foster.
+- `957-sn_install_base_m2m_installed_product.json` (new): `IBPRD0001001`, the bridge row linking the root install base item to `SLPRD0001039`.
+- `958-sn_tech_product_support_case.json` (new): `TPSC0001005`, "Cannot access the documents on the storage account" — priority 1/critical, assignment group SCRM-CSM-Technical Support, assigned to ravi.kapoor, opened by john.jason, linked to `SLPRD0001039`.
+- `959-interaction.json` (new): `IMS0000178`, phone interaction with the same short description/account/contact, opened and closed by john.jason. Not formally linked to the case by any field — same customer scenario, two independent transactional records, as asked.
+Why: requested capture of this Service CRM slice (install base items, CSM groups + roles, one case, one interaction) from opmsalescrmstage into the seed.
+Caveats:
+- `case_report` (`CSR0010198`, platform-generated child of the case) is excluded, same rule as touchpoints/competitors on opportunities — the platform recreates it.
+- The case's `service` field ("Something is Broken") and `sold_product`'s `product_specification`/`prd_offering` resolve to records already in the fixtures or to OOB taxonomy; `refcheck.py --instance opmsalescrmstage` shows zero dangling references across all 70 fixture files after this change.
+- `expected-user-roles.json`'s top-level `source` stays `opmsalescrm1` on purpose — only the two touched users' role lists were refreshed from stage; a full regeneration against stage would have changed roles for all 62 other seeded users (plugin/role drift unrelated to this change) and was reverted.
+- Not loaded onto a blank instance yet; bundle rebuilt (70 tables, 3,194 records).

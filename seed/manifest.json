@@ -51,7 +51,7 @@
         "password_needs_reset"
       ],
       "exclude_records": {
-        "_reason": "integration service accounts — not demo data, credentials don't carry over",
+        "_reason": "integration service accounts \u2014 not demo data, credentials don't carry over",
         "user_name": [
           "sn-icu-service-account",
           "agent-miner-api-svc-account",
@@ -60,13 +60,25 @@
           "conv-insights-svc-account",
           "mwsalescrm.integration@servicenow.com"
         ]
-      }
+      },
+      "also_from": [
+        {
+          "source_instance": "opmsalescrmstage",
+          "scope_query": "sys_id=32714694935cd790e84732e548373c75"
+        }
+      ]
     },
     {
       "file": "040-sys_user_group",
       "table": "sys_user_group",
       "key": [
         "name"
+      ],
+      "also_from": [
+        {
+          "source_instance": "opmsalescrmstage",
+          "scope_query": "sys_idIN7f2c14dc931c9790e84732e548373ce5,838cd010935c9790e84732e548373cb3"
+        }
       ]
     },
     {
@@ -84,6 +96,10 @@
         {
           "source_instance": "opmsalescrmstage",
           "scope_query": "groupIN01a4fed22b7683104deaf02ac891bf39,09a4f2d23bf2c310d5260fa693e45a45,15a4ba563bf2c310d5260fa693e45a16,15ceb6ba3b4b0310d5260fa693e45a3f,1f9a03293b07cb10d5260fa693e45a7b,1f9a03293b07cb10d5260fa693e45a82,239a47e52b0f8b104deaf02ac891bf3d,30a4fed22b7683104deaf02ac891bf33,45a4fed22b7683104deaf02ac891bf4b,60639ba12b8f8b104deaf02ac891bf88,639a07e52b0f8b104deaf02ac891bff7,679a03293b07cb10d5260fa693e45ac7,70e552142b0b03104deaf02ac891bff0,779a47e52b0f8b104deaf02ac891bf43,85a4ba563bf2c310d5260fa693e45a10,891397a12b8f8b104deaf02ac891bfe9,91c21fad3b47cb10d5260fa693e45a0e,939ac3e52b0f8b104deaf02ac891bff8,979ac3e52b0f8b104deaf02ac891bff1,a4a47ed22b7683104deaf02ac891bff3,a79a03293b07cb10d5260fa693e45a95,b31947612b0f8b104deaf02ac891bf07,b8a4f2d23bf2c310d5260fa693e45a3f,e668318c3b8b4f10d5260fa693e45ac3,eb9a03293b07cb10d5260fa693e45a9b,eca4f6563bf2c310d5260fa693e45a8d,f4a47a563bf2c310d5260fa693e45ab3,f77950d22b4343504deaf02ac891bfdb,f8a47a563bf2c310d5260fa693e45aad,fb1947612b0f8b104deaf02ac891bfa5,ff1947612b0f8b104deaf02ac891bfb8"
+        },
+        {
+          "source_instance": "opmsalescrmstage",
+          "scope_query": "groupIN7f2c14dc931c9790e84732e548373ce5,838cd010935c9790e84732e548373cb3"
         }
       ]
     },
@@ -102,6 +118,12 @@
       "on_conflict": "adopt",
       "require_in_fixtures": [
         "user"
+      ],
+      "also_from": [
+        {
+          "source_instance": "opmsalescrmstage",
+          "scope_query": "user.user_nameINjohn.jason,ravi.kapoor^inherited=false"
+        }
       ]
     },
     {
@@ -582,7 +604,46 @@
         "number"
       ],
       "source_instance": "opmsalescrmstage",
-      "scope_query": "sys_idIN0e0522c83bc8d7d0916b37f726e45af9,288f5a803b88d7d0916b37f726e45a31,2b61eec493c413d0e84732e548373c4e,2e8fdacc938413d0e84732e548373c89,3361eec493c413d0e84732e548373cd4,576162c83b88d7d0916b37f726e45a4b,648f5a803b88d7d0916b37f726e45a04,71052688930813d0e84732e548373c9c,750522c83bc8d7d0916b37f726e45a72,7d052688930813d0e84732e548373ca4,ab61a2c83b88d7d0916b37f726e45a7d,c20522c83bc8d7d0916b37f726e45aec,c58f9a803b88d7d0916b37f726e45a6a,e48f1a803b88d7d0916b37f726e45ae5,e68fdacc938413d0e84732e548373c97,f361220893c413d0e84732e548373c2c"
+      "scope_query": "sys_idIN0e0522c83bc8d7d0916b37f726e45af9,288f5a803b88d7d0916b37f726e45a31,2b61eec493c413d0e84732e548373c4e,2e8fdacc938413d0e84732e548373c89,3361eec493c413d0e84732e548373cd4,576162c83b88d7d0916b37f726e45a4b,648f5a803b88d7d0916b37f726e45a04,71052688930813d0e84732e548373c9c,750522c83bc8d7d0916b37f726e45a72,7d052688930813d0e84732e548373ca4,ab61a2c83b88d7d0916b37f726e45a7d,c20522c83bc8d7d0916b37f726e45aec,c58f9a803b88d7d0916b37f726e45a6a,e48f1a803b88d7d0916b37f726e45ae5,e68fdacc938413d0e84732e548373c97,f361220893c413d0e84732e548373c2c,0af071c23b049f10916b37f726e45a07"
+    },
+    {
+      "file": "956-sn_install_base_item",
+      "table": "sn_install_base_item",
+      "key": [
+        "number"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "numberINIBITM0001001,IBITM0001002,IBITM0001003,IBITM0001004,IBITM0001005"
+    },
+    {
+      "file": "957-sn_install_base_m2m_installed_product",
+      "table": "sn_install_base_m2m_installed_product",
+      "key": [
+        "number"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "numberINIBPRD0001001"
+    },
+    {
+      "file": "958-sn_tech_product_support_case",
+      "table": "sn_tech_product_support_case",
+      "key": [
+        "number"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "numberINTPSC0001005",
+      "exclude": [
+        "case_report"
+      ]
+    },
+    {
+      "file": "959-interaction",
+      "table": "interaction",
+      "key": [
+        "number"
+      ],
+      "source_instance": "opmsalescrmstage",
+      "scope_query": "numberINIMS0000178"
     },
     {
       "file": "960-sn_ind_tmt_orm_order",
