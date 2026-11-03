@@ -2,6 +2,41 @@
 
 Follow-ups that aren't blocking. Remove an item once it's resolved, and log the fix in CHANGELOG.md.
 
+## Otto header chat says "something went wrong" on clones — KNOWN FIX, not currently occurring (logged 2026-11-03)
+
+Seen previously on an instance cloned from the golden instance; **not occurring on opmsalescrmstage**
+as of this writing. Logging the fix here so it can be applied immediately if it resurfaces on a clone.
+
+**Symptom:** every message sent to the Otto chat from the header gets "something went wrong" back
+immediately. No AI agent or execution plan runs, and nothing new appears in `sys_generative_ai_log`.
+Other Now Assist features (e.g. summaries) can still work fine.
+
+**Cause:** the Otto header chat is configured for the NextWave experience (`ai_native_chat`), which
+runs on a separate conversation server that must sign in to the instance via two OAuth clients
+(`NextWave` and `NextWave-Channels`). Those OAuth clients don't exist on clones, so the handoff fails
+before the LLM is ever invoked. The reference instance (opmsalescrm1) doesn't use NextWave — it's on
+the classic Now Assist experience (`self_service_dialog`), which is why Otto works there.
+
+**Fix (~2 min, manual on the affected instance):**
+1. Go to `sys_now_assist_deployment_channel.list`.
+2. Open the record "Otto panel – Platform / Unified Navigation"
+   (sys_id `0bfc6cf73bf24b10d5260fa693e45acf` on opmsalescrm1 — likely the same on any instance
+   cloned from the same reference, since the sys_id is carried over with the clone).
+3. Change **Experience** from `ai_native_chat` to `self_service_dialog` and save.
+4. Hard-refresh the browser and retest Otto.
+
+**Automating this:** if this resurfaces, it can be applied directly instead of by hand:
+
+```javascript
+await SN.TableRecord("sys_now_assist_deployment_channel").update(
+  "0bfc6cf73bf24b10d5260fa693e45acf",
+  { experience: "self_service_dialog" }
+);
+```
+
+Verify the sys_id matches that record (`field=Experience`) on the target instance before running —
+if it doesn't, look up the "Otto panel – Platform / Unified Navigation" record by name instead.
+
 ## Role gaps on john.jason and marcus.reed — RESOLVED 2026-10-08
 
 Root causes found by comparing opmsalescrm1 vs. opmsalescrmstage directly (groups, direct roles, and
