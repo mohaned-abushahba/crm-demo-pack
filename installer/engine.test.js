@@ -13,7 +13,7 @@ test("installs everything, skips pre-installed, reports ready", async () => {
   assert.equal(run.status, "completed");
   assert.equal(run.ready, true);
   const s = e.summary(run);
-  assert.equal(s.installed, 53); assert.equal(s.percent, 100);
+  assert.equal(s.installed, 73); assert.equal(s.percent, 100);
 });
 
 test("retries a failing plugin and succeeds on a later attempt", async () => {
@@ -29,7 +29,7 @@ test("exhausted retries -> failed, run continues, not ready, then retryFailed re
   assert.equal(run.status, "completed_with_errors");
   assert.equal(run.ready, false);
   assert.equal(run.plugins.find((p) => p.id === "sn_cpq_intg").state, "failed");
-  assert.equal(e.summary(run).installed, 52);
+  assert.equal(e.summary(run).installed, 72);
   e.retryFailed(run.id);
   run = await wait(e, run.id);
   assert.equal(run.status, "completed"); assert.equal(run.ready, true);

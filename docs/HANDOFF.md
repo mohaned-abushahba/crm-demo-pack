@@ -219,6 +219,18 @@ Verified 2026-10-22: AE -> Sales Agent Golden Landing Page, SDR -> SDR page, Man
   `SCRM-CSM-*` groups/roles. Sourced from opmsalescrmstage directly (opmsalescrm1 has no
   `sn_tech_product_support_case` table). Still open: broader case/interaction volume, other Service CRM
   case types, and loading this slice onto a blank instance to verify end to end.
+- **FSM clickpath extension off `TPSC0001005` (2026-11-03).** Added to the existing demo clickpath: from
+  Case `TPSC0001005`, Ravi Kapoor creates a Work Order; dispatcher **Lisa Ray** (`lisa.ray`, NorCal
+  Technicians group, `wm_dispatcher` role) dispatches the Work Order Task to field technician **Teddy
+  Taylor** (`teddy.taylor`, NorCal Technicians group, `wm_agent` role), who resets a router in the data
+  center to resolve the case. Both personas, their two groups (California Dispatchers, NorCal Technicians)
+  and their direct roles are captured in `030`/`040`/`050`/`060` from opmsalescrmstage (they're OOTB FSM
+  demo personas, pre-dating today's plugin activation — not something this pack creates). The Work Order and
+  Work Order Task are **not** seeded: they're created live during demo execution, the same way the case
+  itself leads into them. Note: `com.snc.work_management.demo` / `com.snc.work_management_geolocation.demo`
+  (the FSM demo-data plugins) remain deliberately excluded from `installer/manifest.json` — see the Field
+  Service Management installer entries below. Teddy Taylor's dispatcher/tech group setup does not depend on
+  either excluded plugin.
 
 ## 9. How to fork and adapt it
 

@@ -1,5 +1,5 @@
 {
-  "_comment": "Source: 'Sales CRM Top Plugins list.docx'. Array order is install order (Order Management first - slowest). All plugins are required: the run only reports ready when every one is verified active. 'heavy' plugins get a longer stall window. Order Management entry confirmed as sn_ind_tmt_orm. Doc note: sn_invoice_case_ss and sn_inv_case_pb pull in many Finance BU dependencies. Contract Management group added 2026-10-26 (4 apps); sn_som_clm is flagged loadDemoData: its demo data must be loaded after install (informational flag, not yet acted on by the engine). sn_sales_common added 2026-10-26 (ID confirmed on opmsalescrmstage, v8.2.0), placed before Opportunity Management as the shared base. Every plugin is installed/upgraded to the latest available version, see installer/README.md. sn_cm_core and sn_outlook_addin added explicitly (IDs confirmed on opmsalescrmstage) ahead of the apps that depend on them, because SCRM- group roles seeded later belong to them.",
+  "_comment": "Source: 'Sales CRM Top Plugins list.docx'. Array order is install order (Order Management first - slowest). All plugins are required: the run only reports ready when every one is verified active. 'heavy' plugins get a longer stall window. Order Management entry confirmed as sn_ind_tmt_orm. Doc note: sn_invoice_case_ss and sn_inv_case_pb pull in many Finance BU dependencies. Contract Management group added 2026-10-26 (4 apps); sn_som_clm is flagged loadDemoData: its demo data must be loaded after install (informational flag, not yet acted on by the engine). sn_sales_common added 2026-10-26 (ID confirmed on opmsalescrmstage, v8.2.0), placed before Opportunity Management as the shared base. Every plugin is installed/upgraded to the latest available version, see installer/README.md. sn_cm_core and sn_outlook_addin added explicitly (IDs confirmed on opmsalescrmstage) ahead of the apps that depend on them, because SCRM- group roles seeded later belong to them. CSM group added 2026-11-02: sn_tech_support (Product Support for Technology), sn_ti_core (Technology Core), sn_acct_lc (Customer Success Management) - first batch of CSM plugins, more to follow. 10 more CSM plugins added 2026-11-03: com.snc.install_base, com.snc.csm_action_status, com.sn_csm_playbook, com.snc.uib.csm_agent_workspace, com.sn_cs_sm, com.sn_cs_sm_request, com.sn_csm_case_digest, com.sn_prd_pm, com.sn_st_mgmt (all platform plugins, type 'plugin', no store version - IDs not yet confirmed against a live instance), and sn_sprb_mgmt (store app). Field Service Management group added 2026-11-03 (7 apps): com.snc.time_recording_fsm and com.snc.automatic_assignment are platform plugins (type 'plugin', no store version). com.snc.work_management.demo and com.snc.work_management_geolocation.demo (FSM demo data plugins) are deliberately excluded - this demo pack must not load FSM demo data, so neither plugin is installed for any FSM-related entry in this manifest.",
   "plugins": [
     {
       "id": "sn_ind_tmt_orm",
@@ -423,6 +423,166 @@
       "name": "Microsoft Word Add-in for ServiceNow Contracts",
       "type": "store",
       "group": "Contract Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_tech_support",
+      "name": "Product Support for Technology",
+      "type": "store",
+      "group": "CSM",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_ti_core",
+      "name": "Technology Core",
+      "type": "store",
+      "group": "CSM",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_acct_lc",
+      "name": "Customer Success Management",
+      "type": "store",
+      "group": "CSM",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "com.snc.install_base",
+      "name": "Customer Service Install Base Management",
+      "type": "plugin",
+      "group": "CSM",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "com.snc.csm_action_status",
+      "name": "Customer Service Case Action Status",
+      "type": "plugin",
+      "group": "CSM",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "com.sn_csm_playbook",
+      "name": "Playbook for Customer Service Problem Management",
+      "type": "plugin",
+      "group": "CSM",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "com.snc.uib.csm_agent_workspace",
+      "name": "Customer Service Problem Management Agent Workspace",
+      "type": "plugin",
+      "group": "CSM",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "com.sn_cs_sm",
+      "name": "Customer Service with Service Management",
+      "type": "plugin",
+      "group": "CSM",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "com.sn_cs_sm_request",
+      "name": "Customer Service with Request Management",
+      "type": "plugin",
+      "group": "CSM",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "com.sn_csm_case_digest",
+      "name": "Customer Service Case Digest",
+      "type": "plugin",
+      "group": "CSM",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "com.sn_prd_pm",
+      "name": "Product Catalog Management Core",
+      "type": "plugin",
+      "group": "CSM",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "com.sn_st_mgmt",
+      "name": "Service Test Management",
+      "type": "plugin",
+      "group": "CSM",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_sprb_mgmt",
+      "name": "Customer Service Problem Management",
+      "type": "store",
+      "group": "CSM",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "com.snc.time_recording_fsm",
+      "name": "Time Recording for Field Service",
+      "type": "plugin",
+      "group": "Field Service Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "com.snc.automatic_assignment",
+      "name": "Automatic Assignment",
+      "type": "plugin",
+      "group": "Field Service Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_fsm_disp_wrkspc",
+      "name": "FSM Configurable Dispatcher Workspace",
+      "type": "store",
+      "group": "Field Service Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_fsm_mobile",
+      "name": "Field Service Mobile",
+      "type": "store",
+      "group": "Field Service Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_fsm_tp",
+      "name": "Field Service Territory Planning",
+      "type": "store",
+      "group": "Field Service Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_fsm_equip_schd",
+      "name": "Field Service Resource Scheduling",
+      "type": "store",
+      "group": "Field Service Management",
+      "required": true,
+      "heavy": false
+    },
+    {
+      "id": "sn_fsm_components",
+      "name": "Field Service Management Components",
+      "type": "store",
+      "group": "Field Service Management",
       "required": true,
       "heavy": false
     }

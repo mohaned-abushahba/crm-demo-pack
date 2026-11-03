@@ -1,7 +1,7 @@
 # Plugin installer (wizard step 1)
 
-Installs the 53 Sales CRM plugins/store apps, including the 4 Contract Management apps (Service CRM plugins are added to `manifest.json` under their own `group`) on a target instance **before** update sets and seed data.
-Source list: `Sales CRM Top Plugins list.docx` -> `manifest.json`. All 53 are required: a run reports
+Installs the 73 Sales CRM plugins/store apps, including the 4 Contract Management apps, 13 CSM apps, and 7 Field Service Management apps (Service CRM plugins are added to `manifest.json` under their own `group`) on a target instance **before** update sets and seed data. FSM demo data plugins (`com.snc.work_management.demo`, `com.snc.work_management_geolocation.demo`) are intentionally **excluded** — this pack does not load FSM demo data for any plugin.
+Source list: `Sales CRM Top Plugins list.docx` -> `manifest.json`. All 73 are required: a run reports
 `ready: true` only when every one is verified active, and seeding should be gated on that.
 
 ```

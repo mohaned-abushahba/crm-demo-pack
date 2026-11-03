@@ -3749,6 +3749,36 @@
     "workspace_user"
    ]
   },
+  "931644d4d773020058c92cf65e61034c": {
+   "user_name": "lisa.ray",
+   "roles": [
+    "agent_schedule_user",
+    "canvas_user",
+    "cmdb_read",
+    "document_management_user",
+    "dynamic_scheduling_user",
+    "fsm_skill_user",
+    "inventory_user",
+    "pa_viewer",
+    "service_fulfiller",
+    "skill_model_user",
+    "skill_user",
+    "sn_apptmnt_booking.appointment_booking_manager",
+    "sn_apptmnt_booking.appointment_booking_user",
+    "sn_fsm_tp.fsm_territory_read",
+    "sn_itam_recomm.recommendations_read",
+    "sn_shn.user",
+    "sn_tp.territory_read",
+    "snc_internal",
+    "snc_required_script_writer_permission",
+    "task_activity_reader",
+    "territory_user",
+    "timecard_user",
+    "wm_basic",
+    "wm_dispatcher",
+    "wm_read"
+   ]
+  },
   "e2898d082b07c7104deaf02ac891bfac": {
    "user_name": "lucas.bennett",
    "roles": [
@@ -6610,6 +6640,33 @@
     "template_read_global",
     "viz_creator",
     "workspace_user"
+   ]
+  },
+  "17f8d601d7b3020058c92cf65e610318": {
+   "user_name": "teddy.taylor",
+   "roles": [
+    "agent_schedule_user",
+    "canvas_user",
+    "cmdb_read",
+    "document_management_user",
+    "fsm_skill_user",
+    "inventory_user",
+    "pa_viewer",
+    "questionnaire_user",
+    "service_fulfiller",
+    "skill_user",
+    "sn_apptmnt_booking.appointment_booking_manager",
+    "sn_apptmnt_booking.appointment_booking_user",
+    "sn_fsm_tp.fsm_territory_read",
+    "sn_itam_recomm.recommendations_read",
+    "sn_shn.user",
+    "sn_tp.territory_read",
+    "task_activity_reader",
+    "territory_user",
+    "timecard_user",
+    "wm_agent",
+    "wm_basic",
+    "wm_read"
    ]
   },
   "dd6f3ecc3bd7cb10d5260fa693e45a17": {

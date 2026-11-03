@@ -590,6 +590,40 @@
       "vendors": "",
       "email": "",
       "include_members": "false"
+    },
+    {
+      "parent": "",
+      "manager": "",
+      "roles": "",
+      "active": "true",
+      "description": "Field Service California Dispatchers",
+      "source": "",
+      "type": "59e22fb137032000158bbfc8bcbe5d52",
+      "sys_id": "96fb652637232000158bbfc8bcbe5db4",
+      "cost_center": "",
+      "default_assignee": "",
+      "name": "California Dispatchers",
+      "exclude_manager": "false",
+      "vendors": "",
+      "email": "",
+      "include_members": "false"
+    },
+    {
+      "parent": "",
+      "manager": "4847c4d4d773020058c92cf65e61038e",
+      "roles": "",
+      "active": "true",
+      "description": "Technicians need to support Nortern California ",
+      "source": "",
+      "type": "87245e061b13200050fdfbcd2c0713cc",
+      "sys_id": "699708d4d773020058c92cf65e61037c",
+      "cost_center": "",
+      "default_assignee": "",
+      "name": "NorCal Technicians",
+      "exclude_manager": "false",
+      "vendors": "",
+      "email": "",
+      "include_members": "false"
     }
   ]
 }

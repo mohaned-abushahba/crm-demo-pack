@@ -1,5 +1,5 @@
 {
-  "_comment": "Master-data seed manifest. Tables are extracted from the source instance and loaded onto the target in this order. Scope = records created inside any 'windows' range (2026-08-22 is skipped: plugin activation day, run as admin), ANDed with the table's 'query'. 'key' is the business key used to detect a record that already exists on the target with a different sys_id; on_conflict 'fail' stops the load, 'adopt' keeps the target's record (used for join rows that platform automation may already have created). 'insert_as' gives temporary values used on insert; the real values are applied after every table is loaded (e.g. children can only be added while a price list is draft). Specs with 'source_instance' + 'scope_query' (940-971, transactional quotes/orders) are read from that instance by explicit record numbers instead of the created-on windows; platform-generated children (related parties, addresses, allocations, snapshots, approvals, order tasks) are not seeded because the platform recreates them.",
+  "_comment": "Master-data seed manifest. Tables are extracted from the source instance and loaded onto the target in this order. Scope = records created inside any 'windows' range (2026-08-22 is skipped: plugin activation day, run as admin), ANDed with the table's 'query'. 'key' is the business key used to detect a record that already exists on the target with a different sys_id; on_conflict 'fail' stops the load, 'adopt' keeps the target's record (used for join rows that platform automation may already have created). 'insert_as' gives temporary values used on insert; the real values are applied after every table is loaded (e.g. children can only be added while a price list is draft). Specs with 'source_instance' + 'scope_query' (940-971, transactional quotes/orders) are read from that instance by explicit record numbers instead of the created-on windows; platform-generated children (related parties, addresses, allocations, snapshots, approvals, order tasks) are not seeded because the platform recreates them. 2026-11-03: added lisa.ray (dispatcher, NorCal Technicians / wm_dispatcher) and teddy.taylor (field technician, wm_agent) from opmsalescrmstage, plus their two groups (California Dispatchers, NorCal Technicians), for the FSM clickpath off TPSC0001005: Ravi Kapoor creates a Work Order from the case, Lisa Ray dispatches the Work Order Task to Teddy Taylor, who resets a router. The Work Order/Work Order Task themselves are NOT seeded — they're created live during demo execution. These 4 tables (030/040/050/060) were hand-spliced rather than re-extracted: a plain re-run of extract.py against the open-ended 'windows' scope on opmsalescrm1 also swept in ~34 unrelated users added there since the last capture — reverted and added only the intended records instead. California Dispatchers' manager field pointed to a sys_id that 404s on opmsalescrmstage (orphaned reference) and was nulled out rather than carried over broken.",
   "source_instance": "opmsalescrm1",
   "exclude_fields": [
     "sys_created_by",
@@ -64,7 +64,7 @@
       "also_from": [
         {
           "source_instance": "opmsalescrmstage",
-          "scope_query": "sys_id=32714694935cd790e84732e548373c75"
+          "scope_query": "sys_idIN32714694935cd790e84732e548373c75,931644d4d773020058c92cf65e61034c,17f8d601d7b3020058c92cf65e610318"
         }
       ]
     },
@@ -77,7 +77,7 @@
       "also_from": [
         {
           "source_instance": "opmsalescrmstage",
-          "scope_query": "sys_idIN7f2c14dc931c9790e84732e548373ce5,838cd010935c9790e84732e548373cb3"
+          "scope_query": "sys_idIN7f2c14dc931c9790e84732e548373ce5,838cd010935c9790e84732e548373cb3,96fb652637232000158bbfc8bcbe5db4,699708d4d773020058c92cf65e61037c"
         }
       ]
     },
@@ -99,7 +99,7 @@
         },
         {
           "source_instance": "opmsalescrmstage",
-          "scope_query": "groupIN7f2c14dc931c9790e84732e548373ce5,838cd010935c9790e84732e548373cb3"
+          "scope_query": "groupIN7f2c14dc931c9790e84732e548373ce5,838cd010935c9790e84732e548373cb3,96fb652637232000158bbfc8bcbe5db4,699708d4d773020058c92cf65e61037c"
         }
       ]
     },
@@ -122,7 +122,7 @@
       "also_from": [
         {
           "source_instance": "opmsalescrmstage",
-          "scope_query": "user.user_nameINjohn.jason,ravi.kapoor^inherited=false"
+          "scope_query": "user.user_nameINjohn.jason,ravi.kapoor,lisa.ray,teddy.taylor^inherited=false"
         }
       ]
     },

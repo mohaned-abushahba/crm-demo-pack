@@ -37,6 +37,54 @@ File: seed/data/050-sys_user_grmember.json, seed/data/070-sys_group_has_role.jso
 
 ---
 
+## Seed: capture FSM dispatcher/technician personas for TPSC0001005 clickpath (2026-11-03)
+Domain: Service CRM
+What: Added `lisa.ray` (dispatcher, NorCal Technicians group, direct `wm_dispatcher` role) and
+`teddy.taylor` (field technician, NorCal Technicians group, direct `wm_agent` role) from
+opmsalescrmstage to `030-sys_user.json`, plus their two groups (`California Dispatchers`,
+`NorCal Technicians`) to `040-sys_user_group.json`, the group memberships to
+`050-sys_user_grmember.json`, and their direct (non-inherited) roles to `060-sys_user_has_role.json`.
+`expected-user-roles.json` and `seed/dist/golden-demo-seed.json` regenerated (66 users now have
+recorded roles, up from 64).
+Why: extends the existing demo clickpath off Case `TPSC0001005`: Ravi Kapoor creates a Work Order from
+the case, Lisa Ray dispatches the Work Order Task to Teddy Taylor, who resets a router in the data
+center to close it out. The Work Order and Work Order Task themselves are intentionally **not** seeded —
+they're created live during demo execution, same as the rest of this clickpath.
+Note: both personas and their groups pre-date today's FSM demo-data plugin activation on stage (groups
+created 2026-07-06) — they don't depend on `com.snc.work_management.demo` /
+`com.snc.work_management_geolocation.demo`, which stay excluded from `installer/manifest.json`.
+Gotcha: a plain re-run of `extract.py` against the open-ended `windows` scope on opmsalescrm1 also swept
+in ~34 unrelated users added there since the last capture (new hires on the source instance, nothing to
+do with this change) — reverted and hand-spliced only the 2 users / 2 groups / 2 memberships / 3 direct
+roles actually needed, to avoid conflating unrelated drift with this capture. Also found and fixed:
+`California Dispatchers`' `manager` field pointed to a sys_id that 404s on opmsalescrmstage (orphaned
+reference) — nulled out rather than carried over broken.
+File: seed/manifest.json, seed/data/030-sys_user.json, seed/data/040-sys_user_group.json, seed/data/050-sys_user_grmember.json, seed/data/060-sys_user_has_role.json, seed/data/expected-user-roles.json, seed/data/external-refs.json, seed/dist/golden-demo-seed.json, docs/HANDOFF.md
+
+---
+
+## Installer: 10 more CSM plugins added (2026-11-03)
+Domain: Sales CRM
+What: 10 more plugins added to the `CSM` group in `installer/manifest.json`: `com.snc.install_base` (Customer Service Install Base Management), `com.snc.csm_action_status` (Customer Service Case Action Status), `com.sn_csm_playbook` (Playbook for Customer Service Problem Management), `com.snc.uib.csm_agent_workspace` (Customer Service Problem Management Agent Workspace), `com.sn_cs_sm` (Customer Service with Service Management), `com.sn_cs_sm_request` (Customer Service with Request Management), `com.sn_csm_case_digest` (Customer Service Case Digest), `com.sn_prd_pm` (Product Catalog Management Core), `com.sn_st_mgmt` (Service Test Management) - all platform plugins (type `plugin`, no store version, IDs not yet confirmed against a live instance); and `sn_sprb_mgmt` (Customer Service Problem Management, store app). Manifest is now 73 plugins; test counts and installer README updated.
+File: installer/manifest.json, installer/README.md, installer/engine.test.js
+
+---
+
+## Installer: Field Service Management plugins added, demo data plugins excluded (2026-11-03)
+Domain: Sales CRM
+What: New `Field Service Management` group added to `installer/manifest.json` (7 apps): `com.snc.time_recording_fsm` (Time Recording for Field Service), `com.snc.automatic_assignment` (Automatic Assignment) - both platform plugins, no store version; `sn_fsm_disp_wrkspc` (FSM Configurable Dispatcher Workspace), `sn_fsm_mobile` (Field Service Mobile), `sn_fsm_tp` (Field Service Territory Planning), `sn_fsm_equip_schd` (Field Service Resource Scheduling), `sn_fsm_components`.
+Why: `com.snc.work_management.demo` and `com.snc.work_management_geolocation.demo` (FSM demo data plugins) are deliberately left out of the manifest - this demo pack must not load FSM demo data for any plugin. Manifest is now 63 plugins; test counts and installer README updated.
+File: installer/manifest.json, installer/README.md, installer/engine.test.js
+
+---
+
+## Installer: CSM plugins added (2026-11-02)
+Domain: Sales CRM
+What: New `CSM` group added to `installer/manifest.json` with the first batch of Customer Success/CSM plugins: `sn_tech_support` (Product Support for Technology), `sn_ti_core` (Technology Core), `sn_acct_lc` (Customer Success Management). Manifest is now 56 plugins; more CSM plugins to follow in later entries. Test counts and installer README updated.
+File: installer/manifest.json, installer/README.md, installer/engine.test.js
+
+---
+
 ## Installer: Contracts Core and Add-Ins for Microsoft 365 added explicitly (2026-10-26)
 Domain: Sales CRM
 What: `sn_cm_core` (Contracts Core, v3.6.1 on opmsalescrmstage) added before `sn_som_clm`, and `sn_outlook_addin` (ServiceNow Add-Ins for Microsoft 365, v7.5.1) before `sn_crm_outlook`. The SCRM- group roles in seed 070 belong to these scopes, so they are no longer left to arrive as dependencies. Manifest is now 53 plugins; test counts and installer README updated.

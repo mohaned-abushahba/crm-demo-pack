@@ -2126,6 +2126,39 @@
       "inherited": "false",
       "state": "active",
       "user": "32714694935cd790e84732e548373c75"
+    },
+    {
+      "role": "9fa32cba1b32200096f9fbcd2c0713ee",
+      "inh_map": "",
+      "included_in_role": "",
+      "included_in_role_instance": "",
+      "inh_count": "",
+      "sys_id": "8d9644d4d773020058c92cf65e6103ed",
+      "inherited": "false",
+      "state": "active",
+      "user": "931644d4d773020058c92cf65e61034c"
+    },
+    {
+      "role": "7fcaa702933002009c8579b4f47ffbde",
+      "inh_map": "",
+      "included_in_role": "",
+      "included_in_role_instance": "",
+      "inh_count": "",
+      "sys_id": "8c443c1693505750e84732e548373c07",
+      "inherited": "false",
+      "state": "active",
+      "user": "931644d4d773020058c92cf65e61034c"
+    },
+    {
+      "role": "26c324ba1b32200096f9fbcd2c0713c2",
+      "inh_map": "",
+      "included_in_role": "",
+      "included_in_role_instance": "",
+      "inh_count": "",
+      "sys_id": "fd35101673112300a26e12562ef6a7b2",
+      "inherited": "false",
+      "state": "active",
+      "user": "17f8d601d7b3020058c92cf65e610318"
     }
   ]
 }

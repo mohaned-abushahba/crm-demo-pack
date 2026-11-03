@@ -1,5 +1,15 @@
 [
   {
+    "table": "cmn_location",
+    "sys_id": "25ab8e460a0a0bb300857304ff811af5",
+    "label": "2200 Powell Street, San Francisco,CA",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sys_user.location"
+    ]
+  },
+  {
     "table": "fx_currency",
     "sys_id": "USD",
     "label": "United States Dollars",
@@ -59,7 +69,7 @@
     "sys_id": "9228dacdff803210583effffffffff2d",
     "label": "Account Executive",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sn_tp_crm_extn_territory_membership_responsibility.member_role"
     ]
@@ -79,7 +89,7 @@
     "sys_id": "b67c3118ff7b6210e4d5ffffffffff74",
     "label": "Account Executive",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sn_opty_mgmt_core_opportunity_team_member.opportunity_role"
     ]
@@ -99,7 +109,7 @@
     "sys_id": "db8cf118ff7b6210e4d5ffffffffffde",
     "label": "Solution Sales Executive",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sn_opty_mgmt_core_opportunity_team_member.opportunity_role"
     ]
@@ -129,7 +139,7 @@
     "sys_id": "cf533e9e43a7a610583ecd60afb8f251",
     "label": "Account Executive",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sn_opty_mgmt_core_opportunity_team_member.responsibility",
       "sn_tp_crm_extn_territory_membership_responsibility.responsibility"
@@ -140,7 +150,7 @@
     "sys_id": "f17332de43a7a610583ecd60afb8f234",
     "label": "Solution Sales Executive",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sn_opty_mgmt_core_opportunity_team_member.responsibility"
     ]
@@ -424,6 +434,16 @@
   },
   {
     "table": "sys_user",
+    "sys_id": "4847c4d4d773020058c92cf65e61038e",
+    "label": "Alisa Chinoy",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sys_user_group.manager"
+    ]
+  },
+  {
+    "table": "sys_user",
     "sys_id": "6816f79cc0a8016401c5a33be04be441",
     "label": "System Administrator",
     "exists_on_source": true,
@@ -457,21 +477,11 @@
     ]
   },
   {
-    "table": "sys_user_group",
-    "sys_id": "not-applicable",
-    "label": null,
-    "exists_on_source": false,
-    "created_in_scope": false,
-    "used_by": [
-      "sys_group_has_role.granted_by"
-    ]
-  },
-  {
     "table": "sys_user_role",
     "sys_id": "0c0e92f0c3750110d367f55a8840ddfc",
     "label": "sn_tp.territory_admin",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -481,7 +491,27 @@
     "sys_id": "0e474bb543000210144160b6ccb8f26b",
     "label": "sn_lead_mgmt_core.lead_writer",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
+    "used_by": [
+      "sys_group_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
+    "sys_id": "14cc7c98ffe53610269cffffffffff42",
+    "label": "sn_crm_outlook.crm_outlook_admin",
+    "exists_on_source": true,
+    "created_in_scope": true,
+    "used_by": [
+      "sys_group_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
+    "sys_id": "158b7c18ffe53610269cfffffffffff7",
+    "label": "sn_crm_outlook.crm_outlook_user",
+    "exists_on_source": true,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -491,7 +521,7 @@
     "sys_id": "1a1427405310011014caddeeff7b1232",
     "label": "sn_prd_pm.external_product_viewer",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_user_has_role.role"
     ]
@@ -501,7 +531,7 @@
     "sys_id": "1c7f4c3cff336210ea03ffffffffffe2",
     "label": "sn_sales_forecast.adjustment_viewer",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -521,7 +551,7 @@
     "sys_id": "20eaf53dffc0b2108a0dffffffffff9d",
     "label": "sn_sales_forecast.submission_viewer",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -534,6 +564,16 @@
     "created_in_scope": false,
     "used_by": [
       "sys_group_has_role.role",
+      "sys_user_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
+    "sys_id": "26c324ba1b32200096f9fbcd2c0713c2",
+    "label": "wm_agent",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
       "sys_user_has_role.role"
     ]
   },
@@ -552,7 +592,7 @@
     "sys_id": "2d2aa9d8ff7132105b0fffffffffff58",
     "label": "sn_adv_appr_mgmt.approval_request_viewer",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_user_has_role.role"
     ]
@@ -562,7 +602,7 @@
     "sys_id": "2d53ff04ff79b2104790ffffffffff04",
     "label": "sn_crm_touchpoint.admin",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -582,9 +622,19 @@
     "sys_id": "309f515f43453110a530cd60afb8f27b",
     "label": "sn_sales_common.sales_manager",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role",
+      "sys_user_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
+    "sys_id": "3120f52cc312310015519f2974d3ae83",
+    "label": "sn_customerservice_agent",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
       "sys_user_has_role.role"
     ]
   },
@@ -593,7 +643,7 @@
     "sys_id": "320ba38f77a0b110ce3ea465ae5a9953",
     "label": "sn_ind_tmt_orm.order_admin",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role",
       "sys_user_has_role.role"
@@ -604,7 +654,7 @@
     "sys_id": "3355a31eff4ce2101970ffffffffff04",
     "label": "sn_prm.external_partner_manager",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_user_has_role.role"
     ]
@@ -614,7 +664,7 @@
     "sys_id": "361f31e33b24cb10d385fadc73e45a40",
     "label": "sn_qut_sum_skill.quote_ai",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -637,6 +687,16 @@
     "created_in_scope": false,
     "used_by": [
       "sys_user_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
+    "sys_id": "3aa27a775312211026b6ddeeff7b12f4",
+    "label": "sn_cm_core.contract_fulfiller",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sys_group_has_role.role"
     ]
   },
   {
@@ -685,7 +745,7 @@
     "sys_id": "45a4f344ffcde210e4d5ffffffffffa9",
     "label": "sn_bo_core.business_process_record_viewer",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_user_has_role.role"
     ]
@@ -695,7 +755,7 @@
     "sys_id": "4d5f5d1f43453110a530cd60afb8f21a",
     "label": "sn_sales_common.sales_agent",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role",
       "sys_user_has_role.role"
@@ -706,7 +766,7 @@
     "sys_id": "4fe9634f77a0b110ce3ea465ae5a9904",
     "label": "sn_ind_tmt_orm.order_agent",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role",
       "sys_user_has_role.role"
@@ -727,7 +787,7 @@
     "sys_id": "54840553ff8bee10583effffffffff2b",
     "label": "sn_sales_common.sales_restricted_agent",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -737,7 +797,7 @@
     "sys_id": "59078a2753710110286eddeeff7b125b",
     "label": "sn_csm_pricing.pricelist_administrator",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -747,7 +807,7 @@
     "sys_id": "6348a0bd43d1ed105e0dbcba6ab8f201",
     "label": "sn_pss_core.service_contract_manager",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_user_has_role.role"
     ]
@@ -765,10 +825,20 @@
   },
   {
     "table": "sys_user_role",
+    "sys_id": "6b6412a1fff1230048e505f6793bf13a",
+    "label": "sn_outlook_addin.outlook_addin_setup",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sys_group_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
     "sys_id": "6ef85b1c7b521a1032b7e865b38cb6de",
     "label": "sn_sales_forecast.forecast_admin",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -778,9 +848,19 @@
     "sys_id": "6fa3347fff1fa2105061ffffffffff66",
     "label": "sn_sales_agmt_core.sales_agreement_admin",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
+    "sys_id": "7506fe2deb2002003e97afcef106fe87",
+    "label": "sn_openframe_user",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sys_user_has_role.role"
     ]
   },
   {
@@ -788,7 +868,7 @@
     "sys_id": "75d5be7c53a12210163d78d130e5e611",
     "label": "sn_sales_territory.sales_territory_admin",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -806,6 +886,16 @@
   },
   {
     "table": "sys_user_role",
+    "sys_id": "85eb219bf820ca10f8770eee2240b0bb",
+    "label": "sn_cm_core.contract_report_publisher",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sys_group_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
     "sys_id": "940ba702933002009c8579b4f47ffbe2",
     "label": "snc_external",
     "exists_on_source": true,
@@ -816,10 +906,20 @@
   },
   {
     "table": "sys_user_role",
+    "sys_id": "9d11c93737a33110eb21d71964924b93",
+    "label": "sn_tech_support.agent",
+    "exists_on_source": true,
+    "created_in_scope": true,
+    "used_by": [
+      "sys_user_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
     "sys_id": "9d79e252ff9a8610b85dffffffffff45",
     "label": "sn_lead_mgmt_core.lead_agent",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -828,6 +928,16 @@
     "table": "sys_user_role",
     "sys_id": "9e39d637ff932210f51fffffffffff1e",
     "label": "sn_prm_sales.partner_b2c_sales_rep",
+    "exists_on_source": true,
+    "created_in_scope": true,
+    "used_by": [
+      "sys_user_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
+    "sys_id": "9fa32cba1b32200096f9fbcd2c0713ee",
+    "label": "wm_dispatcher",
     "exists_on_source": true,
     "created_in_scope": false,
     "used_by": [
@@ -839,7 +949,7 @@
     "sys_id": "a08c6110ffb132105b0fffffffffff0e",
     "label": "sn_adv_appr_mgmt.approval_request_writer",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role",
       "sys_user_has_role.role"
@@ -860,7 +970,7 @@
     "sys_id": "a464e79aff4ce2101970ffffffffff6e",
     "label": "sn_prm.enterprise_partner_admin",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -870,7 +980,7 @@
     "sys_id": "a5c37b2eff8026101970ffffffffff81",
     "label": "sn_prm.enterprise_partner_rel_manager",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role",
       "sys_user_has_role.role"
@@ -891,7 +1001,7 @@
     "sys_id": "a8707bd47fd212101441353efb86650c",
     "label": "sn_sales_forecast.forecast_viewer",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -901,7 +1011,7 @@
     "sys_id": "aa61ad5affeb22108002fffffffffff9",
     "label": "sn_quote_mgmt_core.quote_admin",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -922,7 +1032,7 @@
     "sys_id": "afb6837bffaa3a10f51fffffffffffa0",
     "label": "sn_prm_opptym.oppty_partner_ui",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_user_has_role.role"
     ]
@@ -931,6 +1041,26 @@
     "table": "sys_user_role",
     "sys_id": "afbf155f43453110a530cd60afb8f264",
     "label": "sn_sales_common.sales_ops_specialist",
+    "exists_on_source": true,
+    "created_in_scope": true,
+    "used_by": [
+      "sys_group_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
+    "sys_id": "b057173e3775c2109b88d94c24924baa",
+    "label": "sn_cm_core.contract_reviewer",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sys_group_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
+    "sys_id": "b05cd92943122110596c2f5ab7b8f248",
+    "label": "sn_cm_core.contract_admin",
     "exists_on_source": true,
     "created_in_scope": false,
     "used_by": [
@@ -942,9 +1072,19 @@
     "sys_id": "b5cc70adffc43210794effffffffffb3",
     "label": "sn_lead_mgmt_core.lead_admin",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
+    "sys_id": "b610786cf45c4210f877ab914eb49dc6",
+    "label": "sn_cwf_wrkspc.frontline_agent",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sys_user_has_role.role"
     ]
   },
   {
@@ -952,7 +1092,7 @@
     "sys_id": "b94bb1bdffc0b2108a0dffffffffff11",
     "label": "sn_sales_forecast.submission_writer",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -970,8 +1110,28 @@
   },
   {
     "table": "sys_user_role",
+    "sys_id": "b9dbd266eb8d311085f82fd05d522816",
+    "label": "sn_cm_core.contract_user",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sys_group_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
     "sys_id": "bc9f6c27c30310105252716b7d40dd89",
     "label": "sn_prd_pm.product_catalog_admin",
+    "exists_on_source": true,
+    "created_in_scope": true,
+    "used_by": [
+      "sys_group_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
+    "sys_id": "be56d939e0d04a10f877cb36a2d44bb4",
+    "label": "sn_cm_core.contract_report_viewer",
     "exists_on_source": true,
     "created_in_scope": false,
     "used_by": [
@@ -983,7 +1143,7 @@
     "sys_id": "c2a086f15b5310102dff5e92dc81c79d",
     "label": "sn_ind_tmt_orm.order_fulfilment_manager",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_user_has_role.role"
     ]
@@ -993,7 +1153,7 @@
     "sys_id": "c579da37ff932210f51fffffffffff42",
     "label": "sn_prm_sales.partner_b2b_sales_rep",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_user_has_role.role"
     ]
@@ -1003,7 +1163,7 @@
     "sys_id": "cb63034dffab22101970ffffffffffc4",
     "label": "sn_prm_orm.order_partner_ui",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_user_has_role.role"
     ]
@@ -1013,7 +1173,7 @@
     "sys_id": "ce502e77ff213a10f51fffffffffff44",
     "label": "sn_prm_qm.quote_partner_ui",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_user_has_role.role"
     ]
@@ -1033,7 +1193,7 @@
     "sys_id": "d182d439ff3122101970ffffffffffed",
     "label": "sn_prm.partner_ui",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_user_has_role.role"
     ]
@@ -1043,7 +1203,7 @@
     "sys_id": "dbc6e0ac4323121020955457acb8f2e9",
     "label": "sn_quota_core.quota_admin",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -1070,10 +1230,20 @@
   },
   {
     "table": "sys_user_role",
+    "sys_id": "e07c5d2943122110596c2f5ab7b8f2bb",
+    "label": "sn_cm_core.contract_config",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "sys_group_has_role.role"
+    ]
+  },
+  {
+    "table": "sys_user_role",
     "sys_id": "ed60b9d4ffb132105b0fffffffffff1c",
     "label": "sn_adv_appr_mgmt.approval_request_approver",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role",
       "sys_user_has_role.role"
@@ -1084,7 +1254,7 @@
     "sys_id": "ee8040deff05e210aa95ffffffffffc0",
     "label": "sn_l2c_cockpit.sales_process_manager",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
@@ -1104,7 +1274,7 @@
     "sys_id": "f66afe3b3f032210caf1293d001f8b5e",
     "label": "sn_sales_forecast.adjustment_writer",
     "exists_on_source": true,
-    "created_in_scope": false,
+    "created_in_scope": true,
     "used_by": [
       "sys_group_has_role.role"
     ]
