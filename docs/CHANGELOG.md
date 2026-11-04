@@ -37,6 +37,32 @@ File: seed/data/050-sys_user_grmember.json, seed/data/070-sys_group_has_role.jso
 
 ---
 
+## Seed: capture Teddy Taylor's agent work schedule from 6 FSM XML exports (2026-11-03)
+Domain: Service CRM
+What: Added `080-agent_work_schedule.json` to the seed pack: one row linking `teddy.taylor` to the
+OOTB `cmn_schedule` "8-5 weekdays" (from_date 2026-11-03, to_date 2026-12-31, as captured). Sourced
+from opmsalescrmstage via `seed/manifest.json`'s new `080-agent_work_schedule` table spec.
+Why: a colleague handed over 6 raw-table XML exports from opmsalescrmstage
+(`DH_KD-AgentWorkSchedule.xml`, `DH_KD-BusinessRule.xml`, `DH_KD-Calendars.xml`,
+`DH_KD-FieldServiceConfig.xml`, `DH_KD-Locations.xml`, `DH_KD-Users.xml`) meant for the FSM
+clickpath. None were actual Update Set XML (no `sys_update_xml` children) — all 6 were direct table
+exports, so they're handled as seed data rather than update-sets. Triage of the other 5:
+- `DH_KD-Locations.xml` (4 `cmn_location` rows) and `DH_KD-Users.xml` (lisa.ray, teddy.taylor) were
+  already in the seed pack — no action needed.
+- `DH_KD-FieldServiceConfig.xml` is the OOTB `sm_config` singleton (created 2014), only
+  `sys_updated_on`-touched by today's FSM plugin activation, not actually customized — not seeded.
+- `DH_KD-Calendars.xml` includes an unused "Teddy Taylor Personal Schedule" `cmn_schedule` record
+  that nothing on the instance references (his real schedule, on both `sys_user.schedule` and the
+  `agent_work_schedule` row, is OOTB "8-5 weekdays") — left out as dead data.
+- `DH_KD-BusinessRule.xml` turned out to be only the `sys_update_set` header record ("Demo Harness
+  Update Set - FSM KD", state "in progress") with 0 `sys_update_xml` children. Queried
+  opmsalescrmstage directly: no custom business rule matching its description ("FSM
+  case-to-work-order location business rule ... Teddy Taylor assignment assistance") exists on the
+  instance — it was never actually created. Tracked as an open item in `docs/OPEN-ITEMS.md`.
+File: seed/manifest.json, seed/data/080-agent_work_schedule.json, seed/data/external-refs.json, seed/dist/golden-demo-seed.json, docs/OPEN-ITEMS.md
+
+---
+
 ## Seed: capture FSM dispatcher/technician personas for TPSC0001005 clickpath (2026-11-03)
 Domain: Service CRM
 What: Added `lisa.ray` (dispatcher, NorCal Technicians group, direct `wm_dispatcher` role) and

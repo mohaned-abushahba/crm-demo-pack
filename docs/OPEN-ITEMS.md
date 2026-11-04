@@ -2,6 +2,21 @@
 
 Follow-ups that aren't blocking. Remove an item once it's resolved, and log the fix in CHANGELOG.md.
 
+## FSM case-to-work-order location business rule not yet written (logged 2026-11-03)
+
+A colleague set up a `sys_update_set` on opmsalescrmstage named "Demo Harness Update Set - FSM KD"
+(sys_id `a321c09ecf5897d02396b0934c851c40`, still `state: in progress`) with the description "FSM
+case-to-work-order location business rule and related scheduling fixes (Teddy Taylor assignment
+assistance)" — presumably meant to auto-populate a Work Order's location from the originating Case
+(TPSC0001005's account/contact address) as part of the Ravi Kapoor → Lisa Ray → Teddy Taylor
+clickpath. Checked `sys_update_xml` for that update set directly: 0 records. Checked `sys_script` for
+anything matching the description: nothing — only OOTB rules from the day's FSM plugin activation. The
+rule was never actually created on the instance.
+
+**To do:** write the actual Business Rule on `wm_order` (or wherever it belongs) that copies the
+location from the case onto the Work Order it spawns, commit it into that update set (or a fresh one),
+then capture it as an Update Set XML under `update-sets/` per the repo's normal config convention.
+
 ## Otto header chat says "something went wrong" on clones — KNOWN FIX, not currently occurring (logged 2026-11-03)
 
 Seen previously on an instance cloned from the golden instance; **not occurring on opmsalescrmstage**

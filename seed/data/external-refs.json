@@ -10,6 +10,16 @@
     ]
   },
   {
+    "table": "cmn_schedule",
+    "sys_id": "08fcd0830a0a0b2600079f56b1adb9ae",
+    "label": "8-5 weekdays",
+    "exists_on_source": true,
+    "created_in_scope": false,
+    "used_by": [
+      "agent_work_schedule.work_schedule"
+    ]
+  },
+  {
     "table": "fx_currency",
     "sys_id": "USD",
     "label": "United States Dollars",

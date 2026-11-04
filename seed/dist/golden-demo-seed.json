@@ -1,11 +1,12 @@
 {
 "format": "golden-demo-seed/1",
 "source": "opmsalescrm1",
-"generated_on": "2026-11-03 23:48:48",
-"record_count": 3203,
-"table_count": 70,
+"generated_on": "2026-11-04 00:13:20",
+"record_count": 3204,
+"table_count": 71,
 "prerequisites": [
 {"table": "cmn_location", "sys_id": "25ab8e460a0a0bb300857304ff811af5", "label": "2200 Powell Street, San Francisco,CA"},
+{"table": "cmn_schedule", "sys_id": "08fcd0830a0a0b2600079f56b1adb9ae", "label": "8-5 weekdays"},
 {"table": "fx_currency", "sys_id": "USD", "label": "United States Dollars"},
 {"table": "sn_customerservice_related_party_configuration", "sys_id": "2071c40fff1eb2100ddcffffffffffd3", "label": "Economic buyer"},
 {"table": "sn_customerservice_related_party_configuration", "sys_id": "31d1044fff1eb2100ddcffffffffff16", "label": "Influencer"},
@@ -741,6 +742,9 @@
 {"sys_id":"a92b4aa79388df50e84732e548373c43","role":"b9dbd266eb8d311085f82fd05d522816","inherits":"true","group":"f4a47a563bf2c310d5260fa693e45ab3"},
 {"sys_id":"ad2b4aa79388df50e84732e548373c0d","role":"be56d939e0d04a10f877cb36a2d44bb4","inherits":"true","group":"f4a47a563bf2c310d5260fa693e45ab3"},
 {"sys_id":"f96c9e563b045350916b37f726e45ac9","role":"6b6412a1fff1230048e505f6793bf13a","inherits":"true","group":"f8a47a563bf2c310d5260fa693e45aad"}
+]},
+{"table": "agent_work_schedule", "key": ["user", "work_schedule"], "on_conflict": "fail", "insert_as": {}, "references": {"work_schedule": "cmn_schedule", "user": "sys_user"}, "count": 1, "records": [
+{"sys_id":"6c4f33c6cf5897d02396b0934c851c5b","work_schedule":"08fcd0830a0a0b2600079f56b1adb9ae","from_date":"2026-11-03","to_date":"2026-12-31","type":"0","user":"17f8d601d7b3020058c92cf65e610318"}
 ]},
 {"table": "customer_account", "key": ["name"], "on_conflict": "fail", "insert_as": {}, "references": {"active_escalation": "sn_customerservice_escalation", "sales_owner": "sys_user", "primary_contact": "customer_contact", "account_parent": "customer_account", "primary_sales_territory": "sn_tp_territory", "theme": "sys_ui_theme", "contact": "sys_user", "parent": "core_company"}, "count": 27, "records": [
 {"banner_image_light":"","country":"USA","parent":"","notes":"","minority_ownership_status":"","stock_symbol":"","discount":"","active_escalation":"","apple_icon":"","number":"ACCT0010021","fiscal_year":"","contact":"","rural_based_status":"","u_marquee_account":"true","account_health":"","stock_price":"","banner_image":"","state":"CA","longitude":"","zip":"94404","profits":"0","success_entitlement":"","active":"true","assumed_name":"","duns_number":"","tax_id":"","incorporated_on":"","u_delinquent":"false","fax_phone":"","phone":"(800) 900-8090","u_market_segment":"enterprise","banner_text":"","name":"Progantic Inc.","account_code":"!!!@","coordinates_retrieved_on":"","primary":"false","identification_number":"","city":"San Mateo","latitude":"","industry":"technology_services","sys_class_name":"customer_account","manufacturer":"false","sn_tmt_core_external_id":"","account_parent":"","sys_id":"04b236292bc78b104deaf02ac891bf16","tribal_affiliation_status":"","business_structure":"","market_cap":"0","channel_partner":"false","num_employees":"","rank_tier":"","street":"123 Progantic Lane","vendor":"false","lat_long_error":"","primary_sales_territory":"290f42173bf24710d5260fa693e45a00","theme":"","trademark":"","email":"","vendor_type":"","revenue_per_year":"0","sales_owner":"9b84f6563bf2c310d5260fa693e45a74","website":"www.progantic.com","publicly_traded":"false","women_ownership_status":"","partner":"false","registration_code":"","vendor_manager":"","perceived_health":"","account_path":"!!!@","legal_entity_name":"","primary_contact":"","customer":"false"},

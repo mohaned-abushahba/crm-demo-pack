@@ -230,7 +230,11 @@ Verified 2026-10-22: AE -> Sales Agent Golden Landing Page, SDR -> SDR page, Man
   itself leads into them. Note: `com.snc.work_management.demo` / `com.snc.work_management_geolocation.demo`
   (the FSM demo-data plugins) remain deliberately excluded from `installer/manifest.json` — see the Field
   Service Management installer entries below. Teddy Taylor's dispatcher/tech group setup does not depend on
-  either excluded plugin.
+  either excluded plugin. Also captured `080-agent_work_schedule.json`: Teddy Taylor's work schedule
+  assignment to the OOTB "8-5 weekdays" `cmn_schedule`. Triaged from a set of 6 raw-table XML exports handed
+  over for this clickpath (see CHANGELOG for the full breakdown of what was/wasn't needed from each). The
+  business rule one of those exports described (case → Work Order location copy) was never actually created
+  on the source instance — see `docs/OPEN-ITEMS.md`.
 
 ## 9. How to fork and adapt it
 

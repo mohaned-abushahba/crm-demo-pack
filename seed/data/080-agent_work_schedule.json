@@ -1,0 +1,24 @@
+{
+  "table": "agent_work_schedule",
+  "key": [
+    "user",
+    "work_schedule"
+  ],
+  "on_conflict": "fail",
+  "source": "opmsalescrmstage",
+  "query": "sys_id=6c4f33c6cf5897d02396b0934c851c5b",
+  "references": {
+    "work_schedule": "cmn_schedule",
+    "user": "sys_user"
+  },
+  "records": [
+    {
+      "sys_id": "6c4f33c6cf5897d02396b0934c851c5b",
+      "work_schedule": "08fcd0830a0a0b2600079f56b1adb9ae",
+      "from_date": "2026-11-03",
+      "to_date": "2026-12-31",
+      "type": "0",
+      "user": "17f8d601d7b3020058c92cf65e610318"
+    }
+  ]
+}
