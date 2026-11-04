@@ -749,3 +749,25 @@ Caveats:
 - The case's `service` field ("Something is Broken") and `sold_product`'s `product_specification`/`prd_offering` resolve to records already in the fixtures or to OOB taxonomy; `refcheck.py --instance opmsalescrmstage` shows zero dangling references across all 70 fixture files after this change.
 - `expected-user-roles.json`'s top-level `source` stays `opmsalescrm1` on purpose — only the two touched users' role lists were refreshed from stage; a full regeneration against stage would have changed roles for all 62 other seeded users (plugin/role drift unrelated to this change) and was reverted.
 - Not loaded onto a blank instance yet; bundle rebuilt (70 tables, 3,194 records).
+
+## seed Marcus Patel + SCRM-Partner Ops sn_sales_common.sales_agent grant (2026-11-04)
+Instance: opmsalescrm1 (source)
+What:
+- Granted `sn_sales_common.sales_agent` directly to `marcus.patel` (`3284fad22b7683104deaf02ac891bff6`,
+  `sys_user_has_role` `3dcbbde6c31817940918dac4e4013145`) and to group `SCRM-Partner Ops`
+  (`15a4ba563bf2c310d5260fa693e45a16`, `sys_group_has_role` `6acb712ac31817940918dac4e4013171`,
+  inherits=true) on opmsalescrm1, then captured both into
+  `seed/data/060-sys_user_has_role.json` / `070-sys_group_has_role.json`.
+- `expected-user-roles.json`: added `sn_sales_common.sales_agent` to `marcus.patel`'s role list only
+  (hand-inserted, not a full regeneration — same scoped-touch convention as the 2026-10-29 entry).
+Why: requested so Marcus Patel and the rest of SCRM-Partner Ops hold the sales agent role.
+Caveats:
+- The role sys_id (`4d5f5d1f43453110a530cd60afb8f21a`) was already present in `external-refs.json`
+  with `used_by` listing both `sys_group_has_role.role` and `sys_user_has_role.role`, so no change
+  needed there.
+- Running `seed/tools/refcheck.py` as a side effect rewrites `created_in_scope` flags across
+  `external-refs.json` (flips ~50 unrelated `true`→`false` and corrupted one role's label to
+  `null`) — discarded, not a real change; pre-existing 1 dangling `sys_user_role` ref
+  (`9d11c93737a33110eb21d71964924b93`) is unrelated to this change, confirmed present before and
+  after.
+- Not loaded onto a blank instance yet.

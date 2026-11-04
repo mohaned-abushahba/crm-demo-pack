@@ -2159,6 +2159,17 @@
       "inherited": "false",
       "state": "active",
       "user": "17f8d601d7b3020058c92cf65e610318"
+    },
+    {
+      "role": "4d5f5d1f43453110a530cd60afb8f21a",
+      "inh_map": "",
+      "included_in_role": "",
+      "included_in_role_instance": "",
+      "inh_count": "",
+      "sys_id": "3dcbbde6c31817940918dac4e4013145",
+      "inherited": "false",
+      "state": "active",
+      "user": "3284fad22b7683104deaf02ac891bff6"
     }
   ]
 }

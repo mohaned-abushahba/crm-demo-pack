@@ -3949,6 +3949,7 @@
     "sn_query_gen.user",
     "sn_req_criteria.admin",
     "sn_req_criteria.viewer",
+    "sn_sales_common.sales_agent",
     "sn_seg.segment_mgmt_admin",
     "sn_seg.segment_mgmt_data_viewer",
     "sn_seg.segment_mgmt_writer",
