@@ -37,6 +37,16 @@ File: seed/data/050-sys_user_grmember.json, seed/data/070-sys_group_has_role.jso
 
 ---
 
+## UPDATE-031 amended: admin landing page re-overridden by FSM Dispatcher screen (2026-11-04)
+Instance: opmsalescrmstage
+What: `sys_ux_screen` "Sales Manager Landing Page" (`efd686ac...bfc7`) order `10` -> `-5`.
+Why: installing the Field Service Management plugins brought in the OOB "Dispatcher Landing Page" (`9800780e...a7c6`, order `1`), which now outranked the Manager screen's order of 10 (UPDATE-031's original fix for the AE/Manager tie) and admin's landing page was overridden to the FSM dispatcher screen. Same root cause as UPDATE-031 — `sys_ux_screen.order` ascending decides the winner among role-matching screens — but a new OOB competitor at a lower order, not a tie between golden-demo screens this time. Admin matches the Dispatcher screen's applicability through its broad role set; a `wm_dispatcher`/`wm_agent`-holding persona would face the same issue.
+Not changed: the OOB "Dispatcher Landing Page" record itself — per repo convention, OOB screens are left alone and the custom/golden screen's order is adjusted instead. `com.snc.par.dashboards.ui.preferences` (the "recent dashboard" list) already had the Sales Manager dashboard first, so that part was not the cause here.
+Caveats: applied directly via the Table API with no current Update Set attached to the session, so no new `sys_update_xml` was generated; serialised by hand into the existing `UPDATE-031-landing-page-screen-order.xml` payload instead (same pattern as UPDATE-018/019/020/022). Not yet re-verified by impersonation — the impersonation call needed for that was blocked by this session's permission policy; re-check by logging in as admin and confirming the landing page is Sales Manager Golden Landing Page, not Dispatcher.
+File: update-sets/UPDATE-031-landing-page-screen-order.xml
+
+---
+
 ## UPDATE-032-fsm-case-work-order-location-rule (2026-11-04)
 Instance: opmsalescrmstage
 What: Captures the Business Rule "Set location from case account (city mat[ch])" on `wm_order` (before insert, condition `initiated_fromISNOTEMPTY^locationISEMPTY`): finds the originating case's account, then that account's `cmn_location` row whose city matches the account's city (preferring one named "HQ"), and sets it as the Work Order's location.

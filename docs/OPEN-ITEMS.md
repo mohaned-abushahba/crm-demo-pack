@@ -2,6 +2,19 @@
 
 Follow-ups that aren't blocking. Remove an item once it's resolved, and log the fix in CHANGELOG.md.
 
+## Admin landing page fix (UPDATE-031 order change) not re-verified by impersonation (logged 2026-11-04)
+
+Moved "Sales Manager Landing Page" from order `10` to `-5` on opmsalescrmstage to beat the OOB "Dispatcher
+Landing Page" (order `1`) that started winning once the FSM plugins were installed — see CHANGELOG. The
+previous fix of this kind (UPDATE-031, 2026-10-22) was verified by impersonating admin and the AE/SDR/Manager
+personas and checking which screen loaded. That verification step was blocked this time: impersonation via
+the REST endpoint was refused by this session's permission policy (identity switch).
+
+**To do:** log in as admin (or impersonate) on opmsalescrmstage and confirm the landing page is the Sales
+Manager Golden Landing Page, not the FSM Dispatcher Landing Page. If it's still wrong, `-5` may not be low
+enough, or another FSM screen besides the Dispatcher one is also now in the running — list `sys_ux_screen`
+ordered ascending and check which ones admin's roles make them eligible for.
+
 ## Otto header chat says "something went wrong" on clones — KNOWN FIX, not currently occurring (logged 2026-11-03)
 
 Seen previously on an instance cloned from the golden instance; **not occurring on opmsalescrmstage**

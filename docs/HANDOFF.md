@@ -160,7 +160,11 @@ and writes `drift-reports/`. Docs there: `CATALOG.md`, `FLOWS.md`, `TESTING-STRA
 - UPDATE-017 has a `snc_external` role grants workaround for an existing instance defect. Kept on purpose.
 - Landing page chosen by `sys_ux_screen.order` ascending among role-matching screens, **not** by the order on
   `sys_ux_applicability_m2m_screen`. Managers hold `sales_agent` and AEs hold `lead_agent`, so ties are real:
-  Manager 10 < AE 20 < SDR 30 (UPDATE-031). Don't put SDR ahead of AE.
+  Manager -5 < AE 20 < SDR 30 (UPDATE-031). Don't put SDR ahead of AE. Manager moved from 10 to -5 on
+  2026-11-04: the FSM plugins brought in the OOB "Dispatcher Landing Page" (order 1), which outranked 10
+  and sent admin to the dispatcher screen instead of Sales Manager. Watch for more OOB landing screens at
+  low orders as more plugins are added; the fix is always to push the custom golden-demo screen's order
+  below the new OOB competitor, never to edit the OOB screen itself.
 - `sn_prd_pm_*` writes did not engage update-set tracking through any path, so product/catalog data is seeded.
 - The catalog/category tables have a broken auto-code Business Rule that discards all fields when `name` isn't
   set; the API still reports success. **Always set `code` explicitly and re-read to verify.**
