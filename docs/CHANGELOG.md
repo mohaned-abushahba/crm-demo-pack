@@ -37,6 +37,15 @@ File: seed/data/050-sys_user_grmember.json, seed/data/070-sys_group_has_role.jso
 
 ---
 
+## UPDATE-032-fsm-case-work-order-location-rule (2026-11-04)
+Instance: opmsalescrmstage
+What: Captures the Business Rule "Set location from case account (city mat[ch])" on `wm_order` (before insert, condition `initiated_fromISNOTEMPTY^locationISEMPTY`): finds the originating case's account, then that account's `cmn_location` row whose city matches the account's city (preferring one named "HQ"), and sets it as the Work Order's location.
+Why: Resolves the open item logged 2026-11-03 — the rule did not exist on the instance at that time (its Update Set, "Demo Harness Update Set - FSM KD", was empty). A colleague created the rule on 2026-11-04; its `sys_update_xml` record had landed in the unrelated "UPDATE-031-landing-page-screen-order" update set (likely just the current set in their session), so it was moved into "Demo Harness Update Set - FSM KD" before exporting. Supports the TPSC0001005 clickpath: Ravi Kapoor creates the Work Order from the case, and this rule auto-fills its location before Lisa Ray dispatches it to Teddy Taylor.
+Not done: the source update set's `state` on opmsalescrmstage is still "in progress", not "complete" — the write to flip it was blocked by this session's permission policy (shared-resource modification). Does not block using the exported XML.
+File: update-sets/UPDATE-032-fsm-case-work-order-location-rule.xml
+
+---
+
 ## Seed: capture Teddy Taylor's agent work schedule from 6 FSM XML exports (2026-11-03)
 Domain: Service CRM
 What: Added `080-agent_work_schedule.json` to the seed pack: one row linking `teddy.taylor` to the

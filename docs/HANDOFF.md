@@ -60,7 +60,7 @@ files and `seed/secrets/passwords.json` are git-ignored. Never commit them.
 
 ```
 installer/     manifest.json (plugins, install order), engine.js (retry/poll), server.js (API :4010), tests
-update-sets/   UPDATE-003 ... UPDATE-031 XML, applied in numeric order; README has the commit order
+update-sets/   UPDATE-003 ... UPDATE-032 XML, applied in numeric order; README has the commit order
 seed/
   manifest.json  which tables, load order, business keys, scope windows, per-table insert_as/on_conflict
   overrides.json value overrides by sys_id + forbidden_patterns (e.g. a real company name must never ship)
@@ -95,7 +95,7 @@ backups/       git-ignored stage cleanup scratch
 - Image-field payloads can embed a **stale attachment**; always check the embedded attachment sys_id.
 
 Commit order is in `update-sets/README.md`:
-`004 -> 005 -> 013 -> 006 -> 007 -> 008 -> 009 -> 010 -> 020 -> 011 -> 012 -> 014 -> 015 -> 016 -> 017 -> 018 -> 019 -> 022 -> 023 -> 024 -> 028 -> 029 -> 030` (plus 003 first, and 031 for landing pages; 021 is intentionally unused).
+`004 -> 005 -> 013 -> 006 -> 007 -> 008 -> 009 -> 010 -> 020 -> 011 -> 012 -> 014 -> 015 -> 016 -> 017 -> 018 -> 019 -> 022 -> 023 -> 024 -> 028 -> 029 -> 030 -> 032` (plus 003 first, and 031 for landing pages; 021 is intentionally unused). 032 (FSM case-to-work-order location rule) has no dependencies.
 
 ### 5.2 Settings that are not Update Set material -> `scripts/post-deploy/`
 Settings whose sys_id is created per instance (e.g. `glide.ui.session_timeout`), private properties, the
@@ -233,8 +233,9 @@ Verified 2026-10-22: AE -> Sales Agent Golden Landing Page, SDR -> SDR page, Man
   either excluded plugin. Also captured `080-agent_work_schedule.json`: Teddy Taylor's work schedule
   assignment to the OOTB "8-5 weekdays" `cmn_schedule`. Triaged from a set of 6 raw-table XML exports handed
   over for this clickpath (see CHANGELOG for the full breakdown of what was/wasn't needed from each). The
-  business rule one of those exports described (case → Work Order location copy) was never actually created
-  on the source instance — see `docs/OPEN-ITEMS.md`.
+  business rule one of those exports described (case → Work Order location copy) had not yet been created
+  on the source instance as of 2026-11-03; it was created 2026-11-04 and is now captured as
+  `update-sets/UPDATE-032-fsm-case-work-order-location-rule.xml` — see `docs/CHANGELOG.md`.
 
 ## 9. How to fork and adapt it
 
