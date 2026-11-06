@@ -1,0 +1,3272 @@
+{
+  "table": "sn_quota_core_sales_quota",
+  "key": [],
+  "on_conflict": "fail",
+  "source": "opmsalescrmstage",
+  "query": "",
+  "references": {
+    "product_offering_family": "sn_prd_pm_product_offering_family",
+    "owner": "sys_user",
+    "period": "business_calendar_span",
+    "forecast_model": "sn_sales_forecast_model",
+    "territory": "sn_tp_territory",
+    "sales_team": "sys_user_group"
+  },
+  "records": [
+    {
+      "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "01b83e2c2b1fc3504deaf02ac891bfa1",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "307902a93b4b8b10d5260fa693e45a32",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "f1098f613b07cb10d5260fa693e45af8",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "03af969993c89710e84732e548373c7d",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "fd0e4ba12b4f8b104deaf02ac891bf06",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "896f324c2b538f104deaf02ac891bf40",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "03af969993c89710e84732e548373c84",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "595a32cc2b138f104deaf02ac891bf86",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "696f324c2b538f104deaf02ac891bf77",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "07af969993c89710e84732e548373c82",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "bb5a72cc2b138f104deaf02ac891bfc0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "9b84f6563bf2c310d5260fa693e45a74",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "08050f652bcb8b104deaf02ac891bf3b",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "290f42173bf24710d5260fa693e45a00",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "c96ffacc3bd7cb10d5260fa693e45aee",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "7000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "0baf969993c89710e84732e548373c3e",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "ac4a3e8c2b138f104deaf02ac891bfde",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "6c6ffe0c2b538f104deaf02ac891bfe2",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "0baf969993c89710e84732e548373c80",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "0d5a36043bd7cb10d5260fa693e45a13",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "dd6f3ecc3bd7cb10d5260fa693e45a17",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "0baf969993c89710e84732e548373c87",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "955a76043bd7cb10d5260fa693e45aef",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "b479154e3bcbcf10d5260fa693e45aa7",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "0faf969993c89710e84732e548373c3c",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "856a9dce3bcbcf10d5260fa693e45ad7",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "096ffacc3bd7cb10d5260fa693e45ae6",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "0faf969993c89710e84732e548373c7e",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "d15a3e8c2b138f104deaf02ac891bfe7",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "986fbe8c3bd7cb10d5260fa693e45a67",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "6500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "0faf969993c89710e84732e548373c85",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "e5fe4e1b2bb243104deaf02ac891bf37",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "346ffe0c2b538f104deaf02ac891bffd",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "32af969993c89710e84732e548373c11",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "3c4a36043bd7cb10d5260fa693e45a0c",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "f9098f613b07cb10d5260fa693e45ae3",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "32af969993c89710e84732e548373c18",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "effdc3ed2b0f8b104deaf02ac891bfb0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "386ffacc3bd7cb10d5260fa693e45a8b",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "7500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "32af969993c89710e84732e548373c1f",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "e1fec65b3bf24710d5260fa693e45acf",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "546ffacc3bd7cb10d5260fa693e45a83",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "32af969993c89710e84732e548373c26",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "784af2043bd7cb10d5260fa693e45ac0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "07843ed22b7683104deaf02ac891bf31",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "32af969993c89710e84732e548373c2d",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "6dfe4e1b2bb243104deaf02ac891bf30",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "bc6ffacc3bd7cb10d5260fa693e45ad1",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "32af969993c89710e84732e548373c34",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "f44af2043bd7cb10d5260fa693e45ae0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "32af969993c89710e84732e548373c3b",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "307902a93b4b8b10d5260fa693e45a32",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "9b84f6563bf2c310d5260fa693e45a74",
+      "period": "fc61faf13b670310916b37f726e45a38",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "3327ee6e2b0347504deaf02ac891bf88",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "290f42173bf24710d5260fa693e45a00",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-07-01 00:00:00",
+          "end": "2026-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "556f3ecc3bd7cb10d5260fa693e45a03",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "36af969993c89710e84732e548373c0f",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "115a32cc2b138f104deaf02ac891bfa1",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "b86ffe0c2b538f104deaf02ac891bfeb",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "36af969993c89710e84732e548373c16",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "855a76043bd7cb10d5260fa693e45ada",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "a16f324c2b538f104deaf02ac891bfb2",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "36af969993c89710e84732e548373c1d",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "b35ab6043bd7cb10d5260fa693e45a28",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "c96ffacc3bd7cb10d5260fa693e45aee",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "7000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "36af969993c89710e84732e548373c24",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "ac4a3e8c2b138f104deaf02ac891bfde",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "346ffe0c2b538f104deaf02ac891bffd",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "36af969993c89710e84732e548373c2b",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "3c4a36043bd7cb10d5260fa693e45a0c",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "f9098f613b07cb10d5260fa693e45ae3",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "36af969993c89710e84732e548373c32",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "effdc3ed2b0f8b104deaf02ac891bfb0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "386ffacc3bd7cb10d5260fa693e45a8b",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "7500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "36af969993c89710e84732e548373c39",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "e1fec65b3bf24710d5260fa693e45acf",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "2c6ffe0c2b538f104deaf02ac891bfc4",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "3aaf969993c89710e84732e548373c0d",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "310e8ba12b4f8b104deaf02ac891bf2c",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "9384f6563bf2c310d5260fa693e45a6d",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "3aaf969993c89710e84732e548373c14",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "5ffec65b3bf24710d5260fa693e45ad5",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "206ffe0c2b538f104deaf02ac891bfda",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "3aaf969993c89710e84732e548373c1b",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "350e83a93b07cb10d5260fa693e45a93",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "b479154e3bcbcf10d5260fa693e45aa7",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "3aaf969993c89710e84732e548373c22",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "856a9dce3bcbcf10d5260fa693e45ad7",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "556f3ecc3bd7cb10d5260fa693e45a03",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "3aaf969993c89710e84732e548373c29",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "115a32cc2b138f104deaf02ac891bfa1",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "b86ffe0c2b538f104deaf02ac891bfeb",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "3aaf969993c89710e84732e548373c30",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "855a76043bd7cb10d5260fa693e45ada",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "a16f324c2b538f104deaf02ac891bfb2",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "3aaf969993c89710e84732e548373c37",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "b35ab6043bd7cb10d5260fa693e45a28",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "07843ed22b7683104deaf02ac891bf31",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "3eaf969993c89710e84732e548373c12",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "6dfe4e1b2bb243104deaf02ac891bf30",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "bc6ffacc3bd7cb10d5260fa693e45ad1",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "3eaf969993c89710e84732e548373c19",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "f44af2043bd7cb10d5260fa693e45ae0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "3eaf969993c89710e84732e548373c20",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "307902a93b4b8b10d5260fa693e45a32",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "2c6ffe0c2b538f104deaf02ac891bfc4",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "3eaf969993c89710e84732e548373c27",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "310e8ba12b4f8b104deaf02ac891bf2c",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "9384f6563bf2c310d5260fa693e45a6d",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "3eaf969993c89710e84732e548373c2e",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "5ffec65b3bf24710d5260fa693e45ad5",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "206ffe0c2b538f104deaf02ac891bfda",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "3eaf969993c89710e84732e548373c35",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "350e83a93b07cb10d5260fa693e45a93",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "946ff60c2b538f104deaf02ac891bfc2",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "43af969993c89710e84732e548373c51",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "a04af2043bd7cb10d5260fa693e45ab8",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "096ffacc3bd7cb10d5260fa693e45ae6",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "43af969993c89710e84732e548373c58",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "d15a3e8c2b138f104deaf02ac891bfe7",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "986fbe8c3bd7cb10d5260fa693e45a67",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "6500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "43af969993c89710e84732e548373c5f",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "e5fe4e1b2bb243104deaf02ac891bf37",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "0b843ed22b7683104deaf02ac891bf1d",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "26000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "43af969993c89710e84732e548373c66",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "916f3ecc3bd7cb10d5260fa693e45a20",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "4500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "43af969993c89710e84732e548373c6d",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "bb5a72cc2b138f104deaf02ac891bfb9",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "0d6f324c2b538f104deaf02ac891bf6e",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "47af969993c89710e84732e548373c4f",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "595a32cc2b138f104deaf02ac891bf8d",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "f1098f613b07cb10d5260fa693e45af8",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "47af969993c89710e84732e548373c56",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "fd0e4ba12b4f8b104deaf02ac891bf06",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "896f324c2b538f104deaf02ac891bf40",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "47af969993c89710e84732e548373c5d",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "595a32cc2b138f104deaf02ac891bf86",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "f46ffe0c2b538f104deaf02ac891bff4",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "47af969993c89710e84732e548373c64",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "855a76043bd7cb10d5260fa693e45ae1",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "946ff60c2b538f104deaf02ac891bfc2",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "47af969993c89710e84732e548373c6b",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "a04af2043bd7cb10d5260fa693e45ab8",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "cd6f324c2b538f104deaf02ac891bf1e",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "3500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "4baf969993c89710e84732e548373c4d",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "855a76043bd7cb10d5260fa693e45ae8",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "61098b212b0f8b104deaf02ac891bf79",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "26000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "4baf969993c89710e84732e548373c54",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "f3de465b3bf24710d5260fa693e45a9d",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "696f324c2b538f104deaf02ac891bf77",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "4baf969993c89710e84732e548373c5b",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "bb5a72cc2b138f104deaf02ac891bfc0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "9b84f6563bf2c310d5260fa693e45a74",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "4baf969993c89710e84732e548373c62",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "290f42173bf24710d5260fa693e45a00",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "0d6f324c2b538f104deaf02ac891bf6e",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "4baf969993c89710e84732e548373c69",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "595a32cc2b138f104deaf02ac891bf8d",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "0b843ed22b7683104deaf02ac891bf1d",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "26000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "4faf969993c89710e84732e548373c4b",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "916f3ecc3bd7cb10d5260fa693e45a20",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "4500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "4faf969993c89710e84732e548373c52",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "bb5a72cc2b138f104deaf02ac891bfb9",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "6c6ffe0c2b538f104deaf02ac891bfe2",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "4faf969993c89710e84732e548373c59",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "0d5a36043bd7cb10d5260fa693e45a13",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "dd6f3ecc3bd7cb10d5260fa693e45a17",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "4faf969993c89710e84732e548373c60",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "955a76043bd7cb10d5260fa693e45aef",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "cd6f324c2b538f104deaf02ac891bf1e",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "3500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "4faf969993c89710e84732e548373c67",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "855a76043bd7cb10d5260fa693e45ae8",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "61098b212b0f8b104deaf02ac891bf79",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "26000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "4faf969993c89710e84732e548373c6e",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "f3de465b3bf24710d5260fa693e45a9d",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "b479154e3bcbcf10d5260fa693e45aa7",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "519c27903b441310916b37f726e45ae8",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "856a9dce3bcbcf10d5260fa693e45ad7",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "f46ffe0c2b538f104deaf02ac891bff4",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "519c27903b441310916b37f726e45aef",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "855a76043bd7cb10d5260fa693e45ae1",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "c96ffacc3bd7cb10d5260fa693e45aee",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "7000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "519c27903b441310916b37f726e45af6",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "ac4a3e8c2b138f104deaf02ac891bfde",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "0b843ed22b7683104deaf02ac891bf1d",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "26000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "54c54fe52bcb8b104deaf02ac891bf2d",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "546ffacc3bd7cb10d5260fa693e45a83",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "559c27903b441310916b37f726e45aed",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "784af2043bd7cb10d5260fa693e45ac0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "cd6f324c2b538f104deaf02ac891bf1e",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "3500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "559c27903b441310916b37f726e45af4",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "855a76043bd7cb10d5260fa693e45ae8",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "2c6ffe0c2b538f104deaf02ac891bfc4",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "599c27903b441310916b37f726e45aeb",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "310e8ba12b4f8b104deaf02ac891bf2c",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "0d6f324c2b538f104deaf02ac891bf6e",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "599c27903b441310916b37f726e45af2",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "595a32cc2b138f104deaf02ac891bf8d",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "556f3ecc3bd7cb10d5260fa693e45a03",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "599c27903b441310916b37f726e45af9",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "115a32cc2b138f104deaf02ac891bfa1",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "946ff60c2b538f104deaf02ac891bfc2",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "5d9c27903b441310916b37f726e45ae9",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "a04af2043bd7cb10d5260fa693e45ab8",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "346ffe0c2b538f104deaf02ac891bffd",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "5d9c27903b441310916b37f726e45af0",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "3c4a36043bd7cb10d5260fa693e45a0c",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "916f3ecc3bd7cb10d5260fa693e45a20",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "4500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "5d9c27903b441310916b37f726e45af7",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "bb5a72cc2b138f104deaf02ac891bfb9",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "9384f6563bf2c310d5260fa693e45a6d",
+      "period": "fc61faf13b670310916b37f726e45a38",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "7327ee6e2b0347504deaf02ac891bf82",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "5ffec65b3bf24710d5260fa693e45ad5",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-07-01 00:00:00",
+          "end": "2026-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "07843ed22b7683104deaf02ac891bf31",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "749547e52bcb8b104deaf02ac891bfc6",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "6dfe4e1b2bb243104deaf02ac891bf30",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "61098b212b0f8b104deaf02ac891bf79",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "26000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "763d27143b441310916b37f726e45acf",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "f3de465b3bf24710d5260fa693e45a9d",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+      "period": "fc61faf13b670310916b37f726e45a38",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "7668722c2b1fc3504deaf02ac891bf2f",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "307902a93b4b8b10d5260fa693e45a32",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-07-01 00:00:00",
+          "end": "2026-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "546ffacc3bd7cb10d5260fa693e45a83",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "76af569993c89710e84732e548373cff",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "784af2043bd7cb10d5260fa693e45ac0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "c96ffacc3bd7cb10d5260fa693e45aee",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "7000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "7aaf569993c89710e84732e548373cfd",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "ac4a3e8c2b138f104deaf02ac891bfde",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "b479154e3bcbcf10d5260fa693e45aa7",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "7eaf569993c89710e84732e548373cfb",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "856a9dce3bcbcf10d5260fa693e45ad7",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "206ffe0c2b538f104deaf02ac891bfda",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "83af969993c89710e84732e548373c83",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "350e83a93b07cb10d5260fa693e45a93",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "bc6ffacc3bd7cb10d5260fa693e45ad1",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "87af969993c89710e84732e548373c81",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "f44af2043bd7cb10d5260fa693e45ae0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "f46ffe0c2b538f104deaf02ac891bff4",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "8baf969993c89710e84732e548373c3d",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "855a76043bd7cb10d5260fa693e45ae1",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "f9098f613b07cb10d5260fa693e45ae3",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "8baf969993c89710e84732e548373c7f",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "effdc3ed2b0f8b104deaf02ac891bfb0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "386ffacc3bd7cb10d5260fa693e45a8b",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "7500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "8baf969993c89710e84732e548373c86",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "e1fec65b3bf24710d5260fa693e45acf",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "b86ffe0c2b538f104deaf02ac891bfeb",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "8faf969993c89710e84732e548373c7d",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "855a76043bd7cb10d5260fa693e45ada",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "a16f324c2b538f104deaf02ac891bfb2",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "8faf969993c89710e84732e548373c84",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "b35ab6043bd7cb10d5260fa693e45a28",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "9384f6563bf2c310d5260fa693e45a6d",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "903583a52bcb8b104deaf02ac891bffb",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "5ffec65b3bf24710d5260fa693e45ad5",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "946ff60c2b538f104deaf02ac891bfc2",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "b2af969993c89710e84732e548373c10",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "a04af2043bd7cb10d5260fa693e45ab8",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "096ffacc3bd7cb10d5260fa693e45ae6",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "b2af969993c89710e84732e548373c17",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "d15a3e8c2b138f104deaf02ac891bfe7",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "986fbe8c3bd7cb10d5260fa693e45a67",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "6500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "b2af969993c89710e84732e548373c1e",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "e5fe4e1b2bb243104deaf02ac891bf37",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "0b843ed22b7683104deaf02ac891bf1d",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "26000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "b2af969993c89710e84732e548373c25",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "916f3ecc3bd7cb10d5260fa693e45a20",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "4500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "b2af969993c89710e84732e548373c2c",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "bb5a72cc2b138f104deaf02ac891bfb9",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "6c6ffe0c2b538f104deaf02ac891bfe2",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "b2af969993c89710e84732e548373c33",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "0d5a36043bd7cb10d5260fa693e45a13",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "dd6f3ecc3bd7cb10d5260fa693e45a17",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "b2af969993c89710e84732e548373c3a",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "955a76043bd7cb10d5260fa693e45aef",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "07843ed22b7683104deaf02ac891bf31",
+      "period": "fc61faf13b670310916b37f726e45a38",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "b327e6263b0f4750d5260fa693e45aff",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "6dfe4e1b2bb243104deaf02ac891bf30",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-07-01 00:00:00",
+          "end": "2026-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "0d6f324c2b538f104deaf02ac891bf6e",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "b6af969993c89710e84732e548373c0e",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "595a32cc2b138f104deaf02ac891bf8d",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "f1098f613b07cb10d5260fa693e45af8",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "b6af969993c89710e84732e548373c15",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "fd0e4ba12b4f8b104deaf02ac891bf06",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "896f324c2b538f104deaf02ac891bf40",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "b6af969993c89710e84732e548373c1c",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "595a32cc2b138f104deaf02ac891bf86",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "f46ffe0c2b538f104deaf02ac891bff4",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "b6af969993c89710e84732e548373c23",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "855a76043bd7cb10d5260fa693e45ae1",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "946ff60c2b538f104deaf02ac891bfc2",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "b6af969993c89710e84732e548373c2a",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "a04af2043bd7cb10d5260fa693e45ab8",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "096ffacc3bd7cb10d5260fa693e45ae6",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "b6af969993c89710e84732e548373c31",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "d15a3e8c2b138f104deaf02ac891bfe7",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "986fbe8c3bd7cb10d5260fa693e45a67",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "6500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "b6af969993c89710e84732e548373c38",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "e5fe4e1b2bb243104deaf02ac891bf37",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "61098b212b0f8b104deaf02ac891bf79",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "26000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "baaf969993c89710e84732e548373c13",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "f3de465b3bf24710d5260fa693e45a9d",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "696f324c2b538f104deaf02ac891bf77",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "baaf969993c89710e84732e548373c1a",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "bb5a72cc2b138f104deaf02ac891bfc0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "9b84f6563bf2c310d5260fa693e45a74",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "baaf969993c89710e84732e548373c21",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "290f42173bf24710d5260fa693e45a00",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "0d6f324c2b538f104deaf02ac891bf6e",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "baaf969993c89710e84732e548373c28",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "595a32cc2b138f104deaf02ac891bf8d",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "f1098f613b07cb10d5260fa693e45af8",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "baaf969993c89710e84732e548373c2f",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "fd0e4ba12b4f8b104deaf02ac891bf06",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "896f324c2b538f104deaf02ac891bf40",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "baaf969993c89710e84732e548373c36",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "595a32cc2b138f104deaf02ac891bf86",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "916f3ecc3bd7cb10d5260fa693e45a20",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "4500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "beaf969993c89710e84732e548373c11",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "bb5a72cc2b138f104deaf02ac891bfb9",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "6c6ffe0c2b538f104deaf02ac891bfe2",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "beaf969993c89710e84732e548373c18",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "0d5a36043bd7cb10d5260fa693e45a13",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "dd6f3ecc3bd7cb10d5260fa693e45a17",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "beaf969993c89710e84732e548373c1f",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "955a76043bd7cb10d5260fa693e45aef",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "cd6f324c2b538f104deaf02ac891bf1e",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "3500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "beaf969993c89710e84732e548373c26",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "855a76043bd7cb10d5260fa693e45ae8",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "61098b212b0f8b104deaf02ac891bf79",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "26000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "beaf969993c89710e84732e548373c2d",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "f3de465b3bf24710d5260fa693e45a9d",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "696f324c2b538f104deaf02ac891bf77",
+      "period": "bc61faf13b670310916b37f726e45a41",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "beaf969993c89710e84732e548373c34",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "bb5a72cc2b138f104deaf02ac891bfc0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-04-01 00:00:00",
+          "end": "2027-07-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "9b84f6563bf2c310d5260fa693e45a74",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "beaf969993c89710e84732e548373c3b",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "290f42173bf24710d5260fa693e45a00",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "556f3ecc3bd7cb10d5260fa693e45a03",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "c3af969993c89710e84732e548373c50",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "115a32cc2b138f104deaf02ac891bfa1",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "b86ffe0c2b538f104deaf02ac891bfeb",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "c3af969993c89710e84732e548373c57",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "855a76043bd7cb10d5260fa693e45ada",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "a16f324c2b538f104deaf02ac891bfb2",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "c3af969993c89710e84732e548373c5e",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "b35ab6043bd7cb10d5260fa693e45a28",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "c96ffacc3bd7cb10d5260fa693e45aee",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "7000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "c3af969993c89710e84732e548373c65",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "ac4a3e8c2b138f104deaf02ac891bfde",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "346ffe0c2b538f104deaf02ac891bffd",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "c3af969993c89710e84732e548373c6c",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "3c4a36043bd7cb10d5260fa693e45a0c",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "2c6ffe0c2b538f104deaf02ac891bfc4",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "c7af969993c89710e84732e548373c4e",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "310e8ba12b4f8b104deaf02ac891bf2c",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "9384f6563bf2c310d5260fa693e45a6d",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "c7af969993c89710e84732e548373c55",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "5ffec65b3bf24710d5260fa693e45ad5",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "206ffe0c2b538f104deaf02ac891bfda",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "c7af969993c89710e84732e548373c5c",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "350e83a93b07cb10d5260fa693e45a93",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "b479154e3bcbcf10d5260fa693e45aa7",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "c7af969993c89710e84732e548373c63",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "856a9dce3bcbcf10d5260fa693e45ad7",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "556f3ecc3bd7cb10d5260fa693e45a03",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "c7af969993c89710e84732e548373c6a",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "115a32cc2b138f104deaf02ac891bfa1",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "546ffacc3bd7cb10d5260fa693e45a83",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "cbaf969993c89710e84732e548373c4c",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "784af2043bd7cb10d5260fa693e45ac0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "07843ed22b7683104deaf02ac891bf31",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "cbaf969993c89710e84732e548373c53",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "6dfe4e1b2bb243104deaf02ac891bf30",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "bc6ffacc3bd7cb10d5260fa693e45ad1",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "cbaf969993c89710e84732e548373c5a",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "f44af2043bd7cb10d5260fa693e45ae0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "cbaf969993c89710e84732e548373c61",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "307902a93b4b8b10d5260fa693e45a32",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "2c6ffe0c2b538f104deaf02ac891bfc4",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "cbaf969993c89710e84732e548373c68",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "310e8ba12b4f8b104deaf02ac891bf2c",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "9384f6563bf2c310d5260fa693e45a6d",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "cbaf969993c89710e84732e548373c6f",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "5ffec65b3bf24710d5260fa693e45ad5",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "346ffe0c2b538f104deaf02ac891bffd",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "cfaf969993c89710e84732e548373c51",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "3c4a36043bd7cb10d5260fa693e45a0c",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "f9098f613b07cb10d5260fa693e45ae3",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "cfaf969993c89710e84732e548373c58",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "effdc3ed2b0f8b104deaf02ac891bfb0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "386ffacc3bd7cb10d5260fa693e45a8b",
+      "period": "b861faf13b670310916b37f726e45a44",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "7500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "cfaf969993c89710e84732e548373c5f",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "e1fec65b3bf24710d5260fa693e45acf",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-07-01 00:00:00",
+          "end": "2027-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "546ffacc3bd7cb10d5260fa693e45a83",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "cfaf969993c89710e84732e548373c66",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "784af2043bd7cb10d5260fa693e45ac0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "07843ed22b7683104deaf02ac891bf31",
+      "period": "b461faf13b670310916b37f726e45a47",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "cfaf969993c89710e84732e548373c6d",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "6dfe4e1b2bb243104deaf02ac891bf30",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-10-01 00:00:00",
+          "end": "2028-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "f1098f613b07cb10d5260fa693e45af8",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "d19c27903b441310916b37f726e45ae7",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "fd0e4ba12b4f8b104deaf02ac891bf06",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "b86ffe0c2b538f104deaf02ac891bfeb",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "d19c27903b441310916b37f726e45aee",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "855a76043bd7cb10d5260fa693e45ada",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "096ffacc3bd7cb10d5260fa693e45ae6",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "d19c27903b441310916b37f726e45af5",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "d15a3e8c2b138f104deaf02ac891bfe7",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "f9098f613b07cb10d5260fa693e45ae3",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "d59c27903b441310916b37f726e45ae4",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "effdc3ed2b0f8b104deaf02ac891bfb0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "6c6ffe0c2b538f104deaf02ac891bfe2",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "d59c27903b441310916b37f726e45aec",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "0d5a36043bd7cb10d5260fa693e45a13",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "bc6ffacc3bd7cb10d5260fa693e45ad1",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "d59c27903b441310916b37f726e45af3",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "f44af2043bd7cb10d5260fa693e45ae0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "696f324c2b538f104deaf02ac891bf77",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "d59c27903b441310916b37f726e45afa",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "bb5a72cc2b138f104deaf02ac891bfc0",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "206ffe0c2b538f104deaf02ac891bfda",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "2500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "d99c27903b441310916b37f726e45aea",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "350e83a93b07cb10d5260fa693e45a93",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "896f324c2b538f104deaf02ac891bf40",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "d99c27903b441310916b37f726e45af1",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "595a32cc2b138f104deaf02ac891bf86",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "a16f324c2b538f104deaf02ac891bfb2",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "d99c27903b441310916b37f726e45af8",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "b35ab6043bd7cb10d5260fa693e45a28",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "986fbe8c3bd7cb10d5260fa693e45a67",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "6500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "dd9c27903b441310916b37f726e45ae8",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "e5fe4e1b2bb243104deaf02ac891bf37",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "386ffacc3bd7cb10d5260fa693e45a8b",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "7500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "dd9c27903b441310916b37f726e45aef",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "e1fec65b3bf24710d5260fa693e45acf",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "dd6f3ecc3bd7cb10d5260fa693e45a17",
+      "period": "f861faf13b670310916b37f726e45a3b",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "5500000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "dd9c27903b441310916b37f726e45af6",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "955a76043bd7cb10d5260fa693e45aef",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-10-01 00:00:00",
+          "end": "2027-01-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "cd6f324c2b538f104deaf02ac891bf1e",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "3500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "f2af969993c89710e84732e548373c00",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "855a76043bd7cb10d5260fa693e45ae8",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "b9098b212b0f8b104deaf02ac891bfc9",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1000000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "f6af569993c89710e84732e548373cf8",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "307902a93b4b8b10d5260fa693e45a32",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "0b843ed22b7683104deaf02ac891bf1d",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "26000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "f6af569993c89710e84732e548373cfe",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "0b843ed22b7683104deaf02ac891bf1d",
+      "period": "fc61faf13b670310916b37f726e45a38",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "7000000",
+      "external_id": "",
+      "type": "rollup",
+      "sys_id": "f727ae6e2b0347504deaf02ac891bfc0",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "cfee8a1b2bb243104deaf02ac891bf8b",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2026-07-01 00:00:00",
+          "end": "2026-10-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "f46ffe0c2b538f104deaf02ac891bff4",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "faaf569993c89710e84732e548373cfc",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "855a76043bd7cb10d5260fa693e45ae1",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    },
+    {
+      "owner": "9b84f6563bf2c310d5260fa693e45a74",
+      "period": "b061faf13b670310916b37f726e45a3f",
+      "forecast_model": "f7a3e9c14b2d8610a5cf3e7b92d1f480",
+      "active": "true",
+      "currency_value": "1500000",
+      "external_id": "",
+      "type": "individual",
+      "sys_id": "feaf569993c89710e84732e548373cfa",
+      "product_offering_family": "",
+      "sales_team": "",
+      "external_source": "",
+      "territory": "290f42173bf24710d5260fa693e45a00",
+      "_resolve": {
+        "period": {
+          "calendar": "857ddda353f3001076bcddeeff7b12af",
+          "start": "2027-01-01 00:00:00",
+          "end": "2027-04-01 00:00:00"
+        }
+      }
+    }
+  ]
+}

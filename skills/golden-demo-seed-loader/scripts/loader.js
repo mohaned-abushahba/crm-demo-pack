@@ -4,7 +4,23 @@
  * Runs server-side in the GLOBAL scope as a Fix Script or Background Script.
  * Reads golden-demo-seed.json from an attachment and upserts every record,
  * keeping the source instance's sys_ids. Safe to re-run: existing records are
- * updated, never duplicated.
+ * updated, never duplicated — including a same-run duplicate from a platform
+ * Business Rule reacting to an earlier write in this load (an on_conflict:'adopt'
+ * table's business-key check is redone live in Phase 2, not trusted from Phase 1;
+ * see the comment there).
+ *
+ * A reference field can point at a table that is itself NOT in the bundle and
+ * is not safe to adopt by sys_id, because every instance generates its own rows
+ * for it independently (e.g. business_calendar_span: each instance has its own
+ * sys_id per fiscal quarter, auto-created by the platform, same calendar/dates).
+ * For that case, mark the field in the table spec's `resolve_by`:
+ *   "resolve_by": { "period": { "table": "business_calendar_span",
+ *                                "match": ["calendar", "start", "end"] } }
+ * and put those match values on each bundle record under `_resolve.<field>`,
+ * e.g. record._resolve.period = { calendar: "...", start: "...", end: "..." }.
+ * The loader looks up the target instance's row by those fields instead of
+ * mapping the field through idMap. See docs/CHANGELOG.md, "seed sales quotas"
+ * for the table this was built for.
  *
  * Set the constants below, run once with DRY_RUN = true, review the
  * report, then run again with DRY_RUN = false.
@@ -86,6 +102,35 @@ var ON_CONFLICT = 'fail';      // 'fail': stop on a business-key clash. 'insert'
         return String(value).split(',').map(function (v) { return idMap[v] || v; }).join(',');
     }
 
+    // ---- Phase 0.5: resolve_by — fields referencing a table the bundle does not carry
+    // (platform/system-generated rows with per-instance sys_ids for the same business
+    // entity, e.g. business_calendar_span). Looked up once per distinct bundle value and
+    // cached into idMap so mapRef() picks the resolved target sys_id up everywhere else
+    // (key matching, write, deferred references) with no further special-casing.
+    report.unresolved = [];
+    bundle.tables.forEach(function (t) {
+        if (!t.resolve_by) return;
+        var resolved = {};
+        t.records.forEach(function (r) {
+            for (var field in t.resolve_by) {
+                var val = r[field];
+                if (!val || idMap[val] || resolved[val]) continue;
+                var spec = t.resolve_by[field];
+                var keys = (r._resolve && r._resolve[field]) || {};
+                var q = new GlideRecord(spec.table);
+                spec.match.forEach(function (k) { q.addQuery(k, keys[k]); });
+                q.setLimit(1);
+                q.query();
+                if (q.next()) {
+                    idMap[val] = q.getUniqueValue();
+                } else {
+                    report.unresolved.push({ table: t.table, field: field, bundle_value: val, match: keys });
+                }
+                resolved[val] = true;
+            }
+        });
+    });
+
     bundle.tables.forEach(function (t) {
         var counts = { table: t.table, expected: t.count, insert: 0, update: 0, adopt: 0, conflict: 0 };
         report.tables.push(counts);
@@ -118,17 +163,43 @@ var ON_CONFLICT = 'fail';      // 'fail': stop on a business-key clash. 'insert'
         });
     });
 
-    if (DRY_RUN || report.missing_prerequisites.length || report.conflicts.length) {
+    if (DRY_RUN || report.missing_prerequisites.length || report.conflicts.length || report.unresolved.length) {
         report.stopped = DRY_RUN ? 'dry run: nothing written'
-            : 'stopped before writing: resolve missing_prerequisites / conflicts first';
+            : 'stopped before writing: resolve missing_prerequisites / conflicts / unresolved first';
         gs.info(JSON.stringify(report, null, 2));
         return;
     }
 
     // ---- Phase 2: write. Forward references and insert_as fields are deferred. ----
+    //
+    // An 'adopt' table's conflict check CANNOT be trusted from Phase 1: Phase 1 queries the
+    // target for every table before Phase 2 has written anything, but a parent insert in
+    // Phase 2 (e.g. the Opportunity) can fire a platform Business Rule that inserts its own
+    // child row (e.g. team member / associated contact) the instant it runs — before this
+    // loader gets to the child table's own records. Phase 1 would see "no existing row yet"
+    // and plan 'insert', and writing that plan verbatim creates a second row alongside the
+    // BR's. So any table marked on_conflict:'adopt' gets its business-key check REDONE here,
+    // live, right before the write — by which point a same-run BR side effect already exists
+    // on the target and is adopted instead of duplicated. (See docs/CHANGELOG.md, "loader:
+    // fix Phase 1/Phase 2 adopt race" and the Business Rules named in that entry.)
     var written = {}, deferred = [];
     plan.forEach(function (p) {
         if (p.action === 'adopt') { written[p.r.sys_id] = true; return; }
+        if (p.action === 'insert' && p.t.on_conflict === 'adopt' && p.t.key.length) {
+            var recheck = new GlideRecord(p.t.table);
+            p.t.key.forEach(function (k) { recheck.addQuery(k, p.t.references[k] ? mapRef(p.r[k]) : p.r[k]); });
+            recheck.setLimit(1);
+            recheck.query();
+            if (recheck.next()) {
+                // A Business Rule triggered by an earlier write in this same run (most likely
+                // the parent record on the previous table) already created this row.
+                idMap[p.r.sys_id] = recheck.getUniqueValue();
+                written[p.r.sys_id] = true;
+                p.action = 'adopt';
+                report.tables.forEach(function (c) { if (c.table === p.t.table) { c.insert--; c.adopt = (c.adopt || 0) + 1; } });
+                return;
+            }
+        }
         var gr;
         if (p.action === 'update') {
             gr = getById(p.cls, p.r.sys_id) || getById(p.t.table, p.r.sys_id);

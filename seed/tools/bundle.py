@@ -23,6 +23,7 @@ def main():
             "key": spec["key"],
             "on_conflict": spec.get("on_conflict", "fail"),
             "insert_as": spec.get("insert_as", {}),
+            "resolve_by": spec.get("resolve_by", {}),
             "references": doc["references"],
             "count": len(doc["records"]),
             "records": doc["records"],

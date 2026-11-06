@@ -771,3 +771,172 @@ Caveats:
   (`9d11c93737a33110eb21d71964924b93`) is unrelated to this change, confirmed present before and
   after.
 - Not loaded onto a blank instance yet.
+
+## fix loader: Phase 1/Phase 2 'adopt' race duplicated Opportunity contacts and team members (2026-11-05)
+Instance: opmsalescrm1 (bug found here after the 2026-10-21 "10 golden opportunities" load)
+What: `skills/golden-demo-seed-loader/scripts/loader.js` planned every table's
+`insert`/`update`/`adopt` action in one Phase 1 pass, querying the target for
+each table's business key before Phase 2 had written anything. For
+`942-sn_opty_mgmt_core_opportunity_team_member` and
+`943-sn_opty_mgmt_core_opportunity_associated_contact` (both `on_conflict:
+'adopt'`, keyed on `opportunity`+`member`/`contact`), that target query ran
+before the parent Opportunity (table 940) existed on the target — so Phase 1
+always planned `insert` for them. But inserting the Opportunity with `contact`
+and `assigned_to` already set fires two OOTB Business Rules ("Populate Oppty
+Contact from Oppty Header", "Populate team member from Oppty Header") that
+insert their own stub associated-contact/team-member row the instant the
+Opportunity write happens in Phase 2 — before the loader reaches tables
+942/943. Phase 2 then wrote the already-decided `insert` plan on top of that
+stub: one real migrated row + one BR-created stub row per Opportunity, same
+business key, different sys_id. `on_conflict: 'adopt'` was set correctly on
+both tables (exactly for "join rows that platform automation may already have
+created" — see the manifest's top-level comment) but Phase 1's conflict check
+ran too early to see the BR's row, so `adopt` never engaged.
+Fix: Phase 2 now re-checks the business key live, immediately before writing,
+for any record whose table is `on_conflict: 'adopt'` and whose Phase-1 plan
+was `insert`. By write time the parent's BR side effect already exists on the
+target, so the re-check finds it and adopts it (points references at it, skips
+the insert) instead of duplicating it. Tables not marked `adopt` are
+unaffected; `945-sn_opty_mgmt_core_opportunity_task` (the touchpoint link —
+no BR recreates it) also needed no change.
+Why: reported by a colleague testing the opmsalescrm1 deploy — Contacts
+related list showed Sarah Whitman twice on OPTY0001085 (one stub, `primary`
+blank; one real, `primary=true`), Team showed the owner twice. Confirmed via
+the API and live in the classic UI; traced to this loader race, not to the
+captured data (opmsalescrmstage and opmsalescrm1 hold identical `940`-`943`
+JSON — the duplication is created during load, not during capture).
+Caveats:
+- Opportunity → Touchpoint linkage and the "Recent and Upcoming Activity"
+  panel were also reported broken on the same Opportunities, but the
+  `sn_opty_mgmt_core_opportunity_task` junction rows and the touchpoint
+  records themselves are byte-identical between opmsalescrmstage and
+  opmsalescrm1 (same sys_ids, same dates, same `state`) — ruled out as a
+  missing-data problem. Not yet root-caused; suspect the widget's own primary-
+  contact lookup, since the duplicate `primary=false` contact row sits right
+  next to the real `primary=true` one. Open — see docs/OPEN-ITEMS.md.
+- Fix is in the loader only; it has not yet been used to re-run a load. The
+  existing duplicate rows on opmsalescrm1 (one `opportunity_associated_contact`
+  and one `opportunity_team_member` stub per each of the 10 seeded
+  Opportunities) still need to be deleted by hand, or by a small one-off
+  cleanup script, since the loader's upsert-by-sys_id path has no "delete a
+  stray row" step — it only prevents new stray rows going forward.
+- Not re-verified end to end on a blank instance; the fix changes Phase 2's
+  write order for `adopt` tables but doesn't touch Phase 1's dry-run report
+  wording, so a dry run can still show `insert` for a row that Phase 2 will
+  actually `adopt` — expected, not a bug, since Phase 1 cannot see a sibling
+  table's future BR side effects; `tables[].adopt` in the final (post-write)
+  report is the number to trust, not the dry-run preview.
+
+## seed Emails and Meetings for the 10 golden opportunities (closes the real root cause of the Emails/Meetings gap) (2026-11-05)
+Instance: opmsalescrmstage (source), loaded directly onto opmsalescrm1
+What:
+- Added three new manifest entries right after `945-sn_opty_mgmt_core_opportunity_task`:
+  `945b-sys_email` (`key: []`, `on_conflict: 'fail'`, scope: `target_table=sn_crm_touchpoint_touchpoint
+  ^instanceIN<the 49 touchpoint sys_ids for OPTY0001085/86/88/89/90/94/95/96>` — 40 records),
+  `945c-sn_meeting_mgmt_meeting_details` (`key: []` — deliberately not `number`, see Caveats — `exclude:
+  ["vm_details"]`, scope: `sourceIN<same 49 touchpoint sys_ids>` — 55 records), and
+  `945d-sn_meeting_mgmt_meeting_participant` (`key: []`, `require_in_fixtures: ["meeting"]`, scope:
+  `meeting.sourceIN<same 49 touchpoint sys_ids>` — 229 records).
+- Extracted with `seed/tools/extract.py --only <table>` for each, ran `seed/tools/refcheck.py
+  --instance opmsalescrm1` (zero new dangling refs after excluding `vm_details`), rebuilt the bundle
+  with `seed/tools/bundle.py` (now 74 tables, 3,530 records).
+- Loaded all 324 new records directly onto opmsalescrm1 by hand (not via `loader.js` — see Caveats),
+  preserving source sys_ids. One field value needed a one-off fix: 4 of the 40 emails had
+  `state=received`, not a valid choice on this instance's `sys_email.state` dictionary (valid:
+  Error/Ignored/Processed/Ready/recipient-list-resolution-complete/-pending); remapped to `processed`
+  (closest meaning: received and not re-sent) rather than skipping those 4 records.
+Why: reported by a colleague testing opmsalescrm1 as "Emails & Meetings from Touchpoints are not
+linked to the Opportunity." Investigated first as a possible migration bug (it wasn't — see the now-
+superseded entry in OPEN-ITEMS, "NOT A BUG, scope gap in the seed"), then found the real cause: the
+Opportunity form's "Emails" and "Meetings" related lists query `sys_email`
+(`target_table`+`instance`) and `sn_meeting_mgmt_meeting_details` (`associated_record`+`source`)
+directly, not the CRM Touchpoint table. Touchpoints (shown as "Tasks") were always correctly linked
+on both instances; `sys_email` and the meeting tables were simply never part of the original
+10-opportunity capture (`940`-`946` only ever pulled `sn_opty_mgmt_core_opportunity*`,
+`sn_crm_touchpoint_touchpoint`, and the task junction).
+Caveats:
+- **`sn_meeting_mgmt_meeting_details`'s `key` is `[]`, not `["number"]`, on purpose.** opmsalescrm1
+  already had 13 unrelated, pre-existing local Meeting records in the `CCMTG0001001`-`CCMTG0001012`
+  number range (different sys_ids from stage's — numbers are sequence-generated and collided
+  incidentally, same class of issue as the OPTY0001087/1098 account number collisions noted
+  elsewhere). Keying on `number` would have made the loader treat 7 of the 55 fixture records as
+  conflicts with those unrelated local meetings. Keying on `[]` means the loader's sys_id check runs
+  first and the business-key fallback never triggers, which is correct here since sys_id is the real
+  identity for every row this seed captures.
+- **`vm_details` excluded from `945c`.** Each meeting's Virtual Meeting Details record
+  (`sn_meeting_mgmt_virtual_meeting_details`) holds Zoom/Teams-specific meeting ID, recording/
+  transcript links and `password2` fields tied to the source instance's conferencing account and
+  encryption key — not portable, not demo-relevant. `refcheck.py` flagged 39 dangling references to
+  this table before the exclude; zero after.
+- **Loaded by hand, not via `skills/golden-demo-seed-loader/scripts/loader.js`.** This session had no
+  way to attach a Fix Script with a bundle attachment through the available tools, so the 324 records
+  were inserted directly via the Table API create tool in small batches (5-30 records at a time),
+  preserving sys_ids, in parent-before-child order (meetings before participants). This is NOT the
+  normal path for applying a seed bundle and was done only because this specific gap needed to close
+  immediately on an already-deployed instance; the next full load of this bundle onto any instance
+  (via the real loader) will pick these three tables up the normal way.
+- Not yet verified in the actual Sales workspace UI (only confirmed via direct table queries showing
+  OPTY0001085 now has 3 touchpoints + 4 emails + 3 meetings, matching stage exactly) — the workspace
+  UI that renders "Emails"/"Meetings" wasn't reachable in this session (see the "Recent and Upcoming
+  Activity" open item for the same blocker). Recommend a visual check next time someone is in the
+  actual workspace.
+- `sn_meeting_mgmt_meeting_m2m` was checked and is NOT what links a Meeting to its Opportunity — that
+  table had zero rows for these meetings on stage too. The real link is `associated_table`/
+  `associated_record` directly on `sn_meeting_mgmt_meeting_details`, which the seed does capture.
+
+---
+
+## Seed + loader: sales quotas for Q3 2026 - Q4 2027 (closes "quotas didn't come over") (2026-11-06)
+Domain: Sales CRM
+Instance: opmsalescrm1
+What: `sn_quota_core_sales_quota` was never part of the seed at all (not in `seed/manifest.json`
+before this entry). Stage has 155 quota rows across 6 fiscal quarters (2026 Q3 - 2027 Q4): per-rep
+`individual` quotas plus `rollup` quotas at territory level, adding to 26M globally and at the TECH
+industry level, as the colleague who built them described. opmsalescrm1 had only 26 rows before this
+fix, and those were NOT a partial migration of the 155 — diffing by sys_id showed only 10 of the 26
+actually matched a stage sys_id (correctly migrated at some earlier point); the other 16 are
+unrelated, genuinely local quota rows (same 5 owners repeated across all 6 periods, only the TECH and
+AMS/AMS-West territories) that predate this fix and were left alone.
+Why `period` couldn't be adopted by sys_id like other platform-generated child rows: quota's `period`
+field references `business_calendar_span`, which is NOT a seeded table — it's a fiscal calendar that
+every instance generates independently (same `calendar` sys_id, same quarter `start`/`end` dates, but
+a different row sys_id per instance per quarter; confirmed by checking "2026 Q4" on both instances:
+identical dates, different sys_ids, both `sys_created_by: system`). The existing `on_conflict:'adopt'`
+mechanism adopts by matching a business key against bundle-captured values via `idMap`/`mapRef`, which
+doesn't help here because `business_calendar_span` itself is never in the bundle to look a key up
+against — there was nothing for `mapRef` to resolve.
+New loader mechanism: `resolve_by`, a table-spec field that names a reference field, the table it
+points at, and which fields on that OTHER table to match on (here: `calendar`, `start`, `end`). At
+extraction time (`extract.py`), each record's resolve_by field's match values are captured into a new
+`_resolve.<field>` object on the bundle record. At load time (`loader.js`, new Phase 0.5, before the
+existing Phase 1 plan), the loader looks up the TARGET instance's row by those match fields and caches
+the result into the same `idMap` that `mapRef()` already reads everywhere else (key matching, write,
+deferred references) — so no other phase needed to change. An unresolvable `resolve_by` lookup is
+collected into `report.unresolved` and treated like a conflict: the loader reports and stops rather
+than silently writing a stale reference.
+How: `seed/manifest.json` got `325-sn_quota_core_sales_quota` (unscoped — this is org-wide master
+data, not per-opportunity transactional data like the 945-series) with
+`"resolve_by": {"period": {"table": "business_calendar_span", "match": ["calendar", "start", "end"]}}`.
+Extracted via `extract.py --only sn_quota_core_sales_quota` (155 records, all carrying `_resolve.period`),
+bundled via `bundle.py` (75 tables, 3685 records). `extract.py` and `bundle.py` both got `resolve_by`
+support; `loader.js` got the new Phase 0.5 plus a `report.unresolved` gate and an updated top-of-file
+comment describing the mechanism.
+Loaded by hand, not via loader.js, for the same reason as the Emails/Meetings fix (2026-11-05): no
+Fix Script attachment path available in this session. Built the 6-period sys_id map by hand (crm1's
+own business_calendar_span rows for 2026 Q3 - 2027 Q4, matched by `start` date against stage's), diffed
+stage's 155 against crm1's 26 by sys_id (145 missing, 10 already correct, 16 unrelated local-only —
+left alone), remapped each missing record's `period` to crm1's sys_id for that quarter, and inserted
+all 145 directly via the Table API create tool in 6 batches of up to 25, preserving sys_ids. Final
+count on opmsalescrm1: 171 (155 seed rows + the 16 pre-existing local-only rows, untouched).
+Caveats:
+- The new `resolve_by` mechanism has not yet been exercised through an actual loader.js run (DRY_RUN
+  or otherwise) — it was built and verified by inspection and by replicating its logic by hand for
+  this load. The next full load of this bundle onto a blank instance is the first real test of Phase
+  0.5; if `business_calendar_span` resolution fails there, check `report.unresolved` first.
+- Not yet verified in the Sales workspace quota UI — only confirmed via direct table queries (total
+  count, per-period breakdown). Same "couldn't reach the workspace UI this session" limitation as the
+  Emails/Meetings and Recent/Upcoming Activity items.
+- The 16 pre-existing local-only quota rows on opmsalescrm1 are out of scope for this fix and were not
+  touched, deleted, or investigated further.
+File: seed/manifest.json, seed/data/325-sn_quota_core_sales_quota.json, seed/dist/golden-demo-seed.json,
+seed/tools/extract.py, seed/tools/bundle.py, skills/golden-demo-seed-loader/scripts/loader.js

@@ -2,6 +2,89 @@
 
 Follow-ups that aren't blocking. Remove an item once it's resolved, and log the fix in CHANGELOG.md.
 
+## Stray duplicate contact/team-member rows on opmsalescrm1's 10 seeded Opportunities — OPEN (logged 2026-11-05)
+
+The loader race fixed in CHANGELOG ("fix loader: Phase 1/Phase 2 'adopt' race...") stops this going
+forward, but doesn't retroactively clean up what the earlier (buggy) load already wrote on
+opmsalescrm1: one extra `sn_opty_mgmt_core_opportunity_associated_contact` row and one extra
+`sn_opty_mgmt_core_opportunity_team_member` row per seeded Opportunity (OPTY0001085/86/87/88/89/90/
+94/95/96/98 — 10 of each, 20 rows total), each a bare BR-created stub (no `opportunity_role`, no
+`primary`, created a few seconds before the real migrated row in the same load). Confirmed on
+OPTY0001085: Contacts related list shows "Sarah Whitman" twice, Team shows the owner twice.
+
+**To do:** for each of the 10 opportunities, delete the stub row — identify it as the
+`opportunity_associated_contact`/`opportunity_team_member` row whose `sys_id` is **not** one of the
+sys_ids present in `seed/data/943-...json` / `942-...json` for that opportunity (the real migrated
+rows keep their source sys_id; the stub does not). Do **not** delete by "oldest `sys_created_on`"
+alone without also checking the sys_id isn't in the fixture — re-running role/order sync could change
+timestamps. A short one-off script, not a loader change, is the right tool here since this is cleanup
+of already-landed bad data, not a repeatable load step.
+
+## Opportunity "Recent and Upcoming Activity" shows nothing on the 10 seeded Opportunities — OPEN (logged 2026-11-05)
+
+Reported alongside the duplicate-contact issue above, on the same 10 opportunities. The
+`sn_opty_mgmt_core_opportunity_task` junction rows linking each Opportunity to its Touchpoints, and
+the Touchpoint records themselves (`sn_crm_touchpoint_touchpoint`), are byte-identical between
+opmsalescrmstage and opmsalescrm1 — same sys_ids, same `opened_at`/`due_date`, same `state`. Ruled
+out as a missing/un-migrated-data problem; the touchpoint data is fine on both instances.
+
+**Also checked and ruled out (2026-11-05): this is not the "Emails & Meetings from Touchpoints not
+linked" complaint below in disguise.** The CRM Touchpoints are themselves correctly linked to the
+Opportunity via `origin_table`/`origin_id`, identically on both instances — see that item for detail
+on why Meetings/Emails are a separate, never-seeded data gap rather than a migration bug.
+
+**Not yet root-caused.** Working theory, unconfirmed: the Opportunity Summary widget's "Recent and
+Upcoming Activity" panel does its own primary-contact (or similar) lookup to decide what counts as
+relevant activity, and the stray duplicate contact row above (same person, `primary=false`, sitting
+next to the real `primary=true` row) could be making that lookup return nothing or the wrong record.
+Couldn't verify directly — the sales-workspace UI that renders this widget wasn't reachable in this
+session (only the classic form rendered; Agent Workspace and `/now/sow/...` both 404'd for this
+instance). **To do:** open OPTY0001085 in whatever UI actually hosts "Opportunity Summary" on
+opmsalescrm1 (ask the user for the right URL/workspace if the ones tried above don't work), check
+whether it's live here or already fixed now that the duplicate-contact cleanup above has landed
+(15 of 16 stray rows deleted as of 2026-11-05; one remains, blocked on an allocation re-point — see
+that item), and if not, inspect the widget's server script / client script for how it picks "the"
+contact or builds the activity list.
+
+## "Emails & Meetings from Touchpoints are not linked to the Opportunity" — RESOLVED 2026-11-05
+
+Reported by the colleague testing opmsalescrm1 alongside the duplicate-contact/team-member issue.
+First investigated as if it might be the same class of migration bug (it wasn't, see below), then
+root-caused and fixed by extending the seed. See CHANGELOG, "seed Emails and Meetings for the 10
+golden opportunities (closes the real root cause of the Emails/Meetings gap)".
+
+Summary of what was wrong: the Opportunity form's "Emails" and "Meetings" related lists query
+`sys_email` (via `instance`/`target_table`) and `sn_meeting_mgmt_meeting_details` (via
+`associated_record`/`source`) directly — not the CRM Touchpoint table. Touchpoints themselves (shown
+as "Tasks") were correctly linked on both instances the whole time; `sys_email` and
+`sn_meeting_mgmt_meeting_details`/`_participant` were simply never part of the original 10-opportunity
+seed capture, so "Emails"/"Meetings" were empty on opmsalescrm1 even though stage had them.
+
+---
+
+## Sales quotas for Q3 2026 - Q4 2027 missing on opmsalescrm1 (155 expected, 26 present) — RESOLVED 2026-11-06
+
+Reported by the colleague who built the quota set: added Q4 2026 and Q1-Q4 2027 quotas for the entire
+sales team, adding to 26M globally and at the TECH industry level (one industry per instance right
+now), and they "did not come over" to opmsalescrm1 — only 26 of 155 were present.
+
+Root-caused and fixed by extending the seed with a new loader mechanism. See CHANGELOG, "Seed +
+loader: sales quotas for Q3 2026 - Q4 2027 (closes 'quotas didn't come over')".
+
+Summary of what was wrong: `sn_quota_core_sales_quota` was never part of the seed at all. The 26 rows
+already on opmsalescrm1 were NOT a partial migration — only 10 of the 26 actually matched a stage
+sys_id; the other 16 were unrelated, genuinely local rows (same 5 owners repeated, only 2 territories)
+predating this fix. The harder part: quota's `period` field references `business_calendar_span`, a
+fiscal calendar every instance generates independently (same quarter, same dates, different sys_id
+per instance) — so the existing `on_conflict:'adopt'`-by-sys_id pattern used for other platform-
+generated rows didn't apply; `business_calendar_span` itself was never in the bundle to adopt against.
+Fixed with a new `resolve_by` mechanism (extraction captures the referenced row's business key,
+loader.js resolves it against the target instance's own calendar by business key, not sys_id, before
+its normal Phase 1 plan). 145 missing rows inserted onto opmsalescrm1; the 16 unrelated local-only
+rows were left alone. Not yet verified in the actual quota workspace UI (only via direct table
+queries) — same "couldn't reach the workspace UI this session" limitation as the Emails/Meetings and
+Recent/Upcoming Activity items.
+
 ## Admin landing page fix (UPDATE-031 order change) not re-verified by impersonation (logged 2026-11-04)
 
 Moved "Sales Manager Landing Page" from order `10` to `-5` on **both** opmsalescrmstage and opmsalescrm1 to

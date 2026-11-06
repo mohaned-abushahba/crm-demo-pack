@@ -141,6 +141,35 @@ Attachment REST API instead.
 - **Duplicate codes are expected.** Offering codes `GENERATORS1` and
   `GENERATOR 1` each appear twice in the source. The loader matches by sys_id
   first, so this is fine.
+- **Opportunity insert fires BRs that pre-create its own children.** Inserting
+  `sn_opty_mgmt_core_opportunity` with `contact` or `assigned_to` already set
+  fires OOTB Business Rules ("Populate Oppty Contact from Oppty Header",
+  "Populate team member from Oppty Header") that insert a stub
+  `opportunity_associated_contact` / `opportunity_team_member` row right then —
+  before the loader reaches those tables' own bundle records. Both tables are
+  `on_conflict: 'adopt'` for exactly this reason, and the loader re-checks the
+  business key live at write time (not from the Phase 1 plan) so the bundle
+  record adopts that stub instead of duplicating it. If a future table shows
+  the same pattern (a parent insert that a BR reacts to by creating a child
+  with a guessable key), mark it `on_conflict: 'adopt'` too — don't add a
+  one-off workaround in the loader.
+- **Some reference fields point at a table every instance generates on its
+  own, with a different sys_id per instance for the same business entity**
+  (e.g. `business_calendar_span`: every instance has its own row per fiscal
+  quarter, same `calendar` + `start`/`end`, different sys_id). `on_conflict:
+  'adopt'` doesn't help here — that pattern adopts by matching a business key
+  against values the bundle itself carries, but this referenced table is
+  never in the bundle to match against. Mark the field `resolve_by` instead:
+  `{"field": {"table": "...", "match": ["field1", "field2"]}}`. Extraction
+  captures the referenced row's `match` field values into `_resolve.<field>`
+  on each bundle record; the loader looks those up against the TARGET
+  instance in a new Phase 0.5, before its Phase 1 plan, and caches the result
+  into the same `idMap` every other phase already reads through `mapRef()` —
+  so nothing else needs to special-case it. See `sn_quota_core_sales_quota`'s
+  `period` field (docs/CHANGELOG.md, "sales quotas for Q3 2026 - Q4 2027") for
+  the table this was built for. If a future reference field shows the same
+  shape (a platform/system table the instance maintains for itself), use
+  `resolve_by` rather than inventing another one-off.
 
 ## Don'ts
 

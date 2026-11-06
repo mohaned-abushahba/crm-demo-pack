@@ -152,6 +152,21 @@ def main():
         for field, values in spec.get("exclude_records", {}).items():
             if not field.startswith("_"):
                 records = [r for r in records if r.get(field) not in values]
+        # resolve_by: the referenced table is platform/system-generated and not itself
+        # in the bundle (each instance has its own sys_id per business entity, e.g. a
+        # fiscal quarter's business_calendar_span row). Capture the match fields here so
+        # the loader can look up the TARGET instance's row by business key instead of by
+        # sys_id. See loader.js's top-of-file comment for the mechanism.
+        for field, rb in spec.get("resolve_by", {}).items():
+            ref_ids = sorted({r[field] for r in records if r.get(field)})
+            by_id = {}
+            for i in range(0, len(ref_ids), PAGE):
+                chunk = ref_ids[i:i + PAGE]
+                for row in client.fetch_all(rb["table"], "sys_idIN" + ",".join(chunk), fields=",".join(["sys_id"] + rb["match"])):
+                    by_id[row["sys_id"]] = {k: row[k] for k in rb["match"]}
+            for r in records:
+                if r.get(field) and r[field] in by_id:
+                    r.setdefault("_resolve", {})[field] = by_id[r[field]]
         doc = {
             "table": table,
             "key": spec["key"],
