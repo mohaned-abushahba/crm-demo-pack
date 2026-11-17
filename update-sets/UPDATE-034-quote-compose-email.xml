@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2026-11-17 19:35:00">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<description>Enable Compose Email (workspace form menu) on Quote (sn_quote_mgmt_core_quote), mirroring Opportunity: adds a compose_email_workspace UI action plus the Workspace wiring (UX Form Action, layout item, and link into the Quote Actions layout). REQUIRES the [Quote Management Data Model] set in this file (email_client=true on the Quote table) or the action will never show. Commit that set too.</description>
+<is_default>false</is_default>
+<name>UPDATE-034-quote-compose-email [Global]</name>
+<origin_sys_id>df964c3e93a89b90e84732e548373c60</origin_sys_id>
+<release_date/>
+<remote_base_update_set/>
+<remote_parent_id/>
+<remote_sys_id>1e349d5c4b1c41d68acaa81a70c3408e</remote_sys_id>
+<state>loaded</state>
+<sys_id>1e349d5c4b1c41d68acaa81a70c3408e</sys_id>
+<update_set/>
+<update_source_id/>
+<update_source_instance_id/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_action_cfe544fa93a89b90e84732e548373cd5</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action"><sys_ui_action action="INSERT_OR_UPDATE"><action_name>compose_email_workspace</action_name><active>true</active><client>true</client><client_script_v2><![CDATA[function onClick(g_form) {
+	var LEGACY_EMAIL_CLIENT_NAME = 'sn-email-editor',
+		SEISMIC_EMAIL_CLIENT_NAME = 'sn-email-client-wrapper',
+		EMAIL = 'sys_email',
+		DRAFT = 'sys_email_draft',
+		tValue = DRAFT;
+
+	//get the list of renderers
+	var renderers = [];
+	if (ux_globals && ux_globals.presource['sn-workspace-content:snCustomRenderer']) {
+		renderers = ux_globals.presource['sn-workspace-content:snCustomRenderer'].data.GlideRecord_Query.sys_aw_renderer._results;
+	}
+
+	if (renderers.length > 0) {
+		// Filter out Email renderers
+		var renderMap = {};
+		renderers.filter(function(o) {
+			return o.table.value == EMAIL || o.table.value == DRAFT;
+		}).map(function(o) {
+			renderMap[o.table.value] = o.custom_renderer_tag.value;
+		});
+
+		//Figure out the final value
+		if (!renderMap.hasOwnProperty(DRAFT))
+			tValue = EMAIL;
+		else {
+			if (!renderMap.hasOwnProperty(EMAIL))
+				tValue = DRAFT;
+			else if (renderMap[EMAIL] == LEGACY_EMAIL_CLIENT_NAME)
+				tValue = EMAIL;
+		}
+	}
+	
+	var dirtyFieldList = g_form.serialize(true).map(function(field) {
+		return {
+			field: field.name,
+			value: field.value
+		};
+	});
+  var dirtyFieldString = JSON.stringify(dirtyFieldList);
+	g_aw.openRecord(tValue, '-1', {parentTable: g_form.getTableName(), parentSysId: g_form.getSysId(), headerValue: getMessage("New Email"), dirtyFields: dirtyFieldString, templateOverride: "EmailTemplate"});
+}]]]]><![CDATA[></client_script_v2><comments/><condition>new global.EmailEditorUtil().showInWorkspaceFormMenu(current) &amp;&amp; current.canWrite() &amp;&amp; !new sn_quote_mgmt_core.QuoteStateUtil().isQuoteInOneOfTerminalStates(current.state + "")</condition><form_action>false</form_action><form_button>false</form_button><form_button_icon/><form_button_v2>false</form_button_v2><form_context_menu>false</form_context_menu><form_link>false</form_link><form_menu_button_v2>true</form_menu_button_v2><form_style/><format_for_configurable_workspace>false</format_for_configurable_workspace><hint/><isolate_script>true</isolate_script><list_action>false</list_action><list_banner_button>false</list_banner_button><list_button>false</list_button><list_button_icon/><list_choice>false</list_choice><list_context_menu>false</list_context_menu><list_link>false</list_link><list_save_with_form_button>false</list_save_with_form_button><list_style/><messages/><name>Compose Email</name><onclick/><order>100</order><script/><show_form_icon_only>false</show_form_icon_only><show_insert>false</show_insert><show_list_icon_only>false</show_list_icon_only><show_multiple_update>false</show_multiple_update><show_query>false</show_query><show_update>true</show_update><sys_class_name>sys_ui_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-11-17 19:24:01</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>cfe544fa93a89b90e84732e548373cd5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Compose Email</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ui_action_cfe544fa93a89b90e84732e548373cd5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-11-17 19:24:01</sys_updated_on><table>sn_quote_mgmt_core_quote</table><ui11_compatible>true</ui11_compatible><ui16_compatible>false</ui16_compatible></sys_ui_action></record_update>]]></payload>
+<payload_hash>962788394</payload_hash>
+<remote_update_set display_value="UPDATE-034-quote-compose-email [Global]">1e349d5c4b1c41d68acaa81a70c3408e</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-11-17 19:24:01</sys_created_on>
+<sys_id>ffebc36c2a7a4f0a99cbf49a532a9904</sys_id>
+<sys_recorded_at>1a1eb0172170000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-11-17 19:27:06</sys_updated_on>
+<target_name>Compose Email</target_name>
+<type>UI Action</type>
+<update_domain>global</update_domain>
+<update_guid>e07840727fe89b90ed3d6afaf1307e63</update_guid>
+<update_guid_history>e07840727fe89b90ed3d6afaf1307e63:962788394,4fe584fa14a89b90495b070d60a2e611:-596930993</update_guid_history>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ux_form_action_c47780fa3ba81b90916b37f726e45a4c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action"><sys_ux_form_action action="INSERT_OR_UPDATE"><action_type>ui_action</action_type><active>true</active><declarative_action/><description/><name>Compose Email</name><specificity>10</specificity><sys_class_name>sys_ux_form_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-11-17 19:30:38</sys_created_on><sys_id>c47780fa3ba81b90916b37f726e45a4c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Compose Email</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ux_form_action_c47780fa3ba81b90916b37f726e45a4c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-11-17 19:30:38</sys_updated_on><table>sn_quote_mgmt_core_quote</table><ui_action display_value="Compose Email">cfe544fa93a89b90e84732e548373cd5</ui_action></sys_ux_form_action><sys_translated_text action="delete_multiple" query="documentkey=c47780fa3ba81b90916b37f726e45a4c"/></record_update>]]></payload>
+<payload_hash>1815867971</payload_hash>
+<remote_update_set display_value="UPDATE-034-quote-compose-email [Global]">1e349d5c4b1c41d68acaa81a70c3408e</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-11-17 19:30:38</sys_created_on>
+<sys_id>949e2eaae60c4a008f882a01b8098113</sys_id>
+<sys_recorded_at>1a1eafd68660000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-11-17 19:31:00</sys_updated_on>
+<target_name>Compose Email</target_name>
+<type>UX Form Actions</type>
+<update_domain>global</update_domain>
+<update_guid>407780fad2a81b90dd02384376818a77</update_guid>
+<update_guid_history>407780fad2a81b90dd02384376818a77:1815867971</update_guid_history>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ux_form_action_layout_item_3d77c0fa3ba81b90916b37f726e45a2a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action_layout_item"><sys_ux_form_action_layout_item action="INSERT_OR_UPDATE"><action display_value="Compose Email">c47780fa3ba81b90916b37f726e45a4c</action><active>true</active><animate_icon>false</animate_icon><color>secondary</color><description/><icon/><item_type>action</item_type><label>Compose Email</label><layout_group/><name>Compose Email</name><order>100</order><overflow>false</overflow><sys_class_name>sys_ux_form_action_layout_item</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-11-17 19:30:45</sys_created_on><sys_id>3d77c0fa3ba81b90916b37f726e45a2a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Compose Email</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ux_form_action_layout_item_3d77c0fa3ba81b90916b37f726e45a2a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-11-17 19:30:45</sys_updated_on><table>sn_quote_mgmt_core_quote</table></sys_ux_form_action_layout_item></record_update>]]></payload>
+<payload_hash>632820843</payload_hash>
+<remote_update_set display_value="UPDATE-034-quote-compose-email [Global]">1e349d5c4b1c41d68acaa81a70c3408e</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-11-17 19:30:45</sys_created_on>
+<sys_id>41bf28e458f34806b2b9e147921ea68f</sys_id>
+<sys_recorded_at>1a1eafd83ea0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-11-17 19:31:00</sys_updated_on>
+<target_name>Compose Email</target_name>
+<type>UX Form Actions Layout Item</type>
+<update_domain>global</update_domain>
+<update_guid>f177c0fadfa81b9044eedaf6b1a2ac49</update_guid>
+<update_guid_history>f177c0fadfa81b9044eedaf6b1a2ac49:632820843</update_guid_history>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ux_m2m_action_layout_item_7277c0fa3ba81b90916b37f726e45ae0</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_m2m_action_layout_item"><sys_ux_m2m_action_layout_item action="INSERT_OR_UPDATE"><active>true</active><animate_icon>false</animate_icon><display_type>0</display_type><icon/><order>100</order><sys_class_name>sys_ux_m2m_action_layout_item</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-11-17 19:30:49</sys_created_on><sys_id>7277c0fa3ba81b90916b37f726e45ae0</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ux_m2m_action_layout_item_7277c0fa3ba81b90916b37f726e45ae0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-11-17 19:30:49</sys_updated_on><table>sn_quote_mgmt_core_quote</table><ux_form_action_layout display_value="Quote Actions">02eafa8643864a1088c55e6e3db8f2c0</ux_form_action_layout><ux_form_action_layout_item display_value="Compose Email">3d77c0fa3ba81b90916b37f726e45a2a</ux_form_action_layout_item><variant>secondary</variant></sys_ux_m2m_action_layout_item></record_update>]]></payload>
+<payload_hash>-1683769599</payload_hash>
+<remote_update_set display_value="UPDATE-034-quote-compose-email [Global]">1e349d5c4b1c41d68acaa81a70c3408e</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-11-17 19:30:49</sys_created_on>
+<sys_id>dcace0a7d28d4c68affaf20a1cb4f59c</sys_id>
+<sys_recorded_at>1a1eafd95860000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-11-17 19:31:01</sys_updated_on>
+<target_name>sn_quote_mgmt_core_quote</target_name>
+<type>Sys Ux M2m Action Layout Item</type>
+<update_domain>global</update_domain>
+<update_guid>3e77c0fad1a81b906f5ef31728c25be6</update_guid>
+<update_guid_history>3e77c0fad1a81b906f5ef31728c25be6:-1683769599</update_guid_history>
+<view/>
+</sys_update_xml>
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<description>Companion to the [Global] set in this file (UPDATE-034-quote-compose-email). Adds email_client=true to the sn_quote_mgmt_core_quote table dictionary attributes (the platform email-client check refuses any table without it). Separate set because the Quote table belongs to the Quote Management Data Model scope.</description>
+<is_default>false</is_default>
+<name>UPDATE-034-quote-compose-email [Quote Management Data Model]</name>
+<origin_sys_id>a669f2f3e7144bf6a2221dc9a943f7f9</origin_sys_id>
+<release_date/>
+<remote_base_update_set/>
+<remote_parent_id/>
+<remote_sys_id>a669f2f3e7144bf6a2221dc9a943f7f9</remote_sys_id>
+<state>loaded</state>
+<sys_id>a669f2f3e7144bf6a2221dc9a943f7f9</sys_id>
+<update_set/>
+<update_source_id/>
+<update_source_instance_id/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</application>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_sn_quote_mgmt_core_quote_null</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="" table="sn_quote_mgmt_core_quote"><active>true</active><array>false</array><attributes>enforce_dot_walk_cross_scope_access=true,email_client=true</attributes><audit>true</audit><calculation/><choice>1</choice><choice_field/><choice_table/><column_label/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element/><element_reference>false</element_reference><foreign_database/><formula/><function_definition/><function_field>false</function_field><internal_type display_value="Collection">collection</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>sn_quote_mgmt_core_quote</name><next_element/><primary>false</primary><read_only>false</read_only><read_only_option/><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_qual_condition/><reference_type/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-29 05:27:45</sys_created_on><sys_id>639074fe3b2b4b10916b37f726e45aff</sys_id><sys_name>sn_quote_mgmt_core_quote</sys_name><sys_package display_value="Quote Management Data Model" source="sn_quote_mgmt_core">d5457076b70131101aaebe508e11a907</sys_package><sys_policy/><sys_scope display_value="Quote Management Data Model">d5457076b70131101aaebe508e11a907</sys_scope><sys_update_name>sys_dictionary_sn_quote_mgmt_core_quote_null</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-11-17 19:23:59</sys_updated_on><table_reference>false</table_reference><text_index>true</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><virtual>false</virtual><virtual_type>script</virtual_type><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+<payload_hash>-2051160361</payload_hash>
+<remote_update_set display_value="UPDATE-034-quote-compose-email [Quote Management Data Model]">a669f2f3e7144bf6a2221dc9a943f7f9</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-11-17 19:24:00</sys_created_on>
+<sys_id>4b2605ff72a04453ab1a0b35384c7ea3</sys_id>
+<sys_recorded_at>1a1eaf756390000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-11-17 19:24:00</sys_updated_on>
+<target_name>Quote</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_guid>7ee580f6daa81b9065b6375ecd53a7fb</update_guid>
+<update_guid_history>7ee580f6daa81b9065b6375ecd53a7fb:-2051160361</update_guid_history>
+<view/>
+</sys_update_xml>
+</unload>
