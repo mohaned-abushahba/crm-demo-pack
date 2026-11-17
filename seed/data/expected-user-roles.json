@@ -3933,6 +3933,7 @@
     "sn_prm.partner_data_viewer",
     "sn_prm.partner_program_rel_writer",
     "sn_prm.partner_program_writer",
+    "sn_prm.partner_ui",
     "sn_prm.program_segment_writer",
     "sn_prm_dr.deal_reg_admin",
     "sn_prm_dr.deal_reg_data_viewer",

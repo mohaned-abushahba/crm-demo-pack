@@ -1296,6 +1296,7 @@
     "exists_on_source": true,
     "created_in_scope": false,
     "used_by": [
+      "sys_group_has_role.role",
       "sys_user_has_role.role"
     ]
   },

@@ -588,6 +588,12 @@
       "role": "4d5f5d1f43453110a530cd60afb8f21a",
       "inherits": "true",
       "group": "15a4ba563bf2c310d5260fa693e45a16"
+    },
+    {
+      "sys_id": "1952772e93e49b90e84732e548373c6c",
+      "role": "d182d439ff3122101970ffffffffffed",
+      "inherits": "true",
+      "group": "15a4ba563bf2c310d5260fa693e45a16"
     }
   ]
 }

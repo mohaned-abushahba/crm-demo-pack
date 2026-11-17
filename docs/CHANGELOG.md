@@ -940,3 +940,24 @@ Caveats:
   touched, deleted, or investigated further.
 File: seed/manifest.json, seed/data/325-sn_quota_core_sales_quota.json, seed/dist/golden-demo-seed.json,
 seed/tools/extract.py, seed/tools/bundle.py, skills/golden-demo-seed-loader/scripts/loader.js
+
+## seed Marcus Patel + SCRM-Partner Ops sn_prm.partner_ui grant (2026-11-17)
+Instance: opmsalescrmstage (source of the grants; `seed/data/expected-user-roles.json` top-level `source` stays `opmsalescrm1`)
+What:
+- Granted `sn_prm.partner_ui` (`d182d439ff3122101970ffffffffffed`) directly to `marcus.patel`
+  (`3284fad22b7683104deaf02ac891bff6`, `sys_user_has_role` `07623be63be41b90916b37f726e45aaa`) and to group
+  `SCRM-Partner Ops` (`15a4ba563bf2c310d5260fa693e45a16`, `sys_group_has_role`
+  `1952772e93e49b90e84732e548373c6c`, inherits=true) on stage, then captured both into
+  `seed/data/060-sys_user_has_role.json` / `070-sys_group_has_role.json`.
+- `expected-user-roles.json`: added `sn_prm.partner_ui` to `marcus.patel`'s role list only (hand-inserted,
+  same scoped-touch convention as the 2026-11-04 entry).
+- `external-refs.json`: added `sys_group_has_role.role` to the role's `used_by` (hand-edited; `refcheck.py`
+  not run, because it rewrites unrelated `created_in_scope` flags — see the 2026-11-04 entry).
+Why: Marcus Patel could not see the Partner Relationship Management list category in CRM Workspace. Each PRM
+list is gated by an audience (`sys_ux_applicability_m2m_list` -> `sys_ux_applicability`); Marcus already held
+the roles for 5 of the 6 lists, and `sn_prm.partner_ui` was the only audience role he lacked (the "Partner UI
+Audience" gating Program Segments; all four PRM audiences also carry it in `role_names`).
+Caveats:
+- Not yet confirmed in the UI that the PRM section now appears for Marcus after the grant.
+- `seed/dist/golden-demo-seed.json` not rebuilt; not loaded onto a blank instance yet.
+- opmsalescrm1 (golden) not checked for whether it already carries this grant.
